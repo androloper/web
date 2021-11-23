@@ -1,0 +1,50 @@
+<style type="text/css">
+			.page {width=1366px; height=768px; padding=25px;}
+			.leftbanner {width=200px; float:left;}
+			.right { width=1166px; float:position}
+			.main {width=866px; float:position;}
+			.rightbanner {width=200px; float:right;}
+			.header {width=866px; height=200px;}
+			.container {width=866px; height=400px; margin-top=50px;}
+			.footer {width=866px; height=200px; margin-top=25px; background-color=white;}
+			
+			@media only screen and (max-width: 480px) and (orientation: portrait){
+				body{-moz-transform: scale(0.3, 0.3);
+				-webkit-transform: scale(0.3, 0.3);
+				}
+			}
+			/** Mobilde Yatay konumdayken **/
+			@media only screen and (max-width: 640px) and (orientation: landscape){
+				body{-moz-transform: scale(0.5, 0.5);
+				-webkit-transform: scale(0.5, 0.5);
+				}
+			}
+			/** Mobilde Yatay yada Dikey **/
+			@media only screen and (max-width: 640px){
+				body{-moz-transform: scale(0.5, 0.5);
+				-webkit-transform: scale(0.5, 0.5);
+				}
+			}
+			/** iPhone 4 ve üstü **/
+			@media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+				body{ -moz-transform: scale(0.3, 0.3);
+				-webkit-transform: scale(0.3, 0.3);
+				}
+			}
+			/** Tabletler için #### **/
+			@media only screen and (min-width: 768px) and (max-width: 1024px){
+				body{-moz-transform: scale(0.7, 0.7);
+				-webkit-transform: scale(0.7, 0.7);
+				}
+			}
+			@media only screen and (min-width:1025px) and (max-width:1366px) {
+				body{-moz-transform: scale(0.85, 0.85);
+				-webkit-transform: scale(0.85, 0.85);
+				}
+			}
+			@media only screen and (min-width:1367px) and (max-width:1920px) {
+				body{-moz-transform: scale(1.33, 1.33);
+				-webkit-transform: scale(1.33, 1.33);
+				}
+			}					
+		</style>
