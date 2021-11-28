@@ -460,7 +460,9 @@ section.section {
 }
 
 .custom-box-details {
-		padding: 35px;
+		padding-left: 35px;
+		padding-top: 35px;
+		padding-bottom: 35px;
 }
 
 .custom-box-details h4 {
@@ -485,12 +487,12 @@ section.section {
 .custom-list-style-1 li span {
 		text-transform: uppercase;
 		font-weight: 600;
-		font-size: 0.9em;
+		font-size: 0.8em;
 }
 
 .custom-list-style-1 li span:nth-child(1) {
 		display: inline-block;
-		min-width: 100px;
+		min-width: 30px;
 }
 
 .custom-list-style-1 li span.custom-max-width-1 {

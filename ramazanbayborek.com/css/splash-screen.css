@@ -14,7 +14,7 @@ body fuse-splash-screen {
     pointer-events: none;
     opacity: 1;
     visibility: visible;
-    transition: opacity 4000ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body fuse-splash-screen img {
@@ -36,18 +36,18 @@ body fuse-splash-screen .spinner > div {
     background-color: #F7E108;
     border-radius: 100%;
     display: inline-block;
-    -webkit-animation: fuse-bouncedelay 4s infinite ease-in-out both;
-    animation: fuse-bouncedelay 4s infinite ease-in-out both;
+    -webkit-animation: fuse-bouncedelay 1s infinite ease-in-out both;
+    animation: fuse-bouncedelay 1s infinite ease-in-out both;
 }
 
 body fuse-splash-screen .spinner .bounce1 {
-    -webkit-animation-delay: -1s;
-    animation-delay: -1s;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
 }
 
 body fuse-splash-screen .spinner .bounce2 {
-    -webkit-animation-delay: -1s;
-    animation-delay: -1s;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
 }
 
 @-webkit-keyframes fuse-bouncedelay {
