@@ -16229,8 +16229,8 @@ html.gecko .sort-destination.sort-destination-margin > [class*="col-"] {
 	z-index: 2;
 	max-width: 90%;
 	font-size: 17px;
-	padding: 13px 21px 2px;
-	bottom: 13%;
+	padding: 10px;
+	bottom: 25%;
 }
 
 .thumb-info .thumb-info-type {
