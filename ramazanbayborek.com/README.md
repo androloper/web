@@ -26,26 +26,26 @@
 <tr>
 <td><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/2682.png" align="center" width="40" height="40" style="margin-right:8px"></td>
 <td>0xf030698d127b93948b9524e65cb5000875e24da2</td>
-<td><img src="https://i.pinimg.com/originals/35/8e/6b/358e6b72c323a1253c14acc7bd65d905.jpg" align="center" width="60" height="60" style="margin-left:8px"></td>
+<td><img src="https://i.pinimg.com/originals/35/8e/6b/358e6b72c323a1253c14acc7bd65d905.jpg" align="center" width="80" height="80" style="margin-left:8px"></td>
 </tr>
 <tr>
 <td><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" align="center" width="40" height="40" style="margin-right:8px"></td>
 <td>1L8b1CPfU9rJSwXuktdLjDS8zqCEb7a7Aq</td>
-<td><img src="https://i.pinimg.com/originals/6b/e6/df/6be6df6efd1571b4864acd4e7a387259.jpg" align="center" width="60" height="60" style="margin-left:8px"></td>
+<td><img src="https://i.pinimg.com/originals/6b/e6/df/6be6df6efd1571b4864acd4e7a387259.jpg" align="center" width="80" height="80" style="margin-left:8px"></td>
 </tr>
 <tr>
 <td><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" align="center" width="40" height="40" style="margin-right:8px"></td>
 <td>0xf030698d127b93948b9524e65cb5000875e24da2</td>
-<td><img src="https://i.pinimg.com/originals/35/8e/6b/358e6b72c323a1253c14acc7bd65d905.jpg" align="center" width="60" height="60" style="margin-left:8px"></td>
+<td><img src="https://i.pinimg.com/originals/35/8e/6b/358e6b72c323a1253c14acc7bd65d905.jpg" align="center" width="80" height="80" style="margin-left:8px"></td>
 </tr>
 <tr>
 <td><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/74.png" align="center" width="40" height="40" style="margin-right:8px"></td>
 <td>DNjMQWqroveVUzxRpG6Fm7TwZTixk56yW6</td>
-<td><img src="https://i.pinimg.com/originals/4c/87/6e/4c876e794ec36270cd3423d704be2433.jpg" align="center" width="60" height="60" style="margin-left:8px"></td>
+<td><img src="https://i.pinimg.com/originals/4c/87/6e/4c876e794ec36270cd3423d704be2433.jpg" align="center" width="80" height="80" style="margin-left:8px"></td>
 </tr>
 <tr>
 <td><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png" align="center" width="40" height="40" style="margin-right:8px"></td>
 <td>0xf030698d127b93948b9524e65cb5000875e24da2</td>
-<td><img src="https://i.pinimg.com/originals/35/8e/6b/358e6b72c323a1253c14acc7bd65d905.jpg" align="center" width="60" height="60" style="margin-left:8px"></td>
+<td><img src="https://i.pinimg.com/originals/35/8e/6b/358e6b72c323a1253c14acc7bd65d905.jpg" align="center" width="80" height="80" style="margin-left:8px"></td>
 </tr>
 </table>
