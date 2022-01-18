@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=androloper&label=Profile%20views&color=ff0000&style=plastic" alt="androloper" /> </p>
 
-- 👨‍💻 All of my projects are available at [ramazanbayborek.com](ramazanbayborek.com)
+- 👨‍💻 All of my projects are available at <a href="https://ramazanbayborek.com" target="blank">ramazanbayborek.com</a>
 
 - 💬 Ask me about **android, flutter, angular, ts and js**
 
