@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { ReferanslarComponent } from 'app/modules/referanslar/referanslar.component';
+import {CdkScrollableModule} from "@angular/cdk/scrolling";
 
 const referanslarRoutes: Route[] = [
     {
@@ -13,8 +14,9 @@ const referanslarRoutes: Route[] = [
     declarations: [
         ReferanslarComponent
     ],
-    imports     : [
-        RouterModule.forChild(referanslarRoutes)
+    imports: [
+        RouterModule.forChild(referanslarRoutes),
+        CdkScrollableModule
     ]
 })
 export class ReferanslarModule

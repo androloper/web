@@ -34,7 +34,7 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         title: 'Anasayfa',
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
-        link : '/'
+        link : '/anasayfa'
     },
     {
         id   : 'projeler',
