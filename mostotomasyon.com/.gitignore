@@ -19,7 +19,6 @@ target/
 
 # JetBrains IDE
 .idea/
-.angular/
 
 # Unit test reports
 TEST*.xml
