@@ -51,7 +51,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
 
         // Set the country iso codes for languages for flags
         this.flagCodes = {
-            'en': 'us',
+            'en': 'eng',
             'tr': 'tr'
         };
     }
@@ -144,6 +144,62 @@ export class LanguagesComponent implements OnInit, OnDestroy
 
                     // Set the title
                     analyticsDashboardItem.title = translation;
+
+                    // Refresh the navigation component
+                    navComponent.refresh();
+                });
+        }
+        // Get the Analytics dashboard item and update its title
+        const anasayfa = this._fuseNavigationService.getItem('anasayfa', navigation);
+        if ( anasayfa )
+        {
+            this._translocoService.selectTranslate('anasayfa').pipe(take(1))
+                .subscribe((translation) => {
+
+                    // Set the title
+                    anasayfa.title = translation;
+
+                    // Refresh the navigation component
+                    navComponent.refresh();
+                });
+        }
+        // Get the Analytics dashboard item and update its title
+        const projeler = this._fuseNavigationService.getItem('projeler', navigation);
+        if ( projeler )
+        {
+            this._translocoService.selectTranslate('projeler').pipe(take(1))
+                .subscribe((translation) => {
+
+                    // Set the title
+                    projeler.title = translation;
+
+                    // Refresh the navigation component
+                    navComponent.refresh();
+                });
+        }
+        // Get the Analytics dashboard item and update its title
+        const referanslar = this._fuseNavigationService.getItem('referanslar', navigation);
+        if ( referanslar )
+        {
+            this._translocoService.selectTranslate('referanslar').pipe(take(1))
+                .subscribe((translation) => {
+
+                    // Set the title
+                    referanslar.title = translation;
+
+                    // Refresh the navigation component
+                    navComponent.refresh();
+                });
+        }
+        // Get the Analytics dashboard item and update its title
+        const iletisim = this._fuseNavigationService.getItem('iletisim', navigation);
+        if ( iletisim )
+        {
+            this._translocoService.selectTranslate('iletisim').pipe(take(1))
+                .subscribe((translation) => {
+
+                    // Set the title
+                    iletisim.title = translation;
 
                     // Refresh the navigation component
                     navComponent.refresh();
