@@ -33,5 +33,10 @@
     "donanim-konfigurasyonu": "Hardware Configuration",
     "lojik-data-akis-diyagrami": "Logic Data Flow Diagram",
     "akis-semasi-dizayni": "Flowchart Diagram",
-    "kontrol-panosu-dizayni": "Control Panel Design"
+    "kontrol-panosu-dizayni": "Control Panel Design",
+    "cimento-fabrikasi-otomasyonu": "Cement Factory Automation",
+    "yem-fabrikasi-otomasyonu": "Feed Factory Automation",
+    "tunel-otomasyonu": "Tunnel Automation",
+    "atik-su-otomasyonu": "Waste Water Automation",
+    "bes-otomasyonu": "Biomass Powerplant Automation"
 }

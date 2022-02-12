@@ -33,5 +33,10 @@
     "donanim-konfigurasyonu": "Donanım Konfigürasyonu",
     "lojik-data-akis-diyagrami": "Lojik Data Akış Diyagramı",
     "akis-semasi-dizayni": "Akış Şeması Dizaynı",
-    "kontrol-panosu-dizayni": "Kontrol Panosu Dizaynı"
+    "kontrol-panosu-dizayni": "Kontrol Panosu Dizaynı",
+    "cimento-fabrikasi-otomasyonu": "Çimento Fabrikası Otomasyonu",
+    "yem-fabrikasi-otomasyonu": "Yem Fabrikası Otomasyonu",
+    "tunel-otomasyonu": "Tünel Otomasyonu",
+    "atik-su-otomasyonu": "Atık Su Otomasyonu",
+    "bes-otomasyonu": "Bes Otomasyonu"
 }
