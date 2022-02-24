@@ -28,12 +28,13 @@
                             [showIcon]="false">
                             {{alert.message}}
                         </fuse-alert>
-                        <form action="mailto:ramazanbayborek@gmail.com"
-                              method="post"
-                              enctype="text/plain"
-                            class="space-y-3"
+                        <form action="https://formspree.io/ramazanbayborek@gmail.com"
+                              method="POST"
+                              class="space-y-3"
+                              encType="multipart/form-data"
                               [formGroup]="supportForm"
                               #supportNgForm="ngForm">
+
                             <!-- Name -->
                             <mat-form-field class="w-full">
                                 <input
@@ -93,7 +94,7 @@
                                     (click)="clearForm()">
                                     Temizle
                                 </button>
-                                <button
+                                <button type="submit"
                                     class="ml-2"
                                     mat-flat-button
                                     [color]="'primary'"
