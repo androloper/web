@@ -2,8 +2,10 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import{ init,send } from '@emailjs/browser';
 
+
+
 @Component({
-  selector: 'app-iletisim',
+  selector: 'iletisim',
   templateUrl: './iletisim.component.html',
   styleUrls: ['./iletisim.component.scss']
 })
@@ -39,6 +41,7 @@ export class IletisimComponent implements OnInit {
             subject : this.supportForm.value.subject,
             message: this.supportForm.value.message,
         };
+       
         // console.log('Your message has been sent!');
         this.alert = {
             type   : 'success',

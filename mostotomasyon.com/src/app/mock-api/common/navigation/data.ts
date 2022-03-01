@@ -3,30 +3,93 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 
 export const defaultNavigation: FuseNavigationItem[] = [
     {
-        id   : 'example',
-        title: 'Example',
+        id   : 'anasayfa',
+        title: 'Anasayfa',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    }
+        icon : 'mat_outline:home',
+        link : '/anasayfa'
+    },
+    {
+        id   : 'projeler',
+        title: 'Projeler',
+        type : 'basic',
+        icon : 'mat_outline:cases',
+        link : '/projeler'
+    },
+    {
+        id   : 'referanslar',
+        title: 'Referanslar',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/referanslar'
+    },
+    {
+        id   : 'iletisim',
+        title: 'İletişim',
+        type : 'basic',
+        icon : 'mat_outline:contact_page',
+        link : '/iletisim'
+    },
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
-        id   : 'example',
-        title: 'Example',
+        id   : 'anasayfa',
+        title: 'Anasayfa',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    }
+        icon : 'mat_outline:home',
+        link : '/anasayfa'
+    },
+    {
+        id   : 'projeler',
+        title: 'Projeler',
+        type : 'basic',
+        icon : 'mat_outline:cases',
+        link : '/projeler'
+    },
+    {
+        id   : 'referanslar',
+        title: 'Referanslar',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/referanslar'
+    },
+    {
+        id   : 'iletisim',
+        title: 'İletişim',
+        type : 'basic',
+        icon : 'mat_outline:contact_page',
+        link : '/iletisim'
+    },
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
     {
-        id   : 'example',
-        title: 'Example',
+        id   : 'anasayfa',
+        title: 'Anasayfa',
         type : 'basic',
-        icon : 'heroicons_outline:chart-pie',
-        link : '/example'
-    }
+        icon : 'mat_outline:home',
+        link : '/anasayfa'
+    },
+    {
+        id   : 'projeler',
+        title: 'Projeler',
+        type : 'basic',
+        icon : 'mat_outline:cases',
+        link : '/projeler'
+    },
+    {
+        id   : 'referanslar',
+        title: 'Referanslar',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/referanslar'
+    },
+    {
+        id   : 'iletisim',
+        title: 'İletişim',
+        type : 'basic',
+        icon : 'mat_outline:contact_page',
+        link : '/iletisim'
+    },
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
     {
