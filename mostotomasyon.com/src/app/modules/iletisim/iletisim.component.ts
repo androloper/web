@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import{ init,send } from '@emailjs/browser';
 
 @Component({
   selector: 'app-iletisim',
@@ -12,8 +12,7 @@ export class IletisimComponent implements OnInit {
     @ViewChild('supportNgForm') supportNgForm: NgForm;
     alert: any;
     supportForm: FormGroup;
-    constructor(private _formBuilder: FormBuilder,
-                private http: HttpClient) { }
+    constructor(private _formBuilder: FormBuilder) { }
 
     ngOnInit(): void {
         this.supportForm = this._formBuilder.group({
@@ -34,28 +33,13 @@ export class IletisimComponent implements OnInit {
      */
     sendForm(): void
     {
-        const headers = new HttpHeaders({
-            // eslint-disable-next-line @typescript-eslint/naming-convention
-            'Content-Type': 'application/json',
-            // eslint-disable-next-line @typescript-eslint/naming-convention
-            'Access-Control-Allow-Origin': '*',
-            // eslint-disable-next-line @typescript-eslint/naming-convention
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-        });
         const obj = {
             name : this.supportForm.value.name,
             email : this.supportForm.value.email,
             subject : this.supportForm.value.subject,
             message: this.supportForm.value.message,
         };
-        const options = {
-            headers : headers,
-            body: obj
-        };
-        console.log(options);
-        this.http.post('mailto:ramazanbayborek@gmail.com', options).subscribe(data => console.log(data));
-        // Send your form here using an http request
-        console.log('Your message has been sent!');
+        // console.log('Your message has been sent!');
         this.alert = {
             type   : 'success',
             message: 'Mesajınız bize ulaşmıştır. En kısa zaman içerisinde tarafımızdan dönüş yapılacaktır.'

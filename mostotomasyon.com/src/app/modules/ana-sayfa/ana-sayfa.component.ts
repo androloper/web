@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ana-sayfa',
+  selector: '',
   templateUrl: './ana-sayfa.component.html',
   styleUrls: ['./ana-sayfa.component.scss']
 })

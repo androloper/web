@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-projeler',
+  selector: 'projeler',
   templateUrl: './projeler.component.html',
   styleUrls: ['./projeler.component.scss']
 })
