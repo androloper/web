@@ -1,11 +1,11 @@
-<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" *transloco="let t" cdkScrollable>
 
     <!-- Main -->
     <div class="flex-auto pt-5 px-5">
 
         <!-- CONTENT GOES HERE -->
         <div class="pt-5 px-5 rounded-2xl">
-            <div class="row pt-5 px-6">
+            <div class="row pt-5 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/abalim.png" alt="" style="height: 70%; width: 70%; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto;">
                 </div>
@@ -21,64 +21,64 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Abalım Yem</b></h3>
-                    <p class="text-2xl pl-2"><u>Burdur Fabrika</u></p>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası 100 ton/saat kapasiteli</p>
-                    <p class="text-2xl pl-2"><u>Konya Fabrika</u></p>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası 80 ton/saat kapasiteli</p>
-                    <p class="text-2xl pl-2"><u>Biga Fabrika</u></p>
-                    <p class="text-xl pl-4">• MCC Panoları Modernizasyon</p>
-                    <p class="text-xl pl-4">• Otomasyon Yenileme İşleri</p>
-                    <p class="text-2xl pl-2"><u>Turgutlu Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
-                    <p class="text-2xl pl-2"><u>Polatlı Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
-                    <p class="text-2xl pl-2"><u>Mersin Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
-                    <p class="text-2xl pl-2"><u>Denizli Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('abalim-yem')}}</b></h3>
+                    <p class="text-2xl pl-2"><u>{{t('burdur-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim-100')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('konya-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim-80')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('biga-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('mcc-panolari-modernizasyon')}}</p>
+                    <p class="text-xl pl-4">• {{t('otomasyon-yenileme')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('turgutlu-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('polatli-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('mersin-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('denizli-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>C.P. Yem</b></h3>
-                    <p class="text-2xl pl-2"><u>İnegöl Fabrika</u></p>
-                    <p class="text-xl pl-4">• Komple yem fabrikası yazılım yenileme işleri ve ilave hatlar</p>
-                    <p class="text-2xl pl-2"><u>Tarsus Fabrika</u></p>
-                    <p class="text-xl pl-4">• Komple yem fabrikası yazılım yenileme işleri ve ilave hatlar</p>
-                    <p class="text-2xl pl-2"><u>Ankara Fabrika</u></p>
-                    <p class="text-xl pl-4">• Komple yem fabrikası yazılım yenileme işleri ve ilave hatlar</p>
-                    <p class="text-2xl pl-2"><u>Hendek Fabrika</u></p>
-                    <p class="text-xl pl-4">• Çelik Silo Otomasyon</p>
-                    <p class="text-2xl pl-2"><u>Hayrabolu Fabrika</u></p>
-                    <p class="text-xl pl-4">• MCC Panoları Modernizasyon</p>
-                    <p class="text-xl pl-4">• Otomasyon yenileme işleri</p>
-                    <p class="text-xl pl-4">• Çelik silo hatları</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('cp-yem')}}</b></h3>
+                    <p class="text-2xl pl-2"><u>{{t('inegol-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('komple-yem-fab')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('tarsus-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('komple-yem-fab')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('ankara-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('komple-yem-fab')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('hendek-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('celik-silo-oto')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('hayrabolu-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('mcc-panolari-modernizasyon')}}</p>
+                    <p class="text-xl pl-4">• {{t('otomasyon-yenileme')}}</p>
+                    <p class="text-xl pl-4">• {{t('celik-silo-oto')}}</p>
 
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Tarfaş Yem</b></h3>
-                    <p class="text-2xl pl-2"><u>Tire Fabrika</u></p>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası 40 ton/saat kapasiteli</p>
-                    <p class="text-2xl pl-2"><u>Aksaray Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
-                    <p class="text-2xl pl-2"><u>Karacabey Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
-                    <p class="text-xl pl-4">• Otomasyon yenileme işleri</p>
-                    <p class="text-2xl pl-2"><u>Bingöl Fabrika</u></p>
-                    <p class="text-xl pl-4">• Devam Eden Proje</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('tarfas-yem')}}</b></h3>
+                    <p class="text-2xl pl-2"><u>{{t('tire-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim-40')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('aksaray-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('karacabey-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
+                    <p class="text-xl pl-4">• {{t('otomasyon-yenileme')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('bingol-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('devam-eden-proje')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>UCK Enerji</b></h3>
-                    <p class="text-2xl pl-2">• Acıpayam Akalan Tesisi Anahtar Teslim</p>
-                    <p class="text-2xl pl-2">• Amasya Suluova Tesisi Anahtar Teslim</p>
-                    <p class="text-2xl pl-2">• Burdur Karamanlı Tesisi Anahtar Teslim</p>
-                    <p class="text-2xl pl-2">• Erzurum Aziziye Tesisi Anahtar Teslim</p>
-                    <p class="text-2xl pl-2">• Konya Çumra Tesisi Anahtar Teslim</p>
-                    <p class="text-2xl pl-2">• Konya Selçuklu Tesisi Anahtar Teslim</p>
-                    <p class="text-2xl pl-2">• Şanlıurfa Siverek Tesisi Anahtar Teslim</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('uck-enerji')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('uck-1')}}</p>
+                    <p class="text-2xl pl-2">• {{t('uck-2')}}</p>
+                    <p class="text-2xl pl-2">• {{t('uck-3')}}</p>
+                    <p class="text-2xl pl-2">• {{t('uck-4')}}</p>
+                    <p class="text-2xl pl-2">• {{t('uck-5')}}</p>
+                    <p class="text-2xl pl-2">• {{t('uck-6')}}</p>
+                    <p class="text-2xl pl-2">• {{t('uck-7')}}</p>
                 </div>
             </div>
 
-            <div class="row pt-10 px-6">
+            <div class="row pt-10 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/bayramoglu.png" alt="" style="height: 70%; width: 70%; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; border-radius: 25px">
                 </div>
@@ -94,28 +94,28 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Bayramoğlu Yem</b></h3>
-                    <p class="text-2xl pl-2">• Fabrika 1 ve 2</p>
-                    <p class="text-2xl pl-2">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('bayramoglu-yem')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('fabrika1-2')}}</p>
+                    <p class="text-2xl pl-2">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Lezita</b></h3>
-                    <p class="text-2xl pl-2"><u>Mersin Fabrika</u></p>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası</p>
-                    <p class="text-2xl pl-2"><u>Denizli Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('lezita')}}</b></h3>
+                    <p class="text-2xl pl-2"><u>{{t('mersin-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim')}}</p>
+                    <p class="text-2xl pl-2"><u>{{t('denizli-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Tarım Kredi Kooperatifleri</b></h3>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('tarim-kredi')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Sanko</b></h3>
-                    <p class="text-2xl pl-2">• Anahtar Teslim Üretim Kuyuları</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('sanko')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('uretim-kuyulari')}}</p>
                 </div>
             </div>
 
-            <div class="row pt-10 px-6">
+            <div class="row pt-10 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/erisler.png" alt="" style="height: 70%; width: 70%; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; border-radius: 25px">
                 </div>
@@ -131,27 +131,27 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Eriş Yem</b></h3>
-                    <p class="text-2xl pl-2"><u>Denizli Fabrika</u></p>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('eris-yem')}}</b></h3>
+                    <p class="text-2xl pl-2"><u>{{t('denizli-fab')}}</u></p>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Ayyem</b></h3>
-                    <p class="text-xl pl-4">• MCC Panoları Modernizasyonu</p>
-                    <p class="text-xl pl-4">• Otomasyon Yenileme İşleri</p>
-                    <p class="text-xl pl-4">• Yeni Üretim Hattı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('ayyem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('mcc-panolari-modernizasyon')}}</p>
+                    <p class="text-xl pl-4">• {{t('otomasyon-yenileme')}}</p>
+                    <p class="text-xl pl-4">• {{t('yeni-uretim-hatti')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Tınaztepe Yem</b></h3>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası 20 ton/saat kapasiteli</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('tinaztepe-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim-20')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Star Rafineri</b></h3>
-                    <p class="text-2xl pl-2">• Yazılım Desteği</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('star-rafineri')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('yazilim-destegi')}}</p>
                 </div>
             </div>
 
-            <div class="row pt-10 px-6">
+            <div class="row pt-10 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/sunarözlemlogoo.png" alt="" style="height: 40%; width: 70%; margin-left: auto; margin-right: auto; margin-top: 15%; margin-bottom: 15%; border-radius: 5px">
                 </div>
@@ -167,25 +167,25 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Sunar Özlem</b></h3>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı ve İlave Hatlar</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('sunar-ozlem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-ilave-hatlar')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Önal Yem</b></h3>
-                    <p class="text-xl pl-4">• MCC Panoları Modernizasyonu</p>
-                    <p class="text-xl pl-4">• Otomasyon Yenileme İşleri</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('onal-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('mcc-panolari-modernizasyon')}}</p>
+                    <p class="text-xl pl-4">• {{t('otomasyon-yenileme')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Boyraz Yem</b></h3>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('boyraz-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Aydın Adnan Menderes Üniversitesi</b></h3>
-                    <p class="text-2xl pl-2">• Güneş Enerji Santrali ADP, MCC Pano Ve Otomasyon Teslimi Proje</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('adu')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('adu-yazi')}}</p>
                 </div>
             </div>
 
-            <div class="row pt-10 px-6">
+            <div class="row pt-10 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/sek.png" alt="" style="height: 70%; width: 70%; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; border-radius: 25px">
                 </div>
@@ -201,24 +201,24 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Sek Süt</b></h3>
-                    <p class="text-xl pl-4">• ADP VE MCC Panoları imalatı ve Montaj</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('sek-sut')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('adp-mcc')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Diyarbakır Yem Sanayii</b></h3>
-                    <p class="text-xl pl-4">• Anahtar Teslim</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('diyarbakir-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Buryem</b></h3>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('buryem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-proje-kapsami')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Nuh Çimento</b></h3>
-                    <p class="text-2xl pl-2">• OYTS Seckiyat Sistemi Anahtar Teslim</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('nuh-cimento')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('oyts')}}</p>
                 </div>
             </div>
 
-            <div class="row pt-10 px-6">
+            <div class="row pt-10 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/basyem.png" alt="" style="height: 30%; width: 70%; margin-left: auto; margin-right: auto; margin-top: 20%; margin-bottom: 20%; border-radius: 15px">
                 </div>
@@ -234,25 +234,25 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Başmakçı Yem</b></h3>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası 20 ton/saat kapasiteli</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('basmakci-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim-20')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Gümüşdoğa Yem</b></h3>
-                    <p class="text-xl pl-4">• Anahtar Teslimi Yem Fabrikası 20 ton/saat kapasiteli</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('gumusdoga-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('anahtar-teslim-20')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Kılıç Yem</b></h3>
-                    <p class="text-xl pl-4">• MCC Panoları Modernizasyonu</p>
-                    <p class="text-xl pl-4">• Otomasyon Yenileme İşleri</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('kilic-yem')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('mcc-panolari-modernizasyon')}}</p>
+                    <p class="text-xl pl-4">• {{t('otomasyon-yenileme')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Çimentaş</b></h3>
-                    <p class="text-2xl pl-2">• Sistem Modernizasyon</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('cimentas')}}</b></h3>
+                    <p class="text-2xl pl-2">• {{t('sistem-modernizasyon')}}</p>
                 </div>
             </div>
 
-            <div class="row pt-10 px-6">
+            <div class="row pt-10 px-6 nomobile">
                 <div class="col-sm-3 text-center">
                     <img src="assets/images/site/agromey.png" alt="" style="height: 50%; width: 70%; margin-left: auto; margin-right: auto; margin-top: 10%; margin-bottom: 10%; border-radius: 25px">
                 </div>
@@ -266,12 +266,12 @@
             </div>
             <div class="row px-6">
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Agromey</b></h3>
-                    <p class="text-xl pl-4">• Modernizasyon Proje Kapsamı ve İlave Hatlar</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('agromey')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('modernizasyon-ilave-hatlar')}}</p>
                 </div>
                 <div class="col-sm-3">
-                    <h3 class="text-4xl font-extrabold tracking-tight"><b>Belenco</b></h3>
-                    <p class="text-xl pl-4">• MCC Panoları ve Aydınlatma Panoları İşleri</p>
+                    <h3 class="text-4xl font-extrabold tracking-tight"><b>{{t('belenco')}}</b></h3>
+                    <p class="text-xl pl-4">• {{t('mcc-panolari-modernizasyon')}}</p>
                 </div>
                 <div class="col-sm-3">
 

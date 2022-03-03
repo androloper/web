@@ -42,8 +42,8 @@ const routerConfig: ExtraOptions = {
         MarkdownModule.forRoot({})
     ],
     bootstrap   : [
-        AppComponent
-    ]
+        AppComponent,
+    ],
 })
 export class AppModule
 {

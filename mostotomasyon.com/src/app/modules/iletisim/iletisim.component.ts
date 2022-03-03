@@ -41,8 +41,7 @@ export class IletisimComponent implements OnInit {
             subject : this.supportForm.value.subject,
             message: this.supportForm.value.message,
         };
-       
-        // console.log('Your message has been sent!');
+
         this.alert = {
             type   : 'success',
             message: 'Mesajınız bize ulaşmıştır. En kısa zaman içerisinde tarafımızdan dönüş yapılacaktır.'

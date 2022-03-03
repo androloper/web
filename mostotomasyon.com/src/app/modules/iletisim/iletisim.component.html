@@ -1,4 +1,4 @@
-<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" *transloco="let t" cdkScrollable>
 
     <!-- Main -->
     <div class="flex-auto pt-5 px-5">
@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-6">
-                    <p class="text-7xl"><b>İletişim Bilgileri</b></p>
+                    <p class="text-7xl"><b>{{t('iletisim-bilgileri')}}</b></p>
                     <p class="text-2xl pl-2">• +90 232 459 01 09</p>
                     <p class="text-2xl pl-2">• info@mostotomasyon.com</p>
                     <p class="text-2xl pl-2">• Doğanlar Mah. 1411/4 Sk. No:3/B Bornova/İzmir</p>
@@ -38,9 +38,9 @@
                                     matInput
                                     [formControlName]="'name'"
                                     [required]="true">
-                                <mat-label>İsim</mat-label>
+                                <mat-label>{{t('isim')}}</mat-label>
                                 <mat-error *ngIf="supportForm.get('name').hasError('required')">
-                                    Doldurmanız Gerekmektedir.
+                                    {{t('doldurmaniz-gerekmektedir')}}
                                 </mat-error>
                             </mat-form-field>
                             <!-- Email -->
@@ -50,12 +50,12 @@
                                     matInput
                                     [formControlName]="'email'"
                                     [required]="true">
-                                <mat-label>Email</mat-label>
+                                <mat-label>{{t('email')}}</mat-label>
                                 <mat-error *ngIf="supportForm.get('email').hasError('required')">
-                                    Doldurmanız Gerekmektedir.
+                                    {{t('doldurmaniz-gerekmektedir')}}
                                 </mat-error>
                                 <mat-error *ngIf="supportForm.get('email').hasError('email')">
-                                    Lütfen geçerli bir mail adresi giriniz.
+                                    {{t('gecerli-mail')}}
                                 </mat-error>
                             </mat-form-field>
                             <!-- Subject -->
@@ -64,9 +64,9 @@
                                     matInput
                                     [formControlName]="'subject'"
                                     [required]="true">
-                                <mat-label>Konu</mat-label>
+                                <mat-label>{{t('konu')}}</mat-label>
                                 <mat-error *ngIf="supportForm.get('subject').hasError('required')">
-                                    Doldurmanız Gerekmektedir.
+                                    {{t('doldurmaniz-gerekmektedir')}}
                                 </mat-error>
                             </mat-form-field>
                             <!-- Message -->
@@ -77,9 +77,9 @@
                             [required]="true"
                             [rows]="5"
                             matTextareaAutosize></textarea>
-                                <mat-label>Mesaj</mat-label>
+                                <mat-label>{{t('mesaj')}}</mat-label>
                                 <mat-error *ngIf="supportForm.get('message').hasError('required')">
-                                    Doldurmanız Gerekmektedir.
+                                    {{t('doldurmaniz-gerekmektedir')}}
                                 </mat-error>
                             </mat-form-field>
                             <!-- Actions -->
@@ -89,7 +89,7 @@
                                     [color]="'accent'"
                                     [disabled]="supportForm.pristine || supportForm.untouched"
                                     (click)="clearForm()">
-                                    Temizle
+                                    {{t('temizle')}}
                                 </button>
                                 <button type="submit"
                                     class="ml-2"
@@ -97,7 +97,7 @@
                                     [color]="'primary'"
                                     [disabled]="supportForm.pristine || supportForm.invalid"
                                     (click)="sendForm()">
-                                    Gönder
+                                    {{t('gonder')}}
                                 </button>
                             </div>
                         </form>

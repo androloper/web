@@ -8,6 +8,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {CommonModule} from "@angular/common";
+import {TranslocoCoreModule} from "../../core/transloco/transloco.module";
 
 const iletisimRoutes: Route[] = [
     {
@@ -28,7 +29,8 @@ const iletisimRoutes: Route[] = [
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
-        CommonModule
+        CommonModule,
+        TranslocoCoreModule
     ]
 })
 export class IletisimModule

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { ProjelerComponent } from 'app/modules/projeler/projeler.component';
 import {CdkScrollableModule} from "@angular/cdk/scrolling";
+import {TranslocoCoreModule} from "../../core/transloco/transloco.module";
 
 const projelerRoutes: Route[] = [
     {
@@ -16,7 +17,8 @@ const projelerRoutes: Route[] = [
     ],
     imports: [
         RouterModule.forChild(projelerRoutes),
-        CdkScrollableModule
+        CdkScrollableModule,
+        TranslocoCoreModule
     ]
 })
 export class ProjelerModule

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-referanslar',
+  selector: 'referanslar',
   templateUrl: './referanslar.component.html',
   styleUrls: ['./referanslar.component.scss']
 })
