@@ -20,7 +20,6 @@ export const appRoutes: Route[] = [
             {path: 'projeler', loadChildren: () => import('app/modules/projeler/projeler.module').then(m => m.ProjelerModule)},
             {path: 'referanslar', loadChildren: () => import('app/modules/referanslar/referanslar.module').then(m => m.ReferanslarModule)},
             {path: 'iletisim', loadChildren: () => import('app/modules/iletisim/iletisim.module').then(m => m.IletisimModule)},
-            {path: 'example', loadChildren: () => import('app/modules/admin/example/example.module').then(m => m.ExampleModule)},
         ]
     }
 ];

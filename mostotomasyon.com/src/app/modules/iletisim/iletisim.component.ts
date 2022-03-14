@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import{ init,send } from '@emailjs/browser';
 
 
-
 @Component({
   selector: 'iletisim',
   templateUrl: './iletisim.component.html',
