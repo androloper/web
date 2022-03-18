@@ -1,0 +1,26 @@
+﻿Mobil Uygulama Gizlilik Politikası
+İşbu Gizlilik Politikasının amacı, Most Otomasyon Elektrik Elektronik San. Ve Tic. Ltd. Şti. (“Şirket”) tarafından işletilmekte olan www.mostotomasyon.com internet sitesinin (“Web Sitesi”), sunmuş olduğu hizmetlere (“Hizmet”) erişim sağlayan mobil uygulamanın (“Uygulama”), işletilmesi sırasında telefon veya tablet gibi mobil cihazlarla (“Cihaz”) hizmeti kullananlar (“Kullanıcı”) ve Şirket tarafından kendilerine sağlanan şifre ile Hizmet yetkisine sahip kullanıcılar (“Üye”) tarafından Şirket ile paylaşılan veya Şirket'in, Kullanıcı/Üye ’nin Uygulama’yı kullanımı sırasında ürettiği kişisel verilerin (“Kişisel Veri”) kullanımına ilişkin koşul ve şartları tespit etmektir.
+Kullanıcı Hizmetimizi kullanmayı tercih ederse, bu politikaya ilişkin bilgilerin toplanmasını ve kullanılmasını kabul eder. Topladığımız Kişisel Veriler Hizmeti sağlamak ve geliştirmek için kullanılır. Kişisel Veriler bu Gizlilik Politikasında açıklanan durumlar dışında kullanılamaz veya paylaşılamaz.
+
+
+Hizmeti Kullandığınızda Toplanan Veriler
+* Kullanıcı Adı
+* Şifre
+
+
+Kullanıcı Tarafından Girilen Veriler
+Sitedeki bazı hizmetlerimizi kullanan kullanıcıdan, kullanıcıyı tanımlamak ve kullanıcı ile iletişim kurmak için sadece
+* Kullanıcı Adı
+* Şifre
+bilgilerini verilen hizmet ile ilgili formlara girmesini talep ediyoruz. Bu bilgiler haricinde verilen hizmete göre isteğe bağlı bazı kişisel bilgiler de girilebilmektedir. Topladığımız bilgiler verilen hizmet ile ilgili kullanıcı ile iletişim kurmak için kullanılacaktır. Bu bilgiler kullanıcıya Uygulama’da verilen diğer hizmetlerle ilgili tanıtım ve bilgilendirme için de kullanılabilir.
+Hassas İzinlere Veya Verilere Erişim
+Uygulamanın cihaza kurulması esnasında kullanıcıdan aşağıdaki izinler istenmektedir:
+* Tam İnternet Erişimi (android.permission.INTERNET)
+
+
+Güvenlik
+Kişisel Veriler HTTPS protokolü aracılığıyla şifrelenerek Web Sitesine gönderilir. Ticari olarak kabul edilebilir bir koruma aracı kullanmak için çalışıyoruz. Ancak, internet üzerinden hiçbir aktarım yönteminin veya elektronik depolama yönteminin %100 güvenli ve güvenilir olmadığını ve mutlak güvenliğini garanti edemeyeceğimizi unutmayın.
+Bu Gizlilik Politikasındaki Değişiklikler
+Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Bu nedenle, herhangi bir değişiklik için periyodik olarak bu sayfayı gözden geçirmenizi tavsiye ederiz. Bu sayfada yeni Gizlilik Politikasını yayınlayarak herhangi bir değişikliği size bildireceğiz. Bu değişiklikler, bu sayfada yayınlandıktan hemen sonra yürürlüğe girer.
+Bizimle İletişime Geçin
+Gizlilik Politikamızla ilgili herhangi bir sorunuz veya öneriniz varsa, developer@mostotomasyon.com mail adresi üzerinden bizimle iletişime geçebilirsiniz.
