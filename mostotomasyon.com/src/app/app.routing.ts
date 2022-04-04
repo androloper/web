@@ -17,6 +17,7 @@ export const appRoutes: Route[] = [
         },
         children   : [
             {path: 'anasayfa', loadChildren: () => import('app/modules/ana-sayfa/ana-sayfa.module').then(m => m.AnaSayfaModule)},
+            {path: 'hakkimizda', loadChildren: () => import('app/modules/hakkimizda/hakkimizda.module').then(m => m.HakkimizdaModule)},
             {path: 'projeler', loadChildren: () => import('app/modules/projeler/projeler.module').then(m => m.ProjelerModule)},
             {path: 'referanslar', loadChildren: () => import('app/modules/referanslar/referanslar.module').then(m => m.ReferanslarModule)},
             {path: 'iletisim', loadChildren: () => import('app/modules/iletisim/iletisim.module').then(m => m.IletisimModule)},

@@ -164,6 +164,20 @@ export class LanguagesComponent implements OnInit, OnDestroy
                 });
         }
         // Get the Analytics dashboard item and update its title
+        const hakkimizda = this._fuseNavigationService.getItem('hakkimizda', navigation);
+        if ( hakkimizda )
+        {
+            this._translocoService.selectTranslate('hakkimizda').pipe(take(1))
+                .subscribe((translation) => {
+
+                    // Set the title
+                    hakkimizda.title = translation;
+
+                    // Refresh the navigation component
+                    navComponent.refresh();
+                });
+        }
+        // Get the Analytics dashboard item and update its title
         const projeler = this._fuseNavigationService.getItem('projeler', navigation);
         if ( projeler )
         {

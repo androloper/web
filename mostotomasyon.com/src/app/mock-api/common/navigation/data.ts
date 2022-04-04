@@ -10,6 +10,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/anasayfa'
     },
     {
+        id   : 'hakkimizda',
+        title: 'Hakkımızda',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/hakkimizda'
+    },
+    {
         id   : 'projeler',
         title: 'Projeler',
         type : 'basic',
@@ -38,6 +45,13 @@ export const compactNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'mat_outline:home',
         link : '/anasayfa'
+    },
+    {
+        id   : 'hakkimizda',
+        title: 'Hakkımızda',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/hakkimizda'
     },
     {
         id   : 'projeler',
@@ -70,6 +84,13 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         link : '/anasayfa'
     },
     {
+        id   : 'hakkimizda',
+        title: 'Hakkımızda',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/hakkimizda'
+    },
+    {
         id   : 'projeler',
         title: 'Projeler',
         type : 'basic',
@@ -98,6 +119,13 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'mat_outline:home',
         link : '/anasayfa'
+    },
+    {
+        id   : 'hakkimizda',
+        title: 'Hakkımızda',
+        type : 'basic',
+        icon : 'mat_outline:business',
+        link : '/hakkimizda'
     },
     {
         id   : 'projeler',
