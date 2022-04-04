@@ -27,7 +27,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'referanslar',
         title: 'Referanslar',
         type : 'basic',
-        icon : 'mat_outline:business',
+        icon : 'mat_outline:business_center',
         link : '/referanslar'
     },
     {
@@ -64,7 +64,7 @@ export const compactNavigation: FuseNavigationItem[] = [
         id   : 'referanslar',
         title: 'Referanslar',
         type : 'basic',
-        icon : 'mat_outline:business',
+        icon : 'mat_outline:business_center',
         link : '/referanslar'
     },
     {
@@ -101,7 +101,7 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         id   : 'referanslar',
         title: 'Referanslar',
         type : 'basic',
-        icon : 'mat_outline:business',
+        icon : 'mat_outline:business_center',
         link : '/referanslar'
     },
     {
@@ -138,7 +138,7 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         id   : 'referanslar',
         title: 'Referanslar',
         type : 'basic',
-        icon : 'mat_outline:business',
+        icon : 'mat_outline:business_center',
         link : '/referanslar'
     },
     {
