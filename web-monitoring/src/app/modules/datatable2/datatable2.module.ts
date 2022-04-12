@@ -5,7 +5,11 @@ import {MatTableModule} from '@angular/material/table';
 import {FuseCardModule} from '../../../@fuse/components/card';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {GridModule, GroupService} from '@syncfusion/ej2-angular-grids';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {CommonModule} from '@angular/common';
+import {ReactiveFormsModule} from "@angular/forms";
 
 const datatable2Routes: Route[] = [
     {
@@ -24,9 +28,12 @@ const datatable2Routes: Route[] = [
         FuseCardModule,
         MatSortModule,
         MatPaginatorModule,
-        GridModule
+        MatIconModule,
+        MatMenuModule,
+        MatButtonModule,
+        CommonModule,
+        ReactiveFormsModule
     ],
-    providers: [GroupService]
 })
 export class Datatable2Module
 {

@@ -1,8 +1,6 @@
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
-#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
-
 
 # Compiled Java class files
 *.class
@@ -137,7 +135,6 @@ app.*.symbols
 /dev/integration_tests/**/xcuserdata
 /dev/integration_tests/**/Pods
 /packages/flutter/coverage/
-version
 analysis_benchmark.json
 .packages.generated
 .classpath
@@ -191,6 +188,7 @@ bower_components
 build/Release
 
 # Dependency directories
+.angular/
 node_modules/
 dist/
 jspm_packages/

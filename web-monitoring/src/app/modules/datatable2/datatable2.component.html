@@ -14,6 +14,41 @@
         </div>
     </div>
     <div class="rounded-2xl p-6 sm:p-8 lg:p-10" style="width: 100%; height: 100%">
+        <mat-table [dataSource]="dataSource">
+
+            <ng-container *ngFor="let column of columns; let i = index" matColumnDef="{{ column.field }}">
+                <mat-header-cell *matHeaderCellDef>
+                    {{ column.field }}
+                    <button class="grid-view-header-menu"
+                            mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon color="primary">filter_alt</mat-icon>
+                    </button>
+                    <mat-menu #menu>
+                        <button mat-menu-item (click)="groupBy($event, column);">Group By</button>
+                        <button mat-menu-item (click)="unGroupBy($event, column);">Ungroup</button>
+                    </mat-menu>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row[column.field] }}</mat-cell>
+            </ng-container>
+
+            <mat-header-row mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+            <!-- Group header -->
+            <ng-container matColumnDef="groupHeader">
+                <mat-cell *matCellDef="let group">
+                    <strong>{{groupByColumns[group.level-1]}}: {{group[groupByColumns[group.level-1]]}} ({{group.totalCounts}})</strong>
+                    <mat-icon *ngIf="group.expanded">expand_less</mat-icon>
+                    <mat-icon *ngIf="!group.expanded">expand_more</mat-icon>
+                </mat-cell>
+            </ng-container>
+
+            <mat-row *matRowDef="let row; columns: ['groupHeader']; when: isGroup" (click)="groupHeaderClick(row)" style="margin-left: 8px"></mat-row>
+        </mat-table>
+        <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]"
+                       showFirstLastButtons
+                       aria-label="">
+        </mat-paginator>
 
     </div>
 </div>
