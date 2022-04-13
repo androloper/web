@@ -679,6 +679,9 @@ $datatable-summary-row-background-hover: #ddd !default;
     .datatable-header {
         border-bottom: 1px solid $datatable-header-border-bottom-color;
 
+        .datatable-header-inner {
+            width: 100% !important;
+        }
         .datatable-header-cell {
             text-align: left;
             padding: 0.9rem 1.2rem;
@@ -687,7 +690,6 @@ $datatable-summary-row-background-hover: #ddd !default;
             color: $datatable-header-cell-color;
             vertical-align: bottom;
             font-size: 12px;
-            font-weight: 500;
 
             .datatable-header-cell-wrapper {
                 position: relative;
@@ -960,4 +962,10 @@ $datatable-summary-row-background-hover: #ddd !default;
         opacity: 0;
         transform: translateX(-50%) scale(0, 1);
     }
+}
+
+.red-input {
+    //accent-color: #9d3039;
+    //height: 30px;
+    //width: 30px;
 }

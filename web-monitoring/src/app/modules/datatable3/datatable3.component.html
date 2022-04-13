@@ -16,26 +16,68 @@
     <div class="rounded-2xl p-6 sm:p-6 lg:p-6" style="width: 100%; height: 100%">
         <div class="row">
             <div class="col-sm-9">
-                <ngx-datatable style="width: 80%"
-                    class="material table table-striped whitespace-nowrap single-selection pt-5 pl-10 pr-10"
+<!--                <ngx-datatable class="material table table-striped single-selection whitespace-nowrap pt-5 pl-5"-->
+<!--                               [rows]="rows"-->
+<!--                               [columnMode]="columnMode.force"-->
+<!--                               [headerHeight]="60"-->
+<!--                               rowHeight="50">-->
+<!--                    <ngx-datatable-column name="Name">-->
+<!--                        <ng-template let-column="column" ngx-datatable-header-template>{{column.name}}</ng-template>-->
+<!--                        <ng-template let-value="value" ngx-datatable-cell-template>-->
+<!--                            {{value}}-->
+<!--                        </ng-template>-->
+<!--                    </ngx-datatable-column>-->
+<!--                    <ngx-datatable-column name="Gender">-->
+<!--                        <ng-template let-column="column" ngx-datatable-header-template>{{ column.name }}</ng-template>-->
+<!--                        <ng-template let-value="value" ngx-datatable-cell-template>-->
+<!--                            {{value}}-->
+<!--                        </ng-template>-->
+<!--                    </ngx-datatable-column>-->
+<!--                    <ngx-datatable-column name="Company">-->
+<!--                        <ng-template let-column="column" ngx-datatable-header-template>{{ column.name }}</ng-template>-->
+<!--                        <ng-template let-value="value" ngx-datatable-cell-template>-->
+<!--                            {{value}}-->
+<!--                        </ng-template>-->
+<!--                    </ngx-datatable-column>-->
+<!--                    <ngx-datatable-column name="Name2">-->
+<!--                        <ng-template let-column="column" ngx-datatable-header-template>{{ column.name }}</ng-template>-->
+<!--                        <ng-template let-value="value" ngx-datatable-cell-template>-->
+<!--                            {{value}}-->
+<!--                        </ng-template>-->
+<!--                    </ngx-datatable-column>-->
+<!--                    <ngx-datatable-column name="Gender2">-->
+<!--                        <ng-template let-column="column" ngx-datatable-header-template>{{ column.name }}</ng-template>-->
+<!--                        <ng-template let-value="value" ngx-datatable-cell-template>-->
+<!--                            {{value}}-->
+<!--                        </ng-template>-->
+<!--                    </ngx-datatable-column>-->
+<!--                    <ngx-datatable-column name="Company2">-->
+<!--                        <ng-template let-column="column" ngx-datatable-header-template>{{ column.name }}</ng-template>-->
+<!--                        <ng-template let-value="value" ngx-datatable-cell-template>-->
+<!--                            {{value}}-->
+<!--                        </ng-template>-->
+<!--                    </ngx-datatable-column>-->
+<!--                </ngx-datatable>-->
+                <ngx-datatable style="width: 90%"
+                    class="material whitespace-nowrap single-selection pt-2"
+                    [loadingIndicator]="loadingIndicator"
                     [rows]="rows"
                     [columnMode]="columnMode.force"
-                    [headerHeight]="60"
-                    rowHeight="50"
-                >
+                    [headerHeight]="50"
+                    rowHeight="60">
                     <ngx-datatable-column *ngFor="let col of columns" [name]="col.name.toUpperCase()"></ngx-datatable-column>
                 </ngx-datatable>
             </div>
             <div class="selected-column col-sm-3">
                 <div>
-                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate pt-4">
+                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate pt-3">
                         Available Columns</h1>
                 </div>
                 <mat-divider></mat-divider>
                 <ul>
                     <li *ngFor="let col of allColumns">
                         <input type="checkbox" [id]="col.name" (click)="toggle(col)" [checked]="isChecked(col)"/>
-                        <label>{{ col.name }}</label>
+                        <label class="pl-2">{{ col.name }}</label>
                     </li>
                 </ul>
             </div>
