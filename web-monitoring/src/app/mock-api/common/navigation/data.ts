@@ -16,6 +16,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:chart-pie',
         link : '/datatable2'
     },
+    {
+        id   : 'datatable3',
+        title: 'Datatable3',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/datatable3'
+    },
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
@@ -31,6 +38,13 @@ export const compactNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/datatable2'
+    },
+    {
+        id   : 'datatable3',
+        title: 'Datatable3',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/datatable3'
     },
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
@@ -48,6 +62,13 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:chart-pie',
         link : '/datatable2'
     },
+    {
+        id   : 'datatable3',
+        title: 'Datatable3',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/datatable3'
+    },
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
     {
@@ -63,5 +84,12 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/datatable2'
+    },
+    {
+        id   : 'datatable3',
+        title: 'Datatable3',
+        type : 'basic',
+        icon : 'heroicons_outline:chart-pie',
+        link : '/datatable3'
     },
 ];
