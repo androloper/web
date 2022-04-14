@@ -964,8 +964,12 @@ $datatable-summary-row-background-hover: #ddd !default;
     }
 }
 
-.red-input {
-    //accent-color: #9d3039;
-    //height: 30px;
-    //width: 30px;
+.color-input {
+    accent-color: #3a2a6d;
+    height: 20px;
+    width: 20px;
+}
+[type="checkbox"]
+{
+    vertical-align:middle;
 }

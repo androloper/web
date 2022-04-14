@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { Datatable3Component } from 'app/modules/datatable3/datatable3.component';
+import { Datatable4Component } from 'app/modules/datatable4/datatable4.component';
 import {MatTableModule} from '@angular/material/table';
 import {FuseCardModule} from '../../../@fuse/components/card';
 import {MatSortModule} from '@angular/material/sort';
@@ -9,19 +9,19 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {CommonModule} from '@angular/common';
 import {MatDividerModule} from '@angular/material/divider';
 
-const datatable3Routes: Route[] = [
+const datatable4Routes: Route[] = [
     {
-        path     : 'datatable3',
-        component: Datatable3Component
+        path     : 'datatable4',
+        component: Datatable4Component
     }
 ];
 
 @NgModule({
     declarations: [
-        Datatable3Component
+        Datatable4Component
     ],
     imports: [
-        RouterModule.forChild(datatable3Routes),
+        RouterModule.forChild(datatable4Routes),
         MatTableModule,
         FuseCardModule,
         MatSortModule,
@@ -31,6 +31,6 @@ const datatable3Routes: Route[] = [
         MatDividerModule,
     ]
 })
-export class Datatable3Module
+export class Datatable4Module
 {
 }
