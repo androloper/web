@@ -47,6 +47,7 @@
                         },
                         "styles": [
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/devextreme/dist/css/dx.light.css",
                             "src/@fuse/styles/tailwind.scss",
                             "src/@fuse/styles/themes.scss",
                             "src/styles/vendors.scss",
@@ -125,6 +126,7 @@
                         ],
                         "styles": [
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/devextreme/dist/css/dx.light.css",
                             "src/styles/styles.scss"
                         ],
                         "scripts": [

@@ -1,8 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
-import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {MatSort, Sort} from '@angular/material/sort';
-import {MatPaginator} from '@angular/material/paginator';
+import {Component, OnInit} from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 
 
