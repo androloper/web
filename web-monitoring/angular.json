@@ -56,10 +56,13 @@
                             "src/styles/vendors.scss",
                             "src/@fuse/styles/main.scss",
                             "src/styles/styles.scss",
-                            "src/styles/tailwind.scss"
+                            "src/styles/tailwind.scss",
+                            "node_modules/datatables.net-dt/css/jquery.dataTables.css"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/jquery/dist/jquery.js",
+                            "node_modules/datatables.net/js/jquery.dataTables.js",
                             "node_modules/bootstrap/dist/js/bootstrap.min.js"
                         ]
                     },

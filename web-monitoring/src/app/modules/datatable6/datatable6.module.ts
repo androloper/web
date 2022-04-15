@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import { Datatable6Component } from 'app/modules/datatable6/datatable6.component';
 import {CommonModule} from '@angular/common';
-import {TableModule} from "primeng/table";
-import {MatSortModule} from "@angular/material/sort";
+import {TableModule} from 'primeng/table';
+import {MatSortModule} from '@angular/material/sort';
 
 const datatable6Routes: Route[] = [
     {
