@@ -1,0 +1,41 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div class="bg-card">
+        <div class="flex flex-col w-full mx-auto px-6 sm:px-8">
+            <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
+                <div class="flex items-center justify-between w-full">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                            Datatable6</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%; height: 100%">
+        <p-table *ngIf="flights" [value]="flights"   [paginator]="true"
+                 [rows]="10" [showCurrentPageReport]="true"
+                 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[5,10,20]">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Flight Number</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Depart Day</th>
+                    <th>Price ($)</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-flight>
+                <tr>
+                    <td>{{flight.flightNumber}}</td>
+                    <td>{{flight.origin}}</td>
+                    <td>{{flight.destination}}</td>
+                    <td>{{flight.departDay}}</td>
+                    <td>{{flight.price}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

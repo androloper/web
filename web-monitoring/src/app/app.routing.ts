@@ -65,6 +65,7 @@ export const appRoutes: Route[] = [
             {path: '', loadChildren: () => import('app/modules/datatable3/datatable3.module').then(m => m.Datatable3Module)},
             {path: '', loadChildren: () => import('app/modules/datatable4/datatable4.module').then(m => m.Datatable4Module)},
             {path: '', loadChildren: () => import('app/modules/datatable5/datatable5.module').then(m => m.Datatable5Module)},
+            {path: '', loadChildren: () => import('app/modules/datatable6/datatable6.module').then(m => m.Datatable6Module)},
         ]
     },
 
