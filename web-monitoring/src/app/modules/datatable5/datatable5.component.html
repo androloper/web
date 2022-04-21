@@ -14,6 +14,8 @@
         </div>
     </div>
     <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%; height: 100%">
+<!--        <dx-button  width="50" height="50" (onClick)="exportGrid()">-->
+<!--        </dx-button>-->
         <dx-data-grid
             id="gridContainer"
             [dataSource]="customers"
@@ -23,10 +25,29 @@
             <dxi-column dataField="CompanyName"></dxi-column>
             <dxi-column dataField="Phone"></dxi-column>
             <dxi-column dataField="Fax"></dxi-column>
+            <dxi-column dataField="Zipcode" [alignment]="'left'"></dxi-column>
             <dxi-column dataField="City" ></dxi-column>
             <dxi-column dataField="State" [groupIndex]="0"></dxi-column>
 <!--            <dxi-column dataField="State"></dxi-column>-->
 
+            <dxo-summary>
+                <dxi-total-item
+                    column="Zipcode"
+                    summaryType="sum">
+<!--                    summaryType="max"-->
+<!--                    summaryType="avg"-->
+<!--                    summaryType="sum"-->
+<!--                    summaryType="count"-->
+<!--                >-->
+                </dxi-total-item>
+<!--                <dxi-total-item-->
+<!--                    column="Id"-->
+<!--                    showInColumn="City"-->
+<!--                    summaryType="sum">-->
+<!--                </dxi-total-item>-->
+            </dxo-summary>
+            <dxo-selection [allowSelectAll]="true"></dxo-selection>
+            <dxo-export [enabled]="true" [fileName]="'datatable5'" ></dxo-export>
             <dxo-search-panel width="300" [visible]="true"></dxo-search-panel>
             <dxo-paging [pageSize]="10"></dxo-paging>
             <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>

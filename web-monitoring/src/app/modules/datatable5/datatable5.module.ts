@@ -3,7 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 import { Datatable5Component } from 'app/modules/datatable5/datatable5.component';
 import {CommonModule} from '@angular/common';
 import {MatDividerModule} from '@angular/material/divider';
-import {DxCheckBoxModule, DxDataGridModule} from 'devextreme-angular';
+import {DxDataGridModule, DxTemplateModule} from 'devextreme-angular';
 
 const datatable5Routes: Route[] = [
     {
@@ -21,7 +21,7 @@ const datatable5Routes: Route[] = [
         CommonModule,
         MatDividerModule,
         DxDataGridModule,
-        DxCheckBoxModule,
+        DxTemplateModule,
     ],
 })
 export class Datatable5Module

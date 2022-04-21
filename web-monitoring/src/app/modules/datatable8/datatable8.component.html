@@ -1,0 +1,37 @@
+<div class="flex flex-col flex-auto min-w-0">
+    <!-- Header -->
+    <div class="bg-card">
+        <div class="flex flex-col w-full mx-auto px-6 sm:px-8">
+            <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
+                <div class="flex items-center justify-between w-full">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                            Datatable8</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%; height: 100%">
+        <dx-data-grid
+            id="gridContainer"
+            [dataSource]="employees"
+            keyExpr="ID"
+            [showBorders]="true"
+        >
+            <dxi-column dataField="Prefix" [width]="70" caption="Title"></dxi-column>
+            <dxi-column dataField="FirstName"></dxi-column>
+            <dxi-column dataField="LastName"></dxi-column>
+            <dxi-column dataField="Position" [width]="170"></dxi-column>
+            <dxi-column dataField="State" [width]="125"></dxi-column>
+            <dxi-column dataField="BirthDate" dataType="date"></dxi-column>
+            <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+            <div *dxTemplate="let employee of 'detail'">
+                <div class="master-detail-caption">{{
+                    employee.data.FirstName + " " + employee.data.LastName + "'s Tasks:"
+                    }}</div>
+                <detail-grid [key]="employee.key"></detail-grid>
+            </div>
+        </dx-data-grid>
+    </div>
+</div>
