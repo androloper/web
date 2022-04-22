@@ -12,11 +12,11 @@
             </div>
         </div>
     </div>
-    <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%; height: 100%">
+    <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%;">
         <dx-data-grid
             id="gridContainer"
-            height="565"
             [dataSource]="employees"
+            height="100%"
             keyExpr="ID"
             [showBorders]="true"
         >
@@ -24,7 +24,7 @@
             <dxi-column dataField="FirstName"></dxi-column>
             <dxi-column dataField="LastName"></dxi-column>
             <dxi-column dataField="Position"></dxi-column>
-            <dxi-column dataField="State" [width]="170"></dxi-column>
+            <dxi-column dataField="State" [width]="200"></dxi-column>
             <dxi-column dataField="BirthDate" dataType="date" [width]="130"></dxi-column>
             <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
             <div *dxTemplate="let employee of 'detail'">
@@ -35,15 +35,17 @@
             </div>
             <dxo-toolbar>
                 <dxi-item name="groupPanel"></dxi-item>
-                <dxi-item location="after">
+                <dxi-item location="after" style="padding-right:15px">
                     <dx-button
                         icon="pdffile"
+                        [width]="50"
                         (onClick)="exportPDF()">
                     </dx-button>
                 </dxi-item>
                 <dxi-item location="after">
                     <dx-button
                         icon="xlsxfile"
+                        [width]="50"
                         (onClick)="exportExcel()">
                     </dx-button>
                 </dxi-item>
@@ -53,12 +55,12 @@
                 <dxi-total-item
                     column="BirthDate"
                     summaryType="count">
-<!--                    summaryType="min"-->
-<!--                    summaryType="max"-->
-<!--                    summaryType="avg"-->
-<!--                    summaryType="sum"-->
-<!--                    summaryType="count"-->
-<!--                >-->
+                    <!--                    summaryType="min"-->
+                    <!--                    summaryType="max"-->
+                    <!--                    summaryType="avg"-->
+                    <!--                    summaryType="sum"-->
+                    <!--                    summaryType="count"-->
+                    <!--                >-->
                 </dxi-total-item>
                 <dxi-total-item
                     column="BirthDate"
@@ -68,14 +70,14 @@
                     column="BirthDate"
                     summaryType="max">
                 </dxi-total-item>
-<!--                <dxi-total-item-->
-<!--                    column="BirthDate"-->
-<!--                    summaryType="avg">-->
-<!--                </dxi-total-item>-->
-<!--                <dxi-total-item-->
-<!--                    column="BirthDate"-->
-<!--                    summaryType="sum">-->
-<!--                </dxi-total-item>-->
+                <!--                <dxi-total-item-->
+                <!--                    column="BirthDate"-->
+                <!--                    summaryType="avg">-->
+                <!--                </dxi-total-item>-->
+                <!--                <dxi-total-item-->
+                <!--                    column="BirthDate"-->
+                <!--                    summaryType="sum">-->
+                <!--                </dxi-total-item>-->
                 <!--                <dxi-total-item-->
                 <!--                    column="Id"-->
                 <!--                    showInColumn="City"-->
@@ -84,9 +86,9 @@
             </dxo-summary>
             <dxo-selection [allowSelectAll]="true"></dxo-selection>
             <dxo-export [enabled]="true" [fileName]="'datatable5'"  ></dxo-export>
-            <dxo-search-panel width="300" [visible]="true"></dxo-search-panel>
+            <dxo-search-panel [visible]="true"></dxo-search-panel>
             <dxo-paging [pageSize]="10"></dxo-paging>
-            <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
+            <dxo-pager [showPageSizeSelector]="true" [visible]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
             <dxo-group-panel [visible]="true"></dxo-group-panel>
         </dx-data-grid>
     </div>
