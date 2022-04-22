@@ -20,6 +20,9 @@
         "paths": {
             "jszip": [
                 "node_modules/jszip/dist/jszip.min.js"
+            ],
+            "exceljs": [
+                "node_modules/exceljs/dist/exceljs.min"
             ]
         }
     },

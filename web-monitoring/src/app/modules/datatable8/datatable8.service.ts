@@ -139,7 +139,7 @@ const employees: Employee[] = [{
         FirstName: 'Rick',
         LastName: 'Croos',
         Position: 'CTO',
-        State: 'Michigan',
+        State: 'Padova',
         BirthDate: '1997/03/10',
     }];
 

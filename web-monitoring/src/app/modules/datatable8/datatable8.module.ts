@@ -4,7 +4,7 @@ import { Datatable8Component } from 'app/modules/datatable8/datatable8.component
 import {CommonModule} from '@angular/common';
 import {DataTablesModule} from 'angular-datatables';
 import {DetailGridComponent} from './detail-grid/detail-grid.component';
-import {DxDataGridModule} from "devextreme-angular";
+import {DxButtonModule, DxDataGridModule, DxSankeyModule} from "devextreme-angular";
 
 const datatable8Routes: Route[] = [
     {
@@ -23,6 +23,8 @@ const datatable8Routes: Route[] = [
         CommonModule,
         DataTablesModule,
         DxDataGridModule,
+        DxSankeyModule,
+        DxButtonModule,
     ]
 })
 export class Datatable8Module

@@ -15,7 +15,7 @@
     <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%; height: 100%">
         <dx-data-grid
             id="gridContainer"
-            height="480"
+            height="565"
             [dataSource]="employees"
             keyExpr="ID"
             [showBorders]="true"
@@ -33,8 +33,57 @@
                     }}</div>
                 <detail-grid [key]="employee.key"></detail-grid>
             </div>
+            <dxo-toolbar>
+                <dxi-item name="groupPanel"></dxi-item>
+                <dxi-item location="after">
+                    <dx-button
+                        icon="pdffile"
+                        (onClick)="exportPDF()">
+                    </dx-button>
+                </dxi-item>
+                <dxi-item location="after">
+                    <dx-button
+                        icon="xlsxfile"
+                        (onClick)="exportExcel()">
+                    </dx-button>
+                </dxi-item>
+                <dxi-item name="searchPanel"></dxi-item>
+            </dxo-toolbar>
+            <dxo-summary>
+                <dxi-total-item
+                    column="BirthDate"
+                    summaryType="count">
+<!--                    summaryType="min"-->
+<!--                    summaryType="max"-->
+<!--                    summaryType="avg"-->
+<!--                    summaryType="sum"-->
+<!--                    summaryType="count"-->
+<!--                >-->
+                </dxi-total-item>
+                <dxi-total-item
+                    column="BirthDate"
+                    summaryType="min">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="BirthDate"
+                    summaryType="max">
+                </dxi-total-item>
+<!--                <dxi-total-item-->
+<!--                    column="BirthDate"-->
+<!--                    summaryType="avg">-->
+<!--                </dxi-total-item>-->
+<!--                <dxi-total-item-->
+<!--                    column="BirthDate"-->
+<!--                    summaryType="sum">-->
+<!--                </dxi-total-item>-->
+                <!--                <dxi-total-item-->
+                <!--                    column="Id"-->
+                <!--                    showInColumn="City"-->
+                <!--                    summaryType="sum">-->
+                <!--                </dxi-total-item>-->
+            </dxo-summary>
             <dxo-selection [allowSelectAll]="true"></dxo-selection>
-            <dxo-export [enabled]="true" [fileName]="'datatable5'" ></dxo-export>
+            <dxo-export [enabled]="true" [fileName]="'datatable5'"  ></dxo-export>
             <dxo-search-panel width="300" [visible]="true"></dxo-search-panel>
             <dxo-paging [pageSize]="10"></dxo-paging>
             <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
