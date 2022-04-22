@@ -1,17 +1,80 @@
-<dx-data-grid
-  id="gridContainer"
-  [dataSource]="customers"
-  keyExpr="ID"
-  [allowColumnReordering]="true"
-  [showBorders]="true">
-  <dxi-column dataField="CompanyName"></dxi-column>
-  <dxi-column dataField="Phone"></dxi-column>
-  <dxi-column dataField="Fax"></dxi-column>
-  <dxi-column dataField="City"></dxi-column>
-  <dxi-column dataField="State" [groupIndex]="0"></dxi-column>
-
-  <dxo-search-panel [visible]="true"></dxo-search-panel>
-  <dxo-paging [pageSize]="10"></dxo-paging>
-  <dxo-group-panel [visible]="true"></dxo-group-panel>
-<!--  <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>-->
+<div style="padding:32px;">
+<dx-data-grid 
+id="gridContainer"
+[dataSource]="employees"
+height="100%"
+keyExpr="ID"
+[showBorders]="true"
+>
+<dxi-column dataField="Prefix" caption="Title" [width]="70"></dxi-column>
+<dxi-column dataField="FirstName"></dxi-column>
+<dxi-column dataField="LastName"></dxi-column>
+<dxi-column dataField="Position"></dxi-column>
+<dxi-column dataField="State" [width]="200"></dxi-column>
+<dxi-column dataField="BirthDate" dataType="date" [width]="130"></dxi-column>
+<dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+<div *dxTemplate="let employee of 'detail'">
+    <div class="master-detail-caption">{{
+        employee.data.FirstName + " " + employee.data.LastName + "'s Tasks:"
+        }}</div>
+    <detail-grid [key]="employee.key"></detail-grid>
+</div>
+<dxo-toolbar>
+    <dxi-item name="groupPanel"></dxi-item>
+    <dxi-item location="after" style="padding-right:15px">
+        <dx-button
+            icon="pdffile"
+            [width]="50"
+            (onClick)="exportPDF()">
+        </dx-button>
+    </dxi-item>
+    <dxi-item location="after">
+        <dx-button 
+            icon="xlsxfile"
+            [width]="50"
+            (onClick)="exportExcel()">
+        </dx-button>
+    </dxi-item>
+    <dxi-item name="searchPanel"></dxi-item>
+</dxo-toolbar>
+<dxo-summary>
+    <dxi-total-item
+        column="BirthDate"
+        summaryType="count">
+<!--                    summaryType="min"-->
+<!--                    summaryType="max"-->
+<!--                    summaryType="avg"-->
+<!--                    summaryType="sum"-->
+<!--                    summaryType="count"-->
+<!--                >-->
+    </dxi-total-item>
+    <dxi-total-item
+        column="BirthDate"
+        summaryType="min">
+    </dxi-total-item>
+    <dxi-total-item
+        column="BirthDate"
+        summaryType="max">
+    </dxi-total-item>
+<!--                <dxi-total-item-->
+<!--                    column="BirthDate"-->
+<!--                    summaryType="avg">-->
+<!--                </dxi-total-item>-->
+<!--                <dxi-total-item-->
+<!--                    column="BirthDate"-->
+<!--                    summaryType="sum">-->
+<!--                </dxi-total-item>-->
+    <!--                <dxi-total-item-->
+    <!--                    column="Id"-->
+    <!--                    showInColumn="City"-->
+    <!--                    summaryType="sum">-->
+    <!--                </dxi-total-item>-->
+</dxo-summary>
+<dxo-selection [allowSelectAll]="true"></dxo-selection>
+<dxo-export [enabled]="true" [fileName]="'datatable5'"  ></dxo-export>
+<dxo-search-panel [visible]="true"></dxo-search-panel>
+<dxo-paging [pageSize]="10"></dxo-paging>
+<dxo-pager [showPageSizeSelector]="true" [visible]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
+<dxo-group-panel [visible]="true"></dxo-group-panel>
 </dx-data-grid>
+</div>
