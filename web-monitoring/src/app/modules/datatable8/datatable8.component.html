@@ -15,16 +15,17 @@
     <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%; height: 100%">
         <dx-data-grid
             id="gridContainer"
+            height="480"
             [dataSource]="employees"
             keyExpr="ID"
             [showBorders]="true"
         >
-            <dxi-column dataField="Prefix" [width]="70" caption="Title"></dxi-column>
+            <dxi-column dataField="Prefix" caption="Title" [width]="70"></dxi-column>
             <dxi-column dataField="FirstName"></dxi-column>
             <dxi-column dataField="LastName"></dxi-column>
-            <dxi-column dataField="Position" [width]="170"></dxi-column>
-            <dxi-column dataField="State" [width]="125"></dxi-column>
-            <dxi-column dataField="BirthDate" dataType="date"></dxi-column>
+            <dxi-column dataField="Position"></dxi-column>
+            <dxi-column dataField="State" [width]="170"></dxi-column>
+            <dxi-column dataField="BirthDate" dataType="date" [width]="130"></dxi-column>
             <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
             <div *dxTemplate="let employee of 'detail'">
                 <div class="master-detail-caption">{{
@@ -32,6 +33,12 @@
                     }}</div>
                 <detail-grid [key]="employee.key"></detail-grid>
             </div>
+            <dxo-selection [allowSelectAll]="true"></dxo-selection>
+            <dxo-export [enabled]="true" [fileName]="'datatable5'" ></dxo-export>
+            <dxo-search-panel width="300" [visible]="true"></dxo-search-panel>
+            <dxo-paging [pageSize]="10"></dxo-paging>
+            <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
+            <dxo-group-panel [visible]="true"></dxo-group-panel>
         </dx-data-grid>
     </div>
 </div>

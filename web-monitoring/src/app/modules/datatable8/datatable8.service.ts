@@ -114,6 +114,33 @@ const employees: Employee[] = [{
         Position: 'Ombudsman',
         State: 'Missouri',
         BirthDate: '1972/09/11',
+    },
+    {
+        ID: 10,
+        Prefix: 'Dr.',
+        FirstName: 'Richard',
+        LastName: 'Samuelson',
+        Position: 'Ombudsman',
+        State: 'Missouri',
+        BirthDate: '1972/09/11',
+    },
+    {
+        ID: 11,
+        Prefix: 'Dr.',
+        FirstName: 'Kobe',
+        LastName: 'Samuelson',
+        Position: 'Ombudsman',
+        State: 'California',
+        BirthDate: '1972/09/11',
+    },
+    {
+        ID: 12,
+        Prefix: 'Mr.',
+        FirstName: 'Rick',
+        LastName: 'Croos',
+        Position: 'CTO',
+        State: 'Michigan',
+        BirthDate: '1997/03/10',
     }];
 
 const tasks: TaskServ[] = [{
@@ -434,7 +461,7 @@ const tasks: TaskServ[] = [{
         Status: 'Completed',
         Priority: 'Normal',
         Completion: 100,
-        EmployeeID: 3,
+        EmployeeID: 9,
     },
     {
         ID: 81,
@@ -454,7 +481,7 @@ const tasks: TaskServ[] = [{
         Status: 'Completed',
         Priority: 'High',
         Completion: 100,
-        EmployeeID: 8,
+        EmployeeID: 12,
     },
     {
         ID: 117,
@@ -464,7 +491,7 @@ const tasks: TaskServ[] = [{
         Status: 'Deferred',
         Priority: 'Normal',
         Completion: 75,
-        EmployeeID: 3,
+        EmployeeID:12,
     },
     {
         ID: 138,
@@ -474,7 +501,7 @@ const tasks: TaskServ[] = [{
         Status: 'In Progress',
         Priority: 'Normal',
         Completion: 40,
-        EmployeeID: 6,
+        EmployeeID: 11,
     },
     {
         ID: 145,
@@ -484,7 +511,7 @@ const tasks: TaskServ[] = [{
         Status: 'In Progress',
         Priority: 'High',
         Completion: 25,
-        EmployeeID: 6,
+        EmployeeID: 10,
     }];
 
 @Injectable()
