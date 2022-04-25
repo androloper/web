@@ -18,8 +18,7 @@
             [dataSource]="employees"
             height="100%"
             keyExpr="ID"
-            [showBorders]="true"
-        >
+            [showBorders]="true">
             <dxi-column dataField="Prefix" caption="Title" [width]="70"></dxi-column>
             <dxi-column dataField="FirstName"></dxi-column>
             <dxi-column dataField="LastName"></dxi-column>
@@ -38,6 +37,7 @@
                 <dxi-item location="after" style="padding-right:15px">
                     <dx-button
                         icon="pdffile"
+                        style="background-color: #f00; border-color: #999"
                         [width]="50"
                         (onClick)="exportPDF()">
                     </dx-button>
@@ -45,6 +45,7 @@
                 <dxi-item location="after">
                     <dx-button
                         icon="xlsxfile"
+                        style="background-color: #279C02; border-color: #999;"
                         [width]="50"
                         (onClick)="exportExcel()">
                     </dx-button>
@@ -55,12 +56,7 @@
                 <dxi-total-item
                     column="BirthDate"
                     summaryType="count">
-                    <!--                    summaryType="min"-->
-                    <!--                    summaryType="max"-->
-                    <!--                    summaryType="avg"-->
-                    <!--                    summaryType="sum"-->
-                    <!--                    summaryType="count"-->
-                    <!--                >-->
+                    <!--                summaryType="min-max-avg-sum-count"-->
                 </dxi-total-item>
                 <dxi-total-item
                     column="BirthDate"
