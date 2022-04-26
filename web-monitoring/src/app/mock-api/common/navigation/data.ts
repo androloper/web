@@ -58,6 +58,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'mat_solid:view_list',
         link : '/datatable8'
     },
+    {
+        id   : 'datatable9',
+        title: 'Datatable9',
+        type : 'basic',
+        icon : 'mat_solid:view_list',
+        link : '/datatable9'
+    },
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
@@ -115,6 +122,13 @@ export const compactNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'mat_solid:view_list',
         link : '/datatable8'
+    },
+    {
+        id   : 'datatable9',
+        title: 'Datatable9',
+        type : 'basic',
+        icon : 'mat_solid:view_list',
+        link : '/datatable9'
     },
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
@@ -174,6 +188,13 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         icon : 'mat_solid:view_list',
         link : '/datatable8'
     },
+    {
+        id   : 'datatable9',
+        title: 'Datatable9',
+        type : 'basic',
+        icon : 'mat_solid:view_list',
+        link : '/datatable9'
+    },
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
     {
@@ -231,5 +252,12 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'mat_solid:view_list',
         link : '/datatable8'
+    },
+    {
+        id   : 'datatable9',
+        title: 'Datatable9',
+        type : 'basic',
+        icon : 'mat_solid:view_list',
+        link : '/datatable9'
     },
 ];

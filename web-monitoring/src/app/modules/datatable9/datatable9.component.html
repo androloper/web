@@ -6,7 +6,7 @@
                 <div class="flex items-center justify-between w-full">
                     <div>
                         <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-                            Datatable8 w/Fixed Data</h1>
+                            Datatable9 w/Service Request</h1>
                     </div>
                 </div>
             </div>
@@ -15,23 +15,17 @@
     <div class="rounded-2xl p-10 sm:p-10 lg:p-10" style="width: 100%;">
         <dx-data-grid
             id="gridContainer"
-            [dataSource]="employees"
+            [dataSource]="athletes"
             height="100%"
-            keyExpr="ID"
             [showBorders]="true">
-            <dxi-column dataField="Prefix" caption="Title" [width]="70"></dxi-column>
-            <dxi-column dataField="FirstName"></dxi-column>
-            <dxi-column dataField="LastName"></dxi-column>
-            <dxi-column dataField="Position"></dxi-column>
-            <dxi-column dataField="State" [width]="200"></dxi-column>
-            <dxi-column dataField="BirthDate" dataType="date" [width]="130"></dxi-column>
-            <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
-            <div *dxTemplate="let employee of 'detail'">
-                <div class="master-detail-caption">{{
-                    employee.data.FirstName + " " + employee.data.LastName + "'s Tasks:"
-                    }}</div>
-                <detail-grid [key]="employee.key"></detail-grid>
-            </div>
+            <dxi-column dataField="age" alignment="center" width="100"></dxi-column>
+            <dxi-column dataField="athlete" alignment="center"></dxi-column>
+            <dxi-column dataField="country" alignment="center"></dxi-column>
+            <dxi-column dataField="sport" alignment="center"></dxi-column>
+            <dxi-column dataField="gold" width="100" alignment="center"></dxi-column>
+            <dxi-column dataField="silver" width="100" alignment="center"></dxi-column>
+            <dxi-column dataField="bronze" width="100" alignment="center"></dxi-column>
+            <dxi-column dataField="total" width="100" alignment="center"></dxi-column>
             <dxo-toolbar>
                 <dxi-item name="groupPanel"></dxi-item>
                 <dxi-item location="after" style="padding-right:15px">
@@ -54,35 +48,58 @@
             </dxo-toolbar>
             <dxo-summary>
                 <dxi-total-item
-                    column="BirthDate"
+                    column="age"
+                    summaryType="min">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="age"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="age"
+                    summaryType="avg"
+                    valueFormat="#0.0">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="age"
                     summaryType="count">
                     <!--                summaryType="min-max-avg-sum-count"-->
                 </dxi-total-item>
                 <dxi-total-item
-                    column="BirthDate"
-                    summaryType="min">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="BirthDate"
+                    column="gold"
                     summaryType="max">
                 </dxi-total-item>
-                <!--                <dxi-total-item-->
-                <!--                    column="BirthDate"-->
-                <!--                    summaryType="avg">-->
-                <!--                </dxi-total-item>-->
-                <!--                <dxi-total-item-->
-                <!--                    column="BirthDate"-->
-                <!--                    summaryType="sum">-->
-                <!--                </dxi-total-item>-->
-                <!--                <dxi-total-item-->
-                <!--                    column="Id"-->
-                <!--                    showInColumn="City"-->
-                <!--                    summaryType="sum">-->
-                <!--                </dxi-total-item>-->
+                <dxi-total-item
+                    column="gold"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="silver"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="silver"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="Bronze"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="Bronze"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="Total"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="Total"
+                    summaryType="sum">
+                </dxi-total-item>
             </dxo-summary>
             <dxo-selection [allowSelectAll]="true"></dxo-selection>
-            <dxo-export [enabled]="true" [fileName]="'datatable8'"  ></dxo-export>
-            <dxo-search-panel [visible]="true"></dxo-search-panel>
+            <dxo-search-panel [visible]="true" width="300"></dxo-search-panel>
             <dxo-paging [pageSize]="10"></dxo-paging>
             <dxo-pager [showPageSizeSelector]="true" [visible]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
             <dxo-group-panel [visible]="true"></dxo-group-panel>
