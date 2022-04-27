@@ -22,16 +22,15 @@
             <dxi-column dataField="athlete" alignment="center"></dxi-column>
             <dxi-column dataField="country" alignment="center"></dxi-column>
             <dxi-column dataField="sport" alignment="center"></dxi-column>
-            <dxi-column dataField="gold" width="100" alignment="center"></dxi-column>
-            <dxi-column dataField="silver" width="100" alignment="center"></dxi-column>
-            <dxi-column dataField="bronze" width="100" alignment="center"></dxi-column>
-            <dxi-column dataField="total" width="100" alignment="center"></dxi-column>
+            <dxi-column dataField="gold" caption="Gold Medal" width="120" alignment="center"></dxi-column>
+            <dxi-column dataField="silver" caption="Silver Medal" width="120" alignment="center"></dxi-column>
+            <dxi-column dataField="bronze" caption="Bronze Medal" width="120" alignment="center"></dxi-column>
+            <dxi-column dataField="total" caption="Total Medal" width="120" alignment="center"></dxi-column>
             <dxo-toolbar>
                 <dxi-item name="groupPanel"></dxi-item>
                 <dxi-item location="after" style="padding-right:15px">
                     <dx-button
                         icon="pdffile"
-                        style="background-color: #f00; border-color: #999"
                         [width]="50"
                         (onClick)="exportPDF()">
                     </dx-button>
@@ -39,7 +38,6 @@
                 <dxi-item location="after">
                     <dx-button
                         icon="xlsxfile"
-                        style="background-color: #279C02; border-color: #999;"
                         [width]="50"
                         (onClick)="exportExcel()">
                     </dx-button>
@@ -61,47 +59,52 @@
                     valueFormat="#0.0">
                 </dxi-total-item>
                 <dxi-total-item
-                    column="age"
+                    column="gold"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="gold"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="silver"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="silver"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="bronze"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="bronze"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="total"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="total"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="athlete"
                     summaryType="count">
-                    <!--                summaryType="min-max-avg-sum-count"-->
                 </dxi-total-item>
                 <dxi-total-item
-                    column="gold"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="gold"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="silver"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="silver"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="Bronze"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="Bronze"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="Total"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="Total"
-                    summaryType="sum">
+                    column="total"
+                    summaryType="avg"
+                    showInColumn="athlete"
+                    valueFormat="#0.00">
                 </dxi-total-item>
             </dxo-summary>
             <dxo-selection [allowSelectAll]="true"></dxo-selection>
             <dxo-search-panel [visible]="true" width="300"></dxo-search-panel>
             <dxo-paging [pageSize]="10"></dxo-paging>
-            <dxo-pager [showPageSizeSelector]="true" [visible]="true" [allowedPageSizes]="[5, 10, 20]"></dxo-pager>
+            <dxo-pager [showPageSizeSelector]="true" [visible]="true" [allowedPageSizes]="[10, 50, 100, 200, 500]" [showNavigationButtons]="true"></dxo-pager>
             <dxo-group-panel [visible]="true"></dxo-group-panel>
         </dx-data-grid>
     </div>
