@@ -100,6 +100,21 @@
                     showInColumn="athlete"
                     valueFormat="#0.00">
                 </dxi-total-item>
+                <dxi-total-item
+                    column="athlete"
+                    summaryType="count"
+                    [displayFormat]="'Different Athletes: '+this.exhibitors">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="country"
+                    summaryType="count"
+                    [displayFormat]="'Different Countries: '+this.countries">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="sport"
+                    summaryType="count"
+                    [displayFormat]="'Different Sports: '+this.sports">
+                </dxi-total-item>
             </dxo-summary>
             <dxo-selection [allowSelectAll]="true"></dxo-selection>
             <dxo-search-panel [visible]="true" width="300"></dxo-search-panel>
