@@ -29,6 +29,16 @@
             <dxo-toolbar>
                 <dxi-item name="groupPanel"></dxi-item>
                 <dxi-item location="after" style="padding-right:15px">
+                    <dx-drop-down-button
+                        [splitButton]="false"
+                        [useSelectMode]="true"
+                        text="Choose a year"
+                        icon="filter"
+                        [items]="yearsInOlympics"
+                        (onItemClick)="itemClicked($event)"
+                    ></dx-drop-down-button>
+                </dxi-item>
+                <dxi-item location="after" style="padding-right:15px">
                     <dx-button
                         icon="pdffile"
                         [width]="50"
@@ -59,38 +69,6 @@
                     valueFormat="#0.0">
                 </dxi-total-item>
                 <dxi-total-item
-                    column="gold"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="gold"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="silver"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="silver"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="bronze"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="bronze"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="total"
-                    summaryType="max">
-                </dxi-total-item>
-                <dxi-total-item
-                    column="total"
-                    summaryType="sum">
-                </dxi-total-item>
-                <dxi-total-item
                     column="athlete"
                     summaryType="count">
                 </dxi-total-item>
@@ -114,6 +92,38 @@
                     column="sport"
                     summaryType="count"
                     [displayFormat]="'Different Sports: '+this.sports">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="gold"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="gold"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="silver"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="silver"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="bronze"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="bronze"
+                    summaryType="sum">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="total"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="total"
+                    summaryType="sum">
                 </dxi-total-item>
             </dxo-summary>
             <dxo-selection [allowSelectAll]="true"></dxo-selection>

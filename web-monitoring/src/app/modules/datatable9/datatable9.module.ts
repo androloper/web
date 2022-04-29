@@ -3,7 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 import { Datatable9Component } from 'app/modules/datatable9/datatable9.component';
 import {CommonModule} from '@angular/common';
 import {DataTablesModule} from 'angular-datatables';
-import {DxButtonModule, DxDataGridModule} from 'devextreme-angular';
+import {DxButtonModule, DxDataGridModule, DxDropDownButtonModule} from 'devextreme-angular';
 
 const datatable9Routes: Route[] = [
     {
@@ -22,6 +22,7 @@ const datatable9Routes: Route[] = [
         DataTablesModule,
         DxDataGridModule,
         DxButtonModule,
+        DxDropDownButtonModule,
     ]
 })
 export class Datatable9Module
