@@ -98,6 +98,8 @@ export class Datatable9Component implements OnInit {
     }
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     exportWord() {
-
+        const blob = new Blob([document.getElementById('gridContainer').innerHTML], {
+        });
+        saveAs(blob, 'Datatable9.docx');
     }
 }

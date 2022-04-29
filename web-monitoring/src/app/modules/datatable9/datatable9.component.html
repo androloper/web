@@ -45,11 +45,18 @@
                         (onClick)="exportPDF()">
                     </dx-button>
                 </dxi-item>
-                <dxi-item location="after">
+                <dxi-item location="after" style="padding-right:15px">
                     <dx-button
                         icon="xlsxfile"
                         [width]="50"
                         (onClick)="exportExcel()">
+                    </dx-button>
+                </dxi-item>
+                <dxi-item location="after">
+                    <dx-button
+                        icon="docxfile"
+                        [width]="50"
+                        (onClick)="exportWord()">
                     </dx-button>
                 </dxi-item>
                 <dxi-item name="searchPanel"></dxi-item>
