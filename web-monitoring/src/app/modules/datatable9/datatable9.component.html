@@ -32,6 +32,16 @@
                     <dx-drop-down-button
                         [splitButton]="false"
                         [useSelectMode]="true"
+                        text="Choose a sport"
+                        icon="tags"
+                        [items]="sportsInOlympics2"
+                        (onItemClick)="itemClickedForSports($event)"
+                    ></dx-drop-down-button>
+                </dxi-item>
+                <dxi-item location="after" style="padding-right:15px">
+                    <dx-drop-down-button
+                        [splitButton]="false"
+                        [useSelectMode]="true"
                         text="Choose a year"
                         icon="filter"
                         [items]="yearsInOlympics"

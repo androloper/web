@@ -18,15 +18,18 @@ export class Datatable9Component implements OnInit {
     @ViewChild(DxDataGridComponent, {static: false}) dataGrid: DxDataGridComponent;
     athletes: Datatable9[];
     yearChanges: any[];
+    sportChanges: any[];
     exhibitor: any[];
     exhibitors: string;
     countriesInOlympics: any[];
     countries: string;
     sportsInOlympics: any[];
+    sportsInOlympics2: any[];
     sports: string;
     yearsInOlympics: any[];
     years: string;
     choosingYear;
+    choosingSport;
     totalMedal=0;
     avg: string;
     constructor(private service: Datatable9Service) {
@@ -37,6 +40,7 @@ export class Datatable9Component implements OnInit {
             .subscribe((data)=>{
                 this.athletes = data;
                 this.yearChanges = data;
+                this.sportChanges = data;
                 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                 // this.choosingYear !== null ? this.athletes = [...new Set(data.map(item => item.year === this.choosingYear && item.athlete))] : this.athletes = data;
                 this.exhibitor = [...new Set(data.map(item => item.athlete))];
@@ -44,6 +48,7 @@ export class Datatable9Component implements OnInit {
                 this.countriesInOlympics = [...new Set(data.map(item => item.country))];
                 this.countries = this.countriesInOlympics.length.toString();
                 this.sportsInOlympics = [...new Set(data.map(item => item.sport))];
+                this.sportsInOlympics2 = [...new Set(data.map(item => item.sport).sort((a, b) => a.localeCompare(b)))];
                 this.sports = this.sportsInOlympics.length.toString();
                 this.yearsInOlympics = [...new Set(data.map(item => item.year).sort((a, b) => a-b))];
                 // eslint-disable-next-line @typescript-eslint/prefer-for-of
@@ -61,9 +66,26 @@ export class Datatable9Component implements OnInit {
         this.exhibitor = [...new Set(this.athletes.map(item => item.athlete))];
         this.exhibitors = this.exhibitor.length.toString();
         this.countriesInOlympics = [...new Set(this.athletes.map(item => item.country))];
-        this.countries = this.countriesInOlympics.length.toString();
+        this.countries = (this.countriesInOlympics.length-1).toString();
         this.sportsInOlympics = [...new Set(this.athletes.map(item => item.sport))];
-        this.sports = this.sportsInOlympics.length.toString();
+        this.sports = (this.sportsInOlympics.length-1).toString();
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let i = 0; i < this.athletes.length; i++) {
+            this.totalMedal += this.athletes[i].total;
+        }
+        this.avg = (this.totalMedal/this.athletes.length).toFixed(2);
+    }
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    itemClickedForSports(e) {
+        this.choosingSport = e.itemData;
+        this.athletes = [...new Set(this.sportChanges.map(item => item.sport === this.choosingSport && true ? item : 'why the row is empty, i dont understand'))];
+        console.log(this.athletes);
+        this.exhibitor = [...new Set(this.athletes.map(item => item.athlete))];
+        this.exhibitors = this.exhibitor.length.toString();
+        this.countriesInOlympics = [...new Set(this.athletes.map(item => item.country))];
+        this.countries = (this.countriesInOlympics.length-1).toString();
+        this.sportsInOlympics = [...new Set(this.athletes.map(item => item.sport))];
+        this.sports = (this.sportsInOlympics.length-1).toString();
         // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < this.athletes.length; i++) {
             this.totalMedal += this.athletes[i].total;
@@ -103,3 +125,4 @@ export class Datatable9Component implements OnInit {
         saveAs(blob, 'Datatable9.docx');
     }
 }
+//{'athlete':'Ramazan Baybörek','age':25, 'country': 'Turkey', 'year': 2020, 'date':'20-02-2020', 'sport':'Basketball', 'gold':10, 'silver':0, 'bronze': 0, 'total': 10 }
