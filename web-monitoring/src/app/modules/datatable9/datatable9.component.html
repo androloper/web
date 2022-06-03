@@ -32,6 +32,16 @@
                     <dx-drop-down-button
                         [splitButton]="false"
                         [useSelectMode]="true"
+                        text="Choose a country"
+                        icon="globe"
+                        [items]="countriesInOlympics2"
+                        (onItemClick)="itemClickedForCountry($event)"
+                    ></dx-drop-down-button>
+                </dxi-item>
+                <dxi-item location="after" style="padding-right:15px">
+                    <dx-drop-down-button
+                        [splitButton]="false"
+                        [useSelectMode]="true"
                         text="Choose a sport"
                         icon="tags"
                         [items]="sportsInOlympics2"
@@ -100,12 +110,12 @@
                     summaryType="count"
                     [displayFormat]="'Different Athletes: '+this.exhibitors">
                 </dxi-total-item>
-                <dxi-total-item
+                <dxi-total-item *ngIf="choosingCountry===undefined"
                     column="country"
                     summaryType="count"
                     [displayFormat]="'Different Countries: '+this.countries">
                 </dxi-total-item>
-                <dxi-total-item
+                <dxi-total-item *ngIf="choosingSport===undefined"
                     column="sport"
                     summaryType="count"
                     [displayFormat]="'Different Sports: '+this.sports">

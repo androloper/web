@@ -19,9 +19,11 @@ export class Datatable9Component implements OnInit {
     athletes: Datatable9[];
     yearChanges: any[];
     sportChanges: any[];
+    countryChanges: any[];
     exhibitor: any[];
     exhibitors: string;
     countriesInOlympics: any[];
+    countriesInOlympics2: any[];
     countries: string;
     sportsInOlympics: any[];
     sportsInOlympics2: any[];
@@ -30,6 +32,7 @@ export class Datatable9Component implements OnInit {
     years: string;
     choosingYear;
     choosingSport;
+    choosingCountry;
     totalMedal=0;
     avg: string;
     constructor(private service: Datatable9Service) {
@@ -41,11 +44,13 @@ export class Datatable9Component implements OnInit {
                 this.athletes = data;
                 this.yearChanges = data;
                 this.sportChanges = data;
+                this.countryChanges = data;
                 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                 // this.choosingYear !== null ? this.athletes = [...new Set(data.map(item => item.year === this.choosingYear && item.athlete))] : this.athletes = data;
                 this.exhibitor = [...new Set(data.map(item => item.athlete))];
                 this.exhibitors = this.exhibitor.length.toString();
                 this.countriesInOlympics = [...new Set(data.map(item => item.country))];
+                this.countriesInOlympics2 = [...new Set(data.map(item => item.country).sort((a, b) => a.localeCompare(b)))];
                 this.countries = this.countriesInOlympics.length.toString();
                 this.sportsInOlympics = [...new Set(data.map(item => item.sport))];
                 this.sportsInOlympics2 = [...new Set(data.map(item => item.sport).sort((a, b) => a.localeCompare(b)))];
@@ -79,6 +84,23 @@ export class Datatable9Component implements OnInit {
     itemClickedForSports(e) {
         this.choosingSport = e.itemData;
         this.athletes = [...new Set(this.sportChanges.map(item => item.sport === this.choosingSport && true ? item : 'why the row is empty, i dont understand'))];
+        console.log(this.athletes);
+        this.exhibitor = [...new Set(this.athletes.map(item => item.athlete))];
+        this.exhibitors = this.exhibitor.length.toString();
+        this.countriesInOlympics = [...new Set(this.athletes.map(item => item.country))];
+        this.countries = (this.countriesInOlympics.length-1).toString();
+        this.sportsInOlympics = [...new Set(this.athletes.map(item => item.sport))];
+        this.sports = (this.sportsInOlympics.length-1).toString();
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let i = 0; i < this.athletes.length; i++) {
+            this.totalMedal += this.athletes[i].total;
+        }
+        this.avg = (this.totalMedal/this.athletes.length).toFixed(2);
+    }
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    itemClickedForCountry(e) {
+        this.choosingCountry = e.itemData;
+        this.athletes = [...new Set(this.countryChanges.map(item => item.country === this.choosingCountry && true ? item : 'why the row is empty, i dont understand'))];
         console.log(this.athletes);
         this.exhibitor = [...new Set(this.athletes.map(item => item.athlete))];
         this.exhibitors = this.exhibitor.length.toString();
