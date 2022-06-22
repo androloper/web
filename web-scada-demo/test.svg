@@ -64,7 +64,7 @@
         <g
        id="g320"
        transform="matrix(0.02895845,0,0,0.02703223,3.5095976,4.8448998)"
-       tagName="PLC01!M110.IO"
+       tagName="PLC01!M999.IO"
        tip="motor">
         <path
          style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
@@ -84,14 +84,14 @@
             cy="278"
             rx="53"
             ry="68"
-            id="ellipse203"/>
+            id="ellipse203" anime="demo"/>
         <ellipse
             style="fill:#ff0000;stroke:#ffffff;stroke-width:2"
             cx="81"
             cy="278"
             rx="38"
             ry="53"
-            id="ellipse205"/>
+            id="ellipse205" anime="demo"/>
         <path
             style="fill:#ffffff;stroke:#ffffff;stroke-width:2"
             d="M 73,225 H 89 V 332 H 73 Z"
@@ -103,7 +103,7 @@
         <path
             style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
             d="M 134,164 H 834 V 620 H 134 Z"
-            id="path211"/>
+            id="path211" anime="demo"/>
         <path
             style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
             d="M 210,195 H 651 L 590,134 H 271 Z"
@@ -412,12 +412,14 @@
             <path
                     style="fill:none;stroke:#7f7f7f;stroke-width:2"
                     d="m 545,491 h 15"
-                    id="path273-1"/></g>
+                    id="path273-1"/>
+        </g>
         <g
                 id="g320-7-8"
                 transform="matrix(0.02895845,0,0,0.02703223,1.3544166,52.737877)"
                 tagName="PLC01!M111.IO"
-                tip="motor"><path
+                tip="motor">
+            <path
          style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
          d="M 28,636 V 134 l 30,-15 h 61 l 15,15 v 502 l -30,15 H 58 Z"
          id="path197-9-1" />
@@ -587,7 +589,8 @@
             <path
                     style="fill:none;stroke:#7f7f7f;stroke-width:2"
                     d="m 545,491 h 15"
-                    id="path273-1-1"/></g>
+                    id="path273-1-1"/>
+        </g>
         <g
                 id="g320-7-8-4"
                 transform="matrix(0.02895845,0,0,0.02703223,0.87548764,80.036876)"
@@ -20012,4 +20015,6 @@
             <path
                     style="fill:none;stroke:#7f7f7f;stroke-width:2"
                     d="m 545,491 h 15"
-                    id="path273-1-1-741"/></g></g></svg>
+                    id="path273-1-1-741"/></g>
+    </g>
+</svg>
