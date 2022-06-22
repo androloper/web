@@ -36,77 +36,153 @@ function changeColors(color) {
         if (!aa.children[k].hasAttribute("anime")) {
           aa.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
         }
+        if(aa.children[k].getAttribute("id").startsWith("path197")){
+          //motorun solundaki aktiflik alanının orta yüzeyi
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
+        }
         if(aa.children[k].getAttribute("id").startsWith("path199")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //motorun solundaki aktiflik alanının en altı
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path201")){
-          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2")
+          //motorun solundaki aktiflik yuvarlağının üstündeki beyaz kısım
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
         }
+        //motorun solundaki aktiflik durumunu gösteren yuvarlak
         if(aa.children[k].getAttribute("id").startsWith("ellipse203")){
-          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2")
+          //beyaz yüzey
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("ellipse205")){
-          aa.children[k].setAttribute("style", "fill:green;stroke:black;stroke-width:2")
+          //renginin değişmesi gereken yer
+          aa.children[k].setAttribute("style", "fill:green;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path207")){
-          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2")
+          //ortadaki beyaz kısım
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path209")){
-          aa.children[k].setAttribute("style", "fill:green;stroke:black;stroke-width:2")
+          //sağ tarafında birleşen yer
+          aa.children[k].setAttribute("style", "fill:green;stroke:black;stroke-width:2");
         }
+        if(aa.children[k].getAttribute("id").startsWith("path211")){
+          //motor yüzeyi
+          aa.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
+        }
+        //motor üstündeki 4 tane yamuk
         if(aa.children[k].getAttribute("id").startsWith("path213")){
-          aa.children[k].setAttribute("style", "fill:green;stroke:black;stroke-width:2")
+          //en üstteki
+          aa.children[k].setAttribute("style", "fill:green;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path215")){
-          aa.children[k].setAttribute("style", "fill:blue;stroke:black;stroke-width:2")
+          //üstten ikinci
+          aa.children[k].setAttribute("style", "fill:blue;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path217")){
-          aa.children[k].setAttribute("style", "fill:purple;stroke:black;stroke-width:2")
+          //üstten üçüncü
+          aa.children[k].setAttribute("style", "fill:purple;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path219")){
-          aa.children[k].setAttribute("style", "fill:pink;stroke:black;stroke-width:2")
+          //en alttaki
+          aa.children[k].setAttribute("style", "fill:pink;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("ellipse221")){
-          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2")
+          //motor üstünde sağdaki beyaz yuvarlak
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path223")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //motor üstünde sağdaki beyaz yuvarlak üzerindeki orta kalın çizgi
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path225")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //motor üstünde sağdaki beyaz yuvarlak üzerindeki orta kalın çizginin üstündeki çizgi
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path227")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //motor üstünde sağdaki beyaz yuvarlak üzerindeki çizgiler
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("ellipse229")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //üstteki yuvarlağın dışı
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("ellipse231")){
-          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2")
+          //üstteki yuvarlağın içi
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path233")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //üstteki yuvarlağın tutunduğu kısım
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path235")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //alttaki siyah kısım
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path237")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //alt sağdaki siyah uzun yer
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path239")){
-          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2")
+          //motorun sağında kalan beyaz kısım
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
         }
+        if(aa.children[k].getAttribute("id").startsWith("path241")){
+          //motorun sağında kalan renkli kısım
+          aa.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
+        }
+        // pivotu tutan kısım
         if(aa.children[k].getAttribute("id").startsWith("path243")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //en alt kısmı
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path245")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //bir üst kısmı
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path247")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //bir üstün ortası
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
         }
         if(aa.children[k].getAttribute("id").startsWith("path249")){
-          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2")
+          //en üst kısmı geniş yüzeyli kısım
+          aa.children[k].setAttribute("style", "fill:white;stroke:black;stroke-width:2");
+        }
+        //yüzey üzerindeki çizgiler
+        if(aa.children[k].getAttribute("id").startsWith("path251")){
+          aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path253")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path255")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path257")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path259")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path261")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path263")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path265")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path267")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path269")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path271")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
+        }
+        if(aa.children[k].getAttribute("id").startsWith("path273")){
+          aa.children[k].setAttribute("style","fill:black;stroke:black;stroke-width:2");
         }
       }
     }
