@@ -240,17 +240,17 @@ function getRequest() {
       console.log("No records found");
   }
 
-  // var connection = new ActiveXObject("ADODB.Connection");
-  var connection = new ActiveXObject("SQLOLEDB.Connection"); //alternative
-  // var connectionString="Data Source=.;Initial Catalog=MASTER_DB;User ID=sa;Password=123456;Trusted_Connection=False;TrustServerCertificate=True";
-  var connectionString="Data Source=.;Initial Catalog=MASTER_DB;User ID=sa;Password=123456;Trusted_Connection=False;TrustServerCertificate=True;Provider=SQLOLEDB"; //alternative
-  connection.open(connectionString);
-  // var rs = new ActiveXObject("ADODB.Recordset");
-  var rs = new ActiveXObject("SQLOLEDB.Recordset"); //alternative
-  var query = "SELECT * FROM Tbl1";
-  rs.open(query, connection);
-  rs.moveFirst;
-  rs.close;
-  connection.close;
+  // // var connection = new ActiveXObject("ADODB.Connection");
+  // var connection = new ActiveXObject("SQLOLEDB.Connection"); //alternative
+  // // var connectionString="Data Source=.;Initial Catalog=MASTER_DB;User ID=sa;Password=123456;Trusted_Connection=False;TrustServerCertificate=True";
+  // var connectionString="Data Source=.;Initial Catalog=MASTER_DB;User ID=sa;Password=123456;Trusted_Connection=False;TrustServerCertificate=True;Provider=SQLOLEDB"; //alternative
+  // connection.open(connectionString);
+  // // var rs = new ActiveXObject("ADODB.Recordset");
+  // var rs = new ActiveXObject("SQLOLEDB.Recordset"); //alternative
+  // var query = "SELECT * FROM Tbl1";
+  // rs.open(query, connection);
+  // rs.moveFirst;
+  // rs.close;
+  // connection.close;
 
 }
