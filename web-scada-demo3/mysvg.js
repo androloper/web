@@ -20,9 +20,9 @@ const xlmns = "http://www.w3.org/2000/svg";
 
 function changeColorful(color,number) {
   changeColors(color);
-  changeNumbers(number);
-  setInterval(setColor, 30);
-  setInterval(getRequest, 600);
+  // changeNumbers(10);
+  setInterval(setColor, 300);
+  // setInterval(getRequest, 600);
   // document.getElementById("svg_obj").setAttribute("height", "90%");
 }
 
@@ -31,13 +31,27 @@ function changeColors(color) {
   const layer1 = svg.getElementById("layer1");
   for (var i = 0; i < layer1.children.length; i++) {
     // if (layer1.children[i].getAttribute("tagName") === "PLC01!M999.IO") {
-    if (layer1.children[i].getAttribute("tagName") !== "PLC01!M999.IO") {
+    if (layer1.children[i].getAttribute("PlcTagName") !== "PLC01!M999.IO") {
       var aa = layer1.children[i];
+      aa.addEventListener("click", event => {
+        $('#myModal').modal('show');
+        document.getElementById('modalheadertext').innerText=event.path[1].attributes[0].textContent;
+        document.getElementById('modalbodytext').innerText=event.path[1].attributes[2].textContent;
+        // openModal(event);
+        console.log(event.path[1].attributes[2].textContent);
+        console.log(event);
+        // alert('That worked');
+      });
       for (var k = 0; k < aa.children.length; k++) {
         // if (aa.children[k].hasAttribute("anime")) {
         if (aa.children[k].hasAttribute("willChange")) {
           aa.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
         }
+        // for(var j=0; j<aa.children[k].children.length;j++) {
+        //   if (aa.children[k].children[j].hasAttribute("willChange")) {
+        //     aa.children[k].children[j].setAttribute("style", `fill:${color}`);
+        //   }
+        // }
         // if(aa.children[k].getAttribute("inkscape:label").startsWith("path197")){
         //   //motorun solundaki aktiflik alanının orta yüzeyi
         //   aa.children[k].setAttribute("style", "fill:black;stroke:black;stroke-width:2");
@@ -203,16 +217,40 @@ function changeNumbers(number) {
   const layer1 = svg.getElementById("layer1");
   for (var i = 0; i < layer1.children.length; i++) {
     // if (layer1.children[i].getAttribute("tagName") === "PLC01!M999.IO") {
-    if (layer1.children[i].getAttribute("tagName") !== "PLC01!M999.IO") {
+    if (layer1.children[i].getAttribute("PlcTagName") !== "PLC01!M999.IO") {
       var aa = layer1.children[i];
+      // aa.addEventListener("click", event => {
+      //   $('#myModal').modal('show');
+      //   document.getElementById('modalheadertext').innerText=event.path[1].attributes[0].textContent;
+      //   document.getElementById('modalbodytext').innerText=event.path[1].attributes[2].textContent;
+      //   // openModal(event);
+      //   console.log(event.path[1].attributes[2].textContent);
+      //   console.log(event);
+      //   // alert('That worked');
+      // });
       for (var k = 0; k < aa.children.length; k++) {
         if (aa.children[k].getAttribute("inkscape:label").startsWith("text1")) {
           aa.children[k].setAttribute("style", "font-size:100");
           aa.children[k].textContent = `${number}`;
         }
       }
+      // aa.children[i].setAttribute("onclick","openModal(layer1, i)");
     }
   }
+}
+
+function openModal(event){
+  // $('#myModal').on('show.bs.modal', function (e) {
+  //   $('#myModal.show').each(function (index) {
+  //     $(this).css('z-index', 1101 + index * 2);
+  //     $('.modal-body').textContent = event.path[1].attributes[2].textContent;
+  //   });
+  //   $('.modal-backdrop').each(function (index) {
+  //     $(this).css('z-index', 1101 + index * 2 - 1);
+  //   });
+  // });
+  // var cCc = event.srcElement;
+  alert("That worked!");
 }
 
 function randomNumberGenerator() {
