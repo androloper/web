@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <title>Scada Realtime Demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script type="text/javascript"
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+                integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous"></script>
+        <script src="mysvg.js"></script>
+    </head>
+    <body>
+        <div>
+            <!--  <button style="width: 100px; height: 50px" onclick="changeColor('green')">Change Color</button>-->
+            <button style="width: 100px; height: 50px" onclick="changeColorful('blue', '99')">Colorful</button>
+            <!-- 1000 motor -->
+            <object id="svg_obj" data="scada.svg" type="image/svg+xml"></object>
+            <br><br>
+            <!-- Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modalheadertext">Modal</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button>
+                        </div>
+                        <div class="container"></div>
+                        <div class="modal-body" id="modalbodytext">
+                            <p>
+                                Congratulations
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" data-bs-dismiss="modal" class="btn">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
