@@ -1,3 +1,29 @@
+// let connection2 = new signalR.HubConnectionBuilder()
+//     .withUrl("/signalr")
+//     .build();
+//
+// function setCurrentValue(id, value) {
+//   document.getElementById(id).textContent = value;
+// }
+//
+// window.addEventListener("load", async function () {
+//   await connection.start();
+//   connection.stream(
+//       "SubscribeNodeValueChanges",
+//       "ns=2;s=Channel1.Device1.PLC01.K100.IO")
+//       .subscribe({
+//         next: (e) => {
+//           setCurrentValue("value02", e);
+//         },
+//         complete: () => {
+//           setCurrentValue("value02", "Subscription has been completed.");
+//         },
+//         error: (err) => {
+//             console.log(err);
+//         }
+//       });
+// });
+
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("http://192.168.1.122:9999/demoHub")
@@ -8,6 +34,24 @@ const connection = new signalR.HubConnectionBuilder()
 async function startHubConn(){
   try{
     await connection.start();
+    // connection.stream(
+    //     "SubscribeNodeValueChanges",
+    //     "ns=2;s=Channel1.Device1.PLC01.K114.IO")
+    //     .subscribe({
+    //       next: (e) => {
+    //         const resp = JSON.parse(e);
+    //         for(var i = 0; i<resp.length; i++){
+    //           itemChange(resp[i].Name, resp[i].Value);
+    //         }
+    //         console.log(resp);
+    //       },
+    //       complete: () => {
+    //         console.log("Completed");
+    //       },
+    //       error: (err) => {
+    //         console.log(err);
+    //       }
+    //     });
   }
   catch (err) {
     console.log(err);
@@ -33,12 +77,13 @@ connection.on("ReceiveValues", (value) => {
   console.log(resp);
 });
 
+
 function startScada() {
   startHubConn();
   // changeMotorColors(color);
   // changeElevatorColor();
   // changeLineColor();
-  // changeCoverColor();
+  // changeKlepeColor();
   // changeNumbers(10);
   // setInterval(itemChange, 300);
 }
@@ -56,9 +101,11 @@ function itemChange(itemName, itemValue){
       if (aa[i].getAttribute("PlcTagName") === itemName) {
         if (aa[i].getAttribute("tip") === "motor") {
             checkMotor(itemValue, aa[i]);
+            checkMotorTag(aa[i],itemValue);
         }
         if (aa[i].getAttribute("tip") === "kapak") {
             checkKlepe(itemValue, aa[i]);
+            checkKlepeTag(aa[i],itemValue);
         }
         if (aa[i].getAttribute("tip") === "elevator") {
             checkElevator(itemValue, aa[i]);
@@ -97,23 +144,6 @@ function checkMotor(myVal, motor) {
     return changeMotorColor("grey",motor);
 }
 
-function checkElevator(myVal, elevator) {
-  if (Bit(myVal, 1)) {
-    return changeElevatorColor("green", elevator);
-  }
-  else
-    return changeElevatorColor("grey", elevator);
-}
-
-function checkKlepe(myVal, klepe) {
-  if (Bit(myVal, 0)) {
-    return changeCoverColor("green", klepe);
-  }
-  else {
-    return changeCoverColor("grey", klepe);
-  }
-}
-
 function changeMotorColor(color, motor) {
   motor.addEventListener("click", event => {
     $('#myModal').modal('show');
@@ -133,6 +163,13 @@ function changeMotorColor(color, motor) {
   }
 }
 
+function checkElevator(myVal, elevator) {
+  if (Bit(myVal, 1)) {
+    return changeElevatorColor("green", elevator);
+  }
+  else
+    return changeElevatorColor("grey", elevator);
+}
 
 function changeElevatorColor(color, elevator) {
   for (var k = 0; k < elevator.children.length; k++) {
@@ -149,7 +186,16 @@ function changeElevatorColor(color, elevator) {
   }
 }
 
-function changeCoverColor(color, klepe) {
+function checkKlepe(myVal, klepe) {
+  if (Bit(myVal, 0)) {
+    return changeKlepeColor("green", klepe);
+  }
+  else {
+    return changeKlepeColor("grey", klepe);
+  }
+}
+
+function changeKlepeColor(color, klepe) {
   klepe.addEventListener("click", event => {
     $('#myModal').modal('show');
     document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
@@ -185,7 +231,51 @@ function changeLineColor() {
   }
 }
 
+function checkMotorTag(tag, value) {
+  if (Bit(value, 13)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:14");
+    }
+  }
+  else if (Bit(value, 11)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:cornflowerblue;stroke:black;stroke-width:14");
+    }
+  }
+  else if (Bit(value, 8)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:yellow;stroke:black;stroke-width:14");
+    }
+  }
+  else
+  if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+    tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:14");
+  }
+}
 
+function checkKlepeTag(tag, value) {
+  if (Bit(value, 8) || Bit(value, 9) || Bit(value, 10) || Bit(value, 11)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:3");
+    }
+  }
+  else if (Bit(value, 5)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:yellow;stroke:black;stroke-width:3");
+    }
+  }
+  else
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:3");
+  }
+}
+
+// function changeTagColor(color, myTag){
+//   console.log(myTag.children.length-2);
+//   if (myTag.children[myTag.children.length-2].hasAttribute("willChange")) {
+//     myTag.children[myTag.children.length-2].setAttribute("style", `fill:${color};stroke:black;stroke-width:3`);
+//   }
+// }
 
 // function changeMotorColors(color) {
 //   const svg = document.getElementById("svg_obj").contentDocument;
