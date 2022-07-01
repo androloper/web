@@ -11,14 +11,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
                 crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
         <script src="mysvg.js"></script>
     </head>
     <body>
         <div>
             <!--  <button style="width: 100px; height: 50px" onclick="changeColor('green')">Change Color</button>-->
-            <button style="width: 100px; height: 50px" onclick="changeColorful('blue', '99')">Colorful</button>
+            <button style="width: 100px; height: 50px" onclick="startScada()">Start</button>
             <!-- 1000 motor -->
-            <object id="svg_obj" data="scada.svg" type="image/svg+xml"></object>
+            <object id="svg_obj" data="scada3.svg" type="image/svg+xml"></object>
             <br><br>
             <!-- Modal -->
             <div class="modal" id="myModal">

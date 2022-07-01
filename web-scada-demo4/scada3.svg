@@ -10,13 +10,18 @@
    preserveAspectRatio="none"
    xml:space="preserve"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="scada.svg"
+   sodipodi:docname="scada3.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
      <defs
-   id="defs83813">
+   id="defs83813"><rect
+   x="217.27126"
+   y="277.36757"
+   width="35.441412"
+   height="14.638844"
+   id="rect1892" />
           <rect
    x="163.6967"
    y="945.48364"
@@ -125,7 +130,27 @@
    width="18.496923"
    height="17.421568"
    id="rect88772" />
-     </defs>
+     <rect
+   x="217.27126"
+   y="277.36758"
+   width="35.441414"
+   height="14.638844"
+   id="rect1892-6" /><rect
+   x="217.27126"
+   y="277.36758"
+   width="35.441414"
+   height="14.638844"
+   id="rect1892-69" /><rect
+   x="217.27126"
+   y="277.36758"
+   width="35.441414"
+   height="14.638844"
+   id="rect1892-1" /><rect
+   x="217.27126"
+   y="277.36758"
+   width="35.441414"
+   height="14.638844"
+   id="rect1892-5" /></defs>
      <sodipodi:namedview
    id="namedview83811"
    pagecolor="#ffffff"
@@ -137,14 +162,14 @@
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
    inkscape:zoom="0.9177657"
-   inkscape:cx="276.75909"
-   inkscape:cy="294.19273"
+   inkscape:cx="53.935334"
+   inkscape:cy="497.94844"
    inkscape:window-width="1920"
    inkscape:window-height="1009"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="layer1"
+   inkscape:current-layer="g128127"
    showguides="true">
           <sodipodi:guide
    position="-52.086365,388.61836"
@@ -161,7 +186,7 @@
 <!--          ÇİZGİLER-->
           <g
    id="g127238"
-   transform="matrix(0.01693333,0,0,0.00601507,97.442556,195.66611)"
+   transform="matrix(0.01693333,0,0,0.01524961,97.442556,195.66611)"
    tip="line">
                <path
    style="fill:#7f7f7f"
@@ -206,7 +231,7 @@
           </g>
           <g
    id="g127310"
-   transform="matrix(0.01693333,0,0,0.02227205,113.5979,61.000955)"
+   transform="matrix(0.01693333,0,0,0.02227205,113.1902,109.51781)"
    tip="line">
                <path
    style="fill:#7f7f7f"
@@ -254,7 +279,7 @@
    inkscape:label="Katman 3"
    id="layer1-5"
    PlcTagName="PLC01!M102.IO"
-   transform="matrix(0.99947985,0,0,1.6843797,94.596185,41.678988)"
+   transform="matrix(0.99986789,0,0,1.1572354,94.59161,98.375141)"
    tip="elevator">
 <!--               ALT-->
                <g
@@ -741,7 +766,7 @@
           
           <g
    id="g127292-3"
-   transform="matrix(0.02781182,0,0,0.01905311,114.12725,82.135286)"
+   transform="matrix(0.02781182,0,0,0.01905311,114.3311,130.44829)"
    tip="line">
                <path
    style="fill:#7f7f7f"
@@ -786,7 +811,7 @@
           </g>
           <g
    id="g127220-0"
-   transform="matrix(0.02965204,0,0,0.11599631,142.15782,81.993013)"
+   transform="matrix(0.02665421,0,0,0.06763495,142.15482,130.30601)"
    tip="line">
                <path
    style="fill:#7f7f7f"
@@ -1443,25 +1468,27 @@
    d="m 545,491 h 15"
    id="path127935"
    inkscape:label="path273" />
-               <text
+               
+          <rect
+   style="fill:#999999;stroke:none;stroke-width:0.244087;stroke-opacity:1"
+   id="rect1521-7"
+   width="15.794542"
+   height="4.0770454"
+   x="155.50281"
+   y="62.590263"
+   transform="matrix(40.028548,0,0,42.248392,-6096.0997,-1904.0587)" /><text
    xml:space="preserve"
-   style="font-size:113.479px;fill:#000000;stroke-width:9.45658"
-   x="390.39343"
-   y="512.43811"
-   id="text127939"
-   transform="scale(0.96616939,1.0350152)"
-   inkscape:label="text1">
-                    <tspan
-   id="tspan127937"
-   style="stroke-width:9.45658"
-   x="390.39343"
-   y="512.43811"
-   sodipodi:role="line">99</tspan>
-               </text>
-          </g>
+   transform="matrix(10.590887,0,0,11.17822,-2023.2161,-2342.9717)"
+   id="text1890-8"
+   style="white-space:pre;shape-inside:url(#rect1892-69);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="217.27148"
+     y="288.31515"
+     id="tspan1032"><tspan
+       style="fill:#000000"
+       id="tspan1030">M105</tspan></tspan></text></g>
           <g
    id="g128043"
-   transform="matrix(0.02498217,0,0,0.02366954,78.091556,45.068194)"
+   transform="matrix(0.02498217,0,0,0.02366954,78.295408,98.273649)"
    PlcTagName="PLC01!M102.IO"
    tip="motor"
    class="&quot;mtr&quot;"
@@ -1687,22 +1714,23 @@
    d="m 545,491 h 15"
    id="path128037"
    inkscape:label="path273" />
-               <text
+               
+          <rect
+   style="fill:#999999;stroke:none;stroke-width:10.0377;stroke-opacity:1"
+   id="rect1521"
+   width="652.07559"
+   height="172.24861"
+   x="131.39772"
+   y="756.45905" /><text
    xml:space="preserve"
-   style="font-size:113.479px;fill:#000000;stroke-width:9.45658"
-   x="390.39343"
-   y="512.43811"
-   id="text128041"
-   transform="scale(0.96616939,1.0350152)"
-   inkscape:label="text1">
-                         <tspan
-   id="tspan128039"
-   style="stroke-width:9.45658"
-   x="390.39343"
-   y="512.43811"
-   sodipodi:role="line">99</tspan>
-               </text>
-          </g>
+   transform="matrix(10.590887,0,0,11.17822,-2020.356,-2326.7918)"
+   id="text1890"
+   style="white-space:pre;shape-inside:url(#rect1892);fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="217.27148"
+     y="288.31515"
+     id="tspan1036"><tspan
+       style="fill:#000000"
+       id="tspan1034">M102</tspan></tspan></text></g>
           <g
    id="g128127"
    transform="matrix(0.02498217,0,0,0.02366954,26.618845,162.58906)"
@@ -1931,30 +1959,32 @@
    d="m 545,491 h 15"
    id="path128121"
    inkscape:label="path273" />
-               <text
+               
+          <rect
+   style="fill:#999999;stroke:none;stroke-width:10.0377;stroke-opacity:1"
+   id="rect1521-4"
+   width="652.07559"
+   height="172.24861"
+   x="-1958.2601"
+   y="3465.0691"
+   transform="translate(2068.5378,-2717.2227)" /><text
    xml:space="preserve"
-   style="font-size:113.479px;fill:#000000;stroke-width:9.45658"
-   x="390.39343"
-   y="512.43811"
-   id="text128125"
-   transform="scale(0.96616939,1.0350152)"
-   inkscape:label="text1">
-                              <tspan
-   id="tspan128123"
-   style="stroke-width:9.45658"
-   x="390.39343"
-   y="512.43811"
-   sodipodi:role="line">99</tspan>
-               </text>
-          </g>
+   transform="matrix(10.590887,0,0,11.17822,-2026.4761,-2335.4043)"
+   id="text1890-4"
+   style="white-space:pre;shape-inside:url(#rect1892-6);fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="217.27148"
+     y="288.31515"
+     id="tspan1040"><tspan
+       style="fill:#000000"
+       id="tspan1038">M100</tspan></tspan></text></g>
 <!--          KAPAKLAR-->
           <g
    id="g601"
-   transform="matrix(0.15051852,0,0,0.15051852,37.277304,85.671654)"
-     PlcTagName="PLC01!K114.IO"
-     tip="kapak"
-     class="kpk"
-     inkscape:label="g170">
+   transform="matrix(0.15051852,0,0,0.15051852,32.996405,65.286422)"
+   PlcTagName="PLC01!K114.IO"
+   tip="kapak"
+   class="kpk"
+   inkscape:label="g170">
 	<linearGradient
    id="g_right"
    gradientUnits="userSpaceOnUse"
@@ -1991,7 +2021,7 @@
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
    id="path536"
    style="fill:#000000"
-    willChange=""/>
+   willChange="" />
 	<linearGradient
    id="g_left"
    gradientUnits="userSpaceOnUse"
@@ -2028,7 +2058,7 @@
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
    id="path552-8"
    style="fill:#000000"
-   willChange=""/>
+   willChange="" />
 	<radialGradient
    id="g_orta"
    cx="56.2505"
@@ -2061,124 +2091,154 @@
    cy="28.014"
    r="13.102"
    id="circle566"
-   style="fill:#000000"
-   />
-</g>
+   style="fill:#000000" />
+<rect
+   style="fill:#999999;stroke:none;stroke-width:0.244087;stroke-opacity:1"
+   id="rect1521-2"
+   width="15.294542"
+   height="4.0770454"
+   x="33.95752"
+   y="75.000519"
+   transform="matrix(6.6437007,0,0,6.6437007,-219.21824,-433.74345)" /><text
+   xml:space="preserve"
+   transform="matrix(1.7578125,0,0,1.7578125,-354.33506,-420.31393)"
+   id="text1890-6"
+   style="white-space:pre;shape-inside:url(#rect1892-5);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="220.27148"
+     y="288.31515"
+     id="tspan1044"><tspan
+       style="fill:#000000"
+       id="tspan1042">K114</tspan></tspan></text></g>
           <g
-                  id="g597"
-                  transform="matrix(0.15051852,0,0,0.15051852,61.782015,103.25739)"
-                  PlcTagName="PLC01!K115.IO"
-                  tip="kapak"
-                  class="kpk"
-                  inkscape:label="g170">
+   id="g597"
+   transform="matrix(0.15051852,0,0,0.15051852,69.784205,65.221444)"
+   PlcTagName="PLC01!K115.IO"
+   tip="kapak"
+   class="kpk"
+   inkscape:label="g170">
 	<linearGradient
-            id="linearGradient562"
-            gradientUnits="userSpaceOnUse"
-            x1="84.121101"
-            y1="56.25"
-            x2="84.121101"
-            y2="0.3687">
+   id="linearGradient562"
+   gradientUnits="userSpaceOnUse"
+   x1="84.121101"
+   y1="56.25"
+   x2="84.121101"
+   y2="0.3687">
 		<stop
-                offset="0"
-                style="stop-color:#000000"
-                id="stop550" />
+   offset="0"
+   style="stop-color:#000000"
+   id="stop550" />
          <stop
-                 offset="0.45"
-                 style="stop-color:#000000"
-                 id="stop552" />
+   offset="0.45"
+   style="stop-color:#000000"
+   id="stop552" />
          <stop
-                 offset="0.55"
-                 style="stop-color:#000000"
-                 id="stop554" />
+   offset="0.55"
+   style="stop-color:#000000"
+   id="stop554" />
          <stop
-                 offset="0.76"
-                 style="stop-color:#000000"
-                 id="stop556" />
+   offset="0.76"
+   style="stop-color:#000000"
+   id="stop556" />
          <stop
-                 offset="0.77"
-                 style="stop-color:#000000"
-                 id="stop558" />
+   offset="0.77"
+   style="stop-color:#000000"
+   id="stop558" />
          <stop
-                 offset="1"
-                 style="stop-color:#000000"
-                 id="stop560" />
+   offset="1"
+   style="stop-color:#000000"
+   id="stop560" />
 	</linearGradient>
                <path
-                       d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-                       id="path565"
-                       style="fill:#000000"
-                       willChange="" />
+   d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
+   id="path565"
+   style="fill:#000000"
+   willChange="" />
                <linearGradient
-                       id="linearGradient579"
-                       gradientUnits="userSpaceOnUse"
-                       x1="28.377399"
-                       y1="56.25"
-                       x2="28.377399"
-                       y2="-0.0308">
+   id="linearGradient579"
+   gradientUnits="userSpaceOnUse"
+   x1="28.377399"
+   y1="56.25"
+   x2="28.377399"
+   y2="-0.0308">
 		<stop
-                offset="0"
-                style="stop-color:#000000"
-                id="stop567" />
+   offset="0"
+   style="stop-color:#000000"
+   id="stop567" />
                     <stop
-                            offset="0.45"
-                            style="stop-color:#000000"
-                            id="stop569" />
+   offset="0.45"
+   style="stop-color:#000000"
+   id="stop569" />
                     <stop
-                            offset="0.55"
-                            style="stop-color:#000000"
-                            id="stop571" />
+   offset="0.55"
+   style="stop-color:#000000"
+   id="stop571" />
                     <stop
-                            offset="0.76"
-                            style="stop-color:#000000"
-                            id="stop573" />
+   offset="0.76"
+   style="stop-color:#000000"
+   id="stop573" />
                     <stop
-                            offset="0.77"
-                            style="stop-color:#000000"
-                            id="stop575" />
+   offset="0.77"
+   style="stop-color:#000000"
+   id="stop575" />
                     <stop
-                            offset="1"
-                            style="stop-color:#000000"
-                            id="stop577" />
+   offset="1"
+   style="stop-color:#000000"
+   id="stop577" />
 	</linearGradient>
                <path
-                       d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-                       id="path581"
-                       style="fill:#000000"
-                       willChange="" />
+   d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
+   id="path581"
+   style="fill:#000000"
+   willChange="" />
                <radialGradient
-                       id="radialGradient593"
-                       cx="56.2505"
-                       cy="28.0142"
-                       r="13.1021"
-                       gradientUnits="userSpaceOnUse">
+   id="radialGradient593"
+   cx="56.2505"
+   cy="28.0142"
+   r="13.1021"
+   gradientUnits="userSpaceOnUse">
 		<stop
-                offset="0"
-                style="stop-color:#000000"
-                id="stop583" />
+   offset="0"
+   style="stop-color:#000000"
+   id="stop583" />
                     <stop
-                            offset="0.14"
-                            style="stop-color:#000000"
-                            id="stop585" />
+   offset="0.14"
+   style="stop-color:#000000"
+   id="stop585" />
                     <stop
-                            offset="0.4"
-                            style="stop-color:#000000"
-                            id="stop587" />
+   offset="0.4"
+   style="stop-color:#000000"
+   id="stop587" />
                     <stop
-                            offset="0.75"
-                            style="stop-color:#000000"
-                            id="stop589" />
+   offset="0.75"
+   style="stop-color:#000000"
+   id="stop589" />
                     <stop
-                            offset="1"
-                            style="stop-color:#000000"
-                            id="stop591" />
+   offset="1"
+   style="stop-color:#000000"
+   id="stop591" />
 	</radialGradient>
                <circle
-                       cx="56.25"
-                       cy="28.014"
-                       r="13.102"
-                       id="circle595"
-                       style="fill:#000000"
-                       />
-</g>
+   cx="56.25"
+   cy="28.014"
+   r="13.102"
+   id="circle595"
+   style="fill:#000000" />
+<rect
+   style="fill:#999999;stroke:none;stroke-width:0.244087;stroke-opacity:1"
+   id="rect1521-9"
+   width="15.794542"
+   height="4.0770454"
+   x="70.609177"
+   y="75.000519"
+   transform="matrix(6.6437007,0,0,6.6437007,-463.62537,-433.31175)" /><text
+   xml:space="preserve"
+   transform="matrix(1.7578125,0,0,1.7578125,-354.9621,-419.88224)"
+   id="text1890-0"
+   style="white-space:pre;shape-inside:url(#rect1892-1);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="220.27148"
+     y="288.31515"
+     id="tspan1048"><tspan
+       style="fill:#000000"
+       id="tspan1046">K115</tspan></tspan></text></g>
      </g>
 </svg>
