@@ -209,42 +209,42 @@
    transform="matrix(0.01693333,0,0,0.01524961,97.442556,195.66611)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
    id="path127222"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 61,0 V 999 H 3 V 0 Z"
    id="path127224"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 54,0 V 999 H 10 V 0 Z"
    id="path127226"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 48,0 V 999 H 17 V 0 Z"
    id="path127228"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 42,0 V 999 H 23 V 0 Z"
    id="path127230"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="M 36,0 V 999 H 28 V 0 Z"
    id="path127232"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,0 V 999"
    id="path127234"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path127236"
    willChange="" />
@@ -254,42 +254,42 @@
    transform="matrix(0.01693333,0,0,0.02227205,113.1902,109.51781)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
    id="path127294"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 61,0 V 999 H 3 V 0 Z"
    id="path127296"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 54,0 V 999 H 10 V 0 Z"
    id="path127298"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 48,0 V 999 H 17 V 0 Z"
    id="path127300"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 42,0 V 999 H 23 V 0 Z"
    id="path127302"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="M 36,0 V 999 H 28 V 0 Z"
    id="path127304"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,0 V 999"
    id="path127306"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path127308"
    willChange="" />
@@ -697,63 +697,63 @@
    transform="matrix(0.01693333,0,0,0.02227205,68.342681,174.75055)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
    id="path127190"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 61,0 V 999 H 3 V 0 Z"
    id="path127192"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 54,0 V 999 H 10 V 0 Z"
    id="path127194"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 48,0 V 999 H 17 V 0 Z"
    id="path127196"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 42,0 V 999 H 23 V 0 Z"
    id="path127198"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="M 36,0 V 999 H 28 V 0 Z"
    id="path127200"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,0 V 999"
    id="path127202"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path127204"
    willChange="" />
           </g>
-          
+
           <g
    id="g127292"
    transform="matrix(0.02781182,0,0,0.01905311,69.52444,195.7693)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+   style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
    id="path127262"
    willChange="" />
                <path
-   style="fill:#999999"
+   style="fill:#cccccc"
    d="M 0,4 H 999 V 62 H 0 Z"
    id="path127264"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+   style="fill:#cccccc"
    d="M 0,11 H 999 V 55 H 0 Z"
    id="path127266"
    willChange="" />
@@ -763,68 +763,68 @@
    id="path127268"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+   style="fill:#cccccc"
    d="M 0,23 H 999 V 42 H 0 Z"
    id="path127270"
    willChange="" />
                <path
-   style="fill:#ffffff"
+   style="fill:#cccccc"
    d="m 0,29 h 999 v 8 H 0 Z"
    id="path127272"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+   style="fill:#cccccc"
    d="M 0,66 H 999"
    id="path127274"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+   style="fill:#cccccc"
    d="M 999,0 H 0"
    id="path127276"
    willChange="" />
           </g>
-          
+
           <g
    id="g127292-3"
    transform="matrix(0.02781182,0,0,0.01905311,114.3311,130.44829)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
    id="path127262-4"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 0,4 H 999 V 62 H 0 Z"
    id="path127264-1"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 0,11 H 999 V 55 H 0 Z"
    id="path127266-5"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 0,17 H 999 V 48 H 0 Z"
    id="path127268-6"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 0,23 H 999 V 42 H 0 Z"
    id="path127270-5"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="m 0,29 h 999 v 8 H 0 Z"
    id="path127272-7"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,66 H 999"
    id="path127274-6"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 999,0 H 0"
    id="path127276-3"
    willChange="" />
@@ -834,42 +834,42 @@
    transform="matrix(0.02665421,0,0,0.06763495,142.15482,130.30601)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
    id="path127190-0"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 61,0 V 999 H 3 V 0 Z"
    id="path127192-6"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 54,0 V 999 H 10 V 0 Z"
    id="path127194-8"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 48,0 V 999 H 17 V 0 Z"
    id="path127196-3"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 42,0 V 999 H 23 V 0 Z"
    id="path127198-7"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="M 36,0 V 999 H 28 V 0 Z"
    id="path127200-3"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,0 V 999"
    id="path127202-3"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path127204-7"
    willChange="" />
@@ -880,42 +880,42 @@
    transform="matrix(0.01693333,0,0,0.02227205,187.9769,61.865827)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
    id="path127823"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 61,0 V 999 H 3 V 0 Z"
    id="path127825"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 54,0 V 999 H 10 V 0 Z"
    id="path127827"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 48,0 V 999 H 17 V 0 Z"
    id="path127829"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 42,0 V 999 H 23 V 0 Z"
    id="path127831"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="M 36,0 V 999 H 28 V 0 Z"
    id="path127833"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,0 V 999"
    id="path127835"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path127837"
    willChange="" />
@@ -925,42 +925,42 @@
    transform="matrix(0.01693333,0,0,0.00601507,171.82156,196.53098)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
    id="path127787"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 61,0 V 999 H 3 V 0 Z"
    id="path127789"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 54,0 V 999 H 10 V 0 Z"
    id="path127791"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 48,0 V 999 H 17 V 0 Z"
    id="path127793"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 42,0 V 999 H 23 V 0 Z"
    id="path127795"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="M 36,0 V 999 H 28 V 0 Z"
    id="path127797"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,0 V 999"
    id="path127799"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path127801"
    willChange="" />
@@ -1218,42 +1218,42 @@
    transform="matrix(0.02781182,0,0,0.01905311,143.90344,196.63417)"
    tip="line">
                <path
-   style="fill:#7f7f7f"
+                       style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
    id="path127805"
    willChange="" />
                <path
-   style="fill:#999999"
+                       style="fill:#cccccc"
    d="M 0,4 H 999 V 62 H 0 Z"
    id="path127807"
    willChange="" />
                <path
-   style="fill:#b2b2b2"
+                       style="fill:#cccccc"
    d="M 0,11 H 999 V 55 H 0 Z"
    id="path127809"
    willChange="" />
                <path
-   style="fill:#cccccc"
+                       style="fill:#cccccc"
    d="M 0,17 H 999 V 48 H 0 Z"
    id="path127811"
    willChange="" />
                <path
-   style="fill:#e5e5e5"
+                       style="fill:#cccccc"
    d="M 0,23 H 999 V 42 H 0 Z"
    id="path127813"
    willChange="" />
                <path
-   style="fill:#ffffff"
+                       style="fill:#cccccc"
    d="m 0,29 h 999 v 8 H 0 Z"
    id="path127815"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 0,66 H 999"
    id="path127817"
    willChange="" />
                <path
-   style="fill:none;stroke:#4c4c4c;stroke-width:2"
+                       style="fill:#cccccc"
    d="M 999,0 H 0"
    id="path127819"
    willChange="" />
@@ -1734,7 +1734,7 @@
    d="m 545,491 h 15"
    id="path128037"
    inkscape:label="path273" />
-               
+
           <rect
    style="fill:#999999;stroke:black;stroke-width:12;stroke-opacity:1"
    id="rect1521-2-1-0-8"
@@ -1979,7 +1979,7 @@
    d="m 545,491 h 15"
    id="path128121"
    inkscape:label="path273" />
-               
+
           <rect
    style="fill:#999999;stroke:black;stroke-width:12;stroke-opacity:1"
    id="rect1521-2-1-0-87"
@@ -2110,7 +2110,7 @@
    cy="28.014"
    r="13.102"
    id="circle566"
-   style="fill:#000000" />
+   style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:black;stroke-width:2;stroke-opacity:1"
    id="rect1521-2"
@@ -2240,7 +2240,7 @@
    cy="28.014"
    r="13.102"
    id="circle595"
-   style="fill:#000000" />
+   style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:black;stroke-width:2;stroke-opacity:1"
    id="rect1521-2-1"

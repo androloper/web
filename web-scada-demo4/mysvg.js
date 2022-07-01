@@ -209,6 +209,10 @@ function changeKlepeColor(color, klepe) {
   }
 }
 
+function checkLine(condition1, condition2) {
+
+}
+
 function changeLineColor() {
   const svg = document.getElementById("svg_obj").contentDocument;
   const layer1 = svg.getElementById("layer1");
