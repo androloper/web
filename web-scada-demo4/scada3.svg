@@ -207,7 +207,7 @@
           <g
    id="g127238"
    transform="matrix(0.01693333,0,0,0.01524961,97.442556,195.66611)"
-   tip="line">
+   tip="line" lineTag="M100">
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -253,7 +253,7 @@
           <g
    id="g127310"
    transform="matrix(0.01693333,0,0,0.02227205,113.1902,109.51781)"
-   tip="line">
+   tip="line" lineTag="M102">
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -698,9 +698,8 @@
 <!--          ÇİZGİLER-->
           <g
    id="g127220"
-   conditions="${checkConditions}"
    transform="matrix(0.01693333,0,0,0.02227205,68.342681,174.75055)"
-   tip="line">
+   tip="line" lineTag="M100">
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -746,7 +745,7 @@
           <g
    id="g127292"
    transform="matrix(0.02781182,0,0,0.01905311,69.52444,195.7693)"
-   tip="line">
+   tip="line" lineTag="M100">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -792,7 +791,7 @@
           <g
    id="g127292-3"
    transform="matrix(0.02781182,0,0,0.01905311,114.3311,130.44829)"
-   tip="line">
+   tip="line" lineTag="M102">
                <path
                        style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -838,7 +837,7 @@
           <g
    id="g127220-0"
    transform="matrix(0.02665421,0,0,0.06763495,142.15482,130.30601)"
-   tip="line">
+   tip="line" lineTag="M102">
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -884,7 +883,7 @@
           <g
    id="g127839"
    transform="matrix(0.01693333,0,0,0.02227205,187.9769,61.865827)"
-   tip="line">
+   tip="line" lineTag="M105">
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -930,7 +929,7 @@
           <g
    id="g127803"
    transform="matrix(0.01693333,0,0,0.00601507,171.82156,196.53098)"
-   tip="line">
+   tip="line" lineTag="M102">
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -1225,7 +1224,7 @@
           <g
    id="g127821"
    transform="matrix(0.02781182,0,0,0.01905311,143.90344,196.63417)"
-   tip="line">
+   tip="line" lineTag="M102">
                <path
                        style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -1274,6 +1273,7 @@
    transform="matrix(0.02498217,0,0,0.02366954,152.2938,45.068194)"
    PlcTagName="PLC01!M105.IO"
    tip="motor"
+   lineTag="M105"
    class="&quot;mtr&quot;"
    inkscape:label="g320">
                <path
@@ -1521,6 +1521,7 @@
    transform="matrix(0.02498217,0,0,0.02366954,78.295408,98.273649)"
    PlcTagName="PLC01!M102.IO"
    tip="motor"
+   lineTag="M102"
    class="&quot;mtr&quot;"
    inkscape:label="g320">
                <path
@@ -1767,6 +1768,7 @@
    transform="matrix(0.02498217,0,0,0.02366954,26.618845,162.58906)"
    PlcTagName="PLC01!M100.IO"
    tip="motor"
+   lineTag="M100"
    class="&quot;mtr&quot;"
    inkscape:label="g320">
                <path

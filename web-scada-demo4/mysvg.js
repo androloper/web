@@ -112,10 +112,11 @@ function itemChange(itemName, itemValue){
         }
       }
     }
-    // if (aa[i].children[i].getAttribute("tip") === "line") {
-    //   console.log("12312312");
-    //   changeLineColor(aa[i]);
-    // }
+    if (itemName.includes(aa[i].getAttribute("lineTag"))) {
+      if(aa[i].getAttribute("tip") === "line") {
+        changeLineColor(aa[i]);
+      }
+    }
   }
 }
 
@@ -266,8 +267,8 @@ function changeLineColor(line) {
         document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
         document.getElementById('modalbodytext').innerText = event.path[1].children[1].attributes[2].textContent;
       });
-      for (var k = 0; k < aa.children.length; k++) {
-        var bb = aa.children[k];
+      for (var k = 0; k < line.children.length; k++) {
+        var bb = line.children[k];
         if (bb.hasAttribute("willChange")) {
           bb.setAttribute("style", "fill:green");
         }
