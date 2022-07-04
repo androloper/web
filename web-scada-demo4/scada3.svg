@@ -249,6 +249,7 @@
    id="path127236"
    willChange="" />
           </g>
+
           <g
    id="g127310"
    transform="matrix(0.01693333,0,0,0.02227205,113.1902,109.51781)"
@@ -294,6 +295,7 @@
    id="path127308"
    willChange="" />
           </g>
+
 <!--          SOLDAKİ ELEVATOR-->
           <g
    inkscape:label="Katman 3"
@@ -541,6 +543,7 @@
    id="path610" />
                </g>
           </g>
+
 <!--          ÇUKUR ALTI ELEVATOR-->
           <g
    inkscape:label="Katman 2"
@@ -678,6 +681,7 @@
    willChange="" />
                </g>
           </g>
+
 <!--          ALIM ÇUKURU-->
           <g
    id="tnk1"
@@ -694,6 +698,7 @@
 <!--          ÇİZGİLER-->
           <g
    id="g127220"
+   conditions="${checkConditions}"
    transform="matrix(0.01693333,0,0,0.02227205,68.342681,174.75055)"
    tip="line">
                <path
@@ -829,6 +834,7 @@
    id="path127276-3"
    willChange="" />
           </g>
+
           <g
    id="g127220-0"
    transform="matrix(0.02665421,0,0,0.06763495,142.15482,130.30601)"
@@ -920,6 +926,7 @@
    id="path127837"
    willChange="" />
           </g>
+
           <g
    id="g127803"
    transform="matrix(0.01693333,0,0,0.00601507,171.82156,196.53098)"
@@ -965,6 +972,7 @@
    id="path127801"
    willChange="" />
           </g>
+
 <!--          SAĞDAKİ ELEVATOR-->
           <g
    inkscape:label="Katman 4"
@@ -1212,6 +1220,7 @@
    id="path127763" />
                </g>
           </g>
+
 <!--          ÇİZGİLER-->
           <g
    id="g127821"
@@ -1506,6 +1515,7 @@
      id="tspan1217"><tspan
        style="fill:#000000"
        id="tspan1215">M105</tspan></tspan></text></g>
+
           <g
    id="g128043"
    transform="matrix(0.02498217,0,0,0.02366954,78.295408,98.273649)"
@@ -1751,6 +1761,7 @@
      id="tspan1221"><tspan
        style="fill:#000000"
        id="tspan1219">M102</tspan></tspan></text></g>
+
           <g
    id="g128127"
    transform="matrix(0.02498217,0,0,0.02366954,26.618845,162.58906)"
@@ -1996,6 +2007,7 @@
      id="tspan1225"><tspan
        style="fill:#000000"
        id="tspan1223">M100</tspan></tspan></text></g>
+
 <!--          KAPAKLAR-->
           <g
    id="g601"
@@ -2127,6 +2139,7 @@
      id="tspan1229"><tspan
        style="fill:#000000"
        id="tspan1227">K114</tspan></tspan></text></g>
+
           <g
    id="g597"
    transform="matrix(0.15051852,0,0,0.15051852,69.784205,65.221444)"

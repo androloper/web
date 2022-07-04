@@ -101,17 +101,21 @@ function itemChange(itemName, itemValue){
       if (aa[i].getAttribute("PlcTagName") === itemName) {
         if (aa[i].getAttribute("tip") === "motor") {
             checkMotor(itemValue, aa[i]);
-            checkMotorTag(aa[i],itemValue);
+            changeMotorTag(aa[i],itemValue);
         }
         if (aa[i].getAttribute("tip") === "kapak") {
             checkKlepe(itemValue, aa[i]);
-            checkKlepeTag(aa[i],itemValue);
+            changeKlepeTag(aa[i],itemValue);
         }
         if (aa[i].getAttribute("tip") === "elevator") {
             checkElevator(itemValue, aa[i]);
         }
       }
     }
+    // if (aa[i].children[i].getAttribute("tip") === "line") {
+    //   console.log("12312312");
+    //   changeLineColor(aa[i]);
+    // }
   }
 }
 
@@ -163,6 +167,28 @@ function changeMotorColor(color, motor) {
   }
 }
 
+function changeMotorTag(tag, value) {
+  if (Bit(value, 13)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:14");
+    }
+  }
+  else if (Bit(value, 11)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:cornflowerblue;stroke:black;stroke-width:14");
+    }
+  }
+  else if (Bit(value, 8)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:yellow;stroke:black;stroke-width:14");
+    }
+  }
+  else
+  if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+    tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:14");
+  }
+}
+
 function checkElevator(myVal, elevator) {
   if (Bit(myVal, 1)) {
     return changeElevatorColor("green", elevator);
@@ -209,55 +235,7 @@ function changeKlepeColor(color, klepe) {
   }
 }
 
-function checkLine(condition1, condition2) {
-
-}
-
-function changeLineColor() {
-  const svg = document.getElementById("svg_obj").contentDocument;
-  const layer1 = svg.getElementById("layer1");
-  for (var i = 0; i < layer1.children.length; i++) {
-    if (layer1.children[i].getAttribute("tip") === "line") {
-      var aa = layer1.children[i];
-      // aa.addEventListener("click", event => {
-      //   $('#myModal').modal('show');
-      //   console.log(event);
-      //   document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-      //   document.getElementById('modalbodytext').innerText = event.path[1].children[1].attributes[2].textContent;
-      // });
-      for (var k = 0; k < aa.children.length; k++) {
-        var bb = aa.children[k];
-        if (bb.hasAttribute("willChange")) {
-          bb.setAttribute("style", "fill:green");
-        }
-      }
-    }
-  }
-}
-
-function checkMotorTag(tag, value) {
-  if (Bit(value, 13)) {
-    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
-      tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:14");
-    }
-  }
-  else if (Bit(value, 11)) {
-    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
-      tag.children[tag.children.length-2].setAttribute("style", "fill:cornflowerblue;stroke:black;stroke-width:14");
-    }
-  }
-  else if (Bit(value, 8)) {
-    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
-      tag.children[tag.children.length-2].setAttribute("style", "fill:yellow;stroke:black;stroke-width:14");
-    }
-  }
-  else
-  if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
-    tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:14");
-  }
-}
-
-function checkKlepeTag(tag, value) {
+function changeKlepeTag(tag, value) {
   if (Bit(value, 8) || Bit(value, 9) || Bit(value, 10) || Bit(value, 11)) {
     if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
       tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:3");
@@ -269,10 +247,36 @@ function checkKlepeTag(tag, value) {
     }
   }
   else
-    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
-      tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:3");
+  if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+    tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:3");
   }
 }
+
+
+function checkLine(line, condition1, condition2) {
+
+}
+
+function changeLineColor(line) {
+  for (var i = 0; i < line.children.length; i++) {
+      var aa = line.children[i];
+      aa.addEventListener("click", event => {
+        $('#myModal').modal('show');
+        console.log(event);
+        document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
+        document.getElementById('modalbodytext').innerText = event.path[1].children[1].attributes[2].textContent;
+      });
+      for (var k = 0; k < aa.children.length; k++) {
+        var bb = aa.children[k];
+        if (bb.hasAttribute("willChange")) {
+          bb.setAttribute("style", "fill:green");
+        }
+      }
+  }
+}
+
+
+
 
 // function changeTagColor(color, myTag){
 //   console.log(myTag.children.length-2);
