@@ -1,0 +1,145 @@
+<html lang="en">
+    <head>
+        <title>Devextreme Pure JS Demo</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script type="text/javascript"
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+                integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.1.3/css/dx.light.css">
+        <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.3/js/dx.all.js"></script>
+        <link
+                href="https://cdnjs.cloudflare.com/ajax/libs/devextreme/21.1.4/css/dx.light.css"
+                rel="stylesheet"
+        />
+    </head>
+    <body class="dx-viewport" style="padding: 6px">
+    <div class="demo-container">
+        <div id="gridContainer" style="height: 100%"></div>
+    </div>
+    </body>
+    <script>
+        $(() => {
+            $('#gridContainer').dxDataGrid({
+                dataSource: {
+                    store: {
+                        type: 'odata',
+                        url: 'https://js.devexpress.com/Demos/SalesViewer/odata/DaySaleDtoes',
+                        key: 'Id',
+                        beforeSend(request) {
+                            request.params.startDate = '2020-05-10';
+                            request.params.endDate = '2020-05-15';
+                        },
+                    },
+                },
+                paging: {
+                    pageSize: 25,
+                },
+                pager: {
+                    showPageSizeSelector: true,
+                    allowedPageSizes: [10, 25, 50, 100],
+                },
+                searchPanel: {
+                    visible: true,
+                    highlightCaseSensitive: false,
+                },
+                groupPanel: {
+                    visible: true
+                },
+                grouping: {
+                    autoExpandAll: false,
+                },
+                allowColumnReordering: true,
+                rowAlternationEnabled: true,
+                showBorders: true,
+                columns: [
+                    {
+                        dataField: 'Product',
+                        groupIndex: 0,
+                    },
+                    {
+                        dataField: 'Amount',
+                        caption: 'Sale Amount',
+                        dataType: 'number',
+                        format: 'currency',
+                        alignment: 'right',
+                    },
+                    {
+                        dataField: 'Discount',
+                        caption: 'Discount %',
+                        dataType: 'number',
+                        format: 'percent',
+                        alignment: 'right',
+                        allowGrouping: false,
+                        cellTemplate: discountCellTemplate,
+                        cssClass: 'bullet',
+                    },
+                    {
+                        dataField: 'SaleDate',
+                        dataType: 'date',
+                    },
+                    {
+                        dataField: 'Region',
+                        dataType: 'string',
+                    },
+                    {
+                        dataField: 'Sector',
+                        dataType: 'string',
+                    },
+                    {
+                        dataField: 'Channel',
+                        dataType: 'string',
+                    },
+                    {
+                        dataField: 'Customer',
+                        dataType: 'string',
+                    },
+                ],
+                onContentReady(e) {
+                    if (!collapsed) {
+                        collapsed = true;
+                        e.component.expandRow(['EnviroCare']);
+                    }
+                },
+            });
+        });
+
+        const discountCellTemplate = function (container, options) {
+            $('<div/>').dxBullet({
+                onIncidentOccurred: null,
+                size: {
+                    width: 150,
+                    height: 35,
+                },
+                margin: {
+                    top: 5,
+                    bottom: 0,
+                    left: 5,
+                },
+                showTarget: false,
+                showZeroLevel: true,
+                value: options.value * 100,
+                startScaleValue: 0,
+                endScaleValue: 100,
+                tooltip: {
+                    enabled: true,
+                    font: {
+                        size: 18,
+                    },
+                    paddingTopBottom: 2,
+                    customizeTooltip() {
+                        return { text: options.text };
+                    },
+                    zIndex: 5,
+                },
+            }).appendTo(container);
+        };
+        let collapsed = false;
+    </script>
+</html>
