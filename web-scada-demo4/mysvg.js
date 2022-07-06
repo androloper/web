@@ -34,24 +34,6 @@ const connection = new signalR.HubConnectionBuilder()
 async function startHubConn(){
   try{
     await connection.start();
-    // connection.stream(
-    //     "SubscribeNodeValueChanges",
-    //     "ns=2;s=Channel1.Device1.PLC01.K114.IO")
-    //     .subscribe({
-    //       next: (e) => {
-    //         const resp = JSON.parse(e);
-    //         for(var i = 0; i<resp.length; i++){
-    //           itemChange(resp[i].Name, resp[i].Value);
-    //         }
-    //         console.log(resp);
-    //       },
-    //       complete: () => {
-    //         console.log("Completed");
-    //       },
-    //       error: (err) => {
-    //         console.log(err);
-    //       }
-    //     });
   }
   catch (err) {
     console.log(err);
@@ -63,34 +45,49 @@ connection.onclose(async () => {
   await startHubConn();
 });
 
-connection.on("ReceiveValues", (value) => {
+// connection.on("ReceiveValues", (value) => {
+//   const resp = JSON.parse(value);
+//   for(var i = 0; i<resp.length; i++){
+//     itemChange(resp[i].Name, resp[i].Value);
+//   }
+//     //   if(values.length!=null || values.length===0) {
+//     //     values.push(resp);
+//     //   } else if(resp[i].Name === values[i].Name) {
+//     //     values[i].Value = resp[i].Value;
+//     //   }
+//     // }
+//   console.log(resp);
+// });
+
+connection.on("GetItemAll", (value) => {
   const resp = JSON.parse(value);
   for(var i = 0; i<resp.length; i++){
     itemChange(resp[i].Name, resp[i].Value);
   }
+  allItems = resp;
+  console.log(resp);
+  connection.on("ReceiveValues", (value) => {
+    const resp = JSON.parse(value);
+    for(var i = 0; i<resp.length; i++){
+      itemChange(resp[i].Name, resp[i].Value);
+    }
     //   if(values.length!=null || values.length===0) {
     //     values.push(resp);
     //   } else if(resp[i].Name === values[i].Name) {
     //     values[i].Value = resp[i].Value;
     //   }
     // }
-  console.log(resp);
+    console.log(resp);
+  });
 });
+
 
 
 function startScada() {
   startHubConn();
-  // changeMotorColors(color);
-  // changeElevatorColor();
-  // changeLineColor();
-  // changeKlepeColor();
-  // changeNumbers(10);
-  // setInterval(itemChange, 300);
 }
 
-// var motorList = [];
-// var kapakList = [];
-// var elevatorList = [];
+var allItems = [];
 
 function itemChange(itemName, itemValue){
   const svg = document.getElementById("svg_obj").contentDocument;
@@ -112,11 +109,16 @@ function itemChange(itemName, itemValue){
         }
       }
     }
-    if (itemName.includes(aa[i].getAttribute("lineTag"))) {
-      if(aa[i].getAttribute("tip") === "line") {
-        changeLineColor(aa[i]);
-      }
+    if(aa[i].getAttribute("tip")==="line"){
+      checkLine(aa[i], aa[i].getAttribute("condition"))
     }
+    // if (itemName.includes(aa[i].getAttribute("lineTag"))) {
+    //   if(aa[i].getAttribute("tip") === "line" && aa[i].getAttribute("lineTag")===aa[i].getAttribute("PlcTagName")) {
+    //     changeLineColor(aa[i]);
+    //   } else {
+    //     console.log("RnD Attempt didnt work");
+    //   }
+    // }
   }
 }
 
@@ -132,6 +134,12 @@ function Bit(_val, index) {
     return (c[index] === '1');
   } catch (e) {
     return false;
+  }
+}
+
+function ReadItemFromList(itemList, itemName) {
+  if (itemList.hasOwnProperty(itemName)) {
+    return itemList[itemName].value;
   }
 }
 
@@ -253,29 +261,80 @@ function changeKlepeTag(tag, value) {
   }
 }
 
+function checkLine(line, condition) {
+  var stat = false;
+  var result = get(condition, "{", "}");
+  var myDict = new Object();
+  for (var i = 0; i < result.length; i++) {
+    var tags = result[i].split(':');
+    var tagObj = {
+      bit: tags[0],
+      value: Bit(ReadItemFromList(allItems, tags[0]), tags[1])
+      // value: Bit(ReadItemFromList(line, tags[0]), tags[1])
+    };
+    myDict[result[i]] = tagObj;
+  }
 
-function checkLine(line, condition1, condition2) {
+  var condition1;
+  for (var key in myDict) {
+    var oldStr = "{" + key.toString() + "}";
+    var newStr = myDict[key].value.toString()
+    condition1 = condition.replace(oldStr, newStr);
+  }
 
-}
-
-function changeLineColor(line) {
-  for (var i = 0; i < line.children.length; i++) {
-      var aa = line.children[i];
-      aa.addEventListener("click", event => {
-        $('#myModal').modal('show');
-        console.log(event);
-        document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-        document.getElementById('modalbodytext').innerText = event.path[1].children[1].attributes[2].textContent;
-      });
-      for (var k = 0; k < line.children.length; k++) {
-        var bb = line.children[k];
-        if (bb.hasAttribute("willChange")) {
-          bb.setAttribute("style", "fill:green");
-        }
-      }
+  stat = eval(condition1);
+  if (stat) {
+    changeLineColor(line, "lime");
+  }
+  else {
+    changeLineColor(line, "gray");
   }
 }
 
+function changeLineColor(line, color) {
+    for (var k = 0; k < line.children.length; k++) {
+      var bb = line.children[k];
+      if (bb.hasAttribute("willChange")) {
+        bb.setAttribute("style", `fill:${color}`);
+      }
+    }
+}
+
+var results = [];
+var string = "";
+
+function getFromBetween(sub1, sub2) {
+  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return false;
+  var SP = this.string.indexOf(sub1) + sub1.length;
+  var string1 = this.string.substr(0, SP);
+  var string2 = this.string.substr(SP);
+  var TP = string1.length + string2.indexOf(sub2);
+  return this.string.substring(SP, TP);
+}
+
+function removeFromBetween(sub1, sub2) {
+  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return false;
+  var removal = sub1 + this.getFromBetween(sub1, sub2) + sub2;
+  this.string = this.string.replace(removal, "");
+}
+
+function getAllResults(sub1, sub2) {
+  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return;
+  var result = this.getFromBetween(sub1, sub2);
+  this.results.push(result);
+  this.removeFromBetween(sub1, sub2);
+  if (this.string.indexOf(sub1) > -1 && this.string.indexOf(sub2) > -1) {
+    this.getAllResults(sub1, sub2);
+  }
+  else return;
+}
+
+function get(string, sub1, sub2) {
+  this.results = [];
+  this.string = string;
+  this.getAllResults(sub1, sub2);
+  return this.results;
+}
 
 
 
