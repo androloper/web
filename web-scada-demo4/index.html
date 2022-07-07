@@ -40,6 +40,33 @@
                     </div>
                 </div>
             </div>
+
+            <div id="motorModal" class="modal" onclick="popUpFlag=false;">
+                <table class="modal-content">
+                    <tr>
+                        <td >
+                            <div class="modal-content">
+                                <div class="modal-header" id="modalHeader">
+                                    <h3 style="text-align: center" id="MotorPopupHeader">M100</h3>
+                                </div>
+                                <div id="popupBody" class="modal-body">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button id="btnAlarm" onclick="btnAlarmClick(this)" type="button">></button>
+                        </td>
+                        <td id="tdParametre" >
+                            <table>
+                                <tr>
+                                    <td id="tdPopupTab"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
     </body>
 </html>
