@@ -25,9 +25,6 @@ connection.on("GetItemAll", (value) => {
   const resp = JSON.parse(value);
   for(var i = 0; i<resp.length; i++){
     allItems[resp[i].Name]=resp[i];
-    // var idx = allItems.indexOf(resp[i]);
-    // console.log(idx +": "+allItems[idx]);
-    console.log(allItems[resp[i].Name]);
     itemChange(resp[i].Name, resp[i].Value);
   }
 
@@ -42,7 +39,7 @@ connection.on("GetItemAll", (value) => {
 
 function startScada() {
   startHubConn();
-  // InitEventHandlers();
+  InitEventHandlers();
 }
 
 //assigning the values from signalr
@@ -71,31 +68,32 @@ function itemChange(itemName, itemValue){
       if(condition.indexOf(itemName) > -1)
       checkLine(aa[i], condition);
     }
-    // if (popUpRootTag === itemName) {
-    //   var butonList = document.getElementsByClassName("mostPopupButton");
-    //   var popUpHeaderColor;
-    //   if (popUpType === "M") {
-    //     popUpHeaderColor = checkMotorPopupButton(butonList, itemValue);
-    //   }
-    //   else if (popUpType === "K") {
-    //     popUpHeaderColor = checkKlepePopupButton(butonList, itemValue);
-    //   }
-    //   else if (popUpType === "K3yon") {
-    //     popUpHeaderColor = checkKlepe3YonPopupButton(butonList, itemValue);
-    //   }
-    //   else if (popUpType === "K2yon") {
-    //     popUpHeaderColor = checkKlepe2YonPopupButton(butonList, itemValue);
-    //   }
-    //
-    //   document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = popUpHeaderColor;
-    // }
-    // if (typeof popUpRootTag !== 'undefined') {
-    //   if (popUpRootTag.replace(".IO", ".ARZ") === itemName) {
-    //     if (popUpType === "M") {
-    //       checkMotorPopupAlarms(itemValue);
-    //     }
-    //   }
-    // }
+    if (popUpRootTag === itemName) {
+      var butonList = document.getElementsByClassName("mostPopupButton");
+      console.log("burais "+butonList[0]);
+      var popUpHeaderColor;
+      if (popUpType === "M") {
+        popUpHeaderColor = checkMotorPopupButton(butonList, itemValue);
+      }
+      else if (popUpType === "K") {
+        popUpHeaderColor = checkKlepePopupButton(butonList, itemValue);
+      }
+      else if (popUpType === "K3yon") {
+        popUpHeaderColor = checkKlepe3YonPopupButton(butonList, itemValue);
+      }
+      else if (popUpType === "K2yon") {
+        popUpHeaderColor = checkKlepe2YonPopupButton(butonList, itemValue);
+      }
+
+      document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = popUpHeaderColor;
+    }
+    if (typeof popUpRootTag !== 'undefined') {
+      if (popUpRootTag.replace(".IO", ".ARZ") === itemName) {
+        if (popUpType === "M") {
+          checkMotorPopupAlarms(itemValue);
+        }
+      }
+    }
   }
 }
 
@@ -163,7 +161,7 @@ function btnAlarmClick() {
   //popUpFlag = false;
   var parametre = document.getElementById("tdParametre");
   var btnAlarm = document.getElementById("btnAlarm");
-  if (parametre.style.display == "inherit") {
+  if (parametre.style.display === "inherit") {
     document.getElementById("tdParametre").style.display = "none";
     btnAlarm.innerHTML = ">";
   }
@@ -176,9 +174,10 @@ function btnAlarmClick() {
 }
 
 function InitEventHandlers() {
-
-  var elements = document.getElementsByClassName("motor");
-  for (var i = 0; i < elements.length; i++) {
+  const svg = document.getElementById("svg_obj").contentDocument;
+  const layer1 = svg.getElementById("layer1");
+  for (var i = 0; i < layer1.children.length; i++) {
+    var elements = layer1.children;
     elements[i].addEventListener('click', Motor_Click, false);
   }
 
@@ -196,6 +195,11 @@ function InitEventHandlers() {
   for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', Klepe2Yon_Click, false);
   }
+}
+
+window.onclick = function (event) {
+  
+  ClosePopUp();
 }
 
 function ClosePopUp() {
@@ -239,25 +243,35 @@ function Klepe2Yon_Click() {
   popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
   ShowPopUp();
 }
+var MouseX;
+var MouseY;
+var popUpRootTag;
+var popUpType;
+var popUpFlag = false;
+
+$("body").mousemove(function (e) {
+  MouseX = e.pageX;
+  MouseY = e.pageY;
+});
 
 var ShowPopUp = function () {
   popUpFlag = false;
   var popupHTML = "";
   var popupTabs = "";
 
-  if (popUpType == "M") {
+  if (popUpType === "M") {
     popupHTML = getMotorPopUpHTML();
     popupTabs = getMotorPopUpAlarmInputOutputHTML();
   }
-  else if (popUpType == "K") {
+  else if (popUpType === "K") {
     popupHTML = getKlepePopUpHTML();
     popupTabs = getKlepePopUpAlarmInputOutputHTML();
   }
-  else if (popUpType == "K3yon") {
+  else if (popUpType === "K3yon") {
     popupHTML = getKlepe3YonPopUpHTML();
     popupTabs = getKlepe3YonPopUpAlarmInputOutputHTML();
   }
-  else if (popUpType == "K2yon") {
+  else if (popUpType === "K2yon") {
     popupHTML = getKlepe2YonPopUpHTML();
     popupTabs = getKlepe2YonPopUpAlarmInputOutputHTML();
   }
@@ -271,23 +285,23 @@ var ShowPopUp = function () {
 
   popupKonumHesapla(modal, MouseX, MouseY);
 
-  document.getElementById('MotorPopupHeader').innerHTML = popUpRootTag.substring(6);
+  document.getElementById('MotorPopupHeader').innerHTML = popUpRootTag;
   document.getElementById('popupBody').innerHTML = popupHTML;
   document.getElementById('tdPopupTab').innerHTML = popupTabs;
 
   var butonList = document.getElementsByClassName("mostPopupButton");
   var popUpHeaderColor;
-  if (popUpType == "M") {
+  if (popUpType === "M") {
     popUpHeaderColor = checkMotorPopupButton(butonList, ReadItem(popUpRootTag));
     checkMotorPopupAlarms(ReadItem(popUpRootTag.replace(".IO", ".ARZ")));
   }
-  else if (popUpType == "K") {
+  else if (popUpType === "K") {
     popUpHeaderColor = checkKlepePopupButton(butonList, ReadItem(popUpRootTag));
   }
-  else if (popUpType == "K2yon") {
+  else if (popUpType === "K2yon") {
     popUpHeaderColor = checkKlepe2YonPopupButton(butonList, ReadItem(popUpRootTag));
   }
-  else if (popUpType == "K3yon") {
+  else if (popUpType === "K3yon") {
     popUpHeaderColor = checkKlepe3YonPopupButton(butonList, ReadItem(popUpRootTag));
   }
 
@@ -329,14 +343,14 @@ function checkMotorPopupButton(buttonList, myVal) {
   var aktif = "lime";
 
   for (var i = 0; i < buttonList.length; i++) {
-    if (buttonList[i].id == "btnMan") {
+    if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 8)) {
         buttonList[i].style.backgroundColor = aktif;
       }
       else
         buttonList[i].style.backgroundColor = pasif;
     }
-    else if (buttonList[i].id == "btnStart") {
+    else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 9)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -344,7 +358,7 @@ function checkMotorPopupButton(buttonList, myVal) {
         buttonList[i].style.backgroundColor = pasif;
       }
     }
-    else if (buttonList[i].id == "btnStop") {
+    else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 9)) {
         buttonList[i].style.backgroundColor = pasif;
       }
@@ -352,7 +366,7 @@ function checkMotorPopupButton(buttonList, myVal) {
         buttonList[i].style.backgroundColor = aktif;
       }
     }
-    else if (buttonList[i].id == "btnBakim") {
+    else if (buttonList[i].id === "btnBakim") {
       if (Bit(myVal, 11)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -496,19 +510,19 @@ function checkMotorPopupAlarms(myVal) {
 }
 
 function checkKlepePopupButton(buttonList, myVal) {
-  var headerColor = "gray"; //pop içerisindeki butoon renkleri ayarlanır ve header rengi return edilir.
+  var headerColor = "gray";
   var pasif = "#EFEFEF";
   var aktif = "lime";
 
   for (var i = 0; i < buttonList.length; i++) {
-    if (buttonList[i].id == "btnMan") {
+    if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
         buttonList[i].style.backgroundColor = aktif;
       }
       else
         buttonList[i].style.backgroundColor = pasif;
     }
-    else if (buttonList[i].id == "btnStart") {
+    else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -516,7 +530,7 @@ function checkKlepePopupButton(buttonList, myVal) {
         buttonList[i].style.backgroundColor = pasif;
       }
     }
-    else if (buttonList[i].id == "btnStop") {
+    else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -570,14 +584,14 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
   var aktif = "lime";
 
   for (var i = 0; i < buttonList.length; i++) {
-    if (buttonList[i].id == "btnMan") {
+    if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
         buttonList[i].style.backgroundColor = aktif;
       }
       else
         buttonList[i].style.backgroundColor = pasif;
     }
-    else if (buttonList[i].id == "btnStart") {
+    else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -585,7 +599,7 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
         buttonList[i].style.backgroundColor = pasif;
       }
     }
-    else if (buttonList[i].id == "btnStop") {
+    else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -644,14 +658,14 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
   var aktif = "lime";
 
   for (var i = 0; i < buttonList.length; i++) {
-    if (buttonList[i].id == "btnMan") {
+    if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
         buttonList[i].style.backgroundColor = aktif;
       }
       else
         buttonList[i].style.backgroundColor = pasif;
     }
-    else if (buttonList[i].id == "btnStart") {
+    else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -659,7 +673,7 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
         buttonList[i].style.backgroundColor = pasif;
       }
     }
-    else if (buttonList[i].id == "btnStop") {
+    else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
         buttonList[i].style.backgroundColor = aktif;
       }
@@ -1039,100 +1053,100 @@ function getKlepe2YonPopUpAlarmInputOutputHTML() {
 
 function MotorButton_OnClick(myButton, chat, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
-  if (myButton.id == "btnMan") {
+  if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 8)) {
       chat.server.writeTag(aa, "21");
     }
     else
       chat.server.writeTag(aa, "1");
   }
-  else if (myButton.id == "btnStart") {
+  else if (myButton.id === "btnStart") {
     chat.server.writeTag(aa, "2");
   }
-  else if (myButton.id == "btnStop") {
+  else if (myButton.id === "btnStop") {
     chat.server.writeTag(aa, "22");
   }
-  else if (myButton.id == "btnBakim") {
+  else if (myButton.id === "btnBakim") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 11)) {
       chat.server.writeTag(aa, "24");
     }
     else
       chat.server.writeTag(aa, "4");
   }
-  else if (myButton.id == "btnReset") {
+  else if (myButton.id === "btnReset") {
     chat.server.writeTag(aa, "12");
   }
-  else if (myButton.id == "btnDurusReset") {
+  else if (myButton.id === "btnDurusReset") {
     chat.server.writeTag(aa, "9");
   }
 }
 
 function KlepeButton_OnClick(myButton, chat, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
-  if (myButton.id == "btnMan") {
+  if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 5)) {
       chat.server.writeTag(aa, "21");
     }
     else
       chat.server.writeTag(aa, "1");
   }
-  else if (myButton.id == "btnStart") {
+  else if (myButton.id === "btnStart") {
     chat.server.writeTag(aa, "2");
   }
-  else if (myButton.id == "btnStop") {
+  else if (myButton.id === "btnStop") {
     chat.server.writeTag(aa, "3");
   }
-  else if (myButton.id == "btnReset") {
+  else if (myButton.id === "btnReset") {
     chat.server.writeTag(aa, "12");
   }
 }
 
 function Klepe3YonButton_OnClick(myButton, chat, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
-  if (myButton.id == "btnMan") {
+  if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 5)) {
       chat.server.writeTag(aa, "21");
     }
     else
       chat.server.writeTag(aa, "1");
   }
-  else if (myButton.id == "btnStart") {
+  else if (myButton.id === "btnStart") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 6)) {
       chat.server.writeTag(aa, "22");
     }
     else
       chat.server.writeTag(aa, "2");
   }
-  else if (myButton.id == "btnStop") {
+  else if (myButton.id === "btnStop") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 7)) {
       chat.server.writeTag(aa, "23");
     }
     else
       chat.server.writeTag(aa, "3");
   }
-  else if (myButton.id == "btnReset") {
+  else if (myButton.id === "btnReset") {
     chat.server.writeTag(aa, "12");
   }
 }
 
 function Klepe2YonButton_OnClick(myButton, chat, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
-  if (myButton.id == "btnMan") {
+  if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 5)) {
       chat.server.writeTag(aa, "21");
     }
     else
       chat.server.writeTag(aa, "1");
   }
-  else if (myButton.id == "btnStart") {
+  else if (myButton.id === "btnStart") {
 
     chat.server.writeTag(aa, "2");
   }
-  else if (myButton.id == "btnStop") {
+  else if (myButton.id === "btnStop") {
 
     chat.server.writeTag(aa, "3");
   }
-  else if (myButton.id == "btnReset") {
+  else if (myButton.id === "btnReset") {
     chat.server.writeTag(aa, "12");
   }
 }
@@ -1162,12 +1176,6 @@ function changeMotorColor(color, motor) {
     if (motor.children[k].hasAttribute("willChange")) {
       motor.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
     }
-    // if (motor.children[k].getAttribute("inkscape:label").startsWith("text1")) {
-    //   motor.children[k].setAttribute("style", "font-size:70");
-    //   var a = motor.children[k];
-    //   console.log("burasi "+motor.children[k].getRootNode());
-    //   motor.children[k].textContent = `${color}`;
-    // }
   }
 }
 
