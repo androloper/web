@@ -1,30 +1,4 @@
-var allItems = [];
-
-// let connection2 = new signalR.HubConnectionBuilder()
-//     .withUrl("/signalr")
-//     .build();
-//
-// function setCurrentValue(id, value) {
-//   document.getElementById(id).textContent = value;
-// }
-//
-// window.addEventListener("load", async function () {
-//   await connection.start();
-//   connection.stream(
-//       "SubscribeNodeValueChanges",
-//       "ns=2;s=Channel1.Device1.PLC01.K100.IO")
-//       .subscribe({
-//         next: (e) => {
-//           setCurrentValue("value02", e);
-//         },
-//         complete: () => {
-//           setCurrentValue("value02", "Subscription has been completed.");
-//         },
-//         error: (err) => {
-//             console.log(err);
-//         }
-//       });
-// });
+var allItems = {};
 
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
@@ -47,37 +21,30 @@ connection.onclose(async () => {
   await startHubConn();
 });
 
-
-
 connection.on("GetItemAll", (value) => {
   const resp = JSON.parse(value);
   for(var i = 0; i<resp.length; i++){
     allItems[resp[i].Name]=resp[i];
-    // allItems["ke"];
-    // allItems[i]=resp[i];
-    // allItems.push(resp[i]);
+    // var idx = allItems.indexOf(resp[i]);
+    // console.log(idx +": "+allItems[idx]);
+    console.log(allItems[resp[i].Name]);
     itemChange(resp[i].Name, resp[i].Value);
   }
-
-  for(var i = 0; i<resp.length; i++){
-    itemChange(resp[i].Name, resp[i].Value);
-  }
-
 
   connection.on("ReceiveValues", (value) => {
     const resp = JSON.parse(value);
     for(var i = 0; i<resp.length; i++){
+      allItems[resp[i].Name]=resp[i];
       itemChange(resp[i].Name, resp[i].Value);
     }
   });
 });
 
-
-
 function startScada() {
   startHubConn();
 }
 
+//assigning the values from signalr
 function itemChange(itemName, itemValue){
   const svg = document.getElementById("svg_obj").contentDocument;
   const layer1 = svg.getElementById("layer1");
@@ -98,22 +65,15 @@ function itemChange(itemName, itemValue){
         }
       }
     }
-    if(aa[i].getAttribute("tip")==="line"){
+    else if(aa[i].getAttribute("tip")==="line"){
       var condition = aa[i].getAttribute("condition");
-      if(condition.indexOf(itemName) > -1){
-        checkLine(aa[i], allItems, condition);
-      }
+      if(condition.indexOf(itemName) > -1)
+      checkLine(aa[i], condition);
     }
-    // if (itemName.includes(aa[i].getAttribute("lineTag"))) {
-    //   if(aa[i].getAttribute("tip") === "line" && aa[i].getAttribute("lineTag")===aa[i].getAttribute("PlcTagName")) {
-    //     changeLineColor(aa[i]);
-    //   } else {
-    //     console.log("RnD Attempt didnt work");
-    //   }
-    // }
   }
 }
 
+//binding values
 function Bit(_val, index) {
   try {
     var bVal = Number(_val).toString(2);
@@ -131,22 +91,143 @@ function Bit(_val, index) {
 
 function ReadItemFromList(itemList, itemName) {
   if (itemList.hasOwnProperty(itemName)) {
-    return itemList[itemName].value;
+    // console.log("here is "+itemList[itemName].Value);
+    return itemList[itemName].Value;
   }
 }
 
+var results = [];
+var string = "";
+
+function get(string, sub1, sub2) {
+  this.results = [];
+  this.string = string;
+  this.getAllResults(sub1, sub2);
+  return this.results;
+}
+
+function getAllResults(sub1, sub2) {
+  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return;
+  var result = this.getFromBetween(sub1, sub2);
+  this.results.push(result);
+  this.removeFromBetween(sub1, sub2);
+  if (this.string.indexOf(sub1) > -1 && this.string.indexOf(sub2) > -1) {
+    this.getAllResults(sub1, sub2);
+  }
+  else return;
+}
+
+function getFromBetween(sub1, sub2) {
+  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return false;
+  var SP = this.string.indexOf(sub1) + sub1.length;
+  var string1 = this.string.substr(0, SP);
+  var string2 = this.string.substr(SP);
+  var TP = string1.length + string2.indexOf(sub2);
+  return this.string.substring(SP, TP);
+}
+
+function removeFromBetween(sub1, sub2) {
+  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return false;
+  var removal = sub1 + this.getFromBetween(sub1, sub2) + sub2;
+  this.string = this.string.replace(removal, "");
+}
+
+//showing modals(popups)
+var showPopUp = function () {
+  popUpFlag = false;
+
+
+
+  var popupHTML = "";
+  var popupTabs = "";
+
+  if (popUpType == "M") {
+    popupHTML = getMotorPopUpHTML();
+    popupTabs = getMotorPopUpAlarmInputOutputHTML();
+  }
+  else if (popUpType == "K") {
+    popupHTML = getKlepePopUpHTML();
+    popupTabs = getKlepePopUpAlarmInputOutputHTML();
+  }
+  else if (popUpType == "K3yon") {
+    popupHTML = getKlepe3YonPopUpHTML();
+    popupTabs = getKlepe3YonPopUpAlarmInputOutputHTML();
+  }
+  else if (popUpType == "K2yon") {
+    popupHTML = getKlepe2YonPopUpHTML();
+    popupTabs = getKlepe2YonPopUpAlarmInputOutputHTML();
+  }
+
+
+  modal = document.getElementById("myModal");
+  mainDiv = document.getElementById("mainDiv");
+
+
+  modal.style.display = "block";
+
+  popupKonumHesapla(modal, MouseX, MouseY);
+
+  document.getElementById('MotorPopupHeader').innerHTML = popUpRootTag.substring(6);
+  document.getElementById('popupBody').innerHTML = popupHTML;
+  document.getElementById('tdPopupTab').innerHTML = popupTabs;
+
+  var butonList = document.getElementsByClassName("mostPopupButton");
+  var popUpHeaderColor;
+  if (popUpType == "M") {
+    popUpHeaderColor = checkMotorPopupButton(butonList, ReadItem(popUpRootTag));
+    checkMotorPopupAlarms(ReadItem(popUpRootTag.replace(".IO", ".ARZ")));
+  }
+  else if (popUpType == "K") {
+    popUpHeaderColor = checkKlepePopupButton(butonList, ReadItem(popUpRootTag));
+  }
+  else if (popUpType == "K2yon") {
+    popUpHeaderColor = checkKlepe2YonPopupButton(butonList, ReadItem(popUpRootTag));
+  }
+  else if (popUpType == "K3yon") {
+    popUpHeaderColor = checkKlepe3YonPopupButton(butonList, ReadItem(popUpRootTag));
+  }
+
+  document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = popUpHeaderColor;
+
+  // When the user clicks anywhere outside of the modal, close it
+  //mainDiv.onclick = function (event) {
+  //    if (event.target == modal) {
+  //        modal.style.display = "none";
+  //        //document.getElementById('divPopUp').style.display = 'none';
+  //    }
+  //}
+
+
+};
+function btnAlarmClick() {
+  //popUpFlag = false;
+  var parametre = document.getElementById("tdParametre");
+  var btnAlarm = document.getElementById("btnAlarm");
+  if (parametre.style.display == "inherit") {
+    document.getElementById("tdParametre").style.display = "none";
+    btnAlarm.innerHTML = ">";
+  }
+  else {
+    document.getElementById("tdParametre").style.display = "inherit";
+    btnAlarm.innerHTML = "<";
+  }
+
+
+}
+
+//changing components
 function checkMotor(myVal, motor) {
   if (Bit(myVal, 13)) {
     return changeMotorColor("red",motor);
   }
   else if (Bit(myVal, 1)) {
-    return changeMotorColor("green",motor);
+    return changeMotorColor("limegreen",motor);
   }
   else if (Bit(myVal, 11)) {
     return changeMotorColor("orange",motor);
   }
   else
-    return changeMotorColor("grey",motor);
+    return changeMotorColor("gray",motor);
 }
 
 function changeMotorColor(color, motor) {
@@ -192,10 +273,10 @@ function changeMotorTag(tag, value) {
 
 function checkElevator(myVal, elevator) {
   if (Bit(myVal, 1)) {
-    return changeElevatorColor("green", elevator);
+    return changeElevatorColor("limegreen", elevator);
   }
   else
-    return changeElevatorColor("grey", elevator);
+    return changeElevatorColor("gray", elevator);
 }
 
 function changeElevatorColor(color, elevator) {
@@ -215,10 +296,10 @@ function changeElevatorColor(color, elevator) {
 
 function checkKlepe(myVal, klepe) {
   if (Bit(myVal, 0)) {
-    return changeKlepeColor("green", klepe);
+    return changeKlepeColor("limegreen", klepe);
   }
   else {
-    return changeKlepeColor("grey", klepe);
+    return changeKlepeColor("gray", klepe);
   }
 }
 
@@ -253,7 +334,7 @@ function changeKlepeTag(tag, value) {
   }
 }
 
-function checkLine(line, items, condition) {
+function checkLine(line, condition) {
   var stat = false;
   var result = get(condition, "{", "}");
   var myDict = new Object();
@@ -261,22 +342,21 @@ function checkLine(line, items, condition) {
     var tags = result[i].split(':');
     var tagObj = {
       bit: tags[0],
-      value: Bit(ReadItemFromList(items, tags[0]), tags[1])
+      value: Bit(ReadItemFromList(allItems, tags[0]), tags[1])
       // value: Bit(ReadItemFromList(line, tags[0]), tags[1])
     };
     myDict[result[i]] = tagObj;
   }
 
-  var condition1;
   for (var key in myDict) {
     var oldStr = "{" + key.toString() + "}";
     var newStr = myDict[key].value.toString();
-    condition1 = condition.replace(oldStr, newStr);
+    condition = condition.replace(oldStr, newStr);
   }
 
-  stat = eval(condition1);
+  stat = eval(condition);
   if (stat) {
-    changeLineColor(line, "lime");
+    changeLineColor(line, "limegreen");
   }
   else {
     changeLineColor(line, "gray");
@@ -291,107 +371,3 @@ function changeLineColor(line, color) {
       }
     }
 }
-
-var results = [];
-var string = "";
-
-function getFromBetween(sub1, sub2) {
-  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return false;
-  var SP = this.string.indexOf(sub1) + sub1.length;
-  var string1 = this.string.substr(0, SP);
-  var string2 = this.string.substr(SP);
-  var TP = string1.length + string2.indexOf(sub2);
-  return this.string.substring(SP, TP);
-}
-
-function removeFromBetween(sub1, sub2) {
-  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return false;
-  var removal = sub1 + this.getFromBetween(sub1, sub2) + sub2;
-  this.string = this.string.replace(removal, "");
-}
-
-function getAllResults(sub1, sub2) {
-  if (this.string.indexOf(sub1) < 0 || this.string.indexOf(sub2) < 0) return;
-  var result = this.getFromBetween(sub1, sub2);
-  this.results.push(result);
-  this.removeFromBetween(sub1, sub2);
-  if (this.string.indexOf(sub1) > -1 && this.string.indexOf(sub2) > -1) {
-    this.getAllResults(sub1, sub2);
-  }
-  else return;
-}
-
-function get(string, sub1, sub2) {
-  this.results = [];
-  this.string = string;
-  this.getAllResults(sub1, sub2);
-  return this.results;
-}
-
-
-
-// function changeTagColor(color, myTag){
-//   console.log(myTag.children.length-2);
-//   if (myTag.children[myTag.children.length-2].hasAttribute("willChange")) {
-//     myTag.children[myTag.children.length-2].setAttribute("style", `fill:${color};stroke:black;stroke-width:3`);
-//   }
-// }
-
-// function changeMotorColors(color) {
-//   const svg = document.getElementById("svg_obj").contentDocument;
-//   const layer1 = svg.getElementById("layer1");
-//   for (var i = 0; i < layer1.children.length; i++) {
-//     // if (layer1.children[i].getAttribute("tagName") === "PLC01!M999.IO") {
-//     // if (layer1.children[i].getAttribute("PlcTagName") === plctag) {
-//       if (layer1.children[i].getAttribute("tip") === "motor") {
-//         var aa = layer1.children[i];
-//         aa.addEventListener("click", event => {
-//           $('#myModal').modal('show');
-//           document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-//           document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
-//           // openModal(event);
-//           console.log(event);
-//           // alert('That worked');
-//         });
-//         for (var k = 0; k < aa.children.length; k++) {
-//           // if (aa.children[k].hasAttribute("anime")) {
-//           if (aa.children[k].hasAttribute("willChange")) {
-//             aa.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
-//           }
-//         }
-//       }
-//     // }
-//   }
-// }
-//
-// function changeNumbers(number) {
-//   const svg = document.getElementById("svg_obj").contentDocument;
-//   const layer1 = svg.getElementById("layer1");
-//   for (var i = 0; i < layer1.children.length; i++) {
-//     // if (layer1.children[i].getAttribute("tagName") === "PLC01!M999.IO") {
-//     if (layer1.children[i].getAttribute("PlcTagName") !== "PLC01!M999.IO") {
-//       var aa = layer1.children[i];
-//       // aa.addEventListener("click", event => {
-//       //   $('#myModal').modal('show');
-//       //   document.getElementById('modalheadertext').innerText=event.path[1].attributes[0].textContent;
-//       //   document.getElementById('modalbodytext').innerText=event.path[1].attributes[2].textContent;
-//       //   // openModal(event);
-//       //   console.log(event.path[1].attributes[2].textContent);
-//       //   console.log(event);
-//       //   // alert('That worked');
-//       // });
-//       for (var k = 0; k < aa.children.length; k++) {
-//         if (aa.children[k].getAttribute("inkscape:label").startsWith("text1")) {
-//           aa.children[k].setAttribute("style", "font-size:100");
-//           aa.children[k].textContent = `${number}`;
-//         }
-//       }
-//       // aa.children[i].setAttribute("onclick","openModal(layer1, i)");
-//     }
-//   }
-// }
-//
-// function setColor() {
-//   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//   changeMotorColor("#" + randomColor);
-// }
