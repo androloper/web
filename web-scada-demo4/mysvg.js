@@ -1,3 +1,5 @@
+var allItems = [];
+
 // let connection2 = new signalR.HubConnectionBuilder()
 //     .withUrl("/signalr")
 //     .build();
@@ -45,39 +47,28 @@ connection.onclose(async () => {
   await startHubConn();
 });
 
-// connection.on("ReceiveValues", (value) => {
-//   const resp = JSON.parse(value);
-//   for(var i = 0; i<resp.length; i++){
-//     itemChange(resp[i].Name, resp[i].Value);
-//   }
-//     //   if(values.length!=null || values.length===0) {
-//     //     values.push(resp);
-//     //   } else if(resp[i].Name === values[i].Name) {
-//     //     values[i].Value = resp[i].Value;
-//     //   }
-//     // }
-//   console.log(resp);
-// });
+
 
 connection.on("GetItemAll", (value) => {
   const resp = JSON.parse(value);
   for(var i = 0; i<resp.length; i++){
+    allItems[resp[i].Name]=resp[i];
+    // allItems["ke"];
+    // allItems[i]=resp[i];
+    // allItems.push(resp[i]);
     itemChange(resp[i].Name, resp[i].Value);
   }
-  allItems = resp;
-  console.log(resp);
+
+  for(var i = 0; i<resp.length; i++){
+    itemChange(resp[i].Name, resp[i].Value);
+  }
+
+
   connection.on("ReceiveValues", (value) => {
     const resp = JSON.parse(value);
     for(var i = 0; i<resp.length; i++){
       itemChange(resp[i].Name, resp[i].Value);
     }
-    //   if(values.length!=null || values.length===0) {
-    //     values.push(resp);
-    //   } else if(resp[i].Name === values[i].Name) {
-    //     values[i].Value = resp[i].Value;
-    //   }
-    // }
-    console.log(resp);
   });
 });
 
@@ -86,8 +77,6 @@ connection.on("GetItemAll", (value) => {
 function startScada() {
   startHubConn();
 }
-
-var allItems = [];
 
 function itemChange(itemName, itemValue){
   const svg = document.getElementById("svg_obj").contentDocument;
@@ -110,7 +99,10 @@ function itemChange(itemName, itemValue){
       }
     }
     if(aa[i].getAttribute("tip")==="line"){
-      checkLine(aa[i], aa[i].getAttribute("condition"))
+      var condition = aa[i].getAttribute("condition");
+      if(condition.indexOf(itemName) > -1){
+        checkLine(aa[i], allItems, condition);
+      }
     }
     // if (itemName.includes(aa[i].getAttribute("lineTag"))) {
     //   if(aa[i].getAttribute("tip") === "line" && aa[i].getAttribute("lineTag")===aa[i].getAttribute("PlcTagName")) {
@@ -261,7 +253,7 @@ function changeKlepeTag(tag, value) {
   }
 }
 
-function checkLine(line, condition) {
+function checkLine(line, items, condition) {
   var stat = false;
   var result = get(condition, "{", "}");
   var myDict = new Object();
@@ -269,7 +261,7 @@ function checkLine(line, condition) {
     var tags = result[i].split(':');
     var tagObj = {
       bit: tags[0],
-      value: Bit(ReadItemFromList(allItems, tags[0]), tags[1])
+      value: Bit(ReadItemFromList(items, tags[0]), tags[1])
       // value: Bit(ReadItemFromList(line, tags[0]), tags[1])
     };
     myDict[result[i]] = tagObj;
@@ -278,7 +270,7 @@ function checkLine(line, condition) {
   var condition1;
   for (var key in myDict) {
     var oldStr = "{" + key.toString() + "}";
-    var newStr = myDict[key].value.toString()
+    var newStr = myDict[key].value.toString();
     condition1 = condition.replace(oldStr, newStr);
   }
 
