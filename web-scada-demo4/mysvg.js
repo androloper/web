@@ -39,7 +39,7 @@ connection.on("GetItemAll", (value) => {
 
 function startScada() {
   startHubConn();
-  InitEventHandlers();
+  // InitEventHandlers();
 }
 
 //assigning the values from signalr
@@ -50,13 +50,24 @@ function itemChange(itemName, itemValue){
     var aa = layer1.children;
     if(aa[i].hasAttribute("PlcTagName")){
       if (aa[i].getAttribute("PlcTagName") === itemName) {
+        popUpRootTag = aa[i].getAttribute("PlcTagName");
         if (aa[i].getAttribute("tip") === "motor") {
             checkMotor(itemValue, aa[i]);
             changeMotorTag(aa[i],itemValue);
+            // aa[i].addEventListener('click', Motor_Click, false);
+            aa[i].addEventListener("click", event => {
+              Motor_Click();
+              $('#motorModal').modal('show');
+          });
         }
         if (aa[i].getAttribute("tip") === "kapak") {
             checkKlepe(itemValue, aa[i]);
             changeKlepeTag(aa[i],itemValue);
+            // aa[i].addEventListener('click', Klepe_Click, false);
+            aa[i].addEventListener("click", event => {
+              Klepe_Click();
+              $('#motorModal').modal('show');
+            });
         }
         if (aa[i].getAttribute("tip") === "elevator") {
             checkElevator(itemValue, aa[i]);
@@ -70,7 +81,7 @@ function itemChange(itemName, itemValue){
     }
     if (popUpRootTag === itemName) {
       var butonList = document.getElementsByClassName("mostPopupButton");
-      console.log("burais "+butonList[0]);
+      console.log("burais2 "+butonList.toString());
       var popUpHeaderColor;
       if (popUpType === "M") {
         popUpHeaderColor = checkMotorPopupButton(butonList, itemValue);
@@ -173,29 +184,29 @@ function btnAlarmClick() {
 
 }
 
-function InitEventHandlers() {
-  const svg = document.getElementById("svg_obj").contentDocument;
-  const layer1 = svg.getElementById("layer1");
-  for (var i = 0; i < layer1.children.length; i++) {
-    var elements = layer1.children;
-    elements[i].addEventListener('click', Motor_Click, false);
-  }
-
-  var elements = document.getElementsByClassName("klepe");
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', Klepe_Click, false);
-  }
-
-  var elements = document.getElementsByClassName("klepe3yon");
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', Klepe3Yon_Click, false);
-  }
-
-  var elements = document.getElementsByClassName("klepe2yon");
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', Klepe2Yon_Click, false);
-  }
-}
+// function InitEventHandlers() {
+//   const svg = document.getElementById("svg_obj").contentDocument;
+//   const layer1 = svg.getElementById("layer1");
+//   for (var i = 0; i < layer1.children.length; i++) {
+//     var elements = layer1.children;
+//     elements[i].addEventListener('click', Motor_Click, false);
+//   }
+//
+//   var elements = document.getElementsByClassName("klepe");
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].addEventListener('click', Klepe_Click, false);
+//   }
+//
+//   var elements = document.getElementsByClassName("klepe3yon");
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].addEventListener('click', Klepe3Yon_Click, false);
+//   }
+//
+//   var elements = document.getElementsByClassName("klepe2yon");
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].addEventListener('click', Klepe2Yon_Click, false);
+//   }
+// }
 
 window.onclick = function (event) {
   
@@ -206,7 +217,7 @@ function ClosePopUp() {
   modal = document.getElementById("motorModal");
   if (popUpFlag) {
     popUpFlag = false;
-    modal.style.display = "none";
+    modal.setAttribute("style","display: none");
     popUpRootTag = "";
     popUpType = "";
   }
@@ -222,25 +233,25 @@ function ReadItem(itemName) {
 
 function Motor_Click() {
   popUpType = "M";
-  popUpRootTag = document.getElementById("PlcTagName");
+  // popUpRootTag = plcTag;
   ShowPopUp();
 }
 
 function Klepe_Click() {
   popUpType = "K";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
-  popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
+  // popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
   ShowPopUp();
 }
 
 function Klepe3Yon_Click() {
   popUpType = "K3yon";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
-  popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
+  // popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
   ShowPopUp();
 }
 
 function Klepe2Yon_Click() {
   popUpType = "K2yon";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
-  popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
+  // popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
   ShowPopUp();
 }
 var MouseX;
@@ -305,7 +316,7 @@ var ShowPopUp = function () {
     popUpHeaderColor = checkKlepe3YonPopupButton(butonList, ReadItem(popUpRootTag));
   }
 
-  document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = popUpHeaderColor;
+  document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = "gray";
 
   // When the user clicks anywhere outside of the modal, close it
   //mainDiv.onclick = function (event) {
@@ -319,59 +330,57 @@ var ShowPopUp = function () {
 
 function MotorButton_Click(myButton) {
   popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  MotorButton_OnClick(myButton, chat, AllItems, popUpRootTag);
+  MotorButton_OnClick(myButton, chat, allItems, popUpRootTag);
 }
 
 function KlepeButton_Click(myButton) {
   popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  KlepeButton_OnClick(myButton, chat, AllItems, popUpRootTag);
+  KlepeButton_OnClick(myButton, chat, allItems, popUpRootTag);
 }
 
 function Klepe3YonButton_Click(myButton) {
   popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  Klepe3YonButton_OnClick(myButton, chat, AllItems, popUpRootTag);
+  Klepe3YonButton_OnClick(myButton, chat, allItems, popUpRootTag);
 }
 
 function Klepe2YonButton_Click(myButton) {
   popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  Klepe2YonButton_OnClick(myButton, chat, AllItems, popUpRootTag);
+  Klepe2YonButton_OnClick(myButton, chat, allItems, popUpRootTag);
 }
 
 function checkMotorPopupButton(buttonList, myVal) {
-  var headerColor = "gray"; //pop içerisindeki butoon renkleri ayarlanır ve header rengi return edilir.
-  var pasif = "#EFEFEF";
-  var aktif = "lime";
+  var headerColor = "gray";
 
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 8)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 9)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 9)) {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
       else {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
     }
     else if (buttonList[i].id === "btnBakim") {
       if (Bit(myVal, 11)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
     }
   }
 
@@ -387,55 +396,55 @@ function checkMotorPopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlTermik").style.backgroundColor = "lime";
+    document.getElementById("pnlTermik").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlTermik").style.backgroundColor = "gray";
+    document.getElementById("pnlTermik").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlCalisti").style.backgroundColor = "lime";
+    document.getElementById("pnlCalisti").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlCalisti").style.backgroundColor = "gray";
+    document.getElementById("pnlCalisti").setAttribute("style","background: gray");
 
   if (Bit(myVal, 2)) {
-    document.getElementById("pnlTasmaSw").style.backgroundColor = "lime";
+    document.getElementById("pnlTasmaSw").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlTasmaSw").style.backgroundColor = "gray";
+    document.getElementById("pnlTasmaSw").setAttribute("style","background: gray");
 
   if (Bit(myVal, 3)) {
-    document.getElementById("pnlDevirBekcisi").style.backgroundColor = "lime";
+    document.getElementById("pnlDevirBekcisi").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlDevirBekcisi").style.backgroundColor = "gray";
+    document.getElementById("pnlDevirBekcisi").setAttribute("style","background: gray");
 
   if (Bit(myVal, 4)) {
-    document.getElementById("pnlBakimSalteri").style.backgroundColor = "lime";
+    document.getElementById("pnlBakimSalteri").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlBakimSalteri").style.backgroundColor = "gray";
+    document.getElementById("pnlBakimSalteri").setAttribute("style","background: gray");
 
   if (Bit(myVal, 5)) {
-    document.getElementById("pnlBantKaydi").style.backgroundColor = "lime";
+    document.getElementById("pnlBantKaydi").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlBantKaydi").style.backgroundColor = "gray";
+    document.getElementById("pnlBantKaydi").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 6)) {
-    document.getElementById("pnlEmniyetSw").style.backgroundColor = "lime";
+    document.getElementById("pnlEmniyetSw").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlEmniyetSw").style.backgroundColor = "gray";
+    document.getElementById("pnlEmniyetSw").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 7)) {
-    document.getElementById("pnlMotorStart1").style.backgroundColor = "lime";
+    document.getElementById("pnlMotorStart1").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlMotorStart1").style.backgroundColor = "gray";
+    document.getElementById("pnlMotorStart1").setAttribute("style","background: gray");
 
 
   return headerColor;
@@ -444,68 +453,68 @@ function checkMotorPopupButton(buttonList, myVal) {
 function checkMotorPopupAlarms(myVal) {
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlArzTermik").style.backgroundColor = "red";
+    document.getElementById("pnlArzTermik").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzTermik").style.backgroundColor = "gray";
+    document.getElementById("pnlArzTermik").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlArzKontaktor").style.backgroundColor = "red";
+    document.getElementById("pnlArzKontaktor").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzKontaktor").style.backgroundColor = "gray";
+    document.getElementById("pnlArzKontaktor").setAttribute("style","background: gray");
 
   if (Bit(myVal, 2)) {
-    document.getElementById("pnlArzTasma").style.backgroundColor = "red";
+    document.getElementById("pnlArzTasma").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzTasma").style.backgroundColor = "gray";
+    document.getElementById("pnlArzTasma").setAttribute("style","background: gray");
 
   if (Bit(myVal, 3)) {
-    document.getElementById("pnlArzDevirBekcisi").style.backgroundColor = "red";
+    document.getElementById("pnlArzDevirBekcisi").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzDevirBekcisi").style.backgroundColor = "gray";
+    document.getElementById("pnlArzDevirBekcisi").setAttribute("style","background: gray");
 
   if (Bit(myVal, 4)) {
-    document.getElementById("pnlArzBakimSalteri").style.backgroundColor = "red";
+    document.getElementById("pnlArzBakimSalteri").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzBakimSalteri").style.backgroundColor = "gray";
+    document.getElementById("pnlArzBakimSalteri").setAttribute("style","background: gray");
 
   if (Bit(myVal, 5)) {
-    document.getElementById("pnlArzBantKaydi").style.backgroundColor = "red";
+    document.getElementById("pnlArzBantKaydi").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzBantKaydi").style.backgroundColor = "gray";
+    document.getElementById("pnlArzBantKaydi").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 6)) {
-    document.getElementById("pnlArzEmniyet").style.backgroundColor = "red";
+    document.getElementById("pnlArzEmniyet").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzEmniyet").style.backgroundColor = "gray";
+    document.getElementById("pnlArzEmniyet").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 7)) {
-    document.getElementById("pnlArzAkim").style.backgroundColor = "red";
+    document.getElementById("pnlArzAkim").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzAkim").style.backgroundColor = "gray";
+    document.getElementById("pnlArzAkim").setAttribute("style","background: gray");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzDevir").style.backgroundColor = "red";
+    document.getElementById("pnlArzDevir").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzDevir").style.backgroundColor = "gray";
+    document.getElementById("pnlArzDevir").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzBakimZamani").style.backgroundColor = "red";
+    document.getElementById("pnlArzBakimZamani").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzBakimZamani").style.backgroundColor = "gray";
+    document.getElementById("pnlArzBakimZamani").setAttribute("style","background: gray");
 
 }
 
@@ -517,25 +526,25 @@ function checkKlepePopupButton(buttonList, myVal) {
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
   }
@@ -543,35 +552,35 @@ function checkKlepePopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlSimAcik").style.backgroundColor = "lime";
+    document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlSimAcik").style.backgroundColor = "gray";
+    document.getElementById("pnlSimAcik").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlSimKapali").style.backgroundColor = "lime";
+    document.getElementById("pnlSimKapali").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlSimKapali").style.backgroundColor = "gray";
+    document.getElementById("pnlSimKapali").setAttribute("style","background: gray");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzAcma").style.backgroundColor = "red";
+    document.getElementById("pnlArzAcma").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzAcma").style.backgroundColor = "gray";
+    document.getElementById("pnlArzAcma").setAttribute("style","background: gray");
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzKapama").style.backgroundColor = "red";
+    document.getElementById("pnlArzKapama").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzKapama").style.backgroundColor = "gray";
+    document.getElementById("pnlArzKapama").setAttribute("style","background: gray");
 
   if (Bit(myVal, 10) | Bit(myVal, 15)) {
-    document.getElementById("pnlArzSW").style.backgroundColor = "red";
+    document.getElementById("pnlArzSW").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzSW").style.backgroundColor = "gray";
+    document.getElementById("pnlArzSW").setAttribute("style","background: gray");
 
 
 
@@ -579,32 +588,30 @@ function checkKlepePopupButton(buttonList, myVal) {
 }
 
 function checkKlepe3YonPopupButton(buttonList, myVal) {
-  var headerColor = "gray"; //pop içerisindeki butoon renkleri ayarlanır ve header rengi return edilir.
-  var pasif = "#EFEFEF";
-  var aktif = "lime";
+  var headerColor = "gray";
 
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
   }
@@ -612,41 +619,41 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlSimAcik").style.backgroundColor = "lime";
+    document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlSimAcik").style.backgroundColor = "gray";
+    document.getElementById("pnlSimAcik").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlSimKapali").style.backgroundColor = "lime";
+    document.getElementById("pnlSimKapali").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlSimKapali").style.backgroundColor = "gray";
+    document.getElementById("pnlSimKapali").setAttribute("style","background: gray");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzAcma").style.backgroundColor = "red";
+    document.getElementById("pnlArzAcma").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzAcma").style.backgroundColor = "gray";
+    document.getElementById("pnlArzAcma").setAttribute("style","background: gray");
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzKapama").style.backgroundColor = "red";
+    document.getElementById("pnlArzKapama").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzKapama").style.backgroundColor = "gray";
+    document.getElementById("pnlArzKapama").setAttribute("style","background: gray");
 
   if (Bit(myVal, 10)) {
-    document.getElementById("pnlArzSW").style.backgroundColor = "red";
+    document.getElementById("pnlArzSW").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzSW").style.backgroundColor = "gray";
+    document.getElementById("pnlArzSW").setAttribute("style","background: gray");
 
   if (Bit(myVal, 15)) {
-    document.getElementById("pnlArzOrta").style.backgroundColor = "red";
+    document.getElementById("pnlArzOrta").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzOrta").style.backgroundColor = "gray";
+    document.getElementById("pnlArzOrta").setAttribute("style","background: gray");
 
 
   return headerColor;
@@ -660,25 +667,25 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
-        buttonList[i].style.backgroundColor = aktif;
+        buttonList[i].setAttribute("style","background: lime");
       }
       else {
-        buttonList[i].style.backgroundColor = pasif;
+        buttonList[i].setAttribute("style","background: #EFEFEF");
       }
     }
   }
@@ -686,35 +693,35 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlSimAcik").style.backgroundColor = "lime";
+    document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlSimAcik").style.backgroundColor = "gray";
+    document.getElementById("pnlSimAcik").setAttribute("style","background: gray");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlSimKapali").style.backgroundColor = "lime";
+    document.getElementById("pnlSimKapali").setAttribute("style","background: lime");
   }
   else
-    document.getElementById("pnlSimKapali").style.backgroundColor = "gray";
+    document.getElementById("pnlSimKapali").setAttribute("style","background: gray");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzAcma").style.backgroundColor = "red";
+    document.getElementById("pnlArzAcma").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzAcma").style.backgroundColor = "gray";
+    document.getElementById("pnlArzAcma").setAttribute("style","background: gray");
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzKapama").style.backgroundColor = "red";
+    document.getElementById("pnlArzKapama").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzKapama").style.backgroundColor = "gray";
+    document.getElementById("pnlArzKapama").setAttribute("style","background: gray");
 
   if (Bit(myVal, 10)) {
-    document.getElementById("pnlArzSW").style.backgroundColor = "red";
+    document.getElementById("pnlArzSW").setAttribute("style","background: red");
   }
   else
-    document.getElementById("pnlArzSW").style.backgroundColor = "gray";
+    document.getElementById("pnlArzSW").setAttribute("style","background: gray");
 
 
   return headerColor;
@@ -736,6 +743,7 @@ function popupKonumHesapla(popup, mouseX, mouseY) {
     popup.style.left = (mouseX - popupWidth) + 'px';
   }
 }
+
 function getMotorPopUpHTML() {
   var a =
 
@@ -878,6 +886,7 @@ function getMotorPopUpAlarmInputOutputHTML() {
       + '</table>';
   return a;
 }
+
 function getKlepePopUpHTML() {
   var a =
 
@@ -933,6 +942,64 @@ function getKlepePopUpAlarmInputOutputHTML() {
       + '</table>';
   return a;
 }
+
+function getKlepe2YonPopUpHTML() {
+  var a =
+
+      '<table>'
+      + '<tr><td><button style="width:100%;" id = "btnMan" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
+      + '<tr><td><button style="width:100%;" id = "btnStart" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">Sağ Yön Start</button> </td></tr>'
+      + '<tr><td><button style="width:100%;" id = "btnStop" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">Sol Yön Start</button> </td></tr>'
+      + '<tr><td></td></tr>'
+      + '<tr><td><button style="width:100%;" id = "btnReset" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">RESET</button> </td></tr>'
+      + '</table > ';
+  return a;
+}
+function getKlepe2YonPopUpAlarmInputOutputHTML() {
+  var a = '<table class="popupTabTable">'
+      + '<tr>'
+      + '<td colspan="4" style="text-align: center; background-color: lightgray;">ALARM</td>'
+      + '</tr>'
+      + '<tr>'
+      + '<td style="background-color: whitesmoke; width: 35%;">'
+      + 'Açma Arıza'
+      + '</td>'
+      + '<td id="pnlArzAcma" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
+      + '</td>'
+      + '<td style="background-color: whitesmoke; width: 35%;">'
+      + 'Kapama Arıza'
+      + '</td>'
+      + '<td id="pnlArzKapama" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
+      + '</tr>'
+      + '<tr>'
+      + '<td style="background-color: whitesmoke; width: 35%;">'
+      + 'Switch Arıza'
+      + '</td>'
+      + '<td id="pnlArzSW" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
+      + '</td>'
+      + '</tr > '
+
+
+      + '<tr>'
+      + '<td colspan="4" style="text-align: center; background-color: lightgray;">Input/Output</td>'
+      + '</tr>'
+      + '<tr>'
+      + '<td style="background-color: whitesmoke; width: 35%;">'
+      + 'Açık Sensör'
+      + '</td>'
+      + '<td id="pnlSimAcik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
+
+      + '</td>'
+      + '<td style="background-color: whitesmoke; width: 35%;">'
+      + 'Kapalı Sensör'
+      + '</td>'
+      + '<td id="pnlSimKapali" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
+      + '</tr>'
+
+      + '</table>';
+  return a;
+}
+
 function getKlepe3YonPopUpHTML() {
   var a =
 
@@ -971,62 +1038,6 @@ function getKlepe3YonPopUpAlarmInputOutputHTML() {
       + 'Orta Arıza'
       + '</td>'
       + '<td id="pnlArzOrta" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
-      + '</td>'
-      + '</tr > '
-
-
-      + '<tr>'
-      + '<td colspan="4" style="text-align: center; background-color: lightgray;">Input/Output</td>'
-      + '</tr>'
-      + '<tr>'
-      + '<td style="background-color: whitesmoke; width: 35%;">'
-      + 'Açık Sensör'
-      + '</td>'
-      + '<td id="pnlSimAcik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
-
-      + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%;">'
-      + 'Kapalı Sensör'
-      + '</td>'
-      + '<td id="pnlSimKapali" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
-      + '</tr>'
-
-      + '</table>';
-  return a;
-}
-function getKlepe2YonPopUpHTML() {
-  var a =
-
-      '<table>'
-      + '<tr><td><button style="width:100%;" id = "btnMan" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
-      + '<tr><td><button style="width:100%;" id = "btnStart" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">Sağ Yön Start</button> </td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnStop" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">Sol Yön Start</button> </td></tr>'
-      + '<tr><td></td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnReset" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">RESET</button> </td></tr>'
-      + '</table > ';
-  return a;
-}
-function getKlepe2YonPopUpAlarmInputOutputHTML() {
-  var a = '<table class="popupTabTable">'
-      + '<tr>'
-      + '<td colspan="4" style="text-align: center; background-color: lightgray;">ALARM</td>'
-      + '</tr>'
-      + '<tr>'
-      + '<td style="background-color: whitesmoke; width: 35%;">'
-      + 'Açma Arıza'
-      + '</td>'
-      + '<td id="pnlArzAcma" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
-      + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%;">'
-      + 'Kapama Arıza'
-      + '</td>'
-      + '<td id="pnlArzKapama" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
-      + '</tr>'
-      + '<tr>'
-      + '<td style="background-color: whitesmoke; width: 35%;">'
-      + 'Switch Arıza'
-      + '</td>'
-      + '<td id="pnlArzSW" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
       + '</tr > '
 
@@ -1166,11 +1177,11 @@ function checkMotor(myVal, motor) {
 }
 
 function changeMotorColor(color, motor) {
-  motor.addEventListener("click", event => {
-    $('#myModal').modal('show');
-    document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-    document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
-  });
+  // motor.addEventListener("click", event => {
+  //   $('#myModal').modal('show');
+  //   document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
+  //   document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
+  // });
   // motor.addEventListener('click', Motor_Click, false);
   for (var k = 0; k < motor.children.length; k++) {
     if (motor.children[k].hasAttribute("willChange")) {
@@ -1234,11 +1245,11 @@ function checkKlepe(myVal, klepe) {
 }
 
 function changeKlepeColor(color, klepe) {
-  klepe.addEventListener("click", event => {
-    $('#myModal').modal('show');
-    document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-    document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
-  });
+  // klepe.addEventListener("click", event => {
+  //   $('#myModal').modal('show');
+  //   document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
+  //   document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
+  // });
   for (var k = 0; k < klepe.children.length; k++) {
     // if (aa.children[k].hasAttribute("anime")) {
     if (klepe.children[k].hasAttribute("willChange")) {

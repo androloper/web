@@ -686,7 +686,6 @@
           <g
    id="tnk1"
    tip="tank"
-   PlcTagName="PLC01!M111.IO"
    class="tnk"
    inkscape:label="tank1">
              <path
@@ -1273,7 +1272,7 @@
    transform="matrix(0.02498217,0,0,0.02366954,152.2938,45.068194)"
    PlcTagName="PLC01!M105.IO"
    tip="motor"
-   class="&quot;mtr&quot;"
+   class="mtr"
    inkscape:label="g320">
                <path
    style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
@@ -1520,7 +1519,7 @@
    transform="matrix(0.02498217,0,0,0.02366954,78.295408,98.273649)"
    PlcTagName="PLC01!M102.IO"
    tip="motor"
-   class="&quot;mtr&quot;"
+   class="mtr"
    inkscape:label="g320">
                <path
    style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
@@ -1766,7 +1765,7 @@
    transform="matrix(0.02498217,0,0,0.02366954,26.618845,162.58906)"
    PlcTagName="PLC01!M100.IO"
    tip="motor"
-   class="&quot;mtr&quot;"
+   class="mtr"
    inkscape:label="g320">
                <path
    style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
@@ -2013,7 +2012,7 @@
    transform="matrix(0.15051852,0,0,0.15051852,32.996405,65.286422)"
    PlcTagName="PLC01!K114.IO"
    tip="kapak"
-   class="kpk"
+   class="klepe"
    inkscape:label="g170">
 	<linearGradient
    id="g_right"
@@ -2144,7 +2143,7 @@
    transform="matrix(0.15051852,0,0,0.15051852,69.784205,65.221444)"
    PlcTagName="PLC01!K115.IO"
    tip="kapak"
-   class="kpk"
+   class="klepe"
    inkscape:label="g170">
 	<linearGradient
    id="linearGradient562"

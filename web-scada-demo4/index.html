@@ -1,5 +1,6 @@
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Scada Realtime Demo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -42,12 +43,14 @@
             </div>
 
             <div id="motorModal" class="modal" onclick="popUpFlag = false;">
+                <div class="modal-dialog">
                 <table class="modal-content">
                     <tr>
                         <td>
                             <div class="modal-content">
                                 <div class="modal-header" id="modalHeader">
                                     <h3 style="text-align: center" id="MotorPopupHeader">M100</h3>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button>
                                 </div>
                                 <div id="popupBody" class="modal-body">
                                 </div>
@@ -57,14 +60,18 @@
                             <button id="btnAlarm" onclick="btnAlarmClick(this)" type="button">></button>
                         </td>
                         <td id="tdParametre">
-                            <table>
+                            <table class="modal-content">
                                 <tr>
                                     <td id="tdPopupTab"></td>
                                 </tr>
                             </table>
+                            <div class="modal-footer">
+                                <a href="#" data-bs-dismiss="modal" class="btn">Kapat</a>
+                            </div>
                         </td>
                     </tr>
                 </table>
+                </div>
             </div>
 
         </div>
