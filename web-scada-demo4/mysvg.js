@@ -57,7 +57,7 @@ function itemChange(itemName, itemValue){
             // aa[i].addEventListener('click', Motor_Click, false);
             aa[i].addEventListener("click", event => {
               Motor_Click();
-              $('#motorModal').modal('show');
+              $('#popUpModal').modal('show');
           });
         }
         if (aa[i].getAttribute("tip") === "kapak") {
@@ -66,7 +66,7 @@ function itemChange(itemName, itemValue){
             // aa[i].addEventListener('click', Klepe_Click, false);
             aa[i].addEventListener("click", event => {
               Klepe_Click();
-              $('#motorModal').modal('show');
+              $('#popUpModal').modal('show');
             });
         }
         if (aa[i].getAttribute("tip") === "elevator") {
@@ -214,7 +214,7 @@ window.onclick = function (event) {
 }
 
 function ClosePopUp() {
-  modal = document.getElementById("motorModal");
+  modal = document.getElementById("popUpModal");
   if (popUpFlag) {
     popUpFlag = false;
     modal.setAttribute("style","display: none");
@@ -288,7 +288,7 @@ var ShowPopUp = function () {
   }
 
 
-  modal = document.getElementById("motorModal");
+  modal = document.getElementById("popUpModal");
   mainDiv = document.getElementById("mainDiv");
 
 
