@@ -1,3 +1,7 @@
+window.onload = function () {
+startScada();
+};
+
 var allItems = {};
 
 //SignalR Configuration
@@ -171,14 +175,15 @@ function btnAlarmClick() {
   //popUpFlag = false;
   var parametre = document.getElementById("tdParametre");
   var btnAlarm = document.getElementById("btnAlarm");
+  var modal = document.getElementById("modalDialog");
   if (parametre.style.display === "inherit") {
     document.getElementById("tdParametre").style.display = "none";
-    // btnAlarm.setAttribute("style", "height:200px");
+    modal.style.width = "286px";
     btnAlarm.innerHTML = ">";
   }
   else {
     document.getElementById("tdParametre").style.display = "inherit";
-    // btnAlarm.setAttribute("style", "height:200px");
+    modal.style.width = "600px";
     btnAlarm.innerHTML = "<";
   }
 
@@ -388,55 +393,55 @@ function checkMotorPopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlTermik").setAttribute("style","background: lime");
+    document.getElementById("pnlTermik").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlTermik").setAttribute("style","background: gray");
+    document.getElementById("pnlTermik").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlCalisti").setAttribute("style","background: lime");
+    document.getElementById("pnlCalisti").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlCalisti").setAttribute("style","background: gray");
+    document.getElementById("pnlCalisti").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 2)) {
-    document.getElementById("pnlTasmaSw").setAttribute("style","background: lime");
+    document.getElementById("pnlTasmaSw").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlTasmaSw").setAttribute("style","background: gray");
+    document.getElementById("pnlTasmaSw").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 3)) {
-    document.getElementById("pnlDevirBekcisi").setAttribute("style","background: lime");
+    document.getElementById("pnlDevirBekcisi").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlDevirBekcisi").setAttribute("style","background: gray");
+    document.getElementById("pnlDevirBekcisi").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 4)) {
-    document.getElementById("pnlBakimSalteri").setAttribute("style","background: lime");
+    document.getElementById("pnlBakimSalteri").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlBakimSalteri").setAttribute("style","background: gray");
+    document.getElementById("pnlBakimSalteri").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 5)) {
-    document.getElementById("pnlBantKaydi").setAttribute("style","background: lime");
+    document.getElementById("pnlBantKaydi").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlBantKaydi").setAttribute("style","background: gray");
+    document.getElementById("pnlBantKaydi").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 6)) {
-    document.getElementById("pnlEmniyetSw").setAttribute("style","background: lime");
+    document.getElementById("pnlEmniyetSw").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlEmniyetSw").setAttribute("style","background: gray");
+    document.getElementById("pnlEmniyetSw").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 7)) {
-    document.getElementById("pnlMotorStart1").setAttribute("style","background: lime");
+    document.getElementById("pnlMotorStart1").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlMotorStart1").setAttribute("style","background: gray");
+    document.getElementById("pnlMotorStart1").setAttribute("style","background: gray; border:1px solid black;");
 
 
   return headerColor;
@@ -445,68 +450,68 @@ function checkMotorPopupButton(buttonList, myVal) {
 function checkMotorPopupAlarms(myVal) {
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlArzTermik").setAttribute("style","background: red");
+    document.getElementById("pnlArzTermik").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzTermik").setAttribute("style","background: gray");
+    document.getElementById("pnlArzTermik").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlArzKontaktor").setAttribute("style","background: red");
+    document.getElementById("pnlArzKontaktor").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzKontaktor").setAttribute("style","background: gray");
+    document.getElementById("pnlArzKontaktor").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 2)) {
-    document.getElementById("pnlArzTasma").setAttribute("style","background: red");
+    document.getElementById("pnlArzTasma").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzTasma").setAttribute("style","background: gray");
+    document.getElementById("pnlArzTasma").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 3)) {
-    document.getElementById("pnlArzDevirBekcisi").setAttribute("style","background: red");
+    document.getElementById("pnlArzDevirBekcisi").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzDevirBekcisi").setAttribute("style","background: gray");
+    document.getElementById("pnlArzDevirBekcisi").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 4)) {
-    document.getElementById("pnlArzBakimSalteri").setAttribute("style","background: red");
+    document.getElementById("pnlArzBakimSalteri").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzBakimSalteri").setAttribute("style","background: gray");
+    document.getElementById("pnlArzBakimSalteri").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 5)) {
-    document.getElementById("pnlArzBantKaydi").setAttribute("style","background: red");
+    document.getElementById("pnlArzBantKaydi").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzBantKaydi").setAttribute("style","background: gray");
+    document.getElementById("pnlArzBantKaydi").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 6)) {
-    document.getElementById("pnlArzEmniyet").setAttribute("style","background: red");
+    document.getElementById("pnlArzEmniyet").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzEmniyet").setAttribute("style","background: gray");
+    document.getElementById("pnlArzEmniyet").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 7)) {
-    document.getElementById("pnlArzAkim").setAttribute("style","background: red");
+    document.getElementById("pnlArzAkim").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzAkim").setAttribute("style","background: gray");
+    document.getElementById("pnlArzAkim").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzDevir").setAttribute("style","background: red");
+    document.getElementById("pnlArzDevir").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzDevir").setAttribute("style","background: gray");
+    document.getElementById("pnlArzDevir").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzBakimZamani").setAttribute("style","background: red");
+    document.getElementById("pnlArzBakimZamani").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzBakimZamani").setAttribute("style","background: gray");
+    document.getElementById("pnlArzBakimZamani").setAttribute("style","background: gray; border:1px solid black;");
 
 }
 
@@ -540,35 +545,35 @@ function checkKlepePopupButton(buttonList, myVal) {
   }
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
+    document.getElementById("pnlSimAcik").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlSimAcik").setAttribute("style","background: gray");
+    document.getElementById("pnlSimAcik").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlSimKapali").setAttribute("style","background: lime");
+    document.getElementById("pnlSimKapali").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlSimKapali").setAttribute("style","background: gray");
+    document.getElementById("pnlSimKapali").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzAcma").setAttribute("style","background: red");
+    document.getElementById("pnlArzAcma").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzAcma").setAttribute("style","background: gray");
+    document.getElementById("pnlArzAcma").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzKapama").setAttribute("style","background: red");
+    document.getElementById("pnlArzKapama").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzKapama").setAttribute("style","background: gray");
+    document.getElementById("pnlArzKapama").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 10) | Bit(myVal, 15)) {
-    document.getElementById("pnlArzSW").setAttribute("style","background: red");
+    document.getElementById("pnlArzSW").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzSW").setAttribute("style","background: gray");
+    document.getElementById("pnlArzSW").setAttribute("style","background: gray; border:1px solid black;");
 
   return headerColor;
 }
@@ -605,41 +610,41 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
+    document.getElementById("pnlSimAcik").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlSimAcik").setAttribute("style","background: gray");
+    document.getElementById("pnlSimAcik").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlSimKapali").setAttribute("style","background: lime");
+    document.getElementById("pnlSimKapali").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlSimKapali").setAttribute("style","background: gray");
+    document.getElementById("pnlSimKapali").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzAcma").setAttribute("style","background: red");
+    document.getElementById("pnlArzAcma").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzAcma").setAttribute("style","background: gray");
+    document.getElementById("pnlArzAcma").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzKapama").setAttribute("style","background: red");
+    document.getElementById("pnlArzKapama").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzKapama").setAttribute("style","background: gray");
+    document.getElementById("pnlArzKapama").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 10)) {
-    document.getElementById("pnlArzSW").setAttribute("style","background: red");
+    document.getElementById("pnlArzSW").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzSW").setAttribute("style","background: gray");
+    document.getElementById("pnlArzSW").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 15)) {
-    document.getElementById("pnlArzOrta").setAttribute("style","background: red");
+    document.getElementById("pnlArzOrta").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzOrta").setAttribute("style","background: gray");
+    document.getElementById("pnlArzOrta").setAttribute("style","background: gray; border:1px solid black;");
 
 
   return headerColor;
@@ -679,35 +684,35 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
 
 
   if (Bit(myVal, 0)) {
-    document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
+    document.getElementById("pnlSimAcik").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlSimAcik").setAttribute("style","background: gray");
+    document.getElementById("pnlSimAcik").setAttribute("style","background: gray; border:1px solid black;");
 
 
   if (Bit(myVal, 1)) {
-    document.getElementById("pnlSimKapali").setAttribute("style","background: lime");
+    document.getElementById("pnlSimKapali").setAttribute("style","background: lime; border:1px solid black;");
   }
   else
-    document.getElementById("pnlSimKapali").setAttribute("style","background: gray");
+    document.getElementById("pnlSimKapali").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 8)) {
-    document.getElementById("pnlArzAcma").setAttribute("style","background: red");
+    document.getElementById("pnlArzAcma").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzAcma").setAttribute("style","background: gray");
+    document.getElementById("pnlArzAcma").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 9)) {
-    document.getElementById("pnlArzKapama").setAttribute("style","background: red");
+    document.getElementById("pnlArzKapama").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzKapama").setAttribute("style","background: gray");
+    document.getElementById("pnlArzKapama").setAttribute("style","background: gray; border:1px solid black;");
 
   if (Bit(myVal, 10)) {
-    document.getElementById("pnlArzSW").setAttribute("style","background: red");
+    document.getElementById("pnlArzSW").setAttribute("style","background: red; border:1px solid black;");
   }
   else
-    document.getElementById("pnlArzSW").setAttribute("style","background: gray");
+    document.getElementById("pnlArzSW").setAttribute("style","background: gray; border:1px solid black;");
 
 
   return headerColor;
