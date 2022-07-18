@@ -22,7 +22,7 @@
             <object id="svg_obj" data="scada3.svg" type="image/svg+xml"></object>
             <br><br>
             <!-- Modal -->
-            <div class="modal" id="myModal">
+            <!-- <div class="modal" id="myModal">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -40,28 +40,32 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div id="popUpModal" class="modal" onclick="popUpFlag = false;">
-                <div class="modal-dialog">
-                <table class="modal-content">
-                    <tr>
-                        <td>
+                <div class="modal-dialog" style="height: 100%;">
+                <table style="width: 100%; padding: 14px;" class="modal-content">
+                    <tr style="height: 100%; width: auto;">
+                        <div class="modal-header" style="background:gray;">
+                            <h1 style="text-align: center; padding-top:10px">MOST POPUP</h3>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button>
+                        </div>
+                        <td style="height: 100%; width: auto;">
                             <div class="modal-content">
                                 <div class="modal-header" id="modalHeader">
-                                    <h3 style="text-align: center" id="MotorPopupHeader">M100</h3>
-                                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button>
+                                    <h3 style="text-align: center" id="MotorPopupHeader">PLC Tag Name</h3>
+                                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button> -->
                                 </div>
-                                <div id="popupBody" class="modal-body">
+                                <div id="popupBody" class="modal-body" style="padding-left: 30px;">
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <button id="btnAlarm" onclick="btnAlarmClick(this)" type="button">></button>
+                        <td style="padding:12px; height: 100%;">
+                            <button style="width: 100%; height: 100%; padding:6px" id="btnAlarm" onclick="btnAlarmClick(this)" type="button">></button>
                         </td>
-                        <td id="tdParametre">
-                            <table class="modal-content">
-                                <tr>
+                        <td id="tdParametre" style="display: none; width: auto;">
+                            <table class="modal-content" style="width: auto;">
+                                <tr style="width: auto;">
                                     <td id="tdPopupTab"></td>
                                 </tr>
                             </table>
@@ -70,7 +74,6 @@
                 </table>
                 </div>
             </div>
-
         </div>
     </body>
 </html>

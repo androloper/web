@@ -50,13 +50,13 @@ function itemChange(itemName, itemValue){
     var aa = layer1.children;
     if(aa[i].hasAttribute("PlcTagName")){
       if (aa[i].getAttribute("PlcTagName") === itemName) {
-        popUpRootTag = aa[i].getAttribute("PlcTagName");
+        var popUpRootTag = aa[i].getAttribute("PlcTagName");
         if (aa[i].getAttribute("tip") === "motor") {
             checkMotor(itemValue, aa[i]);
             changeMotorTag(aa[i],itemValue);
             // aa[i].addEventListener('click', Motor_Click, false);
             aa[i].addEventListener("click", event => {
-              Motor_Click();
+              Motor_Click(popUpRootTag);
               $('#popUpModal').modal('show');
           });
         }
@@ -65,7 +65,7 @@ function itemChange(itemName, itemValue){
             changeKlepeTag(aa[i],itemValue);
             // aa[i].addEventListener('click', Klepe_Click, false);
             aa[i].addEventListener("click", event => {
-              Klepe_Click();
+              Klepe_Click(popUpRootTag);
               $('#popUpModal').modal('show');
             });
         }
@@ -81,7 +81,6 @@ function itemChange(itemName, itemValue){
     }
     if (popUpRootTag === itemName) {
       var butonList = document.getElementsByClassName("mostPopupButton");
-      console.log("burais2 "+butonList.toString());
       var popUpHeaderColor;
       if (popUpType === "M") {
         popUpHeaderColor = checkMotorPopupButton(butonList, itemValue);
@@ -174,10 +173,12 @@ function btnAlarmClick() {
   var btnAlarm = document.getElementById("btnAlarm");
   if (parametre.style.display === "inherit") {
     document.getElementById("tdParametre").style.display = "none";
+    // btnAlarm.setAttribute("style", "height:200px");
     btnAlarm.innerHTML = ">";
   }
   else {
     document.getElementById("tdParametre").style.display = "inherit";
+    // btnAlarm.setAttribute("style", "height:200px");
     btnAlarm.innerHTML = "<";
   }
 
@@ -231,39 +232,39 @@ function ReadItem(itemName) {
   }
 }
 
-function Motor_Click() {
+function Motor_Click(plcTag) {
   popUpType = "M";
-  // popUpRootTag = plcTag;
+  popUpRootTag = plcTag;
   ShowPopUp();
 }
 
-function Klepe_Click() {
+function Klepe_Click(plcTag) {
   popUpType = "K";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
-  // popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
+  popUpRootTag = plcTag;
   ShowPopUp();
 }
 
-function Klepe3Yon_Click() {
+function Klepe3Yon_Click(plcTag) {
   popUpType = "K3yon";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
-  // popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
+  popUpRootTag = plcTag;
   ShowPopUp();
 }
 
-function Klepe2Yon_Click() {
+function Klepe2Yon_Click(plcTag) {
   popUpType = "K2yon";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
-  // popUpRootTag = this.getAttribute("PlcTagName");//popup içinde çalışacak tag
+  popUpRootTag = plcTag;
   ShowPopUp();
 }
-var MouseX;
-var MouseY;
-var popUpRootTag;
+
+// var MouseX;
+// var MouseY;
 var popUpType;
 var popUpFlag = false;
 
-$("body").mousemove(function (e) {
-  MouseX = e.pageX;
-  MouseY = e.pageY;
-});
+// $("body").mousemove(function (e) {
+//   MouseX = e.pageX;
+//   MouseY = e.pageY;
+// });
 
 var ShowPopUp = function () {
   popUpFlag = false;
@@ -289,12 +290,10 @@ var ShowPopUp = function () {
 
 
   modal = document.getElementById("popUpModal");
-  mainDiv = document.getElementById("mainDiv");
 
+  modal.setAttribute("style","display:block;");
 
-  modal.style.display = "block";
-
-  popupKonumHesapla(modal, MouseX, MouseY);
+  // popupKonumHesapla(modal, MouseX, MouseY);
 
   document.getElementById('MotorPopupHeader').innerHTML = popUpRootTag;
   document.getElementById('popupBody').innerHTML = popupHTML;
@@ -316,15 +315,7 @@ var ShowPopUp = function () {
     popUpHeaderColor = checkKlepe3YonPopupButton(butonList, ReadItem(popUpRootTag));
   }
 
-  document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = "gray";
-
-  // When the user clicks anywhere outside of the modal, close it
-  //mainDiv.onclick = function (event) {
-  //    if (event.target == modal) {
-  //        modal.style.display = "none";
-  //        //document.getElementById('divPopUp').style.display = 'none';
-  //    }
-  //}
+  document.getElementById('modalHeader').style.backgroundColor = document.getElementById('MotorPopupHeader').style.backgroundColor = popUpHeaderColor;
 
 };
 
@@ -352,35 +343,36 @@ function checkMotorPopupButton(buttonList, myVal) {
   var headerColor = "gray";
 
   for (var i = 0; i < buttonList.length; i++) {
+    // buttonList[i].setAttribute("style", "width:150px;");
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 8)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 9)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 9)) {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
     }
     else if (buttonList[i].id === "btnBakim") {
       if (Bit(myVal, 11)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
     }
   }
 
@@ -520,36 +512,32 @@ function checkMotorPopupAlarms(myVal) {
 
 function checkKlepePopupButton(buttonList, myVal) {
   var headerColor = "gray";
-  var pasif = "#EFEFEF";
-  var aktif = "lime";
 
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
   }
-
-
 
   if (Bit(myVal, 0)) {
     document.getElementById("pnlSimAcik").setAttribute("style","background: lime");
@@ -582,8 +570,6 @@ function checkKlepePopupButton(buttonList, myVal) {
   else
     document.getElementById("pnlArzSW").setAttribute("style","background: gray");
 
-
-
   return headerColor;
 }
 
@@ -593,25 +579,25 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
   }
@@ -667,25 +653,25 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 6)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
     else if (buttonList[i].id === "btnStop") {
       if (Bit(myVal, 7)) {
-        buttonList[i].setAttribute("style","background: lime");
+        buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else {
-        buttonList[i].setAttribute("style","background: #EFEFEF");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
   }
@@ -727,36 +713,36 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
   return headerColor;
 }
 
-function popupKonumHesapla(popup, mouseX, mouseY) {
-  var screenHeight = screen.height;
-  var screenWidth = screen.width;
-  var popupHeihgt = popup.offsetHeight;
-  var popupWidth = popup.offsetWidth;
-  if (mouseY < (screenHeight / 2)) {
-    popup.style.top = mouseY + 'px';
-  } else {
-    popup.style.top = (mouseY - popupHeihgt) + 'px';
-  }
-  if (mouseX < (screenWidth / 2)) {
-    popup.style.left = mouseX + 'px';
-  } else {
-    popup.style.left = (mouseX - popupWidth) + 'px';
-  }
-}
+// function popupKonumHesapla(popup, mouseX, mouseY) {
+//   var screenHeight = screen.height;
+//   var screenWidth = screen.width;
+//   var popupHeihgt = popup.offsetHeight;
+//   var popupWidth = popup.offsetWidth;
+//   if (mouseY < (screenHeight / 2)) {
+//     popup.style.top = mouseY + 'px';
+//   } else {
+//     popup.style.top = (mouseY - popupHeihgt) + 'px';
+//   }
+//   if (mouseX < (screenWidth / 2)) {
+//     popup.style.left = mouseX + 'px';
+//   } else {
+//     popup.style.left = (mouseX - popupWidth) + 'px';
+//   }
+// }
 
 function getMotorPopUpHTML() {
   var a =
 
       '<table>'
-      + '<tr><td><button style="width:100%;" id = "btnMan" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
-      + '<tr><td><button style="width:100%;" id = "btnStart" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">START</button> </td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnStop" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">STOP</button> </td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnBakim" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">BAKIM</button> </td></tr>'
-      + '<tr><td></td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnReset" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">RESET</button> </td></tr>'
-      + '<tr><td></td></tr>'
-      + '<tr><td></td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnDurusReset" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">DURUŞ RESET</button> </td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnMan" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
+      + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnStart" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">START</button> </td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnStop" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">STOP</button> </td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnBakim" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">BAKIM</button> </td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"></td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnReset" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">RESET</button> </td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"></td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"></td></tr>'
+      + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnDurusReset" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">DURUŞ RESET</button> </td></tr>'
       + '</table > ';
   return a;
 }
@@ -891,11 +877,11 @@ function getKlepePopUpHTML() {
   var a =
 
       '<table>'
-      + '<tr><td><button style="width:100%;" id = "btnMan" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
-      + '<tr><td><button style="width:100%;" id = "btnStart" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">AÇ</button> </td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnStop" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">KAPAT</button> </td></tr>'
-      + '<tr><td></td></tr>'
-      + '<tr><td><button style="width:100%;" id = "btnReset" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">RESET</button> </td></tr>'
+      + '<tr><td style="text-align: center;"><button style="width:100%;" id = "btnMan" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
+      + '<tr><td style="text-align: center;"><button style="width:100%;" id = "btnStart" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">AÇ</button> </td></tr>'
+      + '<tr><td style="text-align: center;"><button style="width:100%;" id = "btnStop" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">KAPAT</button> </td></tr>'
+      + '<tr><td style="text-align: center;"></td></tr>'
+      + '<tr><td style="text-align: center;"><button style="width:100%;" id = "btnReset" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">RESET</button> </td></tr>'
       + '</table > ';
   return a;
 }
