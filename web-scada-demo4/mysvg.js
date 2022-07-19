@@ -6,7 +6,7 @@ var allItems = {};
 
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://192.168.1.122:9999/demoHub")
+    .withUrl("http://62.141.44.59:9999/demoHub")
     .withAutomaticReconnect()
     .configureLogging(signalR.LogLevel.Information)
     .build();
@@ -42,17 +42,24 @@ connection.on("GetItemAll", (value) => {
 });
 
 async function WriteToPlc(value) {
-   connection.invoke('WriteToPlc', value).then(() => {
+var b = {
+  Name : value.Name,
+  Value : value.Value,
+  CustomCode : ""
+};
+
+const ad = JSON.stringify(b);
+   connection.invoke('WriteValues', ad).then(() => {
       // document.getElementById('demo').innerText = `${value}`;
-      console.log("WriteToPlc");
-      console.log(value);
+      console.log("WriteValues");
+      console.log(a);
       }).catch(err => console.log(err));
 }
 
-// function startScada() {
-//   startHubConn();
-//   // InitEventHandlers();
-// }
+function startScada() {
+  startHubConn();
+  // InitEventHandlers();
+}
 
 //assigning the values from signalr
 function itemChange(itemName, itemValue){
