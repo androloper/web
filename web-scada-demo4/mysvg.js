@@ -1,5 +1,5 @@
 window.onload = function () {
-startScada();
+  startScada();
 };
 
 var allItems = {};
@@ -41,10 +41,18 @@ connection.on("GetItemAll", (value) => {
   });
 });
 
-function startScada() {
-  startHubConn();
-  // InitEventHandlers();
+async function WriteToPlc(value) {
+   connection.invoke('WriteToPlc', value).then(() => {
+      // document.getElementById('demo').innerText = `${value}`;
+      console.log("WriteToPlc");
+      console.log(value);
+      }).catch(err => console.log(err));
 }
+
+// function startScada() {
+//   startHubConn();
+//   // InitEventHandlers();
+// }
 
 //assigning the values from signalr
 function itemChange(itemName, itemValue){
@@ -215,7 +223,6 @@ function btnAlarmClick() {
 // }
 
 window.onclick = function (event) {
-  
   ClosePopUp();
 }
 
@@ -324,9 +331,11 @@ var ShowPopUp = function () {
 
 };
 
+// var chat = $.connection.connection;
+
 function MotorButton_Click(myButton) {
   popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  MotorButton_OnClick(myButton, chat, allItems, popUpRootTag);
+  MotorButton_OnClick(myButton, allItems, popUpRootTag);
 }
 
 function KlepeButton_Click(myButton) {
@@ -1047,33 +1056,69 @@ function getKlepe3YonPopUpAlarmInputOutputHTML() {
   return a;
 }
 
-function MotorButton_OnClick(myButton, chat, AllItems, rootTag) {
+function MotorButton_OnClick(myButton, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
+  var plcVal;
   if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 8)) {
-      chat.server.writeTag(aa, "21");
+      plcVal = {
+        Name : aa,
+        Value : "21"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "1");
+    else{
+      plcVal = {
+        Name : aa,
+        Value : "1"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnStart") {
-    chat.server.writeTag(aa, "2");
+      plcVal = {
+        Name : aa,
+        Value : "2"
+      };
+      WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnStop") {
-    chat.server.writeTag(aa, "22");
+      plcVal = {
+        Name : aa,
+        Value : "22"
+      };
+      WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnBakim") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 11)) {
-      chat.server.writeTag(aa, "24");
+      plcVal = {
+        Name : aa,
+        Value : "24"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "4");
+    else {
+      plcVal = {
+        Name : aa,
+        Value : "4"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnReset") {
-    chat.server.writeTag(aa, "12");
+    plcVal = {
+      Name : aa,
+      Value : "12"
+    };
+      WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnDurusReset") {
-    chat.server.writeTag(aa, "9");
+    plcVal = {
+      Name : aa,
+      Value : "9"
+    };
+    WriteToPlc(plcVal);
+    // chat.server.writeTag(aa, "9");
   }
 }
 
