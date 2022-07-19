@@ -253,7 +253,8 @@
           <g
    id="g127310"
    transform="matrix(0.01693333,0,0,0.02227205,113.1902,109.51781)"
-   tip="line" condition="({PLC01!M102.IO:1} &amp; {PLC01!M100.IO:1})">
+   tip="line" condition="{PLC01!M102.IO:1}">
+   <!-- tip="line" condition="({PLC01!M102.IO:1} &amp; {PLC01!M100.IO:1})"> -->
                <path
                        style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"

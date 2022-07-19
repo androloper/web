@@ -1,12 +1,12 @@
 window.onload = function () {
-  startScada();
+  startHubConn();
 };
 
 var allItems = {};
 
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://62.141.44.59:9999/demoHub")
+    .withUrl("http://192.168.1.122:9999/demoHub")
     .withAutomaticReconnect()
     .configureLogging(signalR.LogLevel.Information)
     .build();
@@ -41,25 +41,27 @@ connection.on("GetItemAll", (value) => {
   });
 });
 
-async function WriteToPlc(value) {
-var b = {
-  Name : value.Name,
-  Value : value.Value,
-  CustomCode : ""
-};
+connection.on("WriteToPlc", (val)=>{
+  //hata vermemesi için eklendi kurcalama
+});
 
-const ad = JSON.stringify(b);
-   connection.invoke('WriteValues', ad).then(() => {
+async function WriteToPlc(value) {
+  var b = {
+    Name : value.Name,
+    Value : value.Value,
+    CustomCode : ""
+  };
+  const strVal = JSON.stringify(b);
+  connection.invoke('WriteValues', strVal).then(() => {
       // document.getElementById('demo').innerText = `${value}`;
-      console.log("WriteValues");
-      console.log(a);
+      // console.log("WriteValues");
+      // console.log(strVal);
       }).catch(err => console.log(err));
 }
 
-function startScada() {
-  startHubConn();
-  // InitEventHandlers();
-}
+// function startScada() {
+//   startHubConn();
+// }
 
 //assigning the values from signalr
 function itemChange(itemName, itemValue){
@@ -205,30 +207,6 @@ function btnAlarmClick() {
 
 }
 
-// function InitEventHandlers() {
-//   const svg = document.getElementById("svg_obj").contentDocument;
-//   const layer1 = svg.getElementById("layer1");
-//   for (var i = 0; i < layer1.children.length; i++) {
-//     var elements = layer1.children;
-//     elements[i].addEventListener('click', Motor_Click, false);
-//   }
-//
-//   var elements = document.getElementsByClassName("klepe");
-//   for (var i = 0; i < elements.length; i++) {
-//     elements[i].addEventListener('click', Klepe_Click, false);
-//   }
-//
-//   var elements = document.getElementsByClassName("klepe3yon");
-//   for (var i = 0; i < elements.length; i++) {
-//     elements[i].addEventListener('click', Klepe3Yon_Click, false);
-//   }
-//
-//   var elements = document.getElementsByClassName("klepe2yon");
-//   for (var i = 0; i < elements.length; i++) {
-//     elements[i].addEventListener('click', Klepe2Yon_Click, false);
-//   }
-// }
-
 window.onclick = function (event) {
   ClosePopUp();
 }
@@ -258,19 +236,19 @@ function Motor_Click(plcTag) {
 }
 
 function Klepe_Click(plcTag) {
-  popUpType = "K";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
+  popUpType = "K";
   popUpRootTag = plcTag;
   ShowPopUp();
 }
 
 function Klepe3Yon_Click(plcTag) {
-  popUpType = "K3yon";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
+  popUpType = "K3yon";
   popUpRootTag = plcTag;
   ShowPopUp();
 }
 
 function Klepe2Yon_Click(plcTag) {
-  popUpType = "K2yon";//popup tipini vererek popup açılma ve butonların çalışması buna göre olacak
+  popUpType = "K2yon";
   popUpRootTag = plcTag;
   ShowPopUp();
 }
@@ -338,33 +316,29 @@ var ShowPopUp = function () {
 
 };
 
-// var chat = $.connection.connection;
-
 function MotorButton_Click(myButton) {
-  popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
+  popUpFlag = false;//butonlara basınca flag false olmalı. yoksa popup kapanır.
   MotorButton_OnClick(myButton, allItems, popUpRootTag);
 }
 
 function KlepeButton_Click(myButton) {
-  popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  KlepeButton_OnClick(myButton, chat, allItems, popUpRootTag);
+  popUpFlag = false;
+  KlepeButton_OnClick(myButton, allItems, popUpRootTag);
 }
 
 function Klepe3YonButton_Click(myButton) {
-  popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  Klepe3YonButton_OnClick(myButton, chat, allItems, popUpRootTag);
+  popUpFlag = false;
+  Klepe3YonButton_OnClick(myButton, allItems, popUpRootTag);
 }
 
 function Klepe2YonButton_Click(myButton) {
-  popUpFlag = false;//butonlara basınca flag falsse olmalı. yoksa popup kapanır.
-  Klepe2YonButton_OnClick(myButton, chat, allItems, popUpRootTag);
+  popUpFlag = false;
+  Klepe2YonButton_OnClick(myButton,  allItems, popUpRootTag);
 }
 
 function checkMotorPopupButton(buttonList, myVal) {
   var headerColor = "gray";
-
   for (var i = 0; i < buttonList.length; i++) {
-    // buttonList[i].setAttribute("style", "width:150px;");
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 8)) {
         buttonList[i].setAttribute("style","background: lime; width:150px");
@@ -464,7 +438,6 @@ function checkMotorPopupButton(buttonList, myVal) {
 }
 
 function checkMotorPopupAlarms(myVal) {
-
   if (Bit(myVal, 0)) {
     document.getElementById("pnlArzTermik").setAttribute("style","background: red; border:1px solid black;");
   }
@@ -533,7 +506,6 @@ function checkMotorPopupAlarms(myVal) {
 
 function checkKlepePopupButton(buttonList, myVal) {
   var headerColor = "gray";
-
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
@@ -596,7 +568,6 @@ function checkKlepePopupButton(buttonList, myVal) {
 
 function checkKlepe3YonPopupButton(buttonList, myVal) {
   var headerColor = "gray";
-
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {
@@ -1129,75 +1100,149 @@ function MotorButton_OnClick(myButton, AllItems, rootTag) {
   }
 }
 
-function KlepeButton_OnClick(myButton, chat, AllItems, rootTag) {
+function KlepeButton_OnClick(myButton, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
+  var plcVal;
   if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 5)) {
-      chat.server.writeTag(aa, "21");
+      plcVal = {
+        Name : aa,
+        Value : "21"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "1");
+    else{
+      plcVal = {
+        Name : aa,
+        Value : "1"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnStart") {
-    chat.server.writeTag(aa, "2");
+    plcVal = {
+      Name : aa,
+      Value : "2"
+    };
+    WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnStop") {
-    chat.server.writeTag(aa, "3");
+    plcVal = {
+      Name : aa,
+      Value : "3"
+    };
+    WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnReset") {
-    chat.server.writeTag(aa, "12");
+    plcVal = {
+      Name : aa,
+      Value : "12"
+    };
+    WriteToPlc(plcVal);
   }
 }
 
-function Klepe3YonButton_OnClick(myButton, chat, AllItems, rootTag) {
+function Klepe3YonButton_OnClick(myButton, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
+  var plcVal;
   if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 5)) {
-      chat.server.writeTag(aa, "21");
+      plcVal = {
+        Name : aa,
+        Value : "21"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "1");
+    else {
+      plcVal = {
+        Name : aa,
+        Value : "1"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnStart") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 6)) {
-      chat.server.writeTag(aa, "22");
+      plcVal = {
+        Name : aa,
+        Value : "22"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "2");
+    else {
+      plcVal = {
+        Name : aa,
+        Value : "2"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnStop") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 7)) {
-      chat.server.writeTag(aa, "23");
+      plcVal = {
+        Name : aa,
+        Value : "23"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "3");
+    else {
+      plcVal = {
+        Name : aa,
+        Value : "3"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnReset") {
-    chat.server.writeTag(aa, "12");
+    plcVal = {
+      Name : aa,
+      Value : "12"
+    };
+    WriteToPlc(plcVal);
   }
 }
 
-function Klepe2YonButton_OnClick(myButton, chat, AllItems, rootTag) {
+function Klepe2YonButton_OnClick(myButton, AllItems, rootTag) {
   var aa = rootTag.replace(".IO", ".CNT");
   if (myButton.id === "btnMan") {
     if (Bit(ReadItemFromList(AllItems, rootTag), 5)) {
-      chat.server.writeTag(aa, "21");
+      plcVal = {
+        Name : aa,
+        Value : "21"
+      };
+      WriteToPlc(plcVal);
     }
-    else
-      chat.server.writeTag(aa, "1");
+    else {
+      plcVal = {
+        Name : aa,
+        Value : "1"
+      };
+      WriteToPlc(plcVal);
+    }
   }
   else if (myButton.id === "btnStart") {
-
-    chat.server.writeTag(aa, "2");
+    plcVal = {
+      Name : aa,
+      Value : "2"
+    };
+    WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnStop") {
-
-    chat.server.writeTag(aa, "3");
+    plcVal = {
+      Name : aa,
+      Value : "3"
+    };
+    WriteToPlc(plcVal);
   }
   else if (myButton.id === "btnReset") {
-    chat.server.writeTag(aa, "12");
+    plcVal = {
+      Name : aa,
+      Value : "12"
+    };
+    WriteToPlc(plcVal);
   }
 }
+
 //changing components
 function checkMotor(myVal, motor) {
   if (Bit(myVal, 13)) {
@@ -1214,12 +1259,6 @@ function checkMotor(myVal, motor) {
 }
 
 function changeMotorColor(color, motor) {
-  // motor.addEventListener("click", event => {
-  //   $('#myModal').modal('show');
-  //   document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-  //   document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
-  // });
-  // motor.addEventListener('click', Motor_Click, false);
   for (var k = 0; k < motor.children.length; k++) {
     if (motor.children[k].hasAttribute("willChange")) {
       motor.children[k].setAttribute("style", `fill:${color};stroke:black;stroke-width:2`);
@@ -1282,13 +1321,7 @@ function checkKlepe(myVal, klepe) {
 }
 
 function changeKlepeColor(color, klepe) {
-  // klepe.addEventListener("click", event => {
-  //   $('#myModal').modal('show');
-  //   document.getElementById('modalheadertext').innerText = event.path[1].attributes[0].textContent;
-  //   document.getElementById('modalbodytext').innerText = event.path[1].attributes[2].textContent;
-  // });
   for (var k = 0; k < klepe.children.length; k++) {
-    // if (aa.children[k].hasAttribute("anime")) {
     if (klepe.children[k].hasAttribute("willChange")) {
       klepe.children[k].setAttribute("style", `fill:${color}`);
     }
