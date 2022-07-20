@@ -30,6 +30,7 @@ connection.on("GetItemAll", (value) => {
   for(var i = 0; i<resp.length; i++){
     allItems[resp[i].Name]=resp[i];
     itemChange(resp[i].Name, resp[i].Value);
+    // initEventHandler(resp[i].Name);
   }
 
   connection.on("ReceiveValues", (value) => {
@@ -63,6 +64,26 @@ async function WriteToPlc(value) {
 //   startHubConn();
 // }
 
+// function initEventHandler(itemName) {
+//   const svg = document.getElementById("svg_obj").contentDocument;
+//   const layer1 = svg.getElementById("layer1");
+//   for (var i = 0; i < layer1.children.length; i++) {
+//     var aa = layer1.children;
+//     if(aa[i].hasAttribute("PlcTagName")){
+//       if (aa[i].getAttribute("PlcTagName") === itemName) {
+//         var popUpRootTag = aa[i].getAttribute("PlcTagName");
+//         if (aa[i].getAttribute("tip") === "motor") {
+//           aa[i].addEventListener("click", event => {
+//             console.log("1");
+//             Motor_Click(popUpRootTag);
+//             $('#popUpModal').modal('show');
+//         });
+//         }
+//       }
+//     }
+//   }
+// }
+
 //assigning the values from signalr
 function itemChange(itemName, itemValue){
   const svg = document.getElementById("svg_obj").contentDocument;
@@ -75,7 +96,6 @@ function itemChange(itemName, itemValue){
         if (aa[i].getAttribute("tip") === "motor") {
             checkMotor(itemValue, aa[i]);
             changeMotorTag(aa[i],itemValue);
-            // aa[i].addEventListener('click', Motor_Click, false);
             aa[i].addEventListener("click", event => {
               Motor_Click(popUpRootTag);
               $('#popUpModal').modal('show');
@@ -85,7 +105,6 @@ function itemChange(itemName, itemValue){
           if(aa[i].getAttribute("class") === "klepe"){
             checkKlepe(itemValue, aa[i]);
             changeKlepeTag(aa[i],itemValue);
-            // aa[i].addEventListener('click', Klepe_Click, false);
             aa[i].addEventListener("click", event => {
               Klepe_Click(popUpRootTag);
               $('#popUpModal').modal('show');

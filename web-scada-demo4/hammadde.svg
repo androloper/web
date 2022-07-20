@@ -1019,7 +1019,7 @@
    id="g127238"
    transform="matrix(0.01693333,0,0,0.03735878,64.573559,227.17824)"
    tip="line"
-   condition="{PLC01!M100.IO:1}">
+   condition="{PLC01!M101.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -1671,7 +1671,7 @@
    id="g127821"
    transform="matrix(0.02633718,0,0,0.01905311,99.525073,251.1304)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M104.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -1952,7 +1952,7 @@
    id="g88961"
    transform="matrix(0.01584374,0,0,0.02589165,169.96274,111.44645)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K114.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -1997,7 +1997,7 @@
    id="g94131"
    transform="matrix(0.00218945,0,0,0.01905311,174.06575,136.73943)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K114.IO:0} &amp; {PLC01!K121.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -2042,7 +2042,7 @@
    id="g2801"
    transform="matrix(0.00218945,0,0,0.01905311,164.68647,136.7606)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K114.IO:0} &amp; {PLC01!K121.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -2124,8 +2124,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path536"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="g_left"
@@ -2161,8 +2161,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path552-8"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="g_orta"
@@ -2217,7 +2217,7 @@
    id="g88943"
    transform="matrix(0.01584374,0,0,0.00400342,169.87768,100.17453)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K114.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2300,7 +2300,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path565"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient579"
@@ -2337,7 +2337,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path581"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient593"
@@ -2772,7 +2772,7 @@
    id="g87302"
    transform="matrix(0.01693333,0,0,0.01542273,99.525073,235.93268)"
    tip="line"
-   condition="{PLC01!M100.IO:1}">
+   condition="{PLC01!M104.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4297,7 +4297,7 @@
    id="g87410"
    transform="matrix(0.01036456,0,0,0.01905311,136.79742,61.502874)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M105.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4342,7 +4342,7 @@
    id="g87428"
    transform="matrix(0.01584372,0,0,0.1062775,146.10593,61.579086)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M105.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4387,7 +4387,7 @@
    id="g87736"
    transform="matrix(0.01584374,0,0,0.03549431,166.62201,61.579086)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M115.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4432,7 +4432,7 @@
    id="g87500"
    transform="matrix(0.01693333,0,0,0.04042548,448.40873,225.25276)"
    tip="line"
-   condition="{PLC01!M100.IO:1}">
+   condition="{PLC01!M111.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4477,7 +4477,7 @@
    id="g87754"
    transform="matrix(0.01268189,0,0,0.01577447,434.78479,113.84505)"
    tip="line"
-   condition="{PLC01!M105.IO:1}">
+   condition="{PLC01!M112.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4768,7 +4768,7 @@
    id="g87646"
    transform="matrix(0.01693333,0,0,0.02597548,478.54849,197.451)"
    tip="line"
-   condition="{PLC01!M100.IO:1}">
+   condition="{PLC01!M110.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4948,7 +4948,7 @@
    id="g87718"
    transform="matrix(0.21207854,0,0,0.01905311,166.62201,61.502874)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M115.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4993,7 +4993,7 @@
    id="g87772"
    transform="matrix(0.0293969,0,0,0.01905311,388.49705,252.54212)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M114.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -5038,7 +5038,7 @@
    id="g88638"
    transform="matrix(0.01268189,0,0,0.01577447,377.65147,46.363405)"
    tip="line"
-   condition="{PLC01!M105.IO:1}">
+   condition="{PLC01!M115.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5699,7 +5699,7 @@
    id="g88038"
    transform="matrix(0.01693333,0,0,0.01788483,416.74695,235.93268)"
    tip="line"
-   condition="{PLC01!M100.IO:1}">
+   condition="{PLC01!M114.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5744,7 +5744,7 @@
    id="g88606"
    transform="matrix(0.01584372,0,0,0.0738453,425.26094,129.08931)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M112.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -7269,7 +7269,7 @@
    id="g88588"
    transform="matrix(0.01036456,0,0,0.01905311,425.2676,128.55582)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="{PLC01!M112.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -7313,7 +7313,7 @@
           </g><g
    id="g88726"
    transform="matrix(0.01535657,0,0,0.0138033,150.50511,93.114362)"
-   PlcTagName="PLC01!M102.IO"
+   PlcTagName="PLC01!M116.IO"
    tip="motor"
    class="mtr"
    inkscape:label="g320">
@@ -7559,7 +7559,7 @@
    id="g89113"
    transform="matrix(0.0160355,0,0,0.06763495,175.37092,136.73943)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K114.IO:0} &amp; {PLC01!K121.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -7604,7 +7604,7 @@
    id="g89185"
    transform="matrix(0.0160355,0,0,0.06763495,164.63841,136.73943)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K114.IO:0} &amp; {PLC01!K121.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -7932,7 +7932,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path96291"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient96305"
@@ -7969,7 +7969,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path96307"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient96319"
@@ -8028,7 +8028,7 @@
    id="g2819"
    transform="matrix(0.01584374,0,0,0.0077761,183.09732,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K100.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8073,7 +8073,7 @@
    id="g2837"
    transform="matrix(0.00218945,0,0,0.01905311,187.20033,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K100.IO:0} &amp; {PLC01!K107.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -8118,7 +8118,7 @@
    id="g2855"
    transform="matrix(0.00218945,0,0,0.01905311,177.82105,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K100.IO:0} &amp; {PLC01!K107.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -8167,7 +8167,7 @@
    class="klepe2"
    inkscape:label="g170">
 	<linearGradient
-   id="klepesol"
+   id="linearGradient288512312"
    gradientUnits="userSpaceOnUse"
    x1="84.121101"
    y1="56.25"
@@ -8201,7 +8201,7 @@
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
    id="klepesag"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient2885"
@@ -8238,7 +8238,7 @@
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
    id="klepesol"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient2899"
@@ -8293,7 +8293,7 @@
    id="g2929"
    transform="matrix(0.01584374,0,0,0.00400342,183.01226,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K100.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8376,7 +8376,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path2945"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient2959"
@@ -8413,7 +8413,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path2961"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient2973"
@@ -8468,7 +8468,7 @@
    id="g3003"
    transform="matrix(0.0160355,0,0,0.01399189,188.5055,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K100.IO:0} &amp; {PLC01!K107.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8513,7 +8513,7 @@
    id="g3021"
    transform="matrix(0.0160355,0,0,0.01411507,177.77299,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K100.IO:0} &amp; {PLC01!K107.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8558,7 +8558,7 @@
    id="g3267"
    transform="matrix(0.01584374,0,0,0.02589165,212.55867,111.32339)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K115.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8603,7 +8603,7 @@
    id="g3285"
    transform="matrix(0.00218945,0,0,0.01905311,216.66168,136.61637)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K115.IO:0} &amp; {PLC01!K122.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -8648,7 +8648,7 @@
    id="g3303"
    transform="matrix(0.00218945,0,0,0.01905311,207.2824,136.63754)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K115.IO:0} &amp; {PLC01!K122.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -8730,8 +8730,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path3319"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient3333"
@@ -8767,8 +8767,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path3335"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient3347"
@@ -8823,7 +8823,7 @@
    id="g3377"
    transform="matrix(0.01584374,0,0,0.00400342,212.47361,100.05147)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K115.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8906,7 +8906,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path3393"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient3407"
@@ -8943,7 +8943,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path3409"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient3421"
@@ -8998,7 +8998,7 @@
    id="g3451"
    transform="matrix(0.0160355,0,0,0.06763495,217.96685,136.61637)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K115.IO:0} &amp; {PLC01!K122.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9043,7 +9043,7 @@
    id="g3469"
    transform="matrix(0.0160355,0,0,0.06763495,207.23434,136.61637)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K115.IO:0} &amp; {PLC01!K122.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9088,7 +9088,7 @@
    id="g3491"
    transform="matrix(0.01584374,0,0,0.02589165,229.41046,111.20033)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K116.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9133,7 +9133,7 @@
    id="g3509"
    transform="matrix(0.00218945,0,0,0.01905311,233.51347,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K116.IO:0} &amp; {PLC01!K123.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -9178,7 +9178,7 @@
    id="g3527"
    transform="matrix(0.00218945,0,0,0.01905311,224.13419,136.51448)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K116.IO:0} &amp; {PLC01!K123.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -9260,8 +9260,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path3543"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient3557"
@@ -9297,8 +9297,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path3559"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient3571"
@@ -9353,7 +9353,7 @@
    id="g3601"
    transform="matrix(0.01584374,0,0,0.00400342,229.3254,99.928413)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K116.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9436,7 +9436,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path3617"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient3631"
@@ -9473,7 +9473,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path3633"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient3645"
@@ -9528,7 +9528,7 @@
    id="g3675"
    transform="matrix(0.0160355,0,0,0.06763495,234.81864,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K116.IO:0} &amp; {PLC01!K123.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9573,7 +9573,7 @@
    id="g3693"
    transform="matrix(0.0160355,0,0,0.06763495,224.08613,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K116.IO:0} &amp; {PLC01!K123.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9888,7 +9888,7 @@
    id="g4831"
    transform="matrix(0.01584374,0,0,0.02589165,271.38486,111.20033)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K117.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9933,7 +9933,7 @@
    id="g4849"
    transform="matrix(0.00218945,0,0,0.01905311,275.48787,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K117.IO:0} &amp; {PLC01!K124.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -9978,7 +9978,7 @@
    id="g4867"
    transform="matrix(0.00218945,0,0,0.01905311,266.10859,136.51448)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K117.IO:0} &amp; {PLC01!K124.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -10060,8 +10060,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path4883"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient4897"
@@ -10097,8 +10097,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path4899"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient4911"
@@ -10153,7 +10153,7 @@
    id="g4941"
    transform="matrix(0.01584374,0,0,0.00400342,271.2998,99.928413)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K117.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -10236,7 +10236,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path4957"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient4971"
@@ -10273,7 +10273,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path4973"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient4985"
@@ -10328,7 +10328,7 @@
    id="g5015"
    transform="matrix(0.0160355,0,0,0.06763495,276.79304,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K117.IO:0} &amp; {PLC01!K124.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -10373,7 +10373,7 @@
    id="g5033"
    transform="matrix(0.0160355,0,0,0.06763495,266.06053,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K117.IO:0} &amp; {PLC01!K124.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -11228,7 +11228,7 @@
    id="g5727"
    transform="matrix(0.01584374,0,0,0.02589165,288.84747,111.20033)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K118.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -11273,7 +11273,7 @@
    id="g5745"
    transform="matrix(0.00218945,0,0,0.01905311,292.95048,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K118.IO:0} &amp; {PLC01!K125.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -11318,7 +11318,7 @@
    id="g5763"
    transform="matrix(0.00218945,0,0,0.01905311,283.5712,136.51448)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K118.IO:0} &amp; {PLC01!K125.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -11400,8 +11400,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path5779"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient5793"
@@ -11437,8 +11437,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path5795"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient5807"
@@ -11493,7 +11493,7 @@
    id="g5837"
    transform="matrix(0.01584374,0,0,0.00400342,288.76241,99.928413)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K118.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -11576,7 +11576,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path5853"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient5867"
@@ -11613,7 +11613,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path5869"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient5881"
@@ -11668,7 +11668,7 @@
    id="g5911"
    transform="matrix(0.0160355,0,0,0.06763495,294.25565,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K118.IO:0} &amp; {PLC01!K125.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -11713,7 +11713,7 @@
    id="g5929"
    transform="matrix(0.0160355,0,0,0.06763495,283.52314,136.49331)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K118.IO:0} &amp; {PLC01!K125.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -12568,7 +12568,7 @@
    id="g8855"
    transform="matrix(0.01584374,0,0,0.02589165,331.83958,111.12176)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K119.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -12613,7 +12613,7 @@
    id="g8873"
    transform="matrix(0.00218945,0,0,0.01905311,335.94259,136.41474)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K119.IO:0} &amp; {PLC01!K126.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -12658,7 +12658,7 @@
    id="g8891"
    transform="matrix(0.00218945,0,0,0.01905311,326.56331,136.43591)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K119.IO:0} &amp; {PLC01!K126.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -12740,8 +12740,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path8907"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient8921"
@@ -12777,8 +12777,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path8923"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient8935"
@@ -12833,7 +12833,7 @@
    id="g8965"
    transform="matrix(0.01584374,0,0,0.00400342,331.75452,99.849843)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K119.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -12916,7 +12916,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path8981"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient8995"
@@ -12953,7 +12953,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path8997"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient9009"
@@ -13008,7 +13008,7 @@
    id="g9039"
    transform="matrix(0.0160355,0,0,0.06763495,337.24776,136.41474)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K119.IO:0} &amp; {PLC01!K126.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -13053,7 +13053,7 @@
    id="g9057"
    transform="matrix(0.0160355,0,0,0.06763495,326.51525,136.41474)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K119.IO:0} &amp; {PLC01!K126.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -13908,7 +13908,7 @@
    id="g9751"
    transform="matrix(0.01584374,0,0,0.02589165,348.24385,111.12176)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K120.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -13953,7 +13953,7 @@
    id="g9769"
    transform="matrix(0.00218945,0,0,0.01905311,352.34686,136.41474)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K120.IO:0} &amp; {PLC01!K127.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -13998,7 +13998,7 @@
    id="g9787"
    transform="matrix(0.00218945,0,0,0.01905311,342.96758,136.43591)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K120.IO:0} &amp; {PLC01!K127.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -14080,8 +14080,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path9803"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient9817"
@@ -14117,8 +14117,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path9819"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient9831"
@@ -14173,7 +14173,7 @@
    id="g9861"
    transform="matrix(0.01584374,0,0,0.00400342,348.15879,99.849843)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K120.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14256,7 +14256,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path9877"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient9891"
@@ -14293,7 +14293,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path9893"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient9905"
@@ -14348,7 +14348,7 @@
    id="g9935"
    transform="matrix(0.0160355,0,0,0.06763495,353.65203,136.41474)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K120.IO:0} &amp; {PLC01!K127.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14393,7 +14393,7 @@
    id="g9953"
    transform="matrix(0.0160355,0,0,0.06763495,342.91952,136.41474)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M116.IO:1} &amp; {PLC01!K120.IO:0} &amp; {PLC01!K127.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14438,7 +14438,7 @@
    id="g10883"
    transform="matrix(0.01584374,0,0,0.0077761,199.50159,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K101.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14483,7 +14483,7 @@
    id="g10901"
    transform="matrix(0.00218945,0,0,0.01905311,203.6046,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K101.IO:0} &amp; {PLC01!K108.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -14528,7 +14528,7 @@
    id="g10919"
    transform="matrix(0.00218945,0,0,0.01905311,194.22532,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K101.IO:0} &amp; {PLC01!K108.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -14610,8 +14610,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path10935"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient10949"
@@ -14647,8 +14647,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path10951"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient10963"
@@ -14703,7 +14703,7 @@
    id="g10993"
    transform="matrix(0.01584374,0,0,0.00400342,199.41653,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K101.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14786,7 +14786,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path11009"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient11023"
@@ -14823,7 +14823,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path11025"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient11037"
@@ -14878,7 +14878,7 @@
    id="g11067"
    transform="matrix(0.0160355,0,0,0.01399189,204.90977,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K101.IO:0} &amp; {PLC01!K108.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14923,7 +14923,7 @@
    id="g11085"
    transform="matrix(0.0160355,0,0,0.01399189,194.17726,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K101.IO:0} &amp; {PLC01!K108.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14968,7 +14968,7 @@
    id="g11107"
    transform="matrix(0.01584374,0,0,0.0077761,242.36436,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K102.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15013,7 +15013,7 @@
    id="g11125"
    transform="matrix(0.00218945,0,0,0.01905311,246.46737,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K102.IO:0} &amp; {PLC01!K109.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -15058,7 +15058,7 @@
    id="g11143"
    transform="matrix(0.00218945,0,0,0.01905311,237.08809,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K102.IO:0} &amp; {PLC01!K109.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -15140,8 +15140,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path11159"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient11173"
@@ -15177,8 +15177,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path11175"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient11187"
@@ -15233,7 +15233,7 @@
    id="g11217"
    transform="matrix(0.01584374,0,0,0.00400342,242.2793,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K102.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15316,7 +15316,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path11233"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient11247"
@@ -15353,7 +15353,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path11249"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient11261"
@@ -15408,7 +15408,7 @@
    id="g11291"
    transform="matrix(0.0160355,0,0,0.0138687,247.77254,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K102.IO:0} &amp; {PLC01!K109.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15453,7 +15453,7 @@
    id="g11309"
    transform="matrix(0.0160355,0,0,0.0138687,237.04003,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K102.IO:0} &amp; {PLC01!K109.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15498,7 +15498,7 @@
    id="g11331"
    transform="matrix(0.01584374,0,0,0.0077761,258.76863,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K103.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15543,7 +15543,7 @@
    id="g11349"
    transform="matrix(0.00218945,0,0,0.01905311,262.87164,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K103.IO:0} &amp; {PLC01!K110.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -15588,7 +15588,7 @@
    id="g11367"
    transform="matrix(0.00218945,0,0,0.01905311,253.49236,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K103.IO:0} &amp; {PLC01!K110.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -15670,8 +15670,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path11383"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient11397"
@@ -15707,8 +15707,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path11399"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient11411"
@@ -15763,7 +15763,7 @@
    id="g11441"
    transform="matrix(0.01584374,0,0,0.00400342,258.68357,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K103.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15846,7 +15846,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path11457"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient11471"
@@ -15883,7 +15883,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path11473"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient11485"
@@ -15938,7 +15938,7 @@
    id="g11515"
    transform="matrix(0.0160355,0,0,0.0138687,264.17681,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K103.IO:0} &amp; {PLC01!K110.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15983,7 +15983,7 @@
    id="g11533"
    transform="matrix(0.0160355,0,0,0.0138687,253.4443,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K103.IO:0} &amp; {PLC01!K110.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16028,7 +16028,7 @@
    id="g11555"
    transform="matrix(0.01584374,0,0,0.0077761,301.6314,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K104.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16073,7 +16073,7 @@
    id="g11573"
    transform="matrix(0.00218945,0,0,0.01905311,305.73441,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K104.IO:0} &amp; {PLC01!K111.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -16118,7 +16118,7 @@
    id="g11591"
    transform="matrix(0.00218945,0,0,0.01905311,296.35513,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K104.IO:0} &amp; {PLC01!K111.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -16200,8 +16200,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path11607"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient11621"
@@ -16237,8 +16237,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path11623"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient11635"
@@ -16293,7 +16293,7 @@
    id="g11665"
    transform="matrix(0.01584374,0,0,0.00400342,301.54634,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K104.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16376,7 +16376,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path11681"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient11695"
@@ -16413,7 +16413,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path11697"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient11709"
@@ -16468,7 +16468,7 @@
    id="g11739"
    transform="matrix(0.0160355,0,0,0.0138687,307.03958,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K104.IO:0} &amp; {PLC01!K111.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16513,7 +16513,7 @@
    id="g11757"
    transform="matrix(0.0160355,0,0,0.0138687,296.30707,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K104.IO:0} &amp; {PLC01!K111.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16558,7 +16558,7 @@
    id="g11779"
    transform="matrix(0.01584374,0,0,0.0077761,318.56484,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K105.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16603,7 +16603,7 @@
    id="g11797"
    transform="matrix(0.00218945,0,0,0.01905311,322.66785,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K105.IO:0} &amp; {PLC01!K112.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -16648,7 +16648,7 @@
    id="g11815"
    transform="matrix(0.00218945,0,0,0.01905311,313.28857,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K105.IO:0} &amp; {PLC01!K112.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -16730,8 +16730,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path11831"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient11845"
@@ -16767,8 +16767,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path11847"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient11859"
@@ -16823,7 +16823,7 @@
    id="g11889"
    transform="matrix(0.01584374,0,0,0.00400342,318.47978,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K105.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -16906,7 +16906,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path11905"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient11919"
@@ -16943,7 +16943,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path11921"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient11933"
@@ -16998,7 +16998,7 @@
    id="g11963"
    transform="matrix(0.0160355,0,0,0.0138687,323.97302,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K105.IO:0} &amp; {PLC01!K112.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -17043,7 +17043,7 @@
    id="g11981"
    transform="matrix(0.0160355,0,0,0.0138687,313.24051,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K105.IO:0} &amp; {PLC01!K112.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -17088,7 +17088,7 @@
    id="g12003"
    transform="matrix(0.01584374,0,0,0.0077761,360.89844,182.90459)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K106.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -17133,7 +17133,7 @@
    id="g12021"
    transform="matrix(0.00218945,0,0,0.01905311,365.00145,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K106.IO:0} &amp; {PLC01!K113.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -17178,7 +17178,7 @@
    id="g12039"
    transform="matrix(0.00218945,0,0,0.01905311,355.62217,190.22696)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K106.IO:0} &amp; {PLC01!K113.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -17260,8 +17260,8 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path12055"
-   style="fill:#000000"
+   id="klepesag"
+   style="fill:gray"
    willChange="" />
 	<linearGradient
    id="linearGradient12069"
@@ -17297,8 +17297,8 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path12071"
-   style="fill:#000000"
+   id="klepesol"
+   style="fill:gray"
    willChange="" />
 	<radialGradient
    id="radialGradient12083"
@@ -17353,7 +17353,7 @@
    id="g12113"
    transform="matrix(0.01584374,0,0,0.00400342,360.81338,171.63267)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K106.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -17436,7 +17436,7 @@
                <path
    d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
    id="path12129"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <linearGradient
    id="linearGradient12143"
@@ -17473,7 +17473,7 @@
                <path
    d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
    id="path12145"
-   style="fill:#000000"
+   style="fill:gray"
    willChange="" />
                <radialGradient
    id="radialGradient12157"
@@ -17528,7 +17528,7 @@
    id="g12187"
    transform="matrix(0.0160355,0,0,0.0138687,366.30662,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K106.IO:0} &amp; {PLC01!K113.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -17573,7 +17573,7 @@
    id="g12205"
    transform="matrix(0.0160355,0,0,0.0138687,355.57411,190.20579)"
    tip="line"
-   condition="{PLC01!M102.IO:1}">
+   condition="({PLC01!M106.IO:1} &amp; {PLC01!K106.IO:0} &amp; {PLC01!K113.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
