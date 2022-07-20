@@ -82,6 +82,7 @@ function itemChange(itemName, itemValue){
           });
         }
         if (aa[i].getAttribute("tip") === "kapak") {
+          if(aa[i].getAttribute("class") === "klepe"){
             checkKlepe(itemValue, aa[i]);
             changeKlepeTag(aa[i],itemValue);
             // aa[i].addEventListener('click', Klepe_Click, false);
@@ -89,6 +90,15 @@ function itemChange(itemName, itemValue){
               Klepe_Click(popUpRootTag);
               $('#popUpModal').modal('show');
             });
+          }
+          else if(aa[i].getAttribute("class")==="klepe2"){
+            checkKlepe2Yon(itemValue, aa[i]);
+            changeKlepe2YonTag(aa[i],itemValue);
+            aa[i].addEventListener("click", event => {
+              Klepe2Yon_Click(popUpRootTag);
+              $('#popUpModal').modal('show');
+            });
+          }
         }
         if (aa[i].getAttribute("tip") === "elevator") {
             checkElevator(itemValue, aa[i]);
@@ -1329,6 +1339,51 @@ function changeKlepeColor(color, klepe) {
 }
 
 function changeKlepeTag(tag, value) {
+  if (Bit(value, 8) || Bit(value, 9) || Bit(value, 10) || Bit(value, 11)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:3");
+    }
+  }
+  else if (Bit(value, 5)) {
+    if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+      tag.children[tag.children.length-2].setAttribute("style", "fill:yellow;stroke:black;stroke-width:3");
+    }
+  }
+  else
+  if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
+    tag.children[tag.children.length-2].setAttribute("style", "fill:grey;stroke:black;stroke-width:3");
+  }
+}
+
+function checkKlepe2Yon(myVal, klepe) {
+  if (Bit(myVal, 0)) {
+    return changeKlepe2YonColor("limegreen", klepe, "sag");
+  }
+  else if(Bit(myVal, 1)){
+    return changeKlepe2YonColor("limegreen", klepe, "sol");
+  }
+  else {
+    return changeKlepe2YonColor("gray", klepe, "bos");
+  }
+}
+
+function changeKlepe2YonColor(color, klepe, yon) {
+  for (var k = 0; k < klepe.children.length; k++) {
+    if (klepe.children[k].hasAttribute("willChange")) {
+      if(yon==="sag" && klepe.children[k].getAttribute("id")==="klepesag"){
+        klepe.children[k].setAttribute("style", `fill:${color}`);
+      }
+      else if(yon==="sol" && klepe.children[k].getAttribute("id")==="klepesol"){
+        klepe.children[k].setAttribute("style", `fill:${color}`);
+      }
+      else {
+        klepe.children[k].setAttribute("style", `fill:gray`);
+      }
+    }
+  }
+}
+
+function changeKlepe2YonTag(tag, value) {
   if (Bit(value, 8) || Bit(value, 9) || Bit(value, 10) || Bit(value, 11)) {
     if (tag.children[tag.children.length-2].hasAttribute("willChange")) {
       tag.children[tag.children.length-2].setAttribute("style", "fill:red;stroke:black;stroke-width:3");
