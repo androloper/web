@@ -110,7 +110,7 @@ function itemChange(itemName, itemValue){
               $('#popUpModal').modal('show');
             });
           }
-          else if(aa[i].getAttribute("class")==="klepe2"){
+          if(aa[i].getAttribute("class")==="klepe2"){
             checkKlepe2Yon(itemValue, aa[i]);
             changeKlepe2YonTag(aa[i],itemValue);
             aa[i].addEventListener("click", event => {
@@ -373,7 +373,7 @@ function checkMotorPopupButton(buttonList, myVal) {
         buttonList[i].setAttribute("style","background: lime; width:150px");
       }
       else
-        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
+        buttonList[i].setAttribute("style","background: #EFEFEF; width:150px;");
     }
     else if (buttonList[i].id === "btnStart") {
       if (Bit(myVal, 9)) {
@@ -397,6 +397,12 @@ function checkMotorPopupButton(buttonList, myVal) {
       }
       else
         buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
+    }
+    else if (buttonList[i].id === "btnReset") {
+        buttonList[i].setAttribute("style","width:150px; background: salmon");
+    }
+    else if (buttonList[i].id === "btnDurusReset") {
+        buttonList[i].setAttribute("style","width:150px; background: plum");
     }
   }
 
@@ -559,6 +565,9 @@ function checkKlepePopupButton(buttonList, myVal) {
         buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
     }
+    else if (buttonList[i].id === "btnReset") {
+        buttonList[i].setAttribute("style","width:150px; background: salmon");
+    }
   }
 
   if (Bit(myVal, 0)) {
@@ -620,6 +629,9 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
       else {
         buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
+    }
+    else if (buttonList[i].id === "btnReset") {
+        buttonList[i].setAttribute("style","width:150px; background: salmon");
     }
   }
 
@@ -694,6 +706,9 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
       else {
         buttonList[i].setAttribute("style","background: #EFEFEF; width:150px");
       }
+    }
+    else if (buttonList[i].id === "btnReset") {
+        buttonList[i].setAttribute("style","width:150px; background: salmon");
     }
   }
 
