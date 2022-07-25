@@ -1635,7 +1635,27 @@
      y="198.40559"
      width="59.50388"
      height="16.178995"
-     id="rect17723" /></defs><sodipodi:namedview
+     id="rect17723" /><rect
+     x="217.27126"
+     y="277.36758"
+     width="43.36425"
+     height="14.679324"
+     id="rect14725-3-8-7" /><rect
+     x="217.27126"
+     y="277.36758"
+     width="48.498173"
+     height="14.332048"
+     id="rect14727-9-6-9" /><rect
+     x="217.27126"
+     y="277.36758"
+     width="43.36425"
+     height="14.679324"
+     id="rect10185" /><rect
+     x="217.27126"
+     y="277.36758"
+     width="48.498173"
+     height="14.332048"
+     id="rect10409" /></defs><sodipodi:namedview
    id="namedview83811"
    pagecolor="#ffffff"
    bordercolor="#000000"
@@ -1645,13 +1665,13 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
-   inkscape:zoom="1.6607988"
-   inkscape:cx="1532.9973"
-   inkscape:cy="114.70384"
+   inkscape:zoom="0.8303994"
+   inkscape:cx="995.30418"
+   inkscape:cy="460.62172"
    inkscape:window-width="1858"
    inkscape:window-height="1027"
-   inkscape:window-x="63"
-   inkscape:window-y="26"
+   inkscape:window-x="62"
+   inkscape:window-y="25"
    inkscape:window-maximized="0"
    inkscape:current-layer="layer1"
    showguides="true"
@@ -1666,6 +1686,276 @@
    id="layer1">
 
      <g
+   id="g13012"
+   transform="matrix(0.01584374,0,0,0.02809167,410.70061,144.28648)"
+   tip="line"
+   condition="({PLC02!M1511.IO:1} &amp; {PLC02!KL1521.IO:0})">
+               <path
+   style="fill:#cccccc"
+   d="M 66,0 V 999 H 0 V 0 Z"
+   id="path12996"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 61,0 V 999 H 3 V 0 Z"
+   id="path12998"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 54,0 V 999 H 10 V 0 Z"
+   id="path13000"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 48,0 V 999 H 17 V 0 Z"
+   id="path13002"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 42,0 V 999 H 23 V 0 Z"
+   id="path13004"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 36,0 V 999 H 28 V 0 Z"
+   id="path13006"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,0 V 999"
+   id="path13008"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 66,999 V 0"
+   id="path13010"
+   willChange="" />
+          </g><g
+   id="g9598"
+   transform="matrix(0.01309761,0,0,0.01905311,78.664667,234.67624)"
+   tip="line"
+   condition="({PLC02!M1517.IO:1} &amp; {PLC02!KL1510.IO:0})">
+               <path
+   style="fill:#cccccc"
+   d="M 0,0 H 999 V 66 H 0 Z"
+   id="path9582"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,4 H 999 V 62 H 0 Z"
+   id="path9584"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,11 H 999 V 55 H 0 Z"
+   id="path9586"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,17 H 999 V 48 H 0 Z"
+   id="path9588"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,23 H 999 V 42 H 0 Z"
+   id="path9590"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="m 0,29 h 999 v 8 H 0 Z"
+   id="path9592"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,66 H 999"
+   id="path9594"
+   willChange="" />
+               <path
+   style="fill:#cccccc;stroke-width:0.707107"
+   d="M 499.5,0 H 0"
+   id="path9596"
+   willChange="" />
+          </g><g
+   id="g9580"
+   transform="matrix(0.01693333,0,0,0.02868245,39.192176,227.73709)"
+   tip="line"
+   condition="({PLC02!M1501.IO:1} &amp; {PLC02!KL1502.IO:1})">
+               <path
+   style="fill:#cccccc"
+   d="M 66,0 V 999 H 0 V 0 Z"
+   id="path9564"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 61,0 V 999 H 3 V 0 Z"
+   id="path9566"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 54,0 V 999 H 10 V 0 Z"
+   id="path9568"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 48,0 V 999 H 17 V 0 Z"
+   id="path9570"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 42,0 V 999 H 23 V 0 Z"
+   id="path9572"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 36,0 V 999 H 28 V 0 Z"
+   id="path9574"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,0 V 999"
+   id="path9576"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 66,999 V 0"
+   id="path9578"
+   willChange="" />
+          </g><g
+   id="g17041"
+   transform="matrix(0.01584374,0,0,0.00903872,401.31248,246.31688)"
+   tip="line"
+   condition="{PLC02!M1515.IO:1}">
+               <path
+   style="fill:#cccccc"
+   d="M 66,0 V 999 H 0 V 0 Z"
+   id="path17025"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 61,0 V 999 H 3 V 0 Z"
+   id="path17027"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 54,0 V 999 H 10 V 0 Z"
+   id="path17029"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 48,0 V 999 H 17 V 0 Z"
+   id="path17031"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 42,0 V 999 H 23 V 0 Z"
+   id="path17033"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 36,0 V 999 H 28 V 0 Z"
+   id="path17035"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,0 V 999"
+   id="path17037"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 66,999 V 0"
+   id="path17039"
+   willChange="" />
+          </g><g
+   id="g87736-9-2-6-83-2-6-9"
+   transform="matrix(0.01584374,0,0,0.02721407,307.279,145.13604)"
+   tip="line"
+   condition="({PLC02!M1510.IO:1} &amp; {PLC02!KL1520.IO:0})">
+               <path
+   style="fill:#cccccc"
+   d="M 66,0 V 999 H 0 V 0 Z"
+   id="path87720-7-5-4-5-5-9-0"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 61,0 V 999 H 3 V 0 Z"
+   id="path87722-1-4-5-1-4-5-2"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 54,0 V 999 H 10 V 0 Z"
+   id="path87724-7-5-1-54-2-3-7"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 48,0 V 999 H 17 V 0 Z"
+   id="path87726-4-3-2-2-1-2-5"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 42,0 V 999 H 23 V 0 Z"
+   id="path87728-5-0-8-2-5-9-2"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 36,0 V 999 H 28 V 0 Z"
+   id="path87730-1-1-8-9-1-4-45"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,0 V 999"
+   id="path87732-7-9-0-1-6-1-01"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 66,999 V 0"
+   id="path87734-8-4-7-5-0-6-3"
+   willChange="" />
+          </g><g
+   id="g15540-7"
+   transform="matrix(0.01584374,0,0,0.01661251,477.8081,217.74173)"
+   tip="line"
+   condition="{PLC02!K1523.IO:0}">
+               <path
+   style="fill:#cccccc"
+   d="M 66,0 V 999 H 0 V 0 Z"
+   id="path15524-9"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 61,0 V 999 H 3 V 0 Z"
+   id="path15526-0"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 54,0 V 999 H 10 V 0 Z"
+   id="path15528-2"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 48,0 V 999 H 17 V 0 Z"
+   id="path15530-3"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 42,0 V 999 H 23 V 0 Z"
+   id="path15532-9"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 36,0 V 999 H 28 V 0 Z"
+   id="path15534-9"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 0,0 V 999"
+   id="path15536-70"
+   willChange="" />
+               <path
+   style="fill:#cccccc"
+   d="M 66,999 V 0"
+   id="path15538-3"
+   willChange="" />
+          </g><g
    id="g87390-1"
    transform="matrix(0.01535657,0,0,0.0138033,135.68881,109.24219)"
    PlcTagName="PLC02!M1504.IO"
@@ -1908,13 +2198,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-3);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22378"><tspan
+     id="tspan19005"><tspan
        style="fill:#000000"
-       id="tspan22376">M1504</tspan></tspan></text></g><g
+       id="tspan19003">M1504</tspan></tspan></text></g><g
    id="g127292-3-5"
    transform="matrix(0.01588993,0,0,0.01905311,39.192176,255.13335)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1501.IO:1} &amp; {PLC02!KL1502.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -1959,7 +2249,7 @@
    id="g127292-3"
    transform="matrix(0.1085983,0,0,0.01905311,64.443455,35.193668)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1502.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -2004,7 +2294,7 @@
    id="g127821-1"
    transform="matrix(0.0505506,0,0,0.01905311,43.348921,227.45962)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1501.IO:1} &amp; {PLC02!KL1502.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -2049,7 +2339,7 @@
    id="g3021-8-5"
    transform="matrix(0.0160355,0,0,0.0199815,52.162502,234.87146)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1517.IO:1} &amp; {PLC02!KL1510.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2094,7 +2384,7 @@
    id="g3021-8-5-0"
    transform="matrix(0.0160355,0,0,0.02529015,90.690833,234.81824)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1517.IO:1} &amp; {PLC02!KL1510.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2139,7 +2429,7 @@
    id="g127821-1-3"
    transform="matrix(0.03668627,0,0,0.01905311,78.222662,216.63102)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1517.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -2184,7 +2474,7 @@
    id="g3021-8-5-0-6"
    transform="matrix(0.0160355,0,0,0.01892153,78.222662,216.95492)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1517.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2227,9 +2517,9 @@
    willChange="" />
           </g><g
    id="g127821"
-   transform="matrix(0.0396263,0,0,0.01905311,52.162502,234.81824)"
+   transform="matrix(0.02626064,0,0,0.01905311,52.162502,234.81824)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1517.IO:1} &amp; {PLC02!KL1510.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -2510,7 +2800,7 @@
    id="g2819"
    transform="matrix(0.01584374,0,0,0.02289599,35.76688,164.29037)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!K1501.IO:0}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2563,9 +2853,9 @@
    d="m 45.503529,133.14391 h 44.48958 v 19.6055 L 76.728407,168.69648 H 58.885617 L 45.503529,152.74941 Z" />
           </g><g
    id="g127220"
-   transform="matrix(0.01693333,0,0,0.06755855,39.192176,187.96626)"
+   transform="matrix(0.01693333,0,0,0.03981064,39.192176,187.96626)"
    tip="line"
-   condition="{PLC02!M100.IO:1}">
+   condition="{PLC02!M1501.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2746,7 +3036,7 @@
    id="g127220-0"
    transform="matrix(0.01584374,0,0,0.00695648,171.88747,35.26988)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1502.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2791,7 +3081,7 @@
    id="g3021-8"
    transform="matrix(0.0160355,0,0,0.02564028,92.790626,227.45962)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1501.IO:1} &amp; {PLC02!KL1502.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -2836,7 +3126,7 @@
    id="g87410"
    transform="matrix(0.04018552,0,0,0.01905311,103.02874,71.243588)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1503.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -3356,13 +3646,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22382"><tspan
+     id="tspan19009"><tspan
        style="fill:#000000"
-       id="tspan22380">M1503</tspan></tspan></text></g><g
+       id="tspan19007">M1503</tspan></tspan></text></g><g
    id="g87428"
    transform="matrix(0.01584372,0,0,0.00972461,142.12839,71.3198)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1503.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -3407,7 +3697,7 @@
    id="g87736"
    transform="matrix(0.01584374,0,0,0.04936343,220.94369,41.84187)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -3452,7 +3742,7 @@
    id="g87718"
    transform="matrix(0.04694759,0,0,0.01905311,123.10141,41.84187)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -3610,7 +3900,8 @@
    cy="64.897148"
    id="circle2975"
    style="fill:#999999"
-   r="13.102" />
+   r="13.102"
+   willChange="" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.53911;stroke-opacity:1"
    id="rect2977"
@@ -3625,13 +3916,13 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect3025);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22386"><tspan
+     id="tspan19013"><tspan
        style="fill:#000000"
-       id="tspan22384">K1501</tspan></tspan></text></g><g
+       id="tspan19011">K1501</tspan></tspan></text></g><g
    id="g2819-3"
    transform="matrix(0.01584374,0,0,0.02289599,164.36759,212.70962)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!K1511.IO:0}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -3784,6 +4075,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle2975-9"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -3800,9 +4092,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect3025-5);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22390"><tspan
+     id="tspan19017"><tspan
        style="fill:#000000"
-       id="tspan22388">K1511</tspan></tspan></text></g><text
+       id="tspan19015">K1511</tspan></tspan></text></g><text
    xml:space="preserve"
    transform="scale(0.26458333)"
    id="text12211"
@@ -3810,7 +4102,7 @@
    id="g3021-8-2"
    transform="matrix(0.0160355,0,0,0.06228264,113.8139,216.63102)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1517.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -3855,7 +4147,7 @@
    id="g127821-1-3-3"
    transform="matrix(0.03366951,0,0,0.01905311,113.8139,277.59387)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1517.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -3900,7 +4192,7 @@
    id="g87718-2"
    transform="matrix(0.04694759,0,0,0.01905311,175.08873,41.84187)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -3945,7 +4237,7 @@
    id="g87718-5"
    transform="matrix(0.01352095,0,0,0.01905311,127.12891,80.289622)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -3990,7 +4282,7 @@
    id="g87718-5-1"
    transform="matrix(0.04413449,0,0,0.01905311,146.32962,80.26892)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4143,7 +4435,8 @@
    cx="56.25"
    cy="28.014"
    r="13.102"
-   id="circle10965-9-1"
+   id="klepesag"
+   willChange=""
    style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.14859;stroke-opacity:1"
@@ -4159,9 +4452,9 @@
    style="font-size:6.87765px;white-space:pre;shape-inside:url(#rect11087-3-1);shape-padding:2.08906;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="219.35938"
      y="285.73172"
-     id="tspan22394"><tspan
+     id="tspan19021"><tspan
        style="fill:#000000"
-       id="tspan22392">KL1505
+       id="tspan19019">KL1505
 </tspan></tspan></text></g><g
    id="g10975-8-0-1"
    transform="matrix(0.07269573,0,0,0.10614198,168.34212,39.236389)"
@@ -4203,7 +4496,7 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path5292"
+   id="klepesag"
    style="fill:#000000"
    willChange="" />
 	<linearGradient
@@ -4240,7 +4533,7 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path5301"
+   id="klepesol"
    style="fill:#000000"
    willChange="" />
 	<radialGradient
@@ -4274,8 +4567,9 @@
    cx="56.25"
    cy="28.014"
    r="13.102"
-   id="circle10965-9-1-9"
-   style="fill:#999999" />
+   id="klepesag"
+   style="fill:#999999"
+   willChange="" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.14859;stroke-opacity:1"
    id="rect10967-8-0-4"
@@ -4290,14 +4584,14 @@
    style="font-size:6.87765px;white-space:pre;shape-inside:url(#rect11087-3-1-7);shape-padding:2.08906;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="219.35938"
      y="285.73172"
-     id="tspan22398"><tspan
+     id="tspan19025"><tspan
        style="fill:#000000"
-       id="tspan22396">KL1503
+       id="tspan19023">KL1503
 </tspan></tspan></text></g><g
    id="g87736-9"
    transform="matrix(0.01584374,0,0,0.08823159,123.10141,41.84187)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4342,7 +4636,7 @@
    id="g87736-9-2"
    transform="matrix(0.01584374,0,0,0.04974535,127.08138,80.289622)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4387,7 +4681,7 @@
    id="g87736-9-2-1"
    transform="matrix(0.01584374,0,0,0.02179583,189.37429,80.26892)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -4432,7 +4726,7 @@
    id="g87718-5-10"
    transform="matrix(0.02312219,0,0,0.01905311,163.49528,101.50584)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:0} &amp; {PLC02!KL1506.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4477,7 +4771,7 @@
    id="g87718-5-10-0"
    transform="matrix(0.06546454,0,0,0.01905311,153.89481,89.898432)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:0} &amp; {PLC02!KL1504.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4522,7 +4816,7 @@
    id="g87718-5-10-0-3"
    transform="matrix(0.09999214,0,0,0.01905311,193.19992,101.43596)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:0} &amp; {PLC02!KL1506.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4604,7 +4898,7 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path5376"
+   id="klepesag"
    style="fill:#000000"
    willChange="" />
 	<linearGradient
@@ -4641,7 +4935,7 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path5385"
+   id="klepesol"
    style="fill:#000000"
    willChange="" />
 	<radialGradient
@@ -4675,7 +4969,8 @@
    cx="56.25"
    cy="28.014"
    r="13.102"
-   id="circle10965-9-1-0"
+   id="klepesag"
+   willChange=""
    style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.14859;stroke-opacity:1"
@@ -4691,14 +4986,14 @@
    style="font-size:6.87765px;white-space:pre;shape-inside:url(#rect11087-3-1-38);shape-padding:2.08906;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="219.35938"
      y="285.73172"
-     id="tspan22402"><tspan
+     id="tspan19029"><tspan
        style="fill:#000000"
-       id="tspan22400">KL1506
+       id="tspan19027">KL1506
 </tspan></tspan></text></g><g
    id="g87718-5-10-0-7"
    transform="matrix(0.08186413,0,0,0.01905311,224.68487,90.020914)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:0} &amp; {PLC02!KL1504.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -4780,7 +5075,7 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path5415"
+   id="klepesag"
    style="fill:#000000"
    willChange="" />
 	<linearGradient
@@ -4817,7 +5112,7 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path5424"
+   id="klepesol"
    style="fill:#000000"
    willChange="" />
 	<radialGradient
@@ -4851,7 +5146,8 @@
    cx="56.25"
    cy="28.014"
    r="13.102"
-   id="circle10965-9-1-1"
+   id="klepesag"
+   willChange=""
    style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.14859;stroke-opacity:1"
@@ -4867,9 +5163,9 @@
    style="font-size:6.87765px;white-space:pre;shape-inside:url(#rect11087-3-1-6);shape-padding:2.08906;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="219.35938"
      y="285.73172"
-     id="tspan22406"><tspan
+     id="tspan19033"><tspan
        style="fill:#000000"
-       id="tspan22404">KL1504
+       id="tspan19031">KL1504
 </tspan></tspan></text></g><g
    id="g87390-4"
    transform="matrix(0.01535657,0,0,0.0138033,42.207067,6.3005723)"
@@ -5113,9 +5409,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-2);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22410"><tspan
+     id="tspan19037"><tspan
        style="fill:#000000"
-       id="tspan22408">M1502</tspan></tspan></text></g><g
+       id="tspan19035">M1502</tspan></tspan></text></g><g
    id="g87390-8"
    transform="matrix(0.01535657,0,0,0.0138033,3.8711254,180.16784)"
    PlcTagName="PLC02!M1501.IO"
@@ -5358,11 +5654,11 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-0);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22414"><tspan
+     id="tspan19041"><tspan
        style="fill:#000000"
-       id="tspan22412">M1501</tspan></tspan></text></g><g
+       id="tspan19039">M1501</tspan></tspan></text></g><g
    id="g10975-8-0-1-2"
-   transform="matrix(0.07269573,0,0,0.10614198,35.661492,225.17002)"
+   transform="matrix(0.07269573,0,0,0.10614198,35.661492,224.93105)"
    PlcTagName="PLC02!KL1502.IO"
    tip="kapak"
    class="klepe2"
@@ -5401,7 +5697,7 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path5533"
+   id="klepesag"
    style="fill:#000000"
    willChange="" />
 	<linearGradient
@@ -5437,8 +5733,8 @@
    id="stop10947-0-3-2-3" />
 	</linearGradient>
 	<path
-   d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path5542"
+   d="M 15.167269,70.066257 55.954757,31.195245 97.342341,70.066257 H 15.167269"
+   id="klepesol"
    style="fill:#000000"
    willChange="" />
 	<radialGradient
@@ -5472,25 +5768,26 @@
    cx="56.25"
    cy="28.014"
    r="13.102"
-   id="circle10965-9-1-9-7"
+   id="klepesag"
+   willChange=""
    style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.14859;stroke-opacity:1"
    id="rect10967-8-0-4-3"
    width="110.37596"
    height="26.965271"
-   x="1.0668235"
-   y="64.598251"
+   x="0.55601937"
+   y="78.513275"
    willChange="" /><text
    xml:space="preserve"
-   transform="matrix(3.6715865,0,0,2.321734,-797.39566,-579.51126)"
+   transform="matrix(3.6715865,0,0,2.321734,-797.98044,-565.59234)"
    id="text10973-6-6-9-8"
    style="font-size:6.87765px;white-space:pre;shape-inside:url(#rect11087-3-1-7-3);shape-padding:2.08906;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="219.35938"
      y="285.73172"
-     id="tspan22418"><tspan
+     id="tspan19045"><tspan
        style="fill:#000000"
-       id="tspan22416">KL1502
+       id="tspan19043">KL1502
 </tspan></tspan></text></g><g
    id="g10975-8-0-1-2-3"
    transform="matrix(0.07269573,0,0,0.10614198,74.662349,232.47373)"
@@ -5532,7 +5829,7 @@
 	</linearGradient>
 	<path
    d="M 112.5,0.368 55.744,28.104 112.5,56.25 V 0.368"
-   id="path5563"
+   id="klepesag"
    style="fill:#000000"
    willChange="" />
 	<linearGradient
@@ -5569,7 +5866,7 @@
 	</linearGradient>
 	<path
    d="M 0,-0.031 56.755,27.904 0,56.25 V -0.031"
-   id="path5572"
+   id="klepesol"
    style="fill:#000000"
    willChange="" />
 	<radialGradient
@@ -5603,7 +5900,8 @@
    cx="56.25"
    cy="28.014"
    r="13.102"
-   id="circle10965-9-1-9-7-0"
+   id="klepesag"
+   willChange=""
    style="fill:#999999" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.14859;stroke-opacity:1"
@@ -5619,14 +5917,14 @@
    style="font-size:6.87765px;white-space:pre;shape-inside:url(#rect11087-3-1-7-3-9);shape-padding:2.08906;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="219.35938"
      y="285.73172"
-     id="tspan22422"><tspan
+     id="tspan19049"><tspan
        style="fill:#000000"
-       id="tspan22420">KL1510
+       id="tspan19047">KL1510
 </tspan></tspan></text></g><g
    id="g87736-9-2-4"
    transform="matrix(0.01584374,0,0,0.02518213,153.89481,89.898432)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:0} &amp; {PLC02!KL1504.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5671,7 +5969,7 @@
    id="g87736-9-2-6"
    transform="matrix(0.01584374,0,0,0.0135631,163.49528,101.50584)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:0} &amp; {PLC02!KL1506.IO:1})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5716,7 +6014,7 @@
    id="g87736-9-2-6-8"
    transform="matrix(0.01584374,0,0,0.0135631,292.04638,101.43596)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1503.IO:1} &amp; {PLC02!KL1505.IO:0} &amp; {PLC02!KL1506.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5761,7 +6059,7 @@
    id="g87736-9-2-6-8-8"
    transform="matrix(0.01584374,0,0,0.00392269,325.30424,133.2595)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1507.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5806,7 +6104,7 @@
    id="g87736-9-2-6-83"
    transform="matrix(0.01584374,0,0,0.02168855,177.56984,115.24839)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1504.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -5986,7 +6284,7 @@
    id="g87736-9-2-4-8"
    transform="matrix(0.01584374,0,0,0.02518213,305.42145,90.020914)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1502.IO:1} &amp; {PLC02!KL1503.IO:0} &amp; {PLC02!KL1504.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -6031,7 +6329,7 @@
    id="g87736-9-2-6-83-2"
    transform="matrix(0.01584374,0,0,0.01713159,220.21209,137.67291)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1506.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -6076,7 +6374,7 @@
    id="g87736-9-2-6-83-2-1"
    transform="matrix(0.01584374,0,0,0.01713159,161.97427,156.64817)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1508.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -6121,7 +6419,7 @@
    id="g87736-9-2-6-83-2-6"
    transform="matrix(0.01584374,0,0,0.01713161,169.19627,137.6729)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1506.IO:1} &amp; {PLC02!K1508.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -6166,7 +6464,7 @@
    id="g87736-9-2-6-83-2-1-5"
    transform="matrix(0.01584374,0,0,0.01713159,228.94482,155.2356)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1509.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -6450,13 +6748,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-3-2);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22426"><tspan
+     id="tspan19053"><tspan
        style="fill:#000000"
-       id="tspan22424">M1505</tspan></tspan></text></g><g
+       id="tspan19051">M1505</tspan></tspan></text></g><g
    id="g87736-9-2-6-83-2-6-1"
    transform="matrix(0.01584374,0,0,0.01713161,314.05039,115.62972)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="({PLC02!M1505.IO:1} &amp; {PLC02!K1509.IO:0})">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -6883,9 +7181,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect14727-2);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22430"><tspan
+     id="tspan19057"><tspan
        style="fill:#000000"
-       id="tspan22428">M1518</tspan></tspan></text></g><g
+       id="tspan19055">M1518</tspan></tspan></text></g><g
    id="g17666"
    transform="matrix(0.01535657,0,0,0.0138033,141.57038,190.38674)"
    PlcTagName="PLC02!M1526.IO"
@@ -7128,9 +7426,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect17668);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22434"><tspan
+     id="tspan19061"><tspan
        style="fill:#000000"
-       id="tspan22432">M1526</tspan></tspan></text></g><rect
+       id="tspan19059">M1526</tspan></tspan></text></g><rect
    style="fill:#666666;stroke-width:0.282316"
    id="rect9022-1"
    width="20.715868"
@@ -7144,24 +7442,24 @@
    style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect9153-8);fill:#666666"><tspan
      x="448.58594"
      y="560.53782"
-     id="tspan22438"><tspan
+     id="tspan19065"><tspan
        style="fill:#ffffff"
-       id="tspan22436">ÇS1</tspan></tspan></text><text
+       id="tspan19063">ÇS1</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,-2.585777,-1.2431311)"
    id="text9151"
    style="font-size:17.3333px;white-space:pre;shape-inside:url(#rect9153);fill:#666666"><tspan
      x="448.58594"
      y="552.02268"
-     id="tspan22442"><tspan
+     id="tspan19069"><tspan
        style="fill:#ffffff"
-       id="tspan22440">Kamyon
+       id="tspan19067">Kamyon
 </tspan></tspan><tspan
      x="448.58594"
      y="573.68931"
-     id="tspan22446"><tspan
+     id="tspan19073"><tspan
        style="fill:#ffffff"
-       id="tspan22444">Dolum</tspan></tspan></text><g
+       id="tspan19071">Dolum</tspan></tspan></text><g
    id="g87390-1-2"
    transform="matrix(0.01535657,0,0,0.0138033,153.54508,131.93226)"
    PlcTagName="PLC02!M1506.IO"
@@ -7404,9 +7702,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-3-0);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22450"><tspan
+     id="tspan19077"><tspan
        style="fill:#000000"
-       id="tspan22448">M1506</tspan></tspan></text></g><g
+       id="tspan19075">M1506</tspan></tspan></text></g><g
    id="g87390-1-2-4"
    transform="matrix(0.01535657,0,0,0.0138033,137.34732,139.75022)"
    PlcTagName="PLC02!M1508.IO"
@@ -7649,9 +7947,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-3-0-2);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22454"><tspan
+     id="tspan19081"><tspan
        style="fill:#000000"
-       id="tspan22452">M1508</tspan></tspan></text></g><g
+       id="tspan19079">M1508</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g87482-7-8"
    transform="matrix(0,0.36866372,-0.77940245,0,237.17046,132.96545)"
@@ -7898,6 +8196,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle2975-5"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -7914,9 +8213,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect3025-7);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22458"><tspan
+     id="tspan19085"><tspan
        style="fill:#000000"
-       id="tspan22456">K1508</tspan></tspan></text></g><g
+       id="tspan19083">K1508</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g87482-7-8-0"
    transform="matrix(0,0.37046574,-0.43221572,0,189.44802,151.22303)"
@@ -8294,9 +8593,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-3-0-2-5);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22462"><tspan
+     id="tspan19089"><tspan
        style="fill:#000000"
-       id="tspan22460">M1507</tspan></tspan></text></g><g
+       id="tspan19087">M1507</tspan></tspan></text></g><g
    id="g2985-9-5"
    transform="matrix(0.08537806,0,0,0.07525928,310.12544,117.63709)"
    PlcTagName="PLC02!K1509.IO"
@@ -8408,6 +8707,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle2975-5-3"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -8424,13 +8724,13 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect3025-7-9);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22466"><tspan
+     id="tspan19093"><tspan
        style="fill:#000000"
-       id="tspan22464">K1509</tspan></tspan></text></g><g
+       id="tspan19091">K1509</tspan></tspan></text></g><g
    id="g87736-9-2-6-83-2-8"
    transform="matrix(0.01584374,0,0,0.01074083,306.95698,133.90635)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1507.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8470,51 +8770,6 @@
    style="fill:#cccccc"
    d="M 66,999 V 0"
    id="path87734-8-4-7-5-0-7"
-   willChange="" />
-          </g><g
-   id="g87736-9-2-6-83-2-8-5"
-   transform="matrix(0.01584374,0,0,0.01074083,300.53804,163.38437)"
-   tip="line"
-   condition="{PLC02!M102.IO:1}">
-               <path
-   style="fill:#cccccc"
-   d="M 66,0 V 999 H 0 V 0 Z"
-   id="path87720-7-5-4-5-5-2-8"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 61,0 V 999 H 3 V 0 Z"
-   id="path87722-1-4-5-1-4-3-1"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 54,0 V 999 H 10 V 0 Z"
-   id="path87724-7-5-1-54-2-04-6"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 48,0 V 999 H 17 V 0 Z"
-   id="path87726-4-3-2-2-1-4-3"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 42,0 V 999 H 23 V 0 Z"
-   id="path87728-5-0-8-2-5-3-8"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 36,0 V 999 H 28 V 0 Z"
-   id="path87730-1-1-8-9-1-3-6"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 0,0 V 999"
-   id="path87732-7-9-0-1-6-29-0"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 66,999 V 0"
-   id="path87734-8-4-7-5-0-7-2"
    willChange="" />
           </g><g
    inkscape:label="Katman 2"
@@ -8655,7 +8910,7 @@
    id="g14525"
    transform="matrix(0.01584374,0,0,0.02289599,229.98467,212.70962)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!K1512.IO:0}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -8939,9 +9194,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18433);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22470"><tspan
+     id="tspan19097"><tspan
        style="fill:#000000"
-       id="tspan22468">M1520</tspan></tspan></text></g><g
+       id="tspan19095">M1520</tspan></tspan></text></g><g
    id="g18431"
    transform="matrix(0.01535657,0,0,0.0138033,206.72853,190.93449)"
    PlcTagName="PLC02!M1528.IO"
@@ -9184,9 +9439,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18435);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22474"><tspan
+     id="tspan19101"><tspan
        style="fill:#000000"
-       id="tspan22472">M1528</tspan></tspan></text></g><rect
+       id="tspan19099">M1528</tspan></tspan></text></g><rect
    style="fill:#666666;stroke-width:0.282316"
    id="rect10532"
    width="20.715868"
@@ -9200,13 +9455,13 @@
    style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect10538);fill:#666666"><tspan
      x="448.58594"
      y="560.53782"
-     id="tspan22478"><tspan
+     id="tspan19105"><tspan
        style="fill:#ffffff"
-       id="tspan22476">ÇS2</tspan></tspan></text><g
+       id="tspan19103">ÇS2</tspan></tspan></text><g
    id="g14745"
    transform="matrix(0.01584374,0,0,0.02881958,302.25379,218.58386)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!K1513.IO:0}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -9490,9 +9745,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18613);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22482"><tspan
+     id="tspan19109"><tspan
        style="fill:#000000"
-       id="tspan22480">M1522</tspan></tspan></text></g><g
+       id="tspan19107">M1522</tspan></tspan></text></g><g
    id="g18611"
    transform="matrix(0.01535657,0,0,0.0138033,277.62188,190.63815)"
    PlcTagName="PLC02!M1530.IO"
@@ -9735,9 +9990,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18615);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22486"><tspan
+     id="tspan19113"><tspan
        style="fill:#000000"
-       id="tspan22484">M1530</tspan></tspan></text></g><g
+       id="tspan19111">M1530</tspan></tspan></text></g><g
    id="g18793"
    transform="matrix(0.01535657,0,0,0.0138033,332.90276,160.54978)"
    PlcTagName="PLC02!M1552.IO"
@@ -9980,9 +10235,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18883);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22490"><tspan
+     id="tspan19117"><tspan
        style="fill:#000000"
-       id="tspan22488">M1552</tspan></tspan></text></g><g
+       id="tspan19115">M1552</tspan></tspan></text></g><g
    id="g18881"
    transform="matrix(0.01535657,0,0,0.0138033,332.90276,190.71247)"
    PlcTagName="PLC02!M1542.IO"
@@ -10225,9 +10480,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18885);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22494"><tspan
+     id="tspan19121"><tspan
        style="fill:#000000"
-       id="tspan22492">M1542</tspan></tspan></text></g><g
+       id="tspan19119">M1542</tspan></tspan></text></g><g
    id="g18703"
    transform="matrix(0.01535657,0,0,0.0138033,332.90276,174.3648)"
    PlcTagName="PLC02!M1544.IO"
@@ -10470,9 +10725,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18705);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22498"><tspan
+     id="tspan19125"><tspan
        style="fill:#000000"
-       id="tspan22496">M1544</tspan></tspan></text></g><rect
+       id="tspan19123">M1544</tspan></tspan></text></g><rect
    style="fill:#666666;stroke-width:0.282316"
    id="rect10540"
    width="20.715868"
@@ -10486,13 +10741,13 @@
    style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect10546);fill:#666666"><tspan
      x="448.58594"
      y="560.53782"
-     id="tspan22502"><tspan
+     id="tspan19129"><tspan
        style="fill:#ffffff"
-       id="tspan22500">ÇS3</tspan></tspan></text><g
+       id="tspan19127">ÇS3</tspan></tspan></text><g
    id="g87736-9-2-6-83-2-8-6"
    transform="matrix(0.01584374,0,0,0.01074083,356.11183,162.70159)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1540.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -10537,7 +10792,7 @@
    id="g14525-1"
    transform="matrix(0.01584374,0,0,0.02289599,356.46071,212.5524)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!K1522.IO:0}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -10690,6 +10945,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle14571-1"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -10706,9 +10962,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect14725-3);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22506"><tspan
+     id="tspan19133"><tspan
        style="fill:#000000"
-       id="tspan22504">K1522</tspan></tspan></text></g><rect
+       id="tspan19131">K1522</tspan></tspan></text></g><rect
    style="fill:#666666;stroke-width:0.282316"
    id="rect10548"
    width="20.715868"
@@ -10722,58 +10978,13 @@
    style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect10554);fill:#666666"><tspan
      x="448.58594"
      y="560.53782"
-     id="tspan22510"><tspan
+     id="tspan19137"><tspan
        style="fill:#ffffff"
-       id="tspan22508">ÇS4</tspan></tspan></text><g
-   id="g87736-9-2-6-83-2-8-6-1"
-   transform="matrix(0.01584374,0,0,0.01074083,418.98605,162.65216)"
-   tip="line"
-   condition="{PLC02!M102.IO:1}">
-               <path
-   style="fill:#cccccc"
-   d="M 66,0 V 999 H 0 V 0 Z"
-   id="path87720-7-5-4-5-5-2-9-7"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 61,0 V 999 H 3 V 0 Z"
-   id="path87722-1-4-5-1-4-3-0-1"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 54,0 V 999 H 10 V 0 Z"
-   id="path87724-7-5-1-54-2-04-2-9"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 48,0 V 999 H 17 V 0 Z"
-   id="path87726-4-3-2-2-1-4-1-4"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 42,0 V 999 H 23 V 0 Z"
-   id="path87728-5-0-8-2-5-3-2-7"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 36,0 V 999 H 28 V 0 Z"
-   id="path87730-1-1-8-9-1-3-1-6"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 0,0 V 999"
-   id="path87732-7-9-0-1-6-29-7-6"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 66,999 V 0"
-   id="path87734-8-4-7-5-0-7-9-6"
-   willChange="" />
-          </g><g
+       id="tspan19135">ÇS4</tspan></tspan></text><g
    id="g15540"
    transform="matrix(0.01584374,0,0,0.03292347,419.51074,212.55076)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!K1514.IO:0}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -10818,7 +11029,7 @@
    id="g15540-25"
    transform="matrix(0.01584374,0,0,0.00342916,426.98319,242.10981)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1551.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -10863,7 +11074,7 @@
    id="g15540-2"
    transform="matrix(0.01584374,0,0,0.00903872,469.22687,234.33763)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1551.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -11147,9 +11358,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20593);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22514"><tspan
+     id="tspan19141"><tspan
        style="fill:#000000"
-       id="tspan22512">M1524</tspan></tspan></text></g><g
+       id="tspan19139">M1524</tspan></tspan></text></g><g
    id="g20591"
    transform="matrix(0.01535657,0,0,0.0138033,395.83056,192.08589)"
    PlcTagName="PLC02!M1532.IO"
@@ -11392,9 +11603,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20595);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22518"><tspan
+     id="tspan19145"><tspan
        style="fill:#000000"
-       id="tspan22516">M1532</tspan></tspan></text></g><rect
+       id="tspan19143">M1532</tspan></tspan></text></g><rect
    style="fill:#666666;stroke-width:0.282316"
    id="rect10556"
    width="20.715868"
@@ -11408,9 +11619,9 @@
    style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect10562);fill:#666666"><tspan
      x="448.58594"
      y="560.53782"
-     id="tspan22522"><tspan
+     id="tspan19149"><tspan
        style="fill:#ffffff"
-       id="tspan22520">ÇS5</tspan></tspan></text><g
+       id="tspan19147">ÇS5</tspan></tspan></text><g
    id="g10712"
    transform="matrix(0.01535657,0,0,0.0138033,198.55746,139.74169)"
    PlcTagName="PLC02!M1509.IO"
@@ -11653,9 +11864,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect10768);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22526"><tspan
+     id="tspan19153"><tspan
        style="fill:#000000"
-       id="tspan22524">M1509</tspan></tspan></text></g><g
+       id="tspan19151">M1509</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g10766"
    transform="matrix(0,0.37046574,-0.43221572,0,250.65816,151.2145)"
@@ -11794,7 +12005,7 @@
    id="g87736-9-2-6-83-2-1-5-0"
    transform="matrix(0.01584374,0,0,0.00932,146.40405,269.5407)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1517.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -12078,13 +12289,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect10768-4);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22530"><tspan
+     id="tspan19157"><tspan
        style="fill:#000000"
-       id="tspan22528">M1517</tspan></tspan></text></g><g
+       id="tspan19155">M1517</tspan></tspan></text></g><g
    id="g87736-9-2-6-83-2-1-5-0-4"
    transform="matrix(0.01584374,0,0,0.03501812,155.63688,235.58271)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1512.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -12129,7 +12340,7 @@
    id="g17077"
    transform="matrix(0.01584374,0,0,0.01263554,164.11666,256.25679)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1514.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -12548,9 +12759,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect10768-6);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22534"><tspan
+     id="tspan19161"><tspan
        style="fill:#000000"
-       id="tspan22532">M1510</tspan></tspan></text></g><g
+       id="tspan19159">M1510</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g10766-7"
    transform="matrix(0,0.37046574,-0.43221572,0,336.59992,141.00009)"
@@ -12685,51 +12896,6 @@
    id="path10762-3"
    willChange="" />
                </g>
-          </g><g
-   id="g87736-9-2-6-83-2-6-9"
-   transform="matrix(0.01584374,0,0,0.01713161,307.279,145.13604)"
-   tip="line"
-   condition="{PLC02!M102.IO:1}">
-               <path
-   style="fill:#cccccc"
-   d="M 66,0 V 999 H 0 V 0 Z"
-   id="path87720-7-5-4-5-5-9-0"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 61,0 V 999 H 3 V 0 Z"
-   id="path87722-1-4-5-1-4-5-2"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 54,0 V 999 H 10 V 0 Z"
-   id="path87724-7-5-1-54-2-3-7"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 48,0 V 999 H 17 V 0 Z"
-   id="path87726-4-3-2-2-1-2-5"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 42,0 V 999 H 23 V 0 Z"
-   id="path87728-5-0-8-2-5-9-2"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 36,0 V 999 H 28 V 0 Z"
-   id="path87730-1-1-8-9-1-4-45"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 0,0 V 999"
-   id="path87732-7-9-0-1-6-1-01"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 66,999 V 0"
-   id="path87734-8-4-7-5-0-6-3"
-   willChange="" />
           </g><g
    id="g87390-1-2-4-17"
    transform="matrix(0.01535657,0,0,0.0138033,275.43005,147.21336)"
@@ -12973,9 +13139,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect87392-3-0-2-6);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22538"><tspan
+     id="tspan19165"><tspan
        style="fill:#000000"
-       id="tspan22536">M1540</tspan></tspan></text></g><g
+       id="tspan19163">M1540</tspan></tspan></text></g><g
    id="g2985-9-2"
    transform="matrix(0.08537806,0,0,0.07525928,303.35405,147.14341)"
    PlcTagName="PLC02!KL1520.IO"
@@ -13087,6 +13253,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle2975-5-9"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -13103,9 +13270,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect3025-7-1);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22542"><tspan
+     id="tspan19169"><tspan
        style="fill:#000000"
-       id="tspan22540">KL1520</tspan></tspan></text></g><g
+       id="tspan19167">KL1520</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g87482-7-8-0-5"
    transform="matrix(0,0.37149514,-1.0725869,0,385.70433,158.67419)"
@@ -13244,7 +13411,7 @@
    id="g12852"
    transform="matrix(0.01584374,0,0,0.00787399,402.44104,135.92076)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1507.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -13288,7 +13455,7 @@
           </g><g
    id="g12940"
    transform="matrix(0.01535657,0,0,0.0138033,387.92083,128.67772)"
-   PlcTagName="PLC02!M102.IO"
+   PlcTagName="PLC02!M1511.IO"
    tip="motor"
    class="mtr"
    inkscape:label="g320">
@@ -13528,54 +13695,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect13070);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22546"><tspan
+     id="tspan19173"><tspan
        style="fill:#000000"
-       id="tspan22544">M1511</tspan></tspan></text></g><g
-   id="g13012"
-   transform="matrix(0.01584374,0,0,0.01713161,410.70061,144.28648)"
-   tip="line"
-   condition="{PLC02!M102.IO:1}">
-               <path
-   style="fill:#cccccc"
-   d="M 66,0 V 999 H 0 V 0 Z"
-   id="path12996"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 61,0 V 999 H 3 V 0 Z"
-   id="path12998"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 54,0 V 999 H 10 V 0 Z"
-   id="path13000"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 48,0 V 999 H 17 V 0 Z"
-   id="path13002"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 42,0 V 999 H 23 V 0 Z"
-   id="path13004"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 36,0 V 999 H 28 V 0 Z"
-   id="path13006"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 0,0 V 999"
-   id="path13008"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 66,999 V 0"
-   id="path13010"
-   willChange="" />
-          </g><g
+       id="tspan19171">M1511</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g12994"
    transform="matrix(0,0.37046574,-0.43221572,0,440.02153,140.15053)"
@@ -13823,7 +13945,8 @@
    cy="64.897148"
    id="circle13058"
    style="fill:#999999"
-   r="13.102" />
+   r="13.102"
+   willChange="" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.53911;stroke-opacity:1"
    id="rect13060"
@@ -13838,9 +13961,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect13072);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22550"><tspan
+     id="tspan19177"><tspan
        style="fill:#000000"
-       id="tspan22548">KL1521</tspan></tspan></text></g><g
+       id="tspan19175">KL1521</tspan></tspan></text></g><g
    id="g13160"
    transform="matrix(0.01535657,0,0,0.0138033,381.25727,146.76911)"
    PlcTagName="PLC02!M1541.IO"
@@ -14083,13 +14206,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect13216);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22554"><tspan
+     id="tspan19181"><tspan
        style="fill:#000000"
-       id="tspan22552">M1541</tspan></tspan></text></g><g
+       id="tspan19179">M1541</tspan></tspan></text></g><g
    id="g87736-9-2-6-83-2-8-6-1-3"
    transform="matrix(0.01584374,0,0,0.01074083,476.66318,162.93377)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1541.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14269,7 +14392,7 @@
    id="g87718-5-10-0-7-3"
    transform="matrix(0.07826075,0,0,0.01905311,325.30424,135.92076)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1507.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -14314,7 +14437,7 @@
    id="g87718-5-10-0-7-3-7"
    transform="matrix(0.0433327,0,0,0.01905311,426.98319,242.10981)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1551.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -14359,7 +14482,7 @@
    id="g15540-25-9"
    transform="matrix(0.01584374,0,0,0.00342916,307.29276,243.35489)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1550.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14404,7 +14527,7 @@
    id="g15540-2-5"
    transform="matrix(0.01584374,0,0,0.00903872,349.53644,235.58271)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1550.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -14449,7 +14572,7 @@
    id="g87718-5-10-0-7-3-7-6"
    transform="matrix(0.0433327,0,0,0.01905311,307.29276,243.35489)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1550.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -14733,9 +14856,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect10768-4-0);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22558"><tspan
+     id="tspan19185"><tspan
        style="fill:#000000"
-       id="tspan22556">M1512</tspan></tspan></text></g><g
+       id="tspan19183">M1512</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g10766-8-4"
    transform="matrix(0,0.37046574,-0.43221572,0,182.64192,230.8469)"
@@ -14982,6 +15105,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle14571"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -14998,9 +15122,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect14725);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22562"><tspan
+     id="tspan19189"><tspan
        style="fill:#000000"
-       id="tspan22560">K1512</tspan></tspan></text></g><g
+       id="tspan19187">K1512</tspan></tspan></text></g><g
    id="g14669"
    transform="matrix(0.01535657,0,0,0.0138033,196.1583,219.37409)"
    PlcTagName="PLC02!M1513.IO"
@@ -15243,13 +15367,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect14727);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22566"><tspan
+     id="tspan19193"><tspan
        style="fill:#000000"
-       id="tspan22564">M1513</tspan></tspan></text></g><g
+       id="tspan19191">M1513</tspan></tspan></text></g><g
    id="g16549"
    transform="matrix(0.01584374,0,0,0.02817288,236.76056,235.18477)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1513.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -15537,6 +15661,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle14791"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -15553,9 +15678,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect14945);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22570"><tspan
+     id="tspan19197"><tspan
        style="fill:#000000"
-       id="tspan22568">K1513</tspan></tspan></text></g><g
+       id="tspan19195">K1513</tspan></tspan></text></g><g
    id="g14889"
    transform="matrix(0.01535657,0,0,0.0138033,268.42742,231.59837)"
    PlcTagName="PLC02!M1514.IO"
@@ -15798,9 +15923,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect14947);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22574"><tspan
+     id="tspan19201"><tspan
        style="fill:#000000"
-       id="tspan22572">M1514</tspan></tspan></text></g><g
+       id="tspan19199">M1514</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g14943"
    transform="matrix(0,0.37046574,-0.43221572,0,320.52812,243.07118)"
@@ -16178,9 +16303,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect14727-9);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22578"><tspan
+     id="tspan19205"><tspan
        style="fill:#000000"
-       id="tspan22576">M1550</tspan></tspan></text></g><g
+       id="tspan19203">M1550</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g14723-2"
    transform="matrix(0,0.37046574,-0.43221572,0,374.73504,230.68968)"
@@ -16558,9 +16683,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20141);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22582"><tspan
+     id="tspan19209"><tspan
        style="fill:#000000"
-       id="tspan22580">M1554</tspan></tspan></text></g><g
+       id="tspan19207">M1554</tspan></tspan></text></g><g
    id="g20051"
    transform="matrix(0.01535657,0,0,0.0138033,454.13835,190.71247)"
    PlcTagName="PLC02!M1546.IO"
@@ -16803,16 +16928,17 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20143);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22586"><tspan
+     id="tspan19213"><tspan
        style="fill:#000000"
-       id="tspan22584">M1546</tspan></tspan></text></g><g
+       id="tspan19211">M1546</tspan></tspan></text></g>
+       <g
    id="g15596"
    transform="matrix(0.08537806,0,0,0.07525928,415.53826,218.65406)"
    PlcTagName="PLC02!K1514.IO"
    tip="kapak"
    class="klepe"
    inkscape:label="g170">
-	<linearGradient
+	 <linearGradient
    id="linearGradient15554"
    gradientUnits="userSpaceOnUse"
    x1="84.121101"
@@ -16823,23 +16949,23 @@
    offset="0"
    style="stop-color:#000000"
    id="stop15542" />
-         <stop
+              <stop
    offset="0.45"
    style="stop-color:#000000"
    id="stop15544" />
-         <stop
+              <stop
    offset="0.55"
    style="stop-color:#000000"
    id="stop15546" />
-         <stop
+              <stop
    offset="0.76"
    style="stop-color:#000000"
    id="stop15548" />
-         <stop
+              <stop
    offset="0.77"
    style="stop-color:#000000"
    id="stop15550" />
-         <stop
+              <stop
    offset="1"
    style="stop-color:#000000"
    id="stop15552" />
@@ -16918,6 +17044,7 @@
    cy="64.897148"
    id="circle15586"
    style="fill:#999999"
+   willChange=""
    r="13.102" />
 <rect
    style="fill:#999999;stroke:#000000;stroke-width:2.53911;stroke-opacity:1"
@@ -16933,564 +17060,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect15740);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22590"><tspan
+     id="tspan19217"><tspan
        style="fill:#000000"
-       id="tspan22588">K1514</tspan></tspan></text><g
-   id="g14525-1-5"
-   transform="matrix(0.18557156,0,0,0.30422813,745.64087,-90.834889)"
-   tip="line"
-   condition="{PLC02!M102.IO:1}">
-               <path
-   style="fill:#cccccc"
-   d="M 66,0 V 999 H 0 V 0 Z"
-   id="path14509-2-7"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 61,0 V 999 H 3 V 0 Z"
-   id="path14511-0-2"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 54,0 V 999 H 10 V 0 Z"
-   id="path14513-3-7"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 48,0 V 999 H 17 V 0 Z"
-   id="path14515-9-9"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 42,0 V 999 H 23 V 0 Z"
-   id="path14517-2-0"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 36,0 V 999 H 28 V 0 Z"
-   id="path14519-0-0"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 0,0 V 999"
-   id="path14521-9-1"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 66,999 V 0"
-   id="path14523-4-7"
-   willChange="" />
-          </g><g
-   id="g14581-0-1"
-   transform="translate(699.11276,-9.7379134)"
-   PlcTagName="PLC02!K1523.IO"
-   tip="kapak"
-   class="klepe"
-   inkscape:label="g170">
-	<linearGradient
-   id="linearGradient16241"
-   gradientUnits="userSpaceOnUse"
-   x1="84.121101"
-   y1="56.25"
-   x2="84.121101"
-   y2="0.3687">
-		<stop
-   offset="0"
-   style="stop-color:#000000"
-   id="stop14527-6-9" />
-         <stop
-   offset="0.45"
-   style="stop-color:#000000"
-   id="stop14529-9-0" />
-         <stop
-   offset="0.55"
-   style="stop-color:#000000"
-   id="stop14531-4-4" />
-         <stop
-   offset="0.76"
-   style="stop-color:#000000"
-   id="stop14533-8-7" />
-         <stop
-   offset="0.77"
-   style="stop-color:#000000"
-   id="stop14535-8-6" />
-         <stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop14537-6-5" />
-	</linearGradient>
-               <path
-   d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
-   id="path14541-6-1"
-   style="fill:#000000"
-   willChange="" />
-               <linearGradient
-   id="linearGradient16250"
-   gradientUnits="userSpaceOnUse"
-   x1="28.377399"
-   y1="56.25"
-   x2="28.377399"
-   y2="-0.0308">
-		<stop
-   offset="0"
-   style="stop-color:#000000"
-   id="stop14543-2-4" />
-                    <stop
-   offset="0.45"
-   style="stop-color:#000000"
-   id="stop14545-4-5" />
-                    <stop
-   offset="0.55"
-   style="stop-color:#000000"
-   id="stop14547-8-5" />
-                    <stop
-   offset="0.76"
-   style="stop-color:#000000"
-   id="stop14549-1-9" />
-                    <stop
-   offset="0.77"
-   style="stop-color:#000000"
-   id="stop14551-7-9" />
-                    <stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop14553-5-9" />
-	</linearGradient>
-               <path
-   d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
-   id="path14557-7-9"
-   style="fill:#000000"
-   willChange="" />
-               <radialGradient
-   id="radialGradient14569-1-2"
-   cx="56.2505"
-   cy="28.0142"
-   r="13.1021"
-   gradientUnits="userSpaceOnUse">
-		<stop
-   offset="0"
-   style="stop-color:#000000"
-   id="stop14559-9-4" />
-                    <stop
-   offset="0.14"
-   style="stop-color:#000000"
-   id="stop14561-8-0" />
-                    <stop
-   offset="0.4"
-   style="stop-color:#000000"
-   id="stop14563-5-6" />
-                    <stop
-   offset="0.75"
-   style="stop-color:#000000"
-   id="stop14565-5-2" />
-                    <stop
-   offset="1"
-   style="stop-color:#000000"
-   id="stop14567-1-2" />
-	</radialGradient>
-               <circle
-   cx="52.652008"
-   cy="64.897148"
-   id="circle14571-1-1"
-   style="fill:#999999"
-   r="13.102" />
-<rect
-   style="fill:#999999;stroke:#000000;stroke-width:2.53911;stroke-opacity:1"
-   id="rect14573-2-0"
-   width="109.9778"
-   height="37.794262"
-   x="-2.3368919"
-   y="131.08328"
-   willChange="" /><text
-   xml:space="preserve"
-   transform="matrix(1.43997,0,0,2.9468061,-285.05075,-685.28525)"
-   id="text14579-2-4"
-   style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect14725-3-8);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
-     x="217.27148"
-     y="287.11297"
-     id="tspan22594"><tspan
-       style="fill:#000000"
-       id="tspan22592">K1523</tspan></tspan></text></g><g
-   id="g14669-9-7"
-   transform="matrix(0.17986553,0,0,0.18340994,349.44576,-2.2814244)"
-   PlcTagName="PLC02!M1551.IO"
-   tip="motor"
-   class="mtr"
-   inkscape:label="g320">
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="M 28,1364.3882 V 862.38856 l 30,-15 h 61 l 15,15 v 501.99964 l -30,15 H 58 Z"
-   id="path14583-4-3"
-   inkscape:label="path197"
-   willChange="" />
-               <path
-   style="fill:#000000;stroke:#000000;stroke-width:2"
-   d="m 28,1364.3882 v -106.9999 h 106 v 106.9999 l -30,15 H 58 Z"
-   id="path14585-3-7"
-   inkscape:label="path199" />
-               <path
-   style="fill:#ffffff;stroke:#000000;stroke-width:2"
-   d="m 28,999.38856 v -137 l 30,-15 h 61 l 15,15 v 137 z"
-   id="path14587-4-1"
-   inkscape:label="path201" />
-               <ellipse
-   style="fill:#ffffff;stroke:#000000;stroke-width:2"
-   cx="81"
-   cy="1006.3886"
-   rx="53"
-   ry="68"
-   id="ellipse14589-1-5"
-   inkscape:label="ellipse203" />
-               <ellipse
-   style="fill:#ff0000;stroke:#ffffff;stroke-width:2"
-   cx="81"
-   cy="1006.3886"
-   rx="38"
-   ry="53"
-   id="ellipse14591-6-8"
-   inkscape:label="ellipse205" />
-               <path
-   style="fill:#ffffff;stroke:#ffffff;stroke-width:2"
-   d="M 73,953.38856 H 89 V 1060.3885 H 73 Z"
-   id="path14593-4-4"
-   inkscape:label="path207" />
-               <path
-   style="fill:#ff0000;stroke:#ff0000;stroke-width:2"
-   d="m 103,983.38856 h 24 v 46.00004 h -24 z"
-   id="path14595-3-2"
-   inkscape:label="path209" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="M 134,892.38856 H 834 V 1348.3882 H 134 Z"
-   id="path14597-4-8"
-   inkscape:label="path211"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 210,923.38856 h 441 l -61,-61 H 271 Z"
-   id="path14599-3-5"
-   inkscape:label="path213"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 210,968.38856 h 441 l -61,-60 H 271 Z"
-   id="path14601-1-8"
-   inkscape:label="path215"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="M 210,1014.3886 H 651 L 590,953.38856 H 271 Z"
-   id="path14603-4-2"
-   inkscape:label="path217"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="M 210,1044.3885 H 651 L 590,999.38856 H 271 Z"
-   id="path14605-8-0"
-   inkscape:label="path219"
-   willChange="" />
-               <ellipse
-   style="fill:#ffffff;stroke:#000000;stroke-width:2"
-   cx="727"
-   cy="1060.3887"
-   rx="45"
-   ry="61"
-   id="ellipse14607-9-9"
-   inkscape:label="ellipse221" />
-               <path
-   style="fill:#000000;stroke:#000000;stroke-width:2"
-   d="m 688,1044.3885 h 77 v 31 h -77 z"
-   id="path14609-5-0"
-   inkscape:label="path223" />
-               <path
-   style="fill:none;stroke:#ffffff;stroke-width:2"
-   d="m 697,1060.3885 h 30"
-   id="path14611-2-7"
-   inkscape:label="path225" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="m 712,1029.3886 h 31"
-   id="path14613-2-2"
-   inkscape:label="path227" />
-               <ellipse
-   style="fill:#000000;stroke:#7f7f7f;stroke-width:2"
-   cx="423"
-   cy="801.38861"
-   rx="30"
-   ry="45"
-   id="ellipse14615-2-6"
-   inkscape:label="ellipse229" />
-               <ellipse
-   style="fill:#ffffff;stroke:#7f7f7f;stroke-width:2"
-   cx="423"
-   cy="801.38861"
-   rx="15"
-   ry="30"
-   id="ellipse14617-5-8"
-   inkscape:label="ellipse231" />
-               <path
-   style="fill:#000000;stroke:#000000;stroke-width:2"
-   d="m 408,847.38856 h 30 v 15 h -30 z"
-   id="path14619-9-8"
-   inkscape:label="path233" />
-               <path
-   style="fill:#000000;stroke:#000000;stroke-width:2"
-   d="M 134,1348.3882 H 773 V 1212.3884 H 134 Z"
-   id="path14621-3-0"
-   inkscape:label="path235" />
-               <path
-   style="fill:#000000;stroke:#000000;stroke-width:2"
-   d="m 788,1151.3884 h 30 v 196.9998 h -30 z"
-   id="path14623-3-3"
-   inkscape:label="path237" />
-               <path
-   style="fill:#ffffff;stroke:#000000;stroke-width:2"
-   d="m 834,1090.3885 h 136 v 45.9999 H 834 Z"
-   id="path14625-0-9"
-   inkscape:label="path239" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 834,1136.3884 h 136 v 46 H 834 Z"
-   id="path14627-9-7"
-   inkscape:label="path241"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 210,1440.3881 15,-45.9999 h 456 l 16,45.9999 z"
-   id="path14629-5-2"
-   inkscape:label="path243"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 271,1348.3882 h 365 v 46 H 271 Z"
-   id="path14631-4-4"
-   inkscape:label="path245"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 377,1333.3882 h 137 v 61 H 377 Z"
-   id="path14633-9-3"
-   inkscape:label="path247"
-   willChange="" />
-               <path
-   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
-   d="m 514,1333.3882 7,-12 6,-13 5,-14.9999 2,-7 3,-8 1,-8 2,-8 1,-8 2,-9 1,-15.9999 v -9 -8 -16 l -1,-15 -2,-16 -4,-15 -4,-15 -5,-14 -5,-13.9999 -7,-13 -138,-5 -3,6 -7,13 -5,12.9999 -3,7 -2,8 -3,8 -2,8 -1,9 -2,8 -1,8 -1,9 -1,8 v 9 9 16 l 2,16.9999 1,8 2,8 1,8 4,16 3,7 4,14.9999 6,14 4,6 3,6 z"
-   id="path14635-1-0"
-   inkscape:label="path249"
-   willChange="" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="M 377,1333.3882 V 1090.3885"
-   id="path14637-9-1"
-   inkscape:label="path251" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="M 514,1333.3882 V 1090.3885"
-   id="path14639-3-5"
-   inkscape:label="path253" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="m 514,1219.3884 h 47"
-   id="path14641-8-8"
-   inkscape:label="path255" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="m 561,1189.3884 v 60.9999"
-   id="path14643-5-7"
-   inkscape:label="path257" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="M 378,1219.3884 H 333"
-   id="path14645-7-3"
-   inkscape:label="path259" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="m 333,1189.3884 v 60.9999"
-   id="path14647-0-4"
-   inkscape:label="path261" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="m 362,1189.3884 v 60.9999"
-   id="path14649-0-4"
-   inkscape:label="path263" />
-               <path
-   style="fill:none;stroke:#000000;stroke-width:2"
-   d="m 529,1189.3884 v 60.9999"
-   id="path14651-9-7"
-   inkscape:label="path265" />
-               <path
-   style="fill:none;stroke:#7f7f7f;stroke-width:2"
-   d="m 332,1212.3884 v 37.9999"
-   id="path14653-3-2"
-   inkscape:label="path267" />
-               <path
-   style="fill:none;stroke:#7f7f7f;stroke-width:2"
-   d="m 332,1219.3884 h 15"
-   id="path14655-3-4"
-   inkscape:label="path269" />
-               <path
-   style="fill:none;stroke:#7f7f7f;stroke-width:2"
-   d="m 560,1212.3884 v 37.9999"
-   id="path14657-6-9"
-   inkscape:label="path271" />
-               <path
-   style="fill:none;stroke:#7f7f7f;stroke-width:2"
-   d="m 545,1219.3884 h 15"
-   id="path14659-5-9"
-   inkscape:label="path273" />
-
-          <rect
-   style="fill:#999999;stroke:#000000;stroke-width:14.0287;stroke-opacity:1"
-   id="rect14661-0-4"
-   width="793.875"
-   height="170.10033"
-   x="34.048946"
-   y="1477.2106"
-   willChange="" /><text
-   xml:space="preserve"
-   transform="matrix(12.177208,0,0,17.924584,-2432.5641,-3502.9051)"
-   id="text14667-5-7"
-   style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect14727-9-6);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
-     x="217.41406"
-     y="285.74132"
-     id="tspan22598"><tspan
-       style="fill:#000000"
-       id="tspan22596">M1551</tspan></tspan></text></g><g
-   inkscape:label="Katman 2"
-   id="g14723-2-5"
-   transform="matrix(0,4.9225257,-5.0623746,0,959.68104,150.16237)"
-   PlcTagName="PLC02!M1551.IO"
-   tip="elevator">
-               <g
-   id="g14721-4-8"
-   transform="matrix(0.04606541,0,0,0.07639305,7.1479589,16.081709)">
-                    <path
-   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
-   d="M 15,237 V 0 h 164 v 237 z"
-   id="path14671-1-7"
-   willChange="" />
-                    <path
-   style="fill:#d9d9d9"
-   d="M 21,231 H 175 L 97,119 Z"
-   id="path14673-3-3"
-   willChange="" />
-                    <path
-   style="fill:#bfbfbf"
-   d="M 97,119 21,231 V 5 Z"
-   id="path14675-3-7"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2"
-   d="M 21,5 H 175 L 97,119 Z"
-   id="path14677-3-0"
-   willChange="" />
-                    <path
-   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
-   d="M 15,483 V 247 h 164 v 236 z"
-   id="path14679-8-3"
-   willChange="" />
-                    <path
-   style="fill:#d9d9d9"
-   d="M 21,479 H 175 L 97,365 Z"
-   id="path14681-3-0"
-   willChange="" />
-                    <path
-   style="fill:#bfbfbf"
-   d="M 97,365 21,479 V 251 Z"
-   id="path14683-1-3"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2"
-   d="M 21,251 H 175 L 97,365 Z"
-   id="path14685-1-6"
-   willChange="" />
-                    <path
-   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
-   d="m 191,257 v -30 h -6 v 30 z"
-   id="path14687-7-8"
-   willChange="" />
-                    <path
-   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
-   d="M 9,257 V 227 H 5 v 30 z"
-   id="path14689-9-6"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2;stroke:#4c4c4c;stroke-width:2"
-   d="m 0,247 v -10 h 195 v 10 z"
-   id="path14691-7-0"
-   willChange="" />
-                    <path
-   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
-   d="m 191,503 v -30 h -6 v 30 z"
-   id="path14693-9-2"
-   willChange="" />
-                    <path
-   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
-   d="M 9,503 V 473 H 5 v 30 z"
-   id="path14695-2-7"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2;stroke:#4c4c4c;stroke-width:2"
-   d="m 0,493 v -10 h 195 v 10 z"
-   id="path14697-9-9"
-   willChange="" />
-                    <path
-   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
-   d="M 15,731 V 495 h 164 v 236 z"
-   id="path14699-0-1"
-   willChange="" />
-                    <path
-   style="fill:#d9d9d9"
-   d="M 21,727 H 175 L 97,613 Z"
-   id="path14701-1-6"
-   willChange="" />
-                    <path
-   style="fill:#bfbfbf"
-   d="M 97,613 21,727 V 499 Z"
-   id="path14703-5-7"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2"
-   d="M 21,499 H 175 L 97,613 Z"
-   id="path14705-1-1"
-   willChange="" />
-                    <path
-   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
-   d="M 15,979 V 741 h 164 v 238 z"
-   id="path14707-3-8"
-   willChange="" />
-                    <path
-   style="fill:#d9d9d9"
-   d="M 21,975 H 175 L 97,861 Z"
-   id="path14709-6-5"
-   willChange="" />
-                    <path
-   style="fill:#bfbfbf"
-   d="M 97,861 21,975 V 747 Z"
-   id="path14711-0-8"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2"
-   d="M 21,747 H 175 L 97,861 Z"
-   id="path14713-4-1"
-   willChange="" />
-                    <path
-   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
-   d="m 191,753 v -32 h -6 v 32 z"
-   id="path14715-3-3"
-   willChange="" />
-                    <path
-   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
-   d="M 9,753 V 721 H 5 v 32 z"
-   id="path14717-8-7"
-   willChange="" />
-                    <path
-   style="fill:#b2b2b2;stroke:#4c4c4c;stroke-width:2"
-   d="m 0,741 v -10 h 195 v 10 z"
-   id="path14719-2-0"
-   willChange="" />
-               </g>
-          </g></g><g
+       id="tspan19215">K1514</tspan></tspan></text></g><g
    id="g15684"
    transform="matrix(0.01535657,0,0,0.0138033,385.68437,230.3278)"
    PlcTagName="PLC02!M1515.IO"
@@ -17733,9 +17305,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect15742);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22602"><tspan
+     id="tspan19221"><tspan
        style="fill:#000000"
-       id="tspan22600">M1515</tspan></tspan></text></g><g
+       id="tspan19219">M1515</tspan></tspan></text></g><g
    inkscape:label="Katman 2"
    id="g15738"
    transform="matrix(0,0.37046574,-0.43221572,0,437.78507,241.80061)"
@@ -18113,9 +17685,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20145);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22606"><tspan
+     id="tspan19225"><tspan
        style="fill:#000000"
-       id="tspan22604">M1548</tspan></tspan></text></g><rect
+       id="tspan19223">M1548</tspan></tspan></text></g><rect
    style="fill:#666666;stroke-width:0.282316"
    id="rect15744"
    width="20.715868"
@@ -18129,9 +17701,9 @@
    style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect15750);fill:#666666"><tspan
      x="448.58594"
      y="560.53782"
-     id="tspan22610"><tspan
+     id="tspan19229"><tspan
        style="fill:#ffffff"
-       id="tspan22608">ÇS6</tspan></tspan></text><g
+       id="tspan19227">ÇS6</tspan></tspan></text><g
    id="g16531"
    transform="matrix(0.01535657,0,0,0.0138033,198.72788,247.55309)"
    PlcTagName="PLC02!M1516.IO"
@@ -18374,13 +17946,13 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect16605);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22614"><tspan
+     id="tspan19233"><tspan
        style="fill:#000000"
-       id="tspan22612">M1516</tspan></tspan></text></g><g
+       id="tspan19231">M1516</tspan></tspan></text></g><g
    id="g17023"
    transform="matrix(0.01584374,0,0,0.00917338,347.28299,254.16527)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1515.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -18557,55 +18129,10 @@
    willChange="" />
                </g>
           </g><g
-   id="g17041"
-   transform="matrix(0.01584374,0,0,0.00903872,401.31248,246.31688)"
-   tip="line"
-   condition="{PLC02!M102.IO:1}">
-               <path
-   style="fill:#cccccc"
-   d="M 66,0 V 999 H 0 V 0 Z"
-   id="path17025"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 61,0 V 999 H 3 V 0 Z"
-   id="path17027"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 54,0 V 999 H 10 V 0 Z"
-   id="path17029"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 48,0 V 999 H 17 V 0 Z"
-   id="path17031"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 42,0 V 999 H 23 V 0 Z"
-   id="path17033"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 36,0 V 999 H 28 V 0 Z"
-   id="path17035"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 0,0 V 999"
-   id="path17037"
-   willChange="" />
-               <path
-   style="fill:#cccccc"
-   d="M 66,999 V 0"
-   id="path17039"
-   willChange="" />
-          </g><g
    id="g17059"
    transform="matrix(0.0551303,0,0,0.01905311,347.28299,254.08906)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1515.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -18650,7 +18177,7 @@
    id="g17095"
    transform="matrix(0.01584374,0,0,0.00903872,281.95446,248.48461)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1514.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 66,0 V 999 H 0 V 0 Z"
@@ -18695,7 +18222,7 @@
    id="g17113"
    transform="matrix(0.11900248,0,0,0.01905311,164.11666,256.25679)"
    tip="line"
-   condition="{PLC02!M102.IO:1}">
+   condition="{PLC02!M1514.IO:1}">
                <path
    style="fill:#cccccc"
    d="M 0,0 H 999 V 66 H 0 Z"
@@ -18848,6 +18375,7 @@
    cx="52.652008"
    cy="64.897148"
    id="circle2975-5-4"
+   willChange=""
    style="fill:#999999"
    r="13.102" />
 <rect
@@ -18864,9 +18392,9 @@
    style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect3025-7-2);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.27148"
      y="287.11297"
-     id="tspan22618"><tspan
+     id="tspan19237"><tspan
        style="fill:#000000"
-       id="tspan22616">K1507</tspan></tspan></text></g><g
+       id="tspan19235">K1507</tspan></tspan></text></g><g
    id="g17756"
    transform="matrix(0.01535657,0,0,0.0138033,174.63019,160.55668)"
    PlcTagName="PLC02!M1519.IO"
@@ -19109,9 +18637,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect17758);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22622"><tspan
+     id="tspan19241"><tspan
        style="fill:#000000"
-       id="tspan22620">M1519</tspan></tspan></text></g><g
+       id="tspan19239">M1519</tspan></tspan></text></g><g
    id="g17893"
    transform="matrix(0.01535657,0,0,0.0138033,174.59948,180.49892)"
    PlcTagName="PLC02!M1527.IO"
@@ -19354,9 +18882,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect17895);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22626"><tspan
+     id="tspan19245"><tspan
        style="fill:#000000"
-       id="tspan22624">M1527</tspan></tspan></text></g><g
+       id="tspan19243">M1527</tspan></tspan></text></g><g
    id="g17983"
    transform="matrix(0.01535657,0,0,0.0138033,174.61459,194.57476)"
    PlcTagName="PLC02!M1534.IO"
@@ -19599,9 +19127,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect17985);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22630"><tspan
+     id="tspan19249"><tspan
        style="fill:#000000"
-       id="tspan22628">M1534</tspan></tspan></text></g><g
+       id="tspan19247">M1534</tspan></tspan></text></g><g
    id="g18073"
    transform="matrix(0.01535657,0,0,0.0138033,239.94766,160.7718)"
    PlcTagName="PLC02!M1521.IO"
@@ -19844,9 +19372,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18251);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22634"><tspan
+     id="tspan19253"><tspan
        style="fill:#000000"
-       id="tspan22632">M1521</tspan></tspan></text></g><g
+       id="tspan19251">M1521</tspan></tspan></text></g><g
    id="g18161"
    transform="matrix(0.01535657,0,0,0.0138033,239.91695,180.71404)"
    PlcTagName="PLC02!M1529.IO"
@@ -20089,9 +19617,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18253);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22638"><tspan
+     id="tspan19257"><tspan
        style="fill:#000000"
-       id="tspan22636">M1529</tspan></tspan></text></g><g
+       id="tspan19255">M1529</tspan></tspan></text></g><g
    id="g18249"
    transform="matrix(0.01535657,0,0,0.0138033,239.93206,194.78988)"
    PlcTagName="PLC02!M1535.IO"
@@ -20334,9 +19862,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect18255);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22642"><tspan
+     id="tspan19261"><tspan
        style="fill:#000000"
-       id="tspan22640">M1535</tspan></tspan></text></g><g
+       id="tspan19259">M1535</tspan></tspan></text></g><g
    id="g18973"
    transform="matrix(0.01535657,0,0,0.0138033,365.83891,158.95593)"
    PlcTagName="PLC02!M1553.IO"
@@ -20579,9 +20107,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19151);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22646"><tspan
+     id="tspan19265"><tspan
        style="fill:#000000"
-       id="tspan22644">M1553</tspan></tspan></text></g><g
+       id="tspan19263">M1553</tspan></tspan></text></g><g
    id="g19061"
    transform="matrix(0.01535657,0,0,0.0138033,365.8082,185.77738)"
    PlcTagName="PLC02!M1543.IO"
@@ -20824,9 +20352,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19153);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22650"><tspan
+     id="tspan19269"><tspan
        style="fill:#000000"
-       id="tspan22648">M1543</tspan></tspan></text></g><g
+       id="tspan19267">M1543</tspan></tspan></text></g><g
    id="g19149"
    transform="matrix(0.01535657,0,0,0.0138033,365.82331,199.85322)"
    PlcTagName="PLC02!M1556.IO"
@@ -21069,9 +20597,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19155);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22654"><tspan
+     id="tspan19273"><tspan
        style="fill:#000000"
-       id="tspan22652">M1556</tspan></tspan></text></g><g
+       id="tspan19271">M1556</tspan></tspan></text></g><g
    id="g19243"
    transform="matrix(0.01535657,0,0,0.0138033,365.83891,171.65601)"
    PlcTagName="PLC02!M1545.IO"
@@ -21314,9 +20842,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19245);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22658"><tspan
+     id="tspan19277"><tspan
        style="fill:#000000"
-       id="tspan22656">M1545</tspan></tspan></text></g><g
+       id="tspan19275">M1545</tspan></tspan></text></g><g
    id="g19333"
    transform="matrix(0.01535657,0,0,0.0138033,310.77869,160.63994)"
    PlcTagName="PLC02!M1523.IO"
@@ -21559,9 +21087,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19511);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22662"><tspan
+     id="tspan19281"><tspan
        style="fill:#000000"
-       id="tspan22660">M1523</tspan></tspan></text></g><g
+       id="tspan19279">M1523</tspan></tspan></text></g><g
    id="g19421"
    transform="matrix(0.01535657,0,0,0.0138033,310.74798,180.58218)"
    PlcTagName="PLC02!M1531.IO"
@@ -21804,9 +21332,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19513);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22666"><tspan
+     id="tspan19285"><tspan
        style="fill:#000000"
-       id="tspan22664">M1531</tspan></tspan></text></g><g
+       id="tspan19283">M1531</tspan></tspan></text></g><g
    id="g19509"
    transform="matrix(0.01535657,0,0,0.0138033,310.76309,194.65802)"
    PlcTagName="PLC02!M1536.IO"
@@ -22049,9 +21577,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19515);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22670"><tspan
+     id="tspan19289"><tspan
        style="fill:#000000"
-       id="tspan22668">M1536</tspan></tspan></text></g><g
+       id="tspan19287">M1536</tspan></tspan></text></g><g
    id="g19603"
    transform="matrix(0.01535657,0,0,0.0138033,487.39312,159.38384)"
    PlcTagName="PLC02!M1555.IO"
@@ -22294,9 +21822,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19869);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22674"><tspan
+     id="tspan19293"><tspan
        style="fill:#000000"
-       id="tspan22672">M1555</tspan></tspan></text></g><g
+       id="tspan19291">M1555</tspan></tspan></text></g><g
    id="g19691"
    transform="matrix(0.01535657,0,0,0.0138033,487.36241,186.20529)"
    PlcTagName="PLC02!M1547.IO"
@@ -22539,9 +22067,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19871);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22678"><tspan
+     id="tspan19297"><tspan
        style="fill:#000000"
-       id="tspan22676">M1547</tspan></tspan></text></g><g
+       id="tspan19295">M1547</tspan></tspan></text></g><g
    id="g19779"
    transform="matrix(0.01535657,0,0,0.0138033,487.37752,200.28113)"
    PlcTagName="PLC02!M1557.IO"
@@ -22784,9 +22312,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19873);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22682"><tspan
+     id="tspan19301"><tspan
        style="fill:#000000"
-       id="tspan22680">M1557</tspan></tspan></text></g><g
+       id="tspan19299">M1557</tspan></tspan></text></g><g
    id="g19867"
    transform="matrix(0.01535657,0,0,0.0138033,487.39312,172.08392)"
    PlcTagName="PLC02!M1549.IO"
@@ -23029,9 +22557,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect19875);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22686"><tspan
+     id="tspan19305"><tspan
        style="fill:#000000"
-       id="tspan22684">M1549</tspan></tspan></text></g><g
+       id="tspan19303">M1549</tspan></tspan></text></g><g
    id="g20233"
    transform="matrix(0.01535657,0,0,0.0138033,429.06137,160.63994)"
    PlcTagName="PLC02!M1525.IO"
@@ -23274,9 +22802,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20411);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22690"><tspan
+     id="tspan19309"><tspan
        style="fill:#000000"
-       id="tspan22688">M1525</tspan></tspan></text></g><g
+       id="tspan19307">M1525</tspan></tspan></text></g><g
    id="g20321"
    transform="matrix(0.01535657,0,0,0.0138033,429.03066,180.58218)"
    PlcTagName="PLC02!M1533.IO"
@@ -23519,9 +23047,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20413);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22694"><tspan
+     id="tspan19313"><tspan
        style="fill:#000000"
-       id="tspan22692">M1533</tspan></tspan></text></g><g
+       id="tspan19311">M1533</tspan></tspan></text></g><g
    id="g20409"
    transform="matrix(0.01535657,0,0,0.0138033,429.04577,194.65802)"
    PlcTagName="PLC02!M1537.IO"
@@ -23764,9 +23292,9 @@
    style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect20415);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
      x="217.41406"
      y="285.74132"
-     id="tspan22698"><tspan
+     id="tspan19317"><tspan
        style="fill:#000000"
-       id="tspan22696">M1537</tspan></tspan></text></g><rect
+       id="tspan19315">M1537</tspan></tspan></text></g><rect
    style="fill:#b3b3b3;stroke-width:0.349491"
    id="rect9360"
    width="71.926346"
@@ -23779,9 +23307,9 @@
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect9528-8);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="82.010077"
-     id="tspan22702"><tspan
+     id="tspan19321"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22700">15060</tspan></tspan></text><text
+       id="tspan19319">15060</tspan></tspan></text><text
    xml:space="preserve"
    style="font-size:4.23333px;fill:#b3b3b3;stroke-width:0.264583"
    x="361.24994"
@@ -23802,36 +23330,36 @@
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect9528);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="82.010077"
-     id="tspan22706"><tspan
+     id="tspan19325"><tspan
        style="fill:#000000"
-       id="tspan22704">İş Emri No</tspan></tspan></text><text
+       id="tspan19323">İş Emri No</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,-0.52916666,1.0583333)"
    id="text9532"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect9534);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="104.89094"
-     id="tspan22710"><tspan
+     id="tspan19329"><tspan
        style="fill:#000000"
-       id="tspan22708">Hammadde Kodu</tspan></tspan></text><text
+       id="tspan19327">Hammadde Kodu</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,-0.52916666,1.0583333)"
    id="text9538"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect9540);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="130.92805"
-     id="tspan22714"><tspan
+     id="tspan19333"><tspan
        style="fill:#000000"
-       id="tspan22712">Hammadde Adı</tspan></tspan></text><text
+       id="tspan19331">Hammadde Adı</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,-0.52916666,3.6833958)"
    id="text9544"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect9546);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="145.46711"
-     id="tspan22718"><tspan
+     id="tspan19337"><tspan
        style="fill:#000000"
-       id="tspan22716">Başlama Zamanı</tspan></tspan></text><text
+       id="tspan19335">Başlama Zamanı</tspan></tspan></text><text
    xml:space="preserve"
    style="font-size:2.82222px;fill:#f9f9f9;stroke-width:0.264583"
    x="356.86194"
@@ -23958,27 +23486,27 @@
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect11429);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="104.89094"
-     id="tspan22722"><tspan
+     id="tspan19341"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22720">1596</tspan></tspan></text><text
+       id="tspan19339">1596</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,33.603726,1.0583333)"
    id="text11433"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect11435);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="130.92805"
-     id="tspan22726"><tspan
+     id="tspan19345"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22724">Mısır</tspan></tspan></text><text
+       id="tspan19343">Mısır</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,33.337503,3.6833958)"
    id="text11439"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect11441);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="145.46711"
-     id="tspan22730"><tspan
+     id="tspan19349"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22728">10:17:05</tspan></tspan></text><rect
+       id="tspan19347">10:17:05</tspan></tspan></text><rect
    style="opacity:1;fill:#008033;stroke-width:0.264583"
    id="rect11445"
    width="23.632557"
@@ -23991,7 +23519,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11713);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22732">BAŞLAT</tspan></text><rect
+     id="tspan19351">BAŞLAT</tspan></text><rect
    style="opacity:1;fill:#aa8800;stroke-width:0.264583"
    id="rect11869"
    width="23.632557"
@@ -24004,7 +23532,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11875);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22734">RESET</tspan></text><rect
+     id="tspan19353">RESET</tspan></text><rect
    style="opacity:1;fill:#ff5555;stroke-width:0.264583"
    id="rect11877"
    width="23.632557"
@@ -24017,7 +23545,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11883);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22736">DURDUR</tspan></text><rect
+     id="tspan19355">DURDUR</tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12053"
    width="17.838514"
@@ -24030,9 +23558,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1158px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11713-4);fill:#008033"><tspan
      x="1342.6113"
      y="211.28452"
-     id="tspan22740"><tspan
+     id="tspan19359"><tspan
        style="fill:#ffffff"
-       id="tspan22738">AKTİF</tspan></tspan></text><rect
+       id="tspan19357">AKTİF</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12317"
    width="17.838514"
@@ -24045,9 +23573,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect12323);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22744"><tspan
+     id="tspan19363"><tspan
        style="fill:#ffffff"
-       id="tspan22742">MAX</tspan></tspan></text><rect
+       id="tspan19361">MAX</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12325"
    width="17.838514"
@@ -24060,9 +23588,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect12331);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22748"><tspan
+     id="tspan19367"><tspan
        style="fill:#ffffff"
-       id="tspan22746">HATA</tspan></tspan></text><rect
+       id="tspan19365">HATA</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12333"
    width="17.838514"
@@ -24075,9 +23603,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect12339);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22752"><tspan
+     id="tspan19371"><tspan
        style="fill:#ffffff"
-       id="tspan22750">HAZIR</tspan></tspan></text><rect
+       id="tspan19369">HAZIR</tspan></tspan></text><rect
    style="fill:#b3b3b3;stroke-width:0.349491"
    id="rect17567"
    width="71.926346"
@@ -24090,9 +23618,9 @@
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17695);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="82.010077"
-     id="tspan22756"><tspan
+     id="tspan19375"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22754">15060</tspan></tspan></text><text
+       id="tspan19373">15060</tspan></tspan></text><text
    xml:space="preserve"
    style="font-size:4.23333px;fill:#b3b3b3;stroke-width:0.264583"
    x="437.44983"
@@ -24109,36 +23637,36 @@
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17697);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="82.010077"
-     id="tspan22760"><tspan
+     id="tspan19379"><tspan
        style="fill:#000000"
-       id="tspan22758">İş Emri No</tspan></tspan></text><text
+       id="tspan19377">İş Emri No</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,75.670839,1.0583333)"
    id="text17583"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17699);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="104.89094"
-     id="tspan22764"><tspan
+     id="tspan19383"><tspan
        style="fill:#000000"
-       id="tspan22762">Hammadde Kodu</tspan></tspan></text><text
+       id="tspan19381">Hammadde Kodu</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,75.670839,1.0583333)"
    id="text17587"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17701);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="130.92805"
-     id="tspan22768"><tspan
+     id="tspan19387"><tspan
        style="fill:#000000"
-       id="tspan22766">Hammadde Adı</tspan></tspan></text><text
+       id="tspan19385">Hammadde Adı</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,75.670839,3.6833958)"
    id="text17591"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17703);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="145.46711"
-     id="tspan22772"><tspan
+     id="tspan19391"><tspan
        style="fill:#000000"
-       id="tspan22770">Başlama Zamanı</tspan></tspan></text><text
+       id="tspan19389">Başlama Zamanı</tspan></tspan></text><text
    xml:space="preserve"
    style="font-size:2.82222px;fill:#f9f9f9;stroke-width:0.264583"
    x="433.06183"
@@ -24265,27 +23793,27 @@
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17705);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="104.89094"
-     id="tspan22776"><tspan
+     id="tspan19395"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22774">1596</tspan></tspan></text><text
+       id="tspan19393">1596</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,109.80375,1.0583333)"
    id="text17647"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17707);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="130.92805"
-     id="tspan22780"><tspan
+     id="tspan19399"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22778">Mısır</tspan></tspan></text><text
+       id="tspan19397">Mısır</tspan></tspan></text><text
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,109.53752,3.6833958)"
    id="text17651"
    style="font-size:13.3333px;white-space:pre;shape-inside:url(#rect17709);fill:#f9f9f9"><tspan
      x="1355.9746"
      y="145.46711"
-     id="tspan22784"><tspan
+     id="tspan19403"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="tspan22782">10:17:05</tspan></tspan></text><rect
+       id="tspan19401">10:17:05</tspan></tspan></text><rect
    style="opacity:1;fill:#008033;stroke-width:0.264583"
    id="rect17653"
    width="23.632557"
@@ -24298,7 +23826,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17711);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22786">BAŞLAT</tspan></text><rect
+     id="tspan19405">BAŞLAT</tspan></text><rect
    style="opacity:1;fill:#aa8800;stroke-width:0.264583"
    id="rect17659"
    width="23.632557"
@@ -24311,7 +23839,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17713);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22788">RESET</tspan></text><rect
+     id="tspan19407">RESET</tspan></text><rect
    style="opacity:1;fill:#ff5555;stroke-width:0.264583"
    id="rect17665"
    width="23.632557"
@@ -24324,7 +23852,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17715);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22790">DURDUR</tspan></text><rect
+     id="tspan19409">DURDUR</tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17671"
    width="17.838514"
@@ -24337,9 +23865,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1158px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17717);fill:#008033"><tspan
      x="1342.6113"
      y="211.28452"
-     id="tspan22794"><tspan
+     id="tspan19413"><tspan
        style="fill:#ffffff"
-       id="tspan22792">AKTİF</tspan></tspan></text><rect
+       id="tspan19411">AKTİF</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17677"
    width="17.838514"
@@ -24352,9 +23880,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17719);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22798"><tspan
+     id="tspan19417"><tspan
        style="fill:#ffffff"
-       id="tspan22796">MAX</tspan></tspan></text><rect
+       id="tspan19415">MAX</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17683"
    width="17.838514"
@@ -24367,9 +23895,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17721);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22802"><tspan
+     id="tspan19421"><tspan
        style="fill:#ffffff"
-       id="tspan22800">HATA</tspan></tspan></text><rect
+       id="tspan19419">HATA</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17689"
    width="17.838514"
@@ -24382,6 +23910,517 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17723);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan22806"><tspan
+     id="tspan19425"><tspan
        style="fill:#ffffff"
-       id="tspan22804">HAZIR</tspan></tspan></text></g></svg>
+       id="tspan19423">HAZIR</tspan></tspan></text><g
+   id="g10183"
+   transform="matrix(0.08537806,0,0,0.07525928,473.83562,218.74224)"
+   PlcTagName="PLC02!K1523.IO"
+   tip="kapak"
+   class="klepe"
+   inkscape:label="g170">
+	 <linearGradient
+   id="linearGradient10141"
+   gradientUnits="userSpaceOnUse"
+   x1="84.121101"
+   y1="56.25"
+   x2="84.121101"
+   y2="0.3687">
+		<stop
+   offset="0"
+   style="stop-color:#000000"
+   id="stop10129" />
+              <stop
+   offset="0.45"
+   style="stop-color:#000000"
+   id="stop10131" />
+              <stop
+   offset="0.55"
+   style="stop-color:#000000"
+   id="stop10133" />
+              <stop
+   offset="0.76"
+   style="stop-color:#000000"
+   id="stop10135" />
+              <stop
+   offset="0.77"
+   style="stop-color:#000000"
+   id="stop10137" />
+              <stop
+   offset="1"
+   style="stop-color:#000000"
+   id="stop10139" />
+	</linearGradient>
+               <path
+   d="M 77.786517,125.32663 53.33771,60.939656 28.527498,125.32663 h 49.259019"
+   id="path10143"
+   style="fill:#000000"
+   willChange="" />
+               <linearGradient
+   id="linearGradient10157"
+   gradientUnits="userSpaceOnUse"
+   x1="28.377399"
+   y1="56.25"
+   x2="28.377399"
+   y2="-0.0308">
+		<stop
+   offset="0"
+   style="stop-color:#000000"
+   id="stop10145" />
+                    <stop
+   offset="0.45"
+   style="stop-color:#000000"
+   id="stop10147" />
+                    <stop
+   offset="0.55"
+   style="stop-color:#000000"
+   id="stop10149" />
+                    <stop
+   offset="0.76"
+   style="stop-color:#000000"
+   id="stop10151" />
+                    <stop
+   offset="0.77"
+   style="stop-color:#000000"
+   id="stop10153" />
+                    <stop
+   offset="1"
+   style="stop-color:#000000"
+   id="stop10155" />
+	</linearGradient>
+               <path
+   d="M 77.457371,5.3270242 52.833153,69.712862 27.846645,5.3270242 h 49.610726"
+   id="path10159"
+   style="fill:#000000"
+   willChange="" />
+               <radialGradient
+   id="radialGradient10171"
+   cx="56.2505"
+   cy="28.0142"
+   r="13.1021"
+   gradientUnits="userSpaceOnUse">
+		<stop
+   offset="0"
+   style="stop-color:#000000"
+   id="stop10161" />
+                    <stop
+   offset="0.14"
+   style="stop-color:#000000"
+   id="stop10163" />
+                    <stop
+   offset="0.4"
+   style="stop-color:#000000"
+   id="stop10165" />
+                    <stop
+   offset="0.75"
+   style="stop-color:#000000"
+   id="stop10167" />
+                    <stop
+   offset="1"
+   style="stop-color:#000000"
+   id="stop10169" />
+	</radialGradient>
+               <circle
+   cx="52.652008"
+   cy="64.897148"
+   id="circle10173"
+   style="fill:#999999"
+   willChange=""
+   r="13.102" />
+<rect
+   style="fill:#999999;stroke:#000000;stroke-width:2.53911;stroke-opacity:1"
+   id="rect10175"
+   width="109.9778"
+   height="37.794262"
+   x="-2.3368919"
+   y="131.08328"
+   willChange="" /><text
+   xml:space="preserve"
+   transform="matrix(1.43997,0,0,2.9468061,-285.05075,-685.28525)"
+   id="text10181"
+   style="font-size:10.6823px;white-space:pre;shape-inside:url(#rect10185);display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="217.27148"
+     y="287.11297"
+     id="tspan19429"><tspan
+       style="fill:#000000"
+       id="tspan19427">K1523</tspan></tspan></text></g><g
+   id="g10353"
+   transform="matrix(0.01535657,0,0,0.0138033,448.606,218.55284)"
+   PlcTagName="PLC02!M1551.IO"
+   tip="motor"
+   class="mtr"
+   inkscape:label="g320">
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="M 28,1364.3882 V 862.38856 l 30,-15 h 61 l 15,15 v 501.99964 l -30,15 H 58 Z"
+   id="path10267"
+   inkscape:label="path197"
+   willChange="" />
+               <path
+   style="fill:#000000;stroke:#000000;stroke-width:2"
+   d="m 28,1364.3882 v -106.9999 h 106 v 106.9999 l -30,15 H 58 Z"
+   id="path10269"
+   inkscape:label="path199" />
+               <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2"
+   d="m 28,999.38856 v -137 l 30,-15 h 61 l 15,15 v 137 z"
+   id="path10271"
+   inkscape:label="path201" />
+               <ellipse
+   style="fill:#ffffff;stroke:#000000;stroke-width:2"
+   cx="81"
+   cy="1006.3886"
+   rx="53"
+   ry="68"
+   id="ellipse10273"
+   inkscape:label="ellipse203" />
+               <ellipse
+   style="fill:#ff0000;stroke:#ffffff;stroke-width:2"
+   cx="81"
+   cy="1006.3886"
+   rx="38"
+   ry="53"
+   id="ellipse10275"
+   inkscape:label="ellipse205" />
+               <path
+   style="fill:#ffffff;stroke:#ffffff;stroke-width:2"
+   d="M 73,953.38856 H 89 V 1060.3885 H 73 Z"
+   id="path10277"
+   inkscape:label="path207" />
+               <path
+   style="fill:#ff0000;stroke:#ff0000;stroke-width:2"
+   d="m 103,983.38856 h 24 v 46.00004 h -24 z"
+   id="path10279"
+   inkscape:label="path209" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="M 134,892.38856 H 834 V 1348.3882 H 134 Z"
+   id="path10281"
+   inkscape:label="path211"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 210,923.38856 h 441 l -61,-61 H 271 Z"
+   id="path10283"
+   inkscape:label="path213"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 210,968.38856 h 441 l -61,-60 H 271 Z"
+   id="path10285"
+   inkscape:label="path215"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="M 210,1014.3886 H 651 L 590,953.38856 H 271 Z"
+   id="path10287"
+   inkscape:label="path217"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="M 210,1044.3885 H 651 L 590,999.38856 H 271 Z"
+   id="path10289"
+   inkscape:label="path219"
+   willChange="" />
+               <ellipse
+   style="fill:#ffffff;stroke:#000000;stroke-width:2"
+   cx="727"
+   cy="1060.3887"
+   rx="45"
+   ry="61"
+   id="ellipse10291"
+   inkscape:label="ellipse221" />
+               <path
+   style="fill:#000000;stroke:#000000;stroke-width:2"
+   d="m 688,1044.3885 h 77 v 31 h -77 z"
+   id="path10293"
+   inkscape:label="path223" />
+               <path
+   style="fill:none;stroke:#ffffff;stroke-width:2"
+   d="m 697,1060.3885 h 30"
+   id="path10295"
+   inkscape:label="path225" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="m 712,1029.3886 h 31"
+   id="path10297"
+   inkscape:label="path227" />
+               <ellipse
+   style="fill:#000000;stroke:#7f7f7f;stroke-width:2"
+   cx="423"
+   cy="801.38861"
+   rx="30"
+   ry="45"
+   id="ellipse10299"
+   inkscape:label="ellipse229" />
+               <ellipse
+   style="fill:#ffffff;stroke:#7f7f7f;stroke-width:2"
+   cx="423"
+   cy="801.38861"
+   rx="15"
+   ry="30"
+   id="ellipse10301"
+   inkscape:label="ellipse231" />
+               <path
+   style="fill:#000000;stroke:#000000;stroke-width:2"
+   d="m 408,847.38856 h 30 v 15 h -30 z"
+   id="path10303"
+   inkscape:label="path233" />
+               <path
+   style="fill:#000000;stroke:#000000;stroke-width:2"
+   d="M 134,1348.3882 H 773 V 1212.3884 H 134 Z"
+   id="path10305"
+   inkscape:label="path235" />
+               <path
+   style="fill:#000000;stroke:#000000;stroke-width:2"
+   d="m 788,1151.3884 h 30 v 196.9998 h -30 z"
+   id="path10307"
+   inkscape:label="path237" />
+               <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2"
+   d="m 834,1090.3885 h 136 v 45.9999 H 834 Z"
+   id="path10309"
+   inkscape:label="path239" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 834,1136.3884 h 136 v 46 H 834 Z"
+   id="path10311"
+   inkscape:label="path241"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 210,1440.3881 15,-45.9999 h 456 l 16,45.9999 z"
+   id="path10313"
+   inkscape:label="path243"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 271,1348.3882 h 365 v 46 H 271 Z"
+   id="path10315"
+   inkscape:label="path245"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 377,1333.3882 h 137 v 61 H 377 Z"
+   id="path10317"
+   inkscape:label="path247"
+   willChange="" />
+               <path
+   style="fill:#7f7f7f;stroke:#000000;stroke-width:2"
+   d="m 514,1333.3882 7,-12 6,-13 5,-14.9999 2,-7 3,-8 1,-8 2,-8 1,-8 2,-9 1,-15.9999 v -9 -8 -16 l -1,-15 -2,-16 -4,-15 -4,-15 -5,-14 -5,-13.9999 -7,-13 -138,-5 -3,6 -7,13 -5,12.9999 -3,7 -2,8 -3,8 -2,8 -1,9 -2,8 -1,8 -1,9 -1,8 v 9 9 16 l 2,16.9999 1,8 2,8 1,8 4,16 3,7 4,14.9999 6,14 4,6 3,6 z"
+   id="path10319"
+   inkscape:label="path249"
+   willChange="" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="M 377,1333.3882 V 1090.3885"
+   id="path10321"
+   inkscape:label="path251" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="M 514,1333.3882 V 1090.3885"
+   id="path10323"
+   inkscape:label="path253" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="m 514,1219.3884 h 47"
+   id="path10325"
+   inkscape:label="path255" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="m 561,1189.3884 v 60.9999"
+   id="path10327"
+   inkscape:label="path257" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="M 378,1219.3884 H 333"
+   id="path10329"
+   inkscape:label="path259" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="m 333,1189.3884 v 60.9999"
+   id="path10331"
+   inkscape:label="path261" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="m 362,1189.3884 v 60.9999"
+   id="path10333"
+   inkscape:label="path263" />
+               <path
+   style="fill:none;stroke:#000000;stroke-width:2"
+   d="m 529,1189.3884 v 60.9999"
+   id="path10335"
+   inkscape:label="path265" />
+               <path
+   style="fill:none;stroke:#7f7f7f;stroke-width:2"
+   d="m 332,1212.3884 v 37.9999"
+   id="path10337"
+   inkscape:label="path267" />
+               <path
+   style="fill:none;stroke:#7f7f7f;stroke-width:2"
+   d="m 332,1219.3884 h 15"
+   id="path10339"
+   inkscape:label="path269" />
+               <path
+   style="fill:none;stroke:#7f7f7f;stroke-width:2"
+   d="m 560,1212.3884 v 37.9999"
+   id="path10341"
+   inkscape:label="path271" />
+               <path
+   style="fill:none;stroke:#7f7f7f;stroke-width:2"
+   d="m 545,1219.3884 h 15"
+   id="path10343"
+   inkscape:label="path273" />
+
+          <rect
+   style="fill:#999999;stroke:#000000;stroke-width:14.0287;stroke-opacity:1"
+   id="rect10345"
+   width="793.875"
+   height="170.10033"
+   x="34.048946"
+   y="1477.2106"
+   willChange="" /><text
+   xml:space="preserve"
+   transform="matrix(12.177208,0,0,17.924584,-2432.5641,-3502.9051)"
+   id="text10351"
+   style="font-size:9.02042px;white-space:pre;shape-inside:url(#rect10409);shape-padding:0.143733;display:inline;fill:#999999;stroke:none;stroke-opacity:1"><tspan
+     x="217.41406"
+     y="285.74132"
+     id="tspan19433"><tspan
+       style="fill:#000000"
+       id="tspan19431">M1551</tspan></tspan></text></g><g
+   inkscape:label="Katman 2"
+   id="g10407"
+   transform="matrix(0,0.37046574,-0.43221572,0,500.7067,230.02565)"
+   PlcTagName="PLC02!M1551.IO"
+   tip="elevator">
+               <g
+   id="g10405"
+   transform="matrix(0.04606541,0,0,0.07639305,7.1479589,16.081709)">
+                    <path
+   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
+   d="M 15,237 V 0 h 164 v 237 z"
+   id="path10355"
+   willChange="" />
+                    <path
+   style="fill:#d9d9d9"
+   d="M 21,231 H 175 L 97,119 Z"
+   id="path10357"
+   willChange="" />
+                    <path
+   style="fill:#bfbfbf"
+   d="M 97,119 21,231 V 5 Z"
+   id="path10359"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2"
+   d="M 21,5 H 175 L 97,119 Z"
+   id="path10361"
+   willChange="" />
+                    <path
+   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
+   d="M 15,483 V 247 h 164 v 236 z"
+   id="path10363"
+   willChange="" />
+                    <path
+   style="fill:#d9d9d9"
+   d="M 21,479 H 175 L 97,365 Z"
+   id="path10365"
+   willChange="" />
+                    <path
+   style="fill:#bfbfbf"
+   d="M 97,365 21,479 V 251 Z"
+   id="path10367"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2"
+   d="M 21,251 H 175 L 97,365 Z"
+   id="path10369"
+   willChange="" />
+                    <path
+   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
+   d="m 191,257 v -30 h -6 v 30 z"
+   id="path10371"
+   willChange="" />
+                    <path
+   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
+   d="M 9,257 V 227 H 5 v 30 z"
+   id="path10373"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2;stroke:#4c4c4c;stroke-width:2"
+   d="m 0,247 v -10 h 195 v 10 z"
+   id="path10375"
+   willChange="" />
+                    <path
+   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
+   d="m 191,503 v -30 h -6 v 30 z"
+   id="path10377"
+   willChange="" />
+                    <path
+   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
+   d="M 9,503 V 473 H 5 v 30 z"
+   id="path10379"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2;stroke:#4c4c4c;stroke-width:2"
+   d="m 0,493 v -10 h 195 v 10 z"
+   id="path10381"
+   willChange="" />
+                    <path
+   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
+   d="M 15,731 V 495 h 164 v 236 z"
+   id="path10383"
+   willChange="" />
+                    <path
+   style="fill:#d9d9d9"
+   d="M 21,727 H 175 L 97,613 Z"
+   id="path10385"
+   willChange="" />
+                    <path
+   style="fill:#bfbfbf"
+   d="M 97,613 21,727 V 499 Z"
+   id="path10387"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2"
+   d="M 21,499 H 175 L 97,613 Z"
+   id="path10389"
+   willChange="" />
+                    <path
+   style="fill:#cccccc;stroke:#4c4c4c;stroke-width:2"
+   d="M 15,979 V 741 h 164 v 238 z"
+   id="path10391"
+   willChange="" />
+                    <path
+   style="fill:#d9d9d9"
+   d="M 21,975 H 175 L 97,861 Z"
+   id="path10393"
+   willChange="" />
+                    <path
+   style="fill:#bfbfbf"
+   d="M 97,861 21,975 V 747 Z"
+   id="path10395"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2"
+   d="M 21,747 H 175 L 97,861 Z"
+   id="path10397"
+   willChange="" />
+                    <path
+   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
+   d="m 191,753 v -32 h -6 v 32 z"
+   id="path10399"
+   willChange="" />
+                    <path
+   style="fill:#4c4c4c;stroke:#4c4c4c;stroke-width:2"
+   d="M 9,753 V 721 H 5 v 32 z"
+   id="path10401"
+   willChange="" />
+                    <path
+   style="fill:#b2b2b2;stroke:#4c4c4c;stroke-width:2"
+   d="m 0,741 v -10 h 195 v 10 z"
+   id="path10403"
+   willChange="" />
+               </g>
+          </g></g></svg>

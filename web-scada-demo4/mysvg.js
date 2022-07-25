@@ -6,7 +6,7 @@ var allItems = {};
 
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://192.168.1.122:9999/demoHub")
+    .withUrl("http://192.168.1.163:9999/demoHub")
     .withAutomaticReconnect()
     .configureLogging(signalR.LogLevel.Information)
     .build();
@@ -96,6 +96,7 @@ function itemChange(itemName, itemValue){
         if (aa[i].getAttribute("tip") === "motor") {
             checkMotor(itemValue, aa[i]);
             changeMotorTag(aa[i],itemValue);
+            aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
               Motor_Click(popUpRootTag);
               $('#popUpModal').modal('show');
@@ -105,6 +106,7 @@ function itemChange(itemName, itemValue){
           if(aa[i].getAttribute("class") === "klepe"){
             checkKlepe(itemValue, aa[i]);
             changeKlepeTag(aa[i],itemValue);
+            aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
               Klepe_Click(popUpRootTag);
               $('#popUpModal').modal('show');
@@ -113,13 +115,16 @@ function itemChange(itemName, itemValue){
           if(aa[i].getAttribute("class")==="klepe2"){
             checkKlepe2Yon(itemValue, aa[i]);
             changeKlepe2YonTag(aa[i],itemValue);
+            aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
               Klepe2Yon_Click(popUpRootTag);
               $('#popUpModal').modal('show');
+              
             });
           }
         }
         if (aa[i].getAttribute("tip") === "elevator") {
+          // console.log(aa[i].children[0] +": " +itemValue);
             checkElevator(itemValue, aa[i]);
         }
       }
@@ -224,7 +229,7 @@ function btnAlarmClick() {
   var modal = document.getElementById("modalDialog");
   if (parametre.style.display === "inherit") {
     document.getElementById("tdParametre").style.display = "none";
-    modal.style.width = "286px";
+    modal.style.width = "350px";
     btnAlarm.innerHTML = ">";
   }
   else {
@@ -1344,6 +1349,7 @@ function changeElevatorColor(color, elevator) {
   for (var k = 0; k < elevator.children.length; k++) {
     var bb = elevator.children[k];
     if (bb.hasAttribute("willChange")) {
+      console.log(bb.children[k]);
       bb.children[k].setAttribute("style", `fill:${color}`);
     }
     for (var j = 0; j < bb.children.length; j++) {

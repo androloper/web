@@ -14,12 +14,18 @@
                 crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
         <script src="mysvg.js"></script>
+        <style>
+            .modal{
+                overflow-x: hidden !important;
+                overflow-y: hidden !important;
+            }
+        </style>
     </head>
     <body>
         <div style="padding-left: 5%; padding-right: 5%">
             <!--  <button style="width: 100px; height: 50px" onclick="changeColor('green')">Change Color</button>-->
             <!-- <button style="width: 100px; height: 50px" onclick="startScada()">Start</button> -->
-            <object style="width: 100%;" id="svg_obj" data="celiksilo.svg" type="image/svg+xml"></object>
+            <object style="width:100%" id="svg_obj" data="celiksilo.svg" type="image/svg+xml"></object>
             <!-- <object style="width: 100%; height:95%" id="svg_obj" data="hammadde.svg" type="image/svg+xml"></object> -->
             <br><br>
             <!-- Modal -->
@@ -44,18 +50,16 @@
             </div> -->
 
             <div id="popUpModal" class="modal" onclick="popUpFlag = false;">
-                <div class="modal-dialog" id="modalDialog" style="height: 100%; width:286px;">
+                <div class="modal-dialog" id="modalDialog" style="height: 100%; width:350px;">
                 <table style="width: 100%; padding: 14px;" class="modal-content">
                     <tr style="height: 100%; width: auto;">
-                        <div class="modal-header" style="background:#3a2a6d;">
-                            <h1 style="text-align: center; padding-top:9px; color: lightgrey;">POPUP</h3>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">X</button>
-                        </div>
                         <td style="height: 100%; width: auto;">
                             <div class="modal-content">
                                 <div class="modal-header" id="modalHeader">
-                                    <h3 style="text-align: center" id="MotorPopupHeader">PLC Tag Name</h3>
-                                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button> -->
+                                    <h3 style="text-align: center; padding-top: 8px;" id="MotorPopupHeader">PLC Tag Name</h3>
+                                <div style="padding-left: 5px;">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button>
+                                    </div>
                                 </div>
                                 <div id="popupBody" class="modal-body" style="padding-left: 30px;">
                                 </div>
@@ -77,4 +81,27 @@
             </div>
         </div>
     </body>
+    <script type="text/javascript">
+        var contextmenu = document.getElementById('popUpModal');
+    var initX, initY, mousePressX, mousePressY;
+
+    contextmenu.addEventListener('mousedown', function(event) {
+        initX = this.offsetLeft;
+        initY = this.offsetTop;
+        mousePressX = event.clientX;
+        mousePressY = event.clientY;
+
+        this.addEventListener('mousemove', repositionElement, false);
+
+        window.addEventListener('mouseup', function() {
+        contextmenu.removeEventListener('mousemove', repositionElement, false);
+        }, false);
+
+    }, false);
+
+    function repositionElement(event) {
+        this.style.left = initX + event.clientX - mousePressX + 'px';
+        this.style.top = initY + event.clientY - mousePressY + 'px';
+    }
+    </script>
 </html>
