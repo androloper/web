@@ -49,8 +49,8 @@
                 </div>
             </div> -->
 
-            <div id="popUpModal" class="modal" onclick="popUpFlag = false;">
-                <div class="modal-dialog" id="modalDialog" style="height: 100%; width:350px;">
+            <div id="popUpModal" class="modal fade" onclick="popUpFlag = false;">
+                <div class="modal-dialog" id="modalDialog" style="height: 100%; width:250px;">
                 <table style="width: 100%; padding: 14px;" class="modal-content">
                     <tr style="height: 100%; width: auto;">
                         <td style="height: 100%; width: auto;">
@@ -61,12 +61,12 @@
                                     <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">x</button>
                                     </div>
                                 </div>
-                                <div id="popupBody" class="modal-body" style="padding-left: 30px;">
+                                <div id="popupBody" class="modal-body">
                                 </div>
                             </div>
                         </td>
-                        <td style="padding:12px; height: 100%;">
-                            <button style="width: 100%; height: 100%; padding:6px" id="btnAlarm" onclick="btnAlarmClick(this)" type="button">></button>
+                        <td style="padding:8px; height:1vh;">
+                            <button style="width: 100%; height: 100%; padding:6px;" id="btnAlarm" onclick="btnAlarmClick(this)" type="button">></button>
                         </td>
                         <td id="tdParametre" style="display: none; width: auto;">
                             <table class="modal-content" style="width: auto;">
@@ -83,25 +83,28 @@
     </body>
     <script type="text/javascript">
         var contextmenu = document.getElementById('popUpModal');
-    var initX, initY, mousePressX, mousePressY;
+        var initX, initY, mousePressX, mousePressY;
 
-    contextmenu.addEventListener('mousedown', function(event) {
-        initX = this.offsetLeft;
-        initY = this.offsetTop;
-        mousePressX = event.clientX;
-        mousePressY = event.clientY;
+        contextmenu.addEventListener('mousedown', function(event) {
+            initX = this.offsetLeft;
+            initY = this.offsetTop;
+            mousePressX = event.clientX;
+            mousePressY = event.clientY;
 
-        this.addEventListener('mousemove', repositionElement, false);
+            this.addEventListener('mousemove', repositionElement, false);
 
-        window.addEventListener('mouseup', function() {
-        contextmenu.removeEventListener('mousemove', repositionElement, false);
+            window.addEventListener('mouseup', function() {
+            contextmenu.removeEventListener('mousemove', repositionElement, false);
+            }, false);
+
         }, false);
 
-    }, false);
-
-    function repositionElement(event) {
-        this.style.left = initX + event.clientX - mousePressX + 'px';
-        this.style.top = initY + event.clientY - mousePressY + 'px';
-    }
+        function repositionElement(event) {
+            this.style.left = initX + event.clientX - mousePressX + 'px';
+            this.style.top = initY + event.clientY - mousePressY + 'px';
+        }
+        $('#popUpModal').on('hidden.bs.modal', function () {
+            $('#popUpModal .modal-body').html('');
+        });
     </script>
 </html>

@@ -2,6 +2,8 @@ window.onload = function () {
   startHubConn();
 };
 
+modal = document.getElementById("popUpModal");
+
 var allItems = {};
 
 //SignalR Configuration
@@ -83,7 +85,20 @@ async function WriteToPlc(value) {
 //     }
 //   }
 // }
-
+//modal placement
+function modalPositioning(event) {
+  modal = document.getElementById("popUpModal");
+  if(event.x< modal.style.left){
+    modal.style.left = event.x;
+  } else {
+    modal.style.right = (event.x-screen.width);
+  }
+  if(event.y< screen.height/2){
+    modal.style.top = event.y;
+  } else {
+    modal.style.bottom = (event.y-screen.height);
+  }
+}
 //assigning the values from signalr
 function itemChange(itemName, itemValue){
   const svg = document.getElementById("svg_obj").contentDocument;
@@ -98,6 +113,7 @@ function itemChange(itemName, itemValue){
             changeMotorTag(aa[i],itemValue);
             aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
+              modalPositioning(event);
               Motor_Click(popUpRootTag);
               $('#popUpModal').modal('show');
           });
@@ -108,6 +124,7 @@ function itemChange(itemName, itemValue){
             changeKlepeTag(aa[i],itemValue);
             aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
+              modalPositioning(event);
               Klepe_Click(popUpRootTag);
               $('#popUpModal').modal('show');
             });
@@ -117,9 +134,9 @@ function itemChange(itemName, itemValue){
             changeKlepe2YonTag(aa[i],itemValue);
             aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
+              modalPositioning(event);
               Klepe2Yon_Click(popUpRootTag);
               $('#popUpModal').modal('show');
-              
             });
           }
         }
@@ -229,12 +246,12 @@ function btnAlarmClick() {
   var modal = document.getElementById("modalDialog");
   if (parametre.style.display === "inherit") {
     document.getElementById("tdParametre").style.display = "none";
-    modal.style.width = "350px";
+    modal.style.width = "250px";
     btnAlarm.innerHTML = ">";
   }
   else {
     document.getElementById("tdParametre").style.display = "inherit";
-    modal.style.width = "600px";
+    modal.style.width = "420px";
     btnAlarm.innerHTML = "<";
   }
 
@@ -246,10 +263,12 @@ window.onclick = function (event) {
 }
 
 function ClosePopUp() {
-  modal = document.getElementById("popUpModal");
   if (popUpFlag) {
     popUpFlag = false;
-    modal.setAttribute("style","display: none");
+    $('#popUpModal').on('hidden.bs.modal', function () {
+      // $('#popUpModal .modal-body').html('');
+    });
+    // $(".modal-backdrop").hide();
     popUpRootTag = "";
     popUpType = "";
   }
@@ -297,6 +316,27 @@ var popUpFlag = false;
 //   MouseY = e.pageY;
 // });
 
+// function popupKonumHesapla(popup, mouseX, mouseY) {
+//   var screenHeight = screen.height;
+//   var screenWidth = screen.width;
+//   if (mouseY < (screenHeight / 2)) {
+//     popup.style.top = mouseY + 'px';
+//   } else {
+//     console.log(popup);
+//     popup.getAttribute("style", "top") = mouseY + 'px';
+//   }
+//   if (mouseX < (screenWidth / 2)) {
+//     popup.style.left = mouseX + 'px';
+//   } else {
+//     popup.style.left = mouseX + 'px';
+//   }
+// }
+
+// var modal = document.getElementById("popUpModal");
+
+// popupKonumHesapla(modal, MouseX, MouseY);
+
+
 var ShowPopUp = function () {
   popUpFlag = false;
   var popupHTML = "";
@@ -320,13 +360,11 @@ var ShowPopUp = function () {
   }
 
 
-  modal = document.getElementById("popUpModal");
-
-  modal.setAttribute("style","display:block;");
-
   // popupKonumHesapla(modal, MouseX, MouseY);
 
-  document.getElementById('MotorPopupHeader').innerHTML = popUpRootTag;
+  var motorAd = popUpRootTag.substring(6);
+  var cihazAd = motorAd.split('.');
+  document.getElementById('MotorPopupHeader').innerHTML = cihazAd[0];
   document.getElementById('popupBody').innerHTML = popupHTML;
   document.getElementById('tdPopupTab').innerHTML = popupTabs;
 
@@ -754,23 +792,6 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
   return headerColor;
 }
 
-// function popupKonumHesapla(popup, mouseX, mouseY) {
-//   var screenHeight = screen.height;
-//   var screenWidth = screen.width;
-//   var popupHeihgt = popup.offsetHeight;
-//   var popupWidth = popup.offsetWidth;
-//   if (mouseY < (screenHeight / 2)) {
-//     popup.style.top = mouseY + 'px';
-//   } else {
-//     popup.style.top = (mouseY - popupHeihgt) + 'px';
-//   }
-//   if (mouseX < (screenWidth / 2)) {
-//     popup.style.left = mouseX + 'px';
-//   } else {
-//     popup.style.left = (mouseX - popupWidth) + 'px';
-//   }
-// }
-
 function getMotorPopUpHTML() {
   var a =
 
@@ -793,60 +814,60 @@ function getMotorPopUpAlarmInputOutputHTML() {
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">ALARM</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Termik Alarm'
       + '</td>'
       + '<td id="pnlArzTermik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Devir Bekçisi'
       + '</td>'
       + '<td id="pnlArzDevirBekcisi" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kontaktör Arıza'
       + '</td>'
       + '<td id="pnlArzKontaktor" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Bakım Şalteri'
       + '</td>'
       + '<td id="pnlArzBakimSalteri" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Bakım Zamanı'
       + '</td>'
       + '<td id="pnlArzBakimZamani" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Bant Kaydı'
       + '</td>'
       + '<td id="pnlArzBantKaydi" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Taşma Arıza'
       + '</td>'
       + '<td id="pnlArzTasma" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Akım Arıza'
       + '</td>'
       + '<td id="pnlArzAkim" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Emniyet Arıza'
       + '</td>'
       + '<td id="pnlArzEmniyet" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Devir Arıza'
       + '</td>'
       + '<td id="pnlArzDevir" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
@@ -856,55 +877,55 @@ function getMotorPopUpAlarmInputOutputHTML() {
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">Input/Output</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Termik'
       + '</td>'
       + '<td id="pnlTermik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Taşma Switch'
       + '</td>'
       + '<td id="pnlTasmaSw" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Çalıştı'
       + '</td>'
       + '<td id="pnlCalisti" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Devir Bekçisi'
       + '</td>'
       + '<td id="pnlDevirBekcisi" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Bakım Şalteri'
       + '</td>'
       + '<td id="pnlBakimSalteri" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Local Start'
       + '</td>'
       + '<td id="pnlLocalStart" class="popUpPanel" style="background-color: gray; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Bant Kaydı'
       + '</td>'
       + '<td id="pnlBantKaydi" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Emniyet Switch'
       + '</td>'
       + '<td id="pnlEmniyetSw" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Motor Start'
       + '</td>'
       + '<td id="pnlMotorStart1" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
@@ -932,18 +953,18 @@ function getKlepePopUpAlarmInputOutputHTML() {
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">ALARM</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Açma Arıza'
       + '</td>'
       + '<td id="pnlArzAcma" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kapama Arıza'
       + '</td>'
       + '<td id="pnlArzKapama" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Switch Arıza'
       + '</td>'
       + '<td id="pnlArzSW" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
@@ -954,13 +975,13 @@ function getKlepePopUpAlarmInputOutputHTML() {
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">Input/Output</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Açık Sensör'
       + '</td>'
       + '<td id="pnlSimAcik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
 
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kapalı Sensör'
       + '</td>'
       + '<td id="pnlSimKapali" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
@@ -987,34 +1008,34 @@ function getKlepe2YonPopUpAlarmInputOutputHTML() {
       + '<tr style="border: 2px solid black;">'
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">ALARM</td>'
       + '</tr>'
-      + '<tr>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<tr style="border: 1px solid black;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Açma Arıza'
       + '</td>'
       + '<td id="pnlArzAcma" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kapama Arıza'
       + '</td>'
       + '<td id="pnlArzKapama" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Switch Arıza'
       + '</td>'
       + '<td id="pnlArzSW" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
       + '</tr > '
-      + '<tr style="border: 1px solid black;">'
+      + '<tr style="border: 2px solid black;">'
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">Input/Output</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Açık Sensör'
       + '</td>'
       + '<td id="pnlSimAcik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kapalı Sensör'
       + '</td>'
       + '<td id="pnlSimKapali" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
@@ -1042,23 +1063,23 @@ function getKlepe3YonPopUpAlarmInputOutputHTML() {
       + '<td colspan="4" style="text-align: center; background-color: lightgray;">ALARM</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Açma Arıza'
       + '</td>'
       + '<td id="pnlArzAcma" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kapama Arıza'
       + '</td>'
       + '<td id="pnlArzKapama" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Switch Arıza'
       + '</td>'
       + '<td id="pnlArzSW" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Orta Arıza'
       + '</td>'
       + '<td id="pnlArzOrta" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
@@ -1068,12 +1089,12 @@ function getKlepe3YonPopUpAlarmInputOutputHTML() {
       + '<td colspan="4" style="text-align: center; background-color: lightgray; ">Input/Output</td>'
       + '</tr>'
       + '<tr style="border: 1px solid black;">'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Açık Sensör'
       + '</td>'
       + '<td id="pnlSimAcik" class="popUpPanel" style="background-color: lime; width: 15%; border: 1px solid black;">'
       + '</td>'
-      + '<td style="background-color: whitesmoke; width: 35%; font-size: 12px;">'
+      + '<td style="background-color: whitesmoke; width: 35%; font-size: 10px;">'
       + 'Kapalı Sensör'
       + '</td>'
       + '<td id="pnlSimKapali" class="popUpPanel" style="background-color: red; width: 15%; border: 1px solid black;"></td>'
