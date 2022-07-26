@@ -1,5 +1,13 @@
 window.onload = function () {
   startHubConn();
+  // jQuery(document).ready(function(){
+  //   jQuery(function() {
+  //         jQuery(this).bind("contextmenu", function(event) {
+  //           alert('12');
+  //           event.preventDefault();
+  //         });
+  //     });
+  // });
 };
 
 modal = document.getElementById("popUpModal");
@@ -86,17 +94,19 @@ async function WriteToPlc(value) {
 //   }
 // }
 //modal placement
-function modalPositioning(event) {
-  modal = document.getElementById("popUpModal");
-  if(event.x< modal.style.left){
-    modal.style.left = event.x;
+function modalPositioning(modal, event) {
+  // if(event.x< modal.style.left){
+  if(event.x<(screen.width/1.6)){
+    modal.style.left = event.x-(screen.width/4);
   } else {
-    modal.style.right = (event.x-screen.width);
+    // modal.style.right = event.x-screen.width;
+    modal.style.left = event.x/6;
   }
-  if(event.y< screen.height/2){
+  if(event.y< (screen.height/2)){
     modal.style.top = event.y;
   } else {
-    modal.style.bottom = (event.y-screen.height);
+    // modal.style.bottom = event.y-screen.height;
+    modal.style.top = event.y-(screen.height/3);
   }
 }
 //assigning the values from signalr
@@ -113,7 +123,8 @@ function itemChange(itemName, itemValue){
             changeMotorTag(aa[i],itemValue);
             aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
-              modalPositioning(event);
+              modal = document.getElementById("popUpModal");
+              modalPositioning(modal, event);
               Motor_Click(popUpRootTag);
               $('#popUpModal').modal('show');
           });
@@ -124,7 +135,8 @@ function itemChange(itemName, itemValue){
             changeKlepeTag(aa[i],itemValue);
             aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
-              modalPositioning(event);
+              modal = document.getElementById("popUpModal");
+              modalPositioning(modal, event);
               Klepe_Click(popUpRootTag);
               $('#popUpModal').modal('show');
             });
@@ -134,7 +146,8 @@ function itemChange(itemName, itemValue){
             changeKlepe2YonTag(aa[i],itemValue);
             aa[i].setAttribute("style","cursor: pointer");
             aa[i].addEventListener("click", event => {
-              modalPositioning(event);
+              modal = document.getElementById("popUpModal");
+              modalPositioning(modal,event);
               Klepe2Yon_Click(popUpRootTag);
               $('#popUpModal').modal('show');
             });

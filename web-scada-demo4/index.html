@@ -14,15 +14,31 @@
                 crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
         <script src="mysvg.js"></script>
+        <!-- <script>
+            $(document).ready(function(){
+               $(document).bind("contextmenu",function(e){
+                alert('123456');
+                  return false;
+               });
+            });
+            </script> -->
         <style>
             .modal{
                 overflow-x: hidden !important;
                 overflow-y: hidden !important;
             }
+            .text-selection-none{
+                user-select: none; /* supported by Chrome and Opera */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none;
+            }
         </style>
     </head>
+    <!-- <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false"> -->
     <body>
-        <div style="padding-left: 5%; padding-right: 5%">
+        <div style="padding-left: 5%; padding-right: 5%" class="text-selection-none">
             <!--  <button style="width: 100px; height: 50px" onclick="changeColor('green')">Change Color</button>-->
             <!-- <button style="width: 100px; height: 50px" onclick="startScada()">Start</button> -->
             <object style="width:100%" id="svg_obj" data="celiksilo.svg" type="image/svg+xml"></object>
@@ -50,7 +66,7 @@
             </div> -->
 
             <div id="popUpModal" class="modal fade" onclick="popUpFlag = false;">
-                <div class="modal-dialog" id="modalDialog" style="height: 100%; width:250px;">
+                <div class="modal-dialog" id="modalDialog" style="width:250px;">
                 <table style="width: 100%; padding: 14px;" class="modal-content">
                     <tr style="height: 100%; width: auto;">
                         <td style="height: 100%; width: auto;">
@@ -81,16 +97,19 @@
             </div>
         </div>
     </body>
+    <script>
+        
+    </script>
     <script type="text/javascript">
         var contextmenu = document.getElementById('popUpModal');
         var initX, initY, mousePressX, mousePressY;
-
         contextmenu.addEventListener('mousedown', function(event) {
             initX = this.offsetLeft;
             initY = this.offsetTop;
             mousePressX = event.clientX;
             mousePressY = event.clientY;
-
+            event.preventDefault();
+            event.stopPropagation();
             this.addEventListener('mousemove', repositionElement, false);
 
             window.addEventListener('mouseup', function() {
@@ -98,13 +117,15 @@
             }, false);
 
         }, false);
-
         function repositionElement(event) {
             this.style.left = initX + event.clientX - mousePressX + 'px';
             this.style.top = initY + event.clientY - mousePressY + 'px';
         }
         $('#popUpModal').on('hidden.bs.modal', function () {
-            $('#popUpModal .modal-body').html('');
+            // $('#popUpModal .modal-body').html('');
+            $('#body').trigger('click');
         });
+        // $('body').removeClass('modal-open');
+        // $('.modal-backdrop').remove();
     </script>
 </html>
