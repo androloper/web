@@ -195,185 +195,183 @@ function itemChange(itemName, itemValue){
         var flag=false;
           var bb = aa[i].children;
           if(bb[j].getAttribute('PlcTagName')===itemName){
-            if(bb[j].getAttribute('PlcTagName').includes('.STAT')){
-              console.log('burasi1', bb[j], itemValue);
-              changeTextDurum(Bit(itemValue), bb[j]);
-              flag=true;
-            }
-            else if (bb[j].getAttribute('PlcTagName').includes('.ARZ')){
-              console.log('burasi2', bb[j], itemValue);
-                changeHataStatus(Bit(itemValue), bb[j]);
-                flag=true;
-            }
-            else if (bb[j].getAttribute('PlcTagName').includes('.DNOSCD')){
-              // console.log('burasi3', bb[j].id, itemValue);
-              changeTextDolum(itemValue, bb[j], bb[j].id);
-              flag=true;
-            }
-            else if (bb[j].getAttribute('PlcTagName').includes('.ANOSCD')){
-              // console.log('burasi4', bb[j], itemValue);
-              changeText(itemValue, bb[j]);
-              flag=true;
-            }
-
-            else if (bb[j].getAttribute('PlcTagName').includes('.LINKNO')){
-              // console.log('burasi5', bb[j], itemValue);
-                changeText(itemValue, bb[j]);
-                flag=true;
-            }
-            else if (bb[j].getAttribute('PlcTagName').includes('.AKTIFRST')){
-              // console.log('burasi6', bb[j], itemValue);
-              // btnResetSendValues(itemValue, cc[k]);
-              bb[j].setAttribute("style","cursor: pointer");
-              bb[j].addEventListener("click", event => {
-                alert('Resetlendi');
-              });
-              flag=true;
-            }
-            else if (bb[j].getAttribute('PlcTagName').includes('.START')){
-              // console.log('burasi7', bb[j], itemValue);
-              // btnBaslatSendValues(itemValue, cc[k]);
-              bb[j].setAttribute("style","cursor: pointer");
-              bb[j].addEventListener("click", event => {
-                alert('Başlatıldı')
-              });
-              flag=true;
-            }
-            else if (bb[j].getAttribute('PlcTagName').includes('.STOP')){
-              // console.log('burasi8', bb[j], itemValue);
-              // btnDurdurSendValues(itemValue, cc[k]);
-              bb[j].setAttribute("style","cursor: pointer");
-              bb[j].addEventListener("click", event => {
-                alert('Durduruldu')
-              });
-              flag=true;
-            }
-
-            // else if(bb[j].getAttribute('PlcTagName')){
-            //     bb[j].innerHTML=itemValue;
-            //     flag=true;
-            // }
+            changeRelatedPlace(itemValue, bb[j]);
+            flag=true;
           }
           for(var k=0; k<bb[j].children.length;k++){
             var cc = bb[j].children;
             if(cc[k].getAttribute('PlcTagName')===itemName){
-                // changeText(itemValue, 'txtHM1IsEmriNo');
-                // if(cc[0].getAttribute('PlcTagName')){
-                //   cc[0].innerHTML=itemValue;
-                //   flag=true;
-                // }
-                  if(cc[k].getAttribute('PlcTagName').includes('.STAT')){
-                    console.log('burasi11', cc[k], itemValue);
-                    changeTextDurum(Bit(itemValue), cc[k]);
-                    flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.ARZ')){
-                    console.log('burasi12', cc[k], itemValue);
-                      changeHataStatus(Bit(itemValue), cc[k]);
-                      flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.DNOSCD')){
-                    // console.log('burasi13', cc[k], itemValue);
-                    changeTextDolum(itemValue, cc[k]);
-                    flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.ANOSCD')){
-                    // console.log('burasi14', cc[k], itemValue);
-                    changeText(itemValue, cc[k]);
-                    flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.LINKNO')){
-                    // console.log('burasi15', cc[k], itemValue);
-                      changeText(itemValue, cc[k]);
-                      flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.AKTIFRST')){
-                    // console.log('burasi16', cc[k], itemValue);
-                    // btnResetSendValues(itemValue, cc[k]);
-                    cc[k].setAttribute("style","cursor: pointer");
-                    cc[k].addEventListener("click", event => {
-                      alert('Resetlendi');
-                    });
-                    flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.START')){
-                    // console.log('burasi17', cc[k], itemValue);
-                    // btnBaslatSendValues(itemValue, cc[k]);
-                    cc[k].setAttribute("style","cursor: pointer");
-                    cc[k].addEventListener("click", event => {
-                      alert('Başlatıldı')
-                    });
-                    flag=true;
-                  }
-                  else if (cc[k].getAttribute('PlcTagName').includes('.STOP')){
-                    // console.log('burasi18', cc[k], itemValue);
-                    // btnDurdurSendValues(itemValue, cc[k]);
-                    cc[k].setAttribute("style","cursor: pointer");
-                    cc[k].addEventListener("click", event => {
-                      alert('Durduruldu')
-                    });
-                    flag=true;
-                  }
-                
+                changeRelatedPlace(itemValue, cc[k]);
+                flag=true;
             }
           }
-        
       }
     }
   }
 }
 
+function changeRelatedPlace(itemValue, item){
+  if(item.getAttribute('PlcTagName').includes('.STAT')){
+    // console.log('burasi11', cc[k], itemValue);
+    changeTextDurum(itemValue, item);
+  }
+  else if (item.getAttribute('PlcTagName').includes('.ARZ')){
+    // console.log('burasi12', cc[k], Bit(itemValue,1));
+      changeHataStatus(itemValue, item);
+  }
+  else if (item.getAttribute('PlcTagName').includes('.DNOSCD')){
+    // console.log('burasi13', cc[k], itemValue);
+    changeTextDolum(itemValue, item);
+  }
+  else if (item.getAttribute('PlcTagName').includes('.ANOSCD')){
+    // console.log('burasi14', cc[k], itemValue);
+    changeText(itemValue, item);
+  }
+  else if (item.getAttribute('PlcTagName').includes('.LINKNO')){
+    // console.log('burasi15', cc[k], itemValue);
+      changeText(itemValue, item);
+  }
+  else if (item.getAttribute('PlcTagName').includes('.AKTIFRST')){
+    // console.log('burasi16', cc[k], itemValue);
+    // btnResetSendValues(itemValue, cc[k]);
+    item.setAttribute("style","cursor: pointer");
+    item.addEventListener("click", event => {
+      alert('Resetlendi');
+    });
+  }
+  else if (item.getAttribute('PlcTagName').includes('.START')){
+    // console.log('burasi17', cc[k], itemValue);
+    // btnBaslatSendValues(itemValue, cc[k]);
+    item.setAttribute("style","cursor: pointer");
+    item.addEventListener("click", event => {
+      alert('Başlatıldı')
+    });
+  }
+  else if (item.getAttribute('PlcTagName').includes('.STOP')){
+    // console.log('burasi18', cc[k], itemValue);
+    // btnDurdurSendValues(itemValue, cc[k]);
+    item.setAttribute("style","cursor: pointer");
+    item.addEventListener("click", event => {
+      alert('Durduruldu')
+    });
+  }
+}
+
+//alttaki yazı ve üstteki menü(max-aktif-hata-hazır)
+function changeTextDurum(val, durum) {
+  if(Bit(val, 0)){
+    if(durum.id.includes('Hata'))
+      changeHataStatus(Bit(val, 0), durum);
+    if(durum.id.includes('Durum'))
+      durum.innerHTML='GRUP ARIZADA';
+  } else if(Bit(val, 5)){
+    if(durum.id.includes('Hazir'))
+      changeHazirStatus(Bit(val, 5), durum);
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='START BEKLİYOR';
+      durum.setAttribute('x','1435');
+      durum.setAttribute('style', 'fill: #FFC1C0C0');
+    }
+  } else if(Bit(val, 1)){
+    if(durum.id.includes('Max'))
+      changeMaxStatus(Bit(val, 1), durum);
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='SİLO MAX';
+      durum.setAttribute('x','1460');
+      durum.setAttribute('style', 'fill: red');
+    }
+  } else if(Bit(val, 2)){
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='TRANSFER HAZIR';
+      durum.setAttribute('x','1435');
+      durum.setAttribute('style', 'fill: #FF92C792');
+    }
+  } else if(Bit(val, 3)){
+    if(durum.id.includes('Aktif'))
+      changeAktifStatus(Bit(val, 3), durum);
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='TRANSFER DEVREDE';
+      durum.setAttribute('x','1425');
+      durum.setAttribute('style', 'fill: gray');
+    }
+  } else if(Bit(val, 4)){
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='TRANSFER DURDURULUYOR';
+      durum.setAttribute('x','1400');
+      durum.setAttribute('style', 'fill: #FFDEC078');
+    }
+  } else if(Bit(val, 6)){
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='SİLO DEĞİŞTİRİLİYOR';
+      durum.setAttribute('x','1420');
+      durum.setAttribute('style', 'fill: #FFDEC078');
+    }
+  } else if(Bit(val, 7)){
+    if(durum.id.includes('Hata'))
+      changeHataStatus(Bit(val, 7), durum);
+    if(durum.id.includes('Durum')){
+      durum.innerHTML='SİLO MAX ARIZADA';
+      durum.setAttribute('x','1430');
+      durum.setAttribute('style', 'fill: #FFDB9292');
+    }
+  }
+}
+
+//alım ve iş emri no
 function changeText(val, durum) {
   // console.log(val, id);
   durum.innerHTML=val;
 }
 
-function changeTextDolum(val, durum, id) {
+//dolumlar
+function changeTextDolum(val, durum) {
   // console.log(id.substring(11), val.length);
-  if(id.substring(11)<=val.length){
+  if(durum.id.substring(11)<=val.length){
     for (let i=0; i<=val.length; i++){
-      if(id.substring(11)===(i+1).toString()){
+      if(durum.id.substring(11)===(i+1).toString()){
         durum.innerHTML = val[i];
         // console.log(val[i]);
       }
     }
+  } else {
+    durum.innerHTML = "-";
   }
-  // if(durum.id === id) {
-  //   durum.innerHTML = val;
-  // }
-  
 }
 
+//aktif
 function changeAktifStatus(val, durum){
   if(val) {
-    durum.style.color = 'limegreen';
+    durum.style.fill = 'limegreen';
   } else {
-    durum.style.color = 'white';
+    durum.style.fill = 'white';
   }
 }
 
+//hazır
 function changeHazirStatus(val, durum){
   if(val) {
-    durum.style.color = 'limegreen';
+    durum.style.fill = 'limegreen';
   } else {
-    durum.style.color = 'yellow';
+    durum.style.fill = 'white';
     //    durum.setAttribute('style', 'color: yellow');
   }
 }
 
+//max
 function changeMaxStatus(val, durum){
   if(val) {
-    durum.style.color = 'red';
+    durum.style.fill = 'red';
   } else {
-    durum.style.color = 'yellow';
+    durum.style.fill = 'white';
   }
 }
 
+//hata
 function changeHataStatus(val, durum){
   if(val) {
-    durum.style.color = 'red';
+    durum.style.fill = 'red';
   } else {
-    durum.style.color = 'yellow';
+    durum.style.fill = 'white';
   }
 }
 
@@ -399,30 +397,6 @@ function btnResetSendValues(val, button){
   }
 }
 
-function changeTextDurum(val, durum) {
-  if(Bit(val, 0)){
-    changeHataStatus(Bit(val, 0), durum);
-    durum.innerHTML='GRUP ARIZADA';
-  } else if(Bit(val, 5)){
-    changeHazirStatus(Bit(val, 5), durum);
-    durum.innerHTML='START BEKLİYOR';
-  } else if(Bit(val, 1)){
-    changeMaxStatus(Bit(val, 1), durum);
-    durum.innerHTML='SİLO MAX';
-  } else if(Bit(val, 2)){
-    durum.innerHTML='TRANSFER HAZIR';
-  } else if(Bit(val, 3)){
-    changeAktifStatus(Bit(val, 3), durum);
-    durum.innerHTML='TRANSFER DEVREDE';
-  } else if(Bit(val, 4)){
-    durum.innerHTML='TRANSFER DURDURULUYOR';
-  } else if(Bit(val, 6)){
-    durum.innerHTML='SİLO DEĞİŞTİRİLİYOR';
-  } else if(Bit(val, 7)){
-    changeHataStatus(Bit(val, 7), durum);
-    durum.innerHTML='SİLO MAX ARIZADA';
-  }
-}
 
 //binding values
 function Bit(_val, index) {
