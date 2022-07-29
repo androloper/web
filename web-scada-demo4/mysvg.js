@@ -8,7 +8,7 @@ window.onload = function () {
   //         });
   //     });
   // });
-};
+}
 
 modal = document.getElementById("popUpModal");
 
@@ -53,7 +53,7 @@ connection.on("GetItemAll", (value) => {
 });
 
 connection.on("WriteToPlc", (val)=>{
-  //hata vermemesi için eklendi kurcalama
+  //console log'da hata vermemesi için eklendi dokunma
 });
 
 async function WriteToPlc(value) {
@@ -93,6 +93,7 @@ async function WriteToPlc(value) {
 //     }
 //   }
 // }
+
 //modal placement
 function modalPositioning(modal, event) {
   // if(event.x< modal.style.left){
@@ -109,6 +110,7 @@ function modalPositioning(modal, event) {
     modal.style.top = event.y-(screen.height/3);
   }
 }
+
 //assigning the values from signalr
 function itemChange(itemName, itemValue){
   const svg = document.getElementById("svg_obj").contentDocument;
@@ -154,7 +156,6 @@ function itemChange(itemName, itemValue){
           }
         }
         if (aa[i].getAttribute("tip") === "elevator") {
-          // console.log(aa[i].children[0] +": " +itemValue);
             checkElevator(itemValue, aa[i]);
         }
       }
@@ -189,6 +190,237 @@ function itemChange(itemName, itemValue){
         }
       }
     }
+    if(aa[i].hasAttribute("PlcGroupName")){
+      for (var j = 0; j < aa[i].children.length; j++) {
+        var flag=false;
+          var bb = aa[i].children;
+          if(bb[j].getAttribute('PlcTagName')===itemName){
+            if(bb[j].getAttribute('PlcTagName').includes('.STAT')){
+              console.log('burasi1', bb[j], itemValue);
+              changeTextDurum(Bit(itemValue), bb[j]);
+              flag=true;
+            }
+            else if (bb[j].getAttribute('PlcTagName').includes('.ARZ')){
+              console.log('burasi2', bb[j], itemValue);
+                changeHataStatus(Bit(itemValue), bb[j]);
+                flag=true;
+            }
+            else if (bb[j].getAttribute('PlcTagName').includes('.DNOSCD')){
+              // console.log('burasi3', bb[j].id, itemValue);
+              changeTextDolum(itemValue, bb[j], bb[j].id);
+              flag=true;
+            }
+            else if (bb[j].getAttribute('PlcTagName').includes('.ANOSCD')){
+              // console.log('burasi4', bb[j], itemValue);
+              changeText(itemValue, bb[j]);
+              flag=true;
+            }
+
+            else if (bb[j].getAttribute('PlcTagName').includes('.LINKNO')){
+              // console.log('burasi5', bb[j], itemValue);
+                changeText(itemValue, bb[j]);
+                flag=true;
+            }
+            else if (bb[j].getAttribute('PlcTagName').includes('.AKTIFRST')){
+              // console.log('burasi6', bb[j], itemValue);
+              // btnResetSendValues(itemValue, cc[k]);
+              bb[j].setAttribute("style","cursor: pointer");
+              bb[j].addEventListener("click", event => {
+                alert('Resetlendi');
+              });
+              flag=true;
+            }
+            else if (bb[j].getAttribute('PlcTagName').includes('.START')){
+              // console.log('burasi7', bb[j], itemValue);
+              // btnBaslatSendValues(itemValue, cc[k]);
+              bb[j].setAttribute("style","cursor: pointer");
+              bb[j].addEventListener("click", event => {
+                alert('Başlatıldı')
+              });
+              flag=true;
+            }
+            else if (bb[j].getAttribute('PlcTagName').includes('.STOP')){
+              // console.log('burasi8', bb[j], itemValue);
+              // btnDurdurSendValues(itemValue, cc[k]);
+              bb[j].setAttribute("style","cursor: pointer");
+              bb[j].addEventListener("click", event => {
+                alert('Durduruldu')
+              });
+              flag=true;
+            }
+
+            // else if(bb[j].getAttribute('PlcTagName')){
+            //     bb[j].innerHTML=itemValue;
+            //     flag=true;
+            // }
+          }
+          for(var k=0; k<bb[j].children.length;k++){
+            var cc = bb[j].children;
+            if(cc[k].getAttribute('PlcTagName')===itemName){
+                // changeText(itemValue, 'txtHM1IsEmriNo');
+                // if(cc[0].getAttribute('PlcTagName')){
+                //   cc[0].innerHTML=itemValue;
+                //   flag=true;
+                // }
+                  if(cc[k].getAttribute('PlcTagName').includes('.STAT')){
+                    console.log('burasi11', cc[k], itemValue);
+                    changeTextDurum(Bit(itemValue), cc[k]);
+                    flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.ARZ')){
+                    console.log('burasi12', cc[k], itemValue);
+                      changeHataStatus(Bit(itemValue), cc[k]);
+                      flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.DNOSCD')){
+                    // console.log('burasi13', cc[k], itemValue);
+                    changeTextDolum(itemValue, cc[k]);
+                    flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.ANOSCD')){
+                    // console.log('burasi14', cc[k], itemValue);
+                    changeText(itemValue, cc[k]);
+                    flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.LINKNO')){
+                    // console.log('burasi15', cc[k], itemValue);
+                      changeText(itemValue, cc[k]);
+                      flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.AKTIFRST')){
+                    // console.log('burasi16', cc[k], itemValue);
+                    // btnResetSendValues(itemValue, cc[k]);
+                    cc[k].setAttribute("style","cursor: pointer");
+                    cc[k].addEventListener("click", event => {
+                      alert('Resetlendi');
+                    });
+                    flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.START')){
+                    // console.log('burasi17', cc[k], itemValue);
+                    // btnBaslatSendValues(itemValue, cc[k]);
+                    cc[k].setAttribute("style","cursor: pointer");
+                    cc[k].addEventListener("click", event => {
+                      alert('Başlatıldı')
+                    });
+                    flag=true;
+                  }
+                  else if (cc[k].getAttribute('PlcTagName').includes('.STOP')){
+                    // console.log('burasi18', cc[k], itemValue);
+                    // btnDurdurSendValues(itemValue, cc[k]);
+                    cc[k].setAttribute("style","cursor: pointer");
+                    cc[k].addEventListener("click", event => {
+                      alert('Durduruldu')
+                    });
+                    flag=true;
+                  }
+                
+            }
+          }
+        
+      }
+    }
+  }
+}
+
+function changeText(val, durum) {
+  // console.log(val, id);
+  durum.innerHTML=val;
+}
+
+function changeTextDolum(val, durum, id) {
+  // console.log(id.substring(11), val.length);
+  if(id.substring(11)<=val.length){
+    for (let i=0; i<=val.length; i++){
+      if(id.substring(11)===(i+1).toString()){
+        durum.innerHTML = val[i];
+        // console.log(val[i]);
+      }
+    }
+  }
+  // if(durum.id === id) {
+  //   durum.innerHTML = val;
+  // }
+  
+}
+
+function changeAktifStatus(val, durum){
+  if(val) {
+    durum.style.color = 'limegreen';
+  } else {
+    durum.style.color = 'white';
+  }
+}
+
+function changeHazirStatus(val, durum){
+  if(val) {
+    durum.style.color = 'limegreen';
+  } else {
+    durum.style.color = 'yellow';
+    //    durum.setAttribute('style', 'color: yellow');
+  }
+}
+
+function changeMaxStatus(val, durum){
+  if(val) {
+    durum.style.color = 'red';
+  } else {
+    durum.style.color = 'yellow';
+  }
+}
+
+function changeHataStatus(val, durum){
+  if(val) {
+    durum.style.color = 'red';
+  } else {
+    durum.style.color = 'yellow';
+  }
+}
+
+function btnBaslatSendValues(val, button){
+  if(val){
+    // send signalr request
+  } else {
+    // send signalr request
+  }
+}
+function btnDurdurSendValues(val, button){
+  if(val){
+    // send signalr request
+  } else {
+    // send signalr request
+  }
+}
+function btnResetSendValues(val, button){
+  if(val){
+    // send signalr request
+  } else {
+    // send signalr request
+  }
+}
+
+function changeTextDurum(val, durum) {
+  if(Bit(val, 0)){
+    changeHataStatus(Bit(val, 0), durum);
+    durum.innerHTML='GRUP ARIZADA';
+  } else if(Bit(val, 5)){
+    changeHazirStatus(Bit(val, 5), durum);
+    durum.innerHTML='START BEKLİYOR';
+  } else if(Bit(val, 1)){
+    changeMaxStatus(Bit(val, 1), durum);
+    durum.innerHTML='SİLO MAX';
+  } else if(Bit(val, 2)){
+    durum.innerHTML='TRANSFER HAZIR';
+  } else if(Bit(val, 3)){
+    changeAktifStatus(Bit(val, 3), durum);
+    durum.innerHTML='TRANSFER DEVREDE';
+  } else if(Bit(val, 4)){
+    durum.innerHTML='TRANSFER DURDURULUYOR';
+  } else if(Bit(val, 6)){
+    durum.innerHTML='SİLO DEĞİŞTİRİLİYOR';
+  } else if(Bit(val, 7)){
+    changeHataStatus(Bit(val, 7), durum);
+    durum.innerHTML='SİLO MAX ARIZADA';
   }
 }
 
@@ -210,7 +442,6 @@ function Bit(_val, index) {
 
 function ReadItemFromList(itemList, itemName) {
   if (itemList.hasOwnProperty(itemName)) {
-    // console.log("here is "+itemList[itemName].Value);
     return itemList[itemName].Value;
   }
 }
@@ -253,7 +484,6 @@ function removeFromBetween(sub1, sub2) {
 
 //showing modals(popups)
 function btnAlarmClick() {
-  //popUpFlag = false;
   var parametre = document.getElementById("tdParametre");
   var btnAlarm = document.getElementById("btnAlarm");
   var modal = document.getElementById("modalDialog");
@@ -276,17 +506,18 @@ window.onclick = function (event) {
 }
 
 function ClosePopUp() {
-  if (popUpFlag) {
+  if(popUpFlag) {
     popUpFlag = false;
     $('#popUpModal').on('hidden.bs.modal', function () {
-      // $('#popUpModal .modal-body').html('');
+      // $('#popUpModal').hide();
+      // $('#popUpModal .modal-dialog').html('');
+      // $(".modal-dialog").hide();
     });
     // $(".modal-backdrop").hide();
     popUpRootTag = "";
     popUpType = "";
-  }
-  else
-    popUpFlag = true;
+ }
+ else popUpFlag=true;
 }
 
 function ReadItem(itemName) {
@@ -372,11 +603,8 @@ var ShowPopUp = function () {
     popupTabs = getKlepe2YonPopUpAlarmInputOutputHTML();
   }
 
-
-  // popupKonumHesapla(modal, MouseX, MouseY);
-
-  var motorAd = popUpRootTag.substring(6);
-  var cihazAd = motorAd.split('.');
+  var modalAd = popUpRootTag.substring(6);
+  var cihazAd = modalAd.split('.');
   document.getElementById('MotorPopupHeader').innerHTML = cihazAd[0];
   document.getElementById('popupBody').innerHTML = popupHTML;
   document.getElementById('tdPopupTab').innerHTML = popupTabs;
@@ -402,7 +630,7 @@ var ShowPopUp = function () {
 };
 
 function MotorButton_Click(myButton) {
-  popUpFlag = false;//butonlara basınca flag false olmalı. yoksa popup kapanır.
+  popUpFlag = false;
   MotorButton_OnClick(myButton, allItems, popUpRootTag);
 }
 
@@ -735,10 +963,7 @@ function checkKlepe3YonPopupButton(buttonList, myVal) {
 }
 
 function checkKlepe2YonPopupButton(buttonList, myVal) {
-  var headerColor = "gray"; //pop içerisindeki butoon renkleri ayarlanır ve header rengi return edilir.
-  var pasif = "#EFEFEF";
-  var aktif = "lime";
-
+  var headerColor = "gray";
   for (var i = 0; i < buttonList.length; i++) {
     if (buttonList[i].id === "btnMan") {
       if (Bit(myVal, 5)) {

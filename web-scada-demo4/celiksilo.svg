@@ -23266,7 +23266,8 @@
      y="82.010077"
      id="tspan14742"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="PLC02!HM1GRP.LINKNO">15060</tspan></tspan></text><text
+            PlcTagName="PLC02!HM1GRP.LINKNO"
+     id="txtHM1IsEmriNo">15060</tspan></tspan></text><text
           PlcGroupName="hm1"
    xml:space="preserve"
    style="font-size:4.23333px;fill:#b3b3b3;stroke-width:0.264583"
@@ -23385,7 +23386,8 @@
    y="51.176136"
    id="text9576"><tspan
      sodipodi:role="line"
-     id="PLC02!HM1GRP.ANOSCD"
+     PlcTagName="PLC02!HM1GRP.ANOSCD"
+     id="txtHM1Alim"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="356.88052"
      y="51.176136">999</tspan></text><text
@@ -23396,7 +23398,8 @@
    y="51.176136"
    id="text9580"><tspan
      sodipodi:role="line"
-     id="PLC02!HM1GRP.DNOSCD[0]"
+     PlcTagName="PLC02!HM1GRP.DNOSCD"
+     id="txtHM1Dolum1"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="367.00253"
      y="51.176136">999</tspan></text><text
@@ -23407,7 +23410,8 @@
    y="51.176136"
    id="text9584"><tspan
      sodipodi:role="line"
-     id="PLC02!HM1GRP.DNOSCD[1]"
+     PlcTagName="PLC02!HM1GRP.DNOSCD"
+     id="txtHM1Dolum2"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="379.41693"
      y="51.176136">999</tspan></text><text
@@ -23418,7 +23422,8 @@
    y="51.291546"
    id="text9588"><tspan
      sodipodi:role="line"
-     id="PLC02!HM1GRP.DNOSCD[2]"
+     PlcTagName="PLC02!HM1GRP.DNOSCD"
+     id="txtHM1Dolum3"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="391.83133"
      y="51.291546">999</tspan></text><text
@@ -23429,7 +23434,8 @@
    y="51.291546"
    id="text9592"><tspan
      sodipodi:role="line"
-     id="PLC02!HM1GRP.DNOSCD[3]"
+     PlcTagName="PLC02!HM1GRP.DNOSCD"
+     id="txtHM1Dolum4"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="404.24573"
      y="51.291546">999</tspan></text><text
@@ -23440,7 +23446,8 @@
    y="51.486454"
    id="text9596"><tspan
      sodipodi:role="line"
-     id="PLC02!HM1GRP.DNOSCD[4]"
+     PlcTagName="PLC02!HM1GRP.DNOSCD"
+     id="txtHM1Dolum5"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="416.84543"
      y="51.486454">999</tspan></text><text
@@ -23487,7 +23494,8 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11713);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="PLC02!HM1GRP.START">BAŞLAT</tspan></text><rect
+     PlcTagName="PLC02!HM1GRP.START"
+     id="txtHM1Baslat">BAŞLAT</tspan></text><rect
    style="opacity:1;fill:#aa8800;stroke-width:0.264583"
    id="rect11869"
    width="23.632557"
@@ -23501,7 +23509,8 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11875);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="PLC02!HM1GRP.RESET">RESET</tspan></text><rect
+     PlcTagName="PLC02!HM1GRP.AKTIFRST"
+     id="txtHM1Reset">RESET</tspan></text><rect
    style="opacity:1;fill:#ff5555;stroke-width:0.264583"
    id="rect11877"
    width="23.632557"
@@ -23515,7 +23524,8 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect11883);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="PLC02!HM1GRP.STOP">DURDUR</tspan></text><rect
+     PlcTagName="PLC02!HM1GRP.STOP"
+     id="txtHM1Durdur">DURDUR</tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12053"
    width="17.838514"
@@ -23531,7 +23541,8 @@
      y="211.28452"
      id="tspan14780"><tspan
        style="fill:#ffffff"
-       id="txtHM1Aktif">AKTİF</tspan></tspan></text><rect
+       PlcTagName="PLC02!HM1GRP.STAT"
+   id="txtHM1Aktif">AKTİF</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12317"
    width="17.838514"
@@ -23547,6 +23558,7 @@
      y="210.57062"
      id="tspan14784"><tspan
        style="fill:#ffffff"
+       PlcTagName="PLC02!HM1GRP.STAT"
        id="txtHM1Max">MAX</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12325"
@@ -23563,6 +23575,7 @@
      y="210.57062"
      id="tspan14788"><tspan
        style="fill:#ffffff"
+       PlcTagName="PLC02!HM1GRP.ARZ"
        id="txtHM1Hata">HATA</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect12333"
@@ -23579,6 +23592,7 @@
      y="210.57062"
      id="tspan14792"><tspan
        style="fill:#ffffff"
+       PlcTagName="PLC02!HM1GRP.STAT"
        id="txtHM1Hazir">HAZIR</tspan></tspan></text><rect
    style="fill:#b3b3b3;stroke-width:0.365036"
    id="rect17567"
@@ -23595,7 +23609,8 @@
      y="82.010077"
      id="tspan14796"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="PLC02!HM2GRP.LINKNO">15060</tspan></tspan></text><text
+       PlcTagName="PLC02!HM2GRP.LINKNO"
+      id="txtHM2IsEmriNo">15060</tspan></tspan></text><text
        PlcGroupName="hm2"
    xml:space="preserve"
    style="font-size:4.23333px;fill:#b3b3b3;stroke-width:0.264583"
@@ -23710,7 +23725,8 @@
    y="51.176136"
    id="text17619"><tspan
      sodipodi:role="line"
-     id="PLC02!HM2GRP.ANOSCD"
+     PlcTagName="PLC02!HM2GRP.ANOSCD"
+     id="txtHM2Alim"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="433.08041"
      y="51.176136">999</tspan></text><text
@@ -23721,7 +23737,8 @@
    y="51.176136"
    id="text17623"><tspan
      sodipodi:role="line"
-     id="PLC02!HM2GRP.DNOSCD[0]"
+     PlcTagName="PLC02!HM2GRP.DNOSCD"
+     id="txtHM2Dolum1"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="443.20242"
      y="51.176136">999</tspan></text><text
@@ -23732,7 +23749,8 @@
    y="51.176136"
    id="text17627"><tspan
      sodipodi:role="line"
-     id="PLC02!HM2GRP.DNOSCD[1]"
+     PlcTagName="PLC02!HM2GRP.DNOSCD"
+     id="txtHM2Dolum2"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="455.61682"
      y="51.176136">999</tspan></text><text
@@ -23743,7 +23761,8 @@
    y="51.291546"
    id="text17631"><tspan
      sodipodi:role="line"
-     id="PLC02!HM2GRP.DNOSCD[2]"
+     PlcTagName="PLC02!HM2GRP.DNOSCD"
+     id="txtHM2Dolum3"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="468.03122"
      y="51.291546">999</tspan></text><text
@@ -23754,7 +23773,8 @@
    y="51.291546"
    id="text17635"><tspan
      sodipodi:role="line"
-     id="PLC02!HM2GRP.DNOSCD[3]"
+     PlcTagName="PLC02!HM2GRP.DNOSCD"
+     id="txtHM2Dolum4"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="480.44562"
      y="51.291546">999</tspan></text><text
@@ -23765,7 +23785,8 @@
    y="51.486454"
    id="text17639"><tspan
      sodipodi:role="line"
-     id="PLC02!HM2GRP.DNOSCD[4]"
+     PlcTagName="PLC02!HM2GRP.DNOSCD"
+     id="txtHM2Dolum5"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
      x="493.04532"
      y="51.486454">999</tspan></text><text
@@ -23812,7 +23833,8 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17711);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="PLC02!HM2GRP.START">BAŞLAT</tspan></text><rect
+     PlcTagName="PLC02!HM2GRP.START"
+     id="txtHM2Baslat">BAŞLAT</tspan></text><rect
    style="opacity:1;fill:#aa8800;stroke-width:0.264583"
    id="rect17659"
    width="23.632557"
@@ -23826,7 +23848,8 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17713);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="PLC02!HM2GRP.RESET">RESET</tspan></text><rect
+     PlcTagName="PLC02!HM2GRP.AKTIFRST"
+     id="txtHM2Reset">RESET</tspan></text><rect
    style="opacity:1;fill:#ff5555;stroke-width:0.264583"
    id="rect17665"
    width="23.632557"
@@ -23840,7 +23863,8 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17715);opacity:1;fill:#000000"><tspan
      x="1342.6113"
      y="210.57062"
-     id="PLC02!HM2GRP.STOP">DURDUR</tspan></text><rect
+     PlcTagName="PLC02!HM2GRP.STOP"
+     id="txtHM2Durdur">DURDUR</tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17671"
    width="17.838514"
@@ -23855,7 +23879,7 @@
      x="1342.6113"
      y="211.28452"
      id="tspan14834"><tspan
-       style="fill:#ffffff"
+       style="fill:#ffffff" PlcTagName="PLC02!HM2GRP.STAT"
        id="txtHM2Aktif">AKTİF</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17677"
@@ -23871,7 +23895,7 @@
      x="1342.6113"
      y="210.57062"
      id="tspan14838"><tspan
-       style="fill:#ffffff"
+       style="fill:#ffffff" PlcTagName="PLC02!HM2GRP.STAT"
        id="txtHM2Max">MAX</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17683"
@@ -23886,9 +23910,9 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17721);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan14842"><tspan
+     id="tspan14842"><tspan PlcTagName="PLC02!HM2GRP.ARZ"
        style="fill:#ffffff"
-       id="PLC02!HM2GRP.ARZ">HATA</tspan></tspan></text><rect
+       id="txtHM2Hata">HATA</tspan></tspan></text><rect
    style="opacity:1;fill:#4d4d4d;stroke-width:0.259883"
    id="rect17689"
    width="17.838514"
@@ -23902,7 +23926,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect17723);fill:#008033"><tspan
      x="1342.6113"
      y="210.57062"
-     id="tspan14846"><tspan
+     id="tspan14846"><tspan PlcTagName="PLC02!HM2GRP.STAT"
        style="fill:#ffffff"
        id="txtHM2Hazir">HAZIR</tspan></tspan></text><g
    id="g10183"
@@ -24477,7 +24501,8 @@
    style="font-weight:bold;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect9738);fill:#ececec"><tspan
      x="1387.6895"
      y="234.07062"
-     id="PLC02!HM1GRP.STAT"></tspan></text><text
+     PlcTagName="PLC02!HM1GRP.STAT"
+     id="txtHM1Durum"></tspan></text><text
      PlcGroupName="hm2"
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,72.205843,0.84111459)"
@@ -24485,4 +24510,5 @@
    style="font-weight:bold;font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect9746);fill:#ececec"><tspan
      x="1387.6895"
      y="234.07062"
-     id="PLC02!HM2GRP.STAT"></tspan></text></g></svg>
+     PlcTagName="PLC02!HM2GRP.STAT"
+     id="txtHM2Durum"></tspan></text></g></svg>
