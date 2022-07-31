@@ -53,7 +53,9 @@ section.section {
 
 .custom-text-color-2 {
 		color: #727c93 !important;
+		font-size: 10px;
 }
+
 
 .parallax-no-overflow {
 		overflow: visible !important;
@@ -460,9 +462,10 @@ section.section {
 }
 
 .custom-box-details {
-		padding-left: 35px;
-		padding-top: 35px;
-		padding-bottom: 35px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 }
 
 .custom-box-details h4 {
@@ -478,6 +481,7 @@ section.section {
 
 .custom-list-style-1 {
 		padding: 0;
+		margin: 0;
 }
 
 .custom-list-style-1 li {
