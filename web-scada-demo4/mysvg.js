@@ -11,7 +11,7 @@ window.onload = function () {
 }
 
 modal = document.getElementById("popUpModal");
-
+var swaggerData;
 var allItems = {};
 
 //SignalR Configuration
@@ -194,21 +194,133 @@ function itemChange(itemName, itemValue){
       for (var j = 0; j < aa[i].children.length; j++) {
         var flag=false;
           var bb = aa[i].children;
-          if(bb[j].getAttribute('PlcTagName')===itemName){
+          if(bb[j].hasAttribute('PlcTagName')){
+            if(bb[j].getAttribute('PlcTagName')===itemName){
             changeRelatedPlace(itemValue, bb[j]);
             flag=true;
-          }
-          for(var k=0; k<bb[j].children.length;k++){
-            var cc = bb[j].children;
-            if(cc[k].getAttribute('PlcTagName')===itemName){
-                changeRelatedPlace(itemValue, cc[k]);
-                flag=true;
+           }
+            for(var k=0; k<bb[j].children.length;k++){
+              var cc = bb[j].children;
+              if(cc[k].getAttribute('PlcTagName')===itemName){
+                  changeRelatedPlace(itemValue, cc[k]);
+                  flag=true;
+                }            
             }
           }
-      }
+           else {
+            if(aa[i].getAttribute("PlcGroupName")==="hm1"){
+              // console.log(aa[i].children[0].children[0].id)
+              var list = aa[i].children[0].children;
+              for(let i = 0;i<list.length; i++){
+                if(list[i].id==='txtHM1IsEmriNo'){
+                  isEmriNo = list[i].textContent;
+                }
+                // console.log(list[i].id==='txtHM1IsEmriNo');
+                // var isEmriNo = (list[i].id==='txtHM1IsEmriNo').textContent;
+                  // console.log(list[i].id);
+                  // console.log(swaggerData.stokNo);
+                  if(list[i].id==='txtHM1HammaddeKodu'){
+                    if(isEmriNo==='0'){
+                      getHammaddeGrupVeri(1, list[i]);
+                      // list[i].textContent = 
+                    }
+                    else {
+                      getHammaddeGrupVeri(isEmriNo);
+                    }
+                  } else if(list[i].id==='txtHM1HammaddeAdi'){
+                    if(isEmriNo==='0'){
+                      getHammaddeGrupVeri(1, list[i]);
+                      // list[i].textContent = 
+                    }
+                    else {
+                      getHammaddeGrupVeri(isEmriNo);
+                    }
+                  } else if(list[i].id==='txtHM1BaslamaZamani'){
+                    if(isEmriNo==='0'){
+                      getHammaddeGrupVeri(1, list[i]);
+                      // list[i].textContent = 
+                    }
+                    else {
+                      getHammaddeGrupVeri(isEmriNo);
+                    }
+                  } 
+              }
+            }
+            else if(aa[i].getAttribute("PlcGroupName")==="hm2"){
+              // console.log(aa[i].children[0].children[0].id)
+              var list = aa[i].children[0].children;
+              for(let i = 0;i<list.length; i++){
+                if(list[i].id==='txtHM2IsEmriNo'){
+                  isEmriNo = list[i].textContent;
+                }
+                // console.log(list[i].id==='txtHM1IsEmriNo');
+                // var isEmriNo = (list[i].id==='txtHM1IsEmriNo').textContent;
+                  // console.log(list[i].id);
+                  // console.log(swaggerData.stokNo);
+                  if(list[i].id==='txtHM2HammaddeKodu'){
+                    if(isEmriNo==='0'){
+                      getHammaddeGrupVeri(1, list[i]);
+                      // list[i].textContent = 
+                    }
+                    else {
+                      getHammaddeGrupVeri(isEmriNo);
+                    }
+                  } else if(list[i].id==='txtHM2HammaddeAdi'){
+                    if(isEmriNo==='0'){
+                      getHammaddeGrupVeri(1, list[i]);
+                      // list[i].textContent = 
+                    }
+                    else {
+                      getHammaddeGrupVeri(isEmriNo);
+                    }
+                  } else if(list[i].id==='txtHM2BaslamaZamani'){
+                    if(isEmriNo==='0'){
+                      getHammaddeGrupVeri(1, list[i]);
+                      // list[i].textContent = 
+                    }
+                    else {
+                      getHammaddeGrupVeri(isEmriNo);
+                    }
+                  } 
+              }
+            }
+          }      
+      }   
     }
   }
 }
+
+function formatDate(date) {
+  let x = new Date(Date.parse(date));
+  dateFormatted = x.toLocaleString('tr-TR', {hour:'2-digit', minute:'2-digit', second: '2-digit', day:'2-digit', month:'2-digit', year:'numeric' });
+  return dateFormatted;
+}
+
+function getHammaddeGrupVeri(isEmriNo, list) {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET","http://192.168.1.163:9999/api/Values/GetHammaddeGrupVeri?isEmriNo="+isEmriNo);
+  xhr.send();
+  xhr.onload = function () {
+    if(xhr.status === 200) {
+      swaggerData = JSON.parse(xhr.responseText);
+      if(list.id==='txtHM1HammaddeKodu'){
+        list.textContent = swaggerData.stokNo;
+      } else if (list.id==='txtHM1HammaddeAdi'){
+        list.textContent = swaggerData.stokAd;
+      } else if (list.id==='txtHM1BaslamaZamani'){
+        list.textContent = formatDate(swaggerData.tarihBaslangic);
+      } else if(list.id==='txtHM2HammaddeKodu'){
+        list.textContent = swaggerData.stokNo;
+      } else if (list.id==='txtHM2HammaddeAdi'){
+        list.textContent = swaggerData.stokAd;
+      } else if (list.id==='txtHM2BaslamaZamani'){
+        list.textContent = formatDate(swaggerData.tarihBaslangic);
+      }
+    } else
+      console.log("No records found");
+  }
+}
+
 
 function changeRelatedPlace(itemValue, item){
   if(item.getAttribute('PlcTagName').includes('.STAT')){
@@ -229,6 +341,7 @@ function changeRelatedPlace(itemValue, item){
   }
   else if (item.getAttribute('PlcTagName').includes('.LINKNO')){
     // console.log('burasi15', item, itemValue);
+      getHammaddeGrupVeri(itemValue);
       changeText(itemValue, item);
   }
   else if (item.getAttribute('PlcTagName').includes('.AKTIFRST')){
@@ -275,7 +388,7 @@ function changeRelatedPlace(itemValue, item){
   }
 }
 
-function arizaReset() {
+function btnArizaReset() {
   plcVal = {
     Name: 'PLC02!HM_ARZ_RST',
     Value : "1"
@@ -400,6 +513,7 @@ function changeHataStatus(val, durum){
     durum.style.fill = 'white';
   }
 }
+
 
 // function btnBaslatSendValues(val, button){
 //   if(val){

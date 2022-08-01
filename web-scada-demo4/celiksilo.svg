@@ -23267,7 +23267,7 @@
      id="tspan14742"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
             PlcTagName="PLC02!HM1GRP.LINKNO"
-     id="txtHM1IsEmriNo">15060</tspan></tspan></text><text
+     id="txtHM1IsEmriNo">0</tspan></tspan></text><text
           PlcGroupName="hm1"
    xml:space="preserve"
    style="font-size:4.23333px;fill:#b3b3b3;stroke-width:0.264583"
@@ -23610,7 +23610,7 @@
      id="tspan14796"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
        PlcTagName="PLC02!HM2GRP.LINKNO"
-      id="txtHM2IsEmriNo">15060</tspan></tspan></text><text
+      id="txtHM2IsEmriNo">0</tspan></tspan></text><text
        PlcGroupName="hm2"
    xml:space="preserve"
    style="font-size:4.23333px;fill:#b3b3b3;stroke-width:0.264583"
