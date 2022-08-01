@@ -220,7 +220,7 @@ function changeRelatedPlace(itemValue, item){
       changeHataStatus(itemValue, item);
   }
   else if (item.getAttribute('PlcTagName').includes('.DNOSCD')){
-    // console.log('burasi13', cc[k], itemValue);
+    // console.log('burasi13', item, itemValue);
     changeTextDolum(itemValue, item);
   }
   else if (item.getAttribute('PlcTagName').includes('.ANOSCD')){
@@ -228,7 +228,7 @@ function changeRelatedPlace(itemValue, item){
     changeText(itemValue, item);
   }
   else if (item.getAttribute('PlcTagName').includes('.LINKNO')){
-    // console.log('burasi15', cc[k], itemValue);
+    // console.log('burasi15', item, itemValue);
       changeText(itemValue, item);
   }
   else if (item.getAttribute('PlcTagName').includes('.AKTIFRST')){
@@ -240,7 +240,7 @@ function changeRelatedPlace(itemValue, item){
         Name : item.attributes[2].value,
         Value : "1"
       };
-      console.log(plcVal);
+      // console.log(plcVal);
       WriteToPlc(plcVal);
       alert('Resetlendi');
     });
@@ -254,7 +254,7 @@ function changeRelatedPlace(itemValue, item){
         Name : item.attributes[2].value,
         Value : "1"
       };
-      console.log(plcVal);
+      // console.log(plcVal);
       WriteToPlc(plcVal);
       alert('Başlatıldı')
     });
@@ -268,11 +268,19 @@ function changeRelatedPlace(itemValue, item){
         Name : item.attributes[2].value,
         Value : "1"
       };
-      console.log(plcVal);
+      // console.log(plcVal);
       WriteToPlc(plcVal);
       alert('Durduruldu')
     });
   }
+}
+
+function arizaReset() {
+  plcVal = {
+    Name: 'PLC02!HM_ARZ_RST',
+    Value : "1"
+  };
+  WriteToPlc(plcVal);
 }
 
 //alttaki durum yazısı ve üstteki menü(max-aktif-hata-hazır)
@@ -393,34 +401,35 @@ function changeHataStatus(val, durum){
   }
 }
 
-function btnBaslatSendValues(val, button){
-  if(val){
-    plcVal = {
-      Name : aa,
-      Value : "21"
-    };
-    WriteToPlc(plcVal);
-  } else {
-    // send signalr request
-  }
-}
-function btnDurdurSendValues(val, button){
-  if(val){
-    // send signalr request
-  } else {
-    // send signalr request
-  }
-}
-function btnResetSendValues(val, button){
-  if(val){
-    // send signalr request
-  } else {
-    // send signalr request
-  }
-}
+// function btnBaslatSendValues(val, button){
+//   if(val){
+//     plcVal = {
+//       Name : aa,
+//       Value : "21"
+//     };
+//     WriteToPlc(plcVal);
+//   } else {
+//     // send signalr request
+//   }
+// }
+// function btnDurdurSendValues(val, button){
+//   if(val){
+//     // send signalr request
+//   } else {
+//     // send signalr request
+//   }
+// }
+// function btnResetSendValues(val, button){
+//   if(val){
+//     // send signalr request
+//   } else {
+//     // send signalr request
+//   }
+// }
 
 
 //binding values
+
 function Bit(_val, index) {
   try {
     var bVal = Number(_val).toString(2);
