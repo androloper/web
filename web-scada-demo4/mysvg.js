@@ -236,6 +236,12 @@ function changeRelatedPlace(itemValue, item){
     // btnResetSendValues(itemValue, cc[k]);
     item.setAttribute("style","cursor: pointer");
     item.addEventListener("click", event => {
+      plcVal = {
+        Name : item.attributes[2].value,
+        Value : "1"
+      };
+      console.log(plcVal);
+      WriteToPlc(plcVal);
       alert('Resetlendi');
     });
   }
@@ -244,6 +250,12 @@ function changeRelatedPlace(itemValue, item){
     // btnBaslatSendValues(itemValue, cc[k]);
     item.setAttribute("style","cursor: pointer");
     item.addEventListener("click", event => {
+      plcVal = {
+        Name : item.attributes[2].value,
+        Value : "1"
+      };
+      console.log(plcVal);
+      WriteToPlc(plcVal);
       alert('Başlatıldı')
     });
   }
@@ -252,12 +264,18 @@ function changeRelatedPlace(itemValue, item){
     // btnDurdurSendValues(itemValue, cc[k]);
     item.setAttribute("style","cursor: pointer");
     item.addEventListener("click", event => {
+      plcVal = {
+        Name : item.attributes[2].value,
+        Value : "1"
+      };
+      console.log(plcVal);
+      WriteToPlc(plcVal);
       alert('Durduruldu')
     });
   }
 }
 
-//alttaki yazı ve üstteki menü(max-aktif-hata-hazır)
+//alttaki durum yazısı ve üstteki menü(max-aktif-hata-hazır)
 function changeTextDurum(val, durum) {
   if(Bit(val, 0)){
     if(durum.id.includes('Hata'))
@@ -377,7 +395,11 @@ function changeHataStatus(val, durum){
 
 function btnBaslatSendValues(val, button){
   if(val){
-    // send signalr request
+    plcVal = {
+      Name : aa,
+      Value : "21"
+    };
+    WriteToPlc(plcVal);
   } else {
     // send signalr request
   }
