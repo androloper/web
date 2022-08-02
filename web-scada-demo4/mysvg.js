@@ -225,7 +225,7 @@ function itemChange(itemName, itemValue){
                       // list[i].textContent = 
                     }
                     else {
-                      getHammaddeGrupVeri(isEmriNo);
+                      getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
                   } else if(list[i].id==='txtHM1HammaddeAdi'){
                     if(isEmriNo==='0'){
@@ -233,7 +233,7 @@ function itemChange(itemName, itemValue){
                       // list[i].textContent = 
                     }
                     else {
-                      getHammaddeGrupVeri(isEmriNo);
+                      getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
                   } else if(list[i].id==='txtHM1BaslamaZamani'){
                     if(isEmriNo==='0'){
@@ -241,45 +241,37 @@ function itemChange(itemName, itemValue){
                       // list[i].textContent = 
                     }
                     else {
-                      getHammaddeGrupVeri(isEmriNo);
+                      getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
                   } 
               }
             }
             else if(aa[i].getAttribute("PlcGroupName")==="hm2"){
-              // console.log(aa[i].children[0].children[0].id)
               var list = aa[i].children[0].children;
               for(let i = 0;i<list.length; i++){
                 if(list[i].id==='txtHM2IsEmriNo'){
                   isEmriNo = list[i].textContent;
                 }
-                // console.log(list[i].id==='txtHM1IsEmriNo');
-                // var isEmriNo = (list[i].id==='txtHM1IsEmriNo').textContent;
-                  // console.log(list[i].id);
-                  // console.log(swaggerData.stokNo);
                   if(list[i].id==='txtHM2HammaddeKodu'){
                     if(isEmriNo==='0'){
                       getHammaddeGrupVeri(1, list[i]);
-                      // list[i].textContent = 
                     }
                     else {
-                      getHammaddeGrupVeri(isEmriNo);
+                      getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
                   } else if(list[i].id==='txtHM2HammaddeAdi'){
                     if(isEmriNo==='0'){
                       getHammaddeGrupVeri(1, list[i]);
-                      // list[i].textContent = 
                     }
                     else {
-                      getHammaddeGrupVeri(isEmriNo);
+                      getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
                   } else if(list[i].id==='txtHM2BaslamaZamani'){
                     if(isEmriNo==='0'){
                       getHammaddeGrupVeri(1, list[i]);
-                      // list[i].textContent = 
                     }
                     else {
-                      getHammaddeGrupVeri(isEmriNo);
+                      getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
                   } 
               }
@@ -297,8 +289,10 @@ function formatDate(date) {
 }
 
 function getHammaddeGrupVeri(isEmriNo, list) {
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET","http://192.168.1.163:9999/api/Values/GetHammaddeGrupVeri?isEmriNo="+isEmriNo);
+  let xhr = new XMLHttpRequest();
+  // xhr.open("GET","http://192.168.1.163:9999/api/Values/GetHammaddeGrupVeri?isEmriNo="+isEmriNo, true);
+  // xhr.send(null);
+  xhr.open("GET","http://192.168.1.163:9999/api/Values/GetHammaddeGrupVeri?isEmriNo="+isEmriNo,true);
   xhr.send();
   xhr.onload = function () {
     if(xhr.status === 200) {
@@ -316,8 +310,7 @@ function getHammaddeGrupVeri(isEmriNo, list) {
       } else if (list.id==='txtHM2BaslamaZamani'){
         list.textContent = formatDate(swaggerData.tarihBaslangic);
       }
-    } else
-      console.log("No records found");
+    }
   }
 }
 
@@ -341,7 +334,6 @@ function changeRelatedPlace(itemValue, item){
   }
   else if (item.getAttribute('PlcTagName').includes('.LINKNO')){
     // console.log('burasi15', item, itemValue);
-      getHammaddeGrupVeri(itemValue);
       changeText(itemValue, item);
   }
   else if (item.getAttribute('PlcTagName').includes('.AKTIFRST')){
@@ -543,7 +535,6 @@ function changeHataStatus(val, durum){
 
 
 //binding values
-
 function Bit(_val, index) {
   try {
     var bVal = Number(_val).toString(2);
