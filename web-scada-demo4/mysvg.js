@@ -219,31 +219,39 @@ function itemChange(itemName, itemValue){
                 // var isEmriNo = (list[i].id==='txtHM1IsEmriNo').textContent;
                   // console.log(list[i].id);
                   // console.log(swaggerData.stokNo);
-                  if(list[i].id==='txtHM1HammaddeKodu'){
-                    if(isEmriNo==='0'){
-                      getHammaddeGrupVeri(1, list[i]);
-                      // list[i].textContent = 
+                  if(!list[i].hasAttribute('PlcTagName')){
+                    if(isEmriNo==='0') {
+                      list[i].textContent = ""
                     }
-                    else {
+                    else {
                       getHammaddeGrupVeri(isEmriNo, list[i]);
                     }
-                  } else if(list[i].id==='txtHM1HammaddeAdi'){
-                    if(isEmriNo==='0'){
-                      getHammaddeGrupVeri(1, list[i]);
-                      // list[i].textContent = 
-                    }
-                    else {
-                      getHammaddeGrupVeri(isEmriNo, list[i]);
-                    }
-                  } else if(list[i].id==='txtHM1BaslamaZamani'){
-                    if(isEmriNo==='0'){
-                      getHammaddeGrupVeri(1, list[i]);
-                      // list[i].textContent = 
-                    }
-                    else {
-                      getHammaddeGrupVeri(isEmriNo, list[i]);
-                    }
-                  } 
+                  }
+                  // if(list[i].id==='txtHM1HammaddeKodu'){
+                  //   if(isEmriNo==='0'){
+                  //     list[i].textContent = ""
+                  //     // list[i].textContent = 
+                  //   }
+                  //   else {
+                  //     getHammaddeGrupVeri(isEmriNo, list[i]);
+                  //   }
+                  // } else if(list[i].id==='txtHM1HammaddeAdi'){
+                  //   if(isEmriNo==='0'){
+                  //     list[i].textContent = ""
+                  //     // list[i].textContent = 
+                  //   }
+                  //   else {
+                  //     getHammaddeGrupVeri(isEmriNo, list[i]);
+                  //   }
+                  // } else if(list[i].id==='txtHM1BaslamaZamani'){
+                  //   if(isEmriNo==='0'){
+                  //     list[i].textContent = ""
+                  //     // list[i].textContent = 
+                  //   }
+                  //   else {
+                  //     getHammaddeGrupVeri(isEmriNo, list[i]);
+                  //   }
+                  // } 
               }
             }
             else if(aa[i].getAttribute("PlcGroupName")==="hm2"){
@@ -252,28 +260,14 @@ function itemChange(itemName, itemValue){
                 if(list[i].id==='txtHM2IsEmriNo'){
                   isEmriNo = list[i].textContent;
                 }
-                  if(list[i].id==='txtHM2HammaddeKodu'){
-                    if(isEmriNo==='0'){
-                      getHammaddeGrupVeri(1, list[i]);
-                    }
-                    else {
-                      getHammaddeGrupVeri(isEmriNo, list[i]);
-                    }
-                  } else if(list[i].id==='txtHM2HammaddeAdi'){
-                    if(isEmriNo==='0'){
-                      getHammaddeGrupVeri(1, list[i]);
-                    }
-                    else {
-                      getHammaddeGrupVeri(isEmriNo, list[i]);
-                    }
-                  } else if(list[i].id==='txtHM2BaslamaZamani'){
-                    if(isEmriNo==='0'){
-                      getHammaddeGrupVeri(1, list[i]);
-                    }
-                    else {
-                      getHammaddeGrupVeri(isEmriNo, list[i]);
-                    }
-                  } 
+                if(!list[i].hasAttribute('PlcTagName')){
+                  if(isEmriNo==='0') {
+                    list[i].textContent = ""
+                  }
+                  else {
+                    getHammaddeGrupVeri(isEmriNo, list[i]);
+                  }
+                }
               }
             }
           }      
