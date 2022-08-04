@@ -271,7 +271,8 @@ function itemChange(itemName, itemValue){
                 }
               }
             }
-          }      
+          }
+          
       }   
     }
   }
@@ -382,7 +383,7 @@ function btnArizaReset() {
 
 //alttaki durum yazısı ve üstteki menü(max-aktif-hata-hazır)
 function changeTextDurum(val, durum) {
-  // console.log("burasi", durum,val) yanlış geliyor
+  console.log("burasi", durum,val) //yanlış geliyor
   if(Bit(val, 0)){
     if(durum.id.includes('Hata'))
       changeHataStatus(Bit(val, 0), durum);
