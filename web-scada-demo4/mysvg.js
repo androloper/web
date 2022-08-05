@@ -192,7 +192,6 @@ function itemChange(itemName, itemValue){
     }
     if(aa[i].hasAttribute("PlcGroupName")){
       for (var j = 0; j < aa[i].children.length; j++) {
-        // console.log(aa[i]);
         var flag=false;
           var bb = aa[i].children;
           if(bb[j].hasAttribute('PlcTagName')){
@@ -212,16 +211,17 @@ function itemChange(itemName, itemValue){
           }
            else {
             if(aa[i].getAttribute("PlcGroupName")==="hm1"){
-              // console.log(aa[i].children[0].children[0].id)
               var list = aa[i].children[0].children;
               for(let i = 0;i<list.length; i++){
+                if(list[i].getAttribute('PlcTagName')===itemName){
+                  changeTextDurum(itemValue, list[i]);
+                }
+                // if(list[i].getAttribute('PlcTagName').includes('STAT')){
+                //   changeTextDurum(itemValue, list[i]);
+                // }
                 if(list[i].id==='txtHM1IsEmriNo'){
                   isEmriNo = list[i].textContent;
                 }
-                // console.log(list[i].id==='txtHM1IsEmriNo');
-                // var isEmriNo = (list[i].id==='txtHM1IsEmriNo').textContent;
-                  // console.log(list[i].id);
-                  // console.log(swaggerData.stokNo);
                   if(!list[i].hasAttribute('PlcTagName')){
                     if(isEmriNo!=='0') 
                       getHammaddeGrupVeri(isEmriNo, list[i]);
@@ -253,21 +253,18 @@ function itemChange(itemName, itemValue){
                   // } 
               }
             }
-            else if(aa[i].getAttribute("PlcGroupName")==="hm2"){
+            else {
               var list = aa[i].children[0].children;
               for(let i = 0;i<list.length; i++){
+                if(list[i].getAttribute('PlcTagName')===itemName){
+                  changeTextDurum(itemValue, list[i]);
+                }
                 if(list[i].id==='txtHM2IsEmriNo'){
                   isEmriNo = list[i].textContent;
                 }
                 if(!list[i].hasAttribute('PlcTagName')){
                   if(isEmriNo!=='0') 
                       getHammaddeGrupVeri(isEmriNo, list[i]);
-                  // if(isEmriNo==='0') {
-                  //   list[i].textContent = ""
-                  // }
-                  // else {
-                  //   getHammaddeGrupVeri(isEmriNo, list[i]);
-                  // }
                 }
               }
             }
@@ -383,61 +380,62 @@ function btnArizaReset() {
 
 //alttaki durum yazısı ve üstteki menü(max-aktif-hata-hazır)
 function changeTextDurum(val, durum) {
-  console.log("burasi", durum,val) //yanlış geliyor
   if(Bit(val, 0)){
     if(durum.id.includes('Hata'))
       changeHataStatus(Bit(val, 0), durum);
     if(durum.id.includes('Durum'))
-      durum.innerHTML='GRUP ARIZADA';
+    durum.textContent='GRUP ARIZADA';
+    durum.setAttribute('x','374');
+    durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
   } else if(Bit(val, 5)){
     if(durum.id.includes('Hazir'))
       changeHazirStatus(Bit(val, 5), durum);
     if(durum.id.includes('Durum')){
-      durum.innerHTML='START BEKLİYOR';
-      durum.setAttribute('x','1435');
-      durum.setAttribute('style', 'fill: #FFC1C0C0');
+      durum.textContent='START BEKLİYOR';
+      durum.setAttribute('x','371');
+      durum.setAttribute('style', 'fill: green; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 1)){
       if(durum.id.includes('Max'))
       changeMaxStatus(Bit(val, 1), durum);
     if(durum.id.includes('Durum')){
-      durum.innerHTML='SİLO MAX';
-      durum.setAttribute('x','1460');
-      durum.setAttribute('style', 'fill: red');
+      durum.textContent='SİLO MAX';
+      durum.setAttribute('x','379.5');
+      durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 2)){
     if(durum.id.includes('Durum')){
-      durum.innerHTML='TRANSFER HAZIR';
-      durum.setAttribute('x','1435');
-      durum.setAttribute('style', 'fill: #FF92C792');
+      durum.textContent='TRANSFER HAZIR';
+      durum.setAttribute('x','371');
+      durum.setAttribute('style', 'fill: green; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 3)){
     if(durum.id.includes('Aktif'))
       changeAktifStatus(Bit(val, 3), durum);
     if(durum.id.includes('Durum')){
-      durum.innerHTML='TRANSFER DEVREDE';
-      durum.setAttribute('x','1425');
-      durum.setAttribute('style', 'fill: gray');
+      durum.textContent='TRANSFER DEVREDE';
+      durum.setAttribute('x','367');
+      durum.setAttribute('style', 'fill: green; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 4)){
     if(durum.id.includes('Durum')){
-      durum.innerHTML='TRANSFER DURDURULUYOR';
-      durum.setAttribute('x','1400');
-      durum.setAttribute('style', 'fill: #FFDEC078');
+      durum.textContent='TRANSFER DURDURULUYOR';
+      durum.setAttribute('x','359.5');
+      durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 6)){
     if(durum.id.includes('Durum')){
-      durum.innerHTML='SİLO DEĞİŞTİRİLİYOR';
-      durum.setAttribute('x','1420');
-      durum.setAttribute('style', 'fill: #FFDEC078');
+      durum.textContent='SİLO DEĞİŞTİRİLİYOR';
+      durum.setAttribute('x','366.5');
+      durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 7)){
     if(durum.id.includes('Hata'))
       changeHataStatus(Bit(val, 7), durum);
     if(durum.id.includes('Durum')){
-      durum.innerHTML='SİLO MAX ARIZADA';
-      durum.setAttribute('x','1430');
-      durum.setAttribute('style', 'fill: #FFDB9292');
+      durum.textContent='SİLO MAX ARIZADA';
+      durum.setAttribute('x','369.5');
+      durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   }
 }
