@@ -39,15 +39,15 @@
                     },
                 },
                 paging: {
-                    pageSize: 25,
+                    pageSize: 25, //initial page size
                 },
                 pager: {
                     showPageSizeSelector: true,
-                    allowedPageSizes: [10, 25, 50, 100],
+                    allowedPageSizes: [10, 25, 50, 100], //page sizes
                 },
                 searchPanel: {
                     visible: true,
-                    highlightCaseSensitive: false,
+                    highlightCaseSensitive: false, //if it is true, showing highlighted
                 },
                 groupPanel: {
                     visible: true
@@ -61,7 +61,7 @@
                 columns: [
                     {
                         dataField: 'Product',
-                        groupIndex: 0,
+                        groupIndex: 0, //that provides ordering
                     },
                     {
                         dataField: 'Amount',
@@ -104,7 +104,7 @@
                 onContentReady(e) {
                     if (!collapsed) {
                         collapsed = true;
-                        e.component.expandRow(['EnviroCare']);
+                        e.component.expandRow(['EnviroCare']); //expanded group view
                     }
                 },
             });
