@@ -1,13 +1,6 @@
+//startup methods that works in page uploading
 window.onload = function () {
   startHubConn();
-  // jQuery(document).ready(function(){
-  //   jQuery(function() {
-  //         jQuery(this).bind("contextmenu", function(event) {
-  //           alert('12');
-  //           event.preventDefault();
-  //         });
-  //     });
-  // });
 }
 
 modal = document.getElementById("popUpModal");
@@ -16,7 +9,7 @@ var allItems = {};
 
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://192.168.1.163:9999/demoHub")
+    .withUrl("http://62.141.44.59:9999/demoHub")
     .withAutomaticReconnect()
     .configureLogging(signalR.LogLevel.Information)
     .build();
@@ -70,31 +63,7 @@ async function WriteToPlc(value) {
       }).catch(err => console.log(err));
 }
 
-// function startScada() {
-//   startHubConn();
-// }
-
-// function initEventHandler(itemName) {
-//   const svg = document.getElementById("svg_obj").contentDocument;
-//   const layer1 = svg.getElementById("layer1");
-//   for (var i = 0; i < layer1.children.length; i++) {
-//     var aa = layer1.children;
-//     if(aa[i].hasAttribute("PlcTagName")){
-//       if (aa[i].getAttribute("PlcTagName") === itemName) {
-//         var popUpRootTag = aa[i].getAttribute("PlcTagName");
-//         if (aa[i].getAttribute("tip") === "motor") {
-//           aa[i].addEventListener("click", event => {
-//             console.log("1");
-//             Motor_Click(popUpRootTag);
-//             $('#popUpModal').modal('show');
-//         });
-//         }
-//       }
-//     }
-//   }
-// }
-
-//modal placement
+//modal placement according the user wishes
 function modalPositioning(modal, event) {
   // if(event.x< modal.style.left){
   if(event.x<(screen.width/1.6)){
@@ -190,10 +159,14 @@ function itemChange(itemName, itemValue){
         }
       }
     }
+
+    //group naming from the right top
     if(aa[i].hasAttribute("PlcGroupName")){
       for (var j = 0; j < aa[i].children.length; j++) {
         var flag=false;
+        var isEmriNo;
           var bb = aa[i].children;
+          //with plc tag names
           if(bb[j].hasAttribute('PlcTagName')){
             if(bb[j].getAttribute('PlcTagName')===itemName){
               // console.log(bb[j]);
@@ -209,63 +182,42 @@ function itemChange(itemName, itemValue){
                 }            
             }
           }
+          //without plc tag names
            else {
             if(aa[i].getAttribute("PlcGroupName")==="hm1"){
               var list = aa[i].children[0].children;
               for(let i = 0;i<list.length; i++){
                 if(list[i].getAttribute('PlcTagName')===itemName){
-                  changeTextDurum(itemValue, list[i]);
-                }
-                // if(list[i].getAttribute('PlcTagName').includes('STAT')){
-                //   changeTextDurum(itemValue, list[i]);
-                // }
-                if(list[i].id==='txtHM1IsEmriNo'){
-                  isEmriNo = list[i].textContent;
+                  if(itemName.includes('LINKNO')){
+                    isEmriNo = itemValue;
+                    list[i].textContent = itemValue;
+                  }
+                  else {
+                      changeTextDurum(itemValue, list[i]);
+                  }
                 }
                   if(!list[i].hasAttribute('PlcTagName')){
-                    if(isEmriNo!=='0') 
+                    if(isEmriNo!==0 && isEmriNo != undefined) 
                       getHammaddeGrupVeri(isEmriNo, list[i]);
                   }
-                  // if(list[i].id==='txtHM1HammaddeKodu'){
-                  //   if(isEmriNo==='0'){
-                  //     list[i].textContent = ""
-                  //     // list[i].textContent = 
-                  //   }
-                  //   else {
-                  //     getHammaddeGrupVeri(isEmriNo, list[i]);
-                  //   }
-                  // } else if(list[i].id==='txtHM1HammaddeAdi'){
-                  //   if(isEmriNo==='0'){
-                  //     list[i].textContent = ""
-                  //     // list[i].textContent = 
-                  //   }
-                  //   else {
-                  //     getHammaddeGrupVeri(isEmriNo, list[i]);
-                  //   }
-                  // } else if(list[i].id==='txtHM1BaslamaZamani'){
-                  //   if(isEmriNo==='0'){
-                  //     list[i].textContent = ""
-                  //     // list[i].textContent = 
-                  //   }
-                  //   else {
-                  //     getHammaddeGrupVeri(isEmriNo, list[i]);
-                  //   }
-                  // } 
               }
             }
             else {
               var list = aa[i].children[0].children;
               for(let i = 0;i<list.length; i++){
                 if(list[i].getAttribute('PlcTagName')===itemName){
-                  changeTextDurum(itemValue, list[i]);
+                  if(itemName.includes('LINKNO')){
+                    isEmriNo = itemValue;
+                    list[i].textContent = itemValue;
+                  }
+                  else {
+                      changeTextDurum(itemValue, list[i]);
+                  }
                 }
-                if(list[i].id==='txtHM2IsEmriNo'){
-                  isEmriNo = list[i].textContent;
-                }
-                if(!list[i].hasAttribute('PlcTagName')){
-                  if(isEmriNo!=='0') 
+                  if(!list[i].hasAttribute('PlcTagName')){
+                    if(isEmriNo!== 0 && isEmriNo != undefined) 
                       getHammaddeGrupVeri(isEmriNo, list[i]);
-                }
+                  }
               }
             }
           }
@@ -281,10 +233,9 @@ function formatDate(date) {
   return dateFormatted;
 }
 
+//group values are getting from the web api
 function getHammaddeGrupVeri(isEmriNo, list) {
   let xhr = new XMLHttpRequest();
-  // xhr.open("GET","http://192.168.1.163:9999/api/Values/GetHammaddeGrupVeri?isEmriNo="+isEmriNo, true);
-  // xhr.send(null);
   xhr.open("GET","http://192.168.1.163:9999/api/Values/GetHammaddeGrupVeri?isEmriNo="+isEmriNo,true);
   xhr.send();
   xhr.onload = function () {
@@ -307,7 +258,7 @@ function getHammaddeGrupVeri(isEmriNo, list) {
   }
 }
 
-
+//changing to the group attributes
 function changeRelatedPlace(itemValue, item){
   if(item.getAttribute('PlcTagName').includes('.STAT')){
     // console.log('burasi11', cc[k], itemValue);
@@ -324,6 +275,7 @@ function changeRelatedPlace(itemValue, item){
   else if (item.getAttribute('PlcTagName').includes('.ANOSCD')){
     // console.log('burasi14', cc[k], itemValue);
     changeText(itemValue, item);
+
   }
   else if (item.getAttribute('PlcTagName').includes('.LINKNO')){
     // console.log('burasi15', item, itemValue);
@@ -378,15 +330,16 @@ function btnArizaReset() {
   WriteToPlc(plcVal);
 }
 
-//alttaki durum yazısı ve üstteki menü(max-aktif-hata-hazır)
+//bottom statement words and top menu(max-aktif-hata-hazır)
 function changeTextDurum(val, durum) {
   if(Bit(val, 0)){
     if(durum.id.includes('Hata'))
       changeHataStatus(Bit(val, 0), durum);
-    if(durum.id.includes('Durum'))
-    durum.textContent='GRUP ARIZADA';
-    durum.setAttribute('x','374');
-    durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
+    if(durum.id.includes('Durum')){
+      durum.textContent='GRUP ARIZADA';
+      durum.setAttribute('x','374');
+      durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
+    }
   } else if(Bit(val, 5)){
     if(durum.id.includes('Hazir'))
       changeHazirStatus(Bit(val, 5), durum);
@@ -476,7 +429,6 @@ function changeHazirStatus(val, durum){
     durum.style.fill = 'limegreen';
   } else {
     durum.style.fill = 'white';
-    //    durum.setAttribute('style', 'color: yellow');
   }
 }
 
@@ -498,35 +450,7 @@ function changeHataStatus(val, durum){
   }
 }
 
-
-// function btnBaslatSendValues(val, button){
-//   if(val){
-//     plcVal = {
-//       Name : aa,
-//       Value : "21"
-//     };
-//     WriteToPlc(plcVal);
-//   } else {
-//     // send signalr request
-//   }
-// }
-// function btnDurdurSendValues(val, button){
-//   if(val){
-//     // send signalr request
-//   } else {
-//     // send signalr request
-//   }
-// }
-// function btnResetSendValues(val, button){
-//   if(val){
-//     // send signalr request
-//   } else {
-//     // send signalr request
-//   }
-// }
-
-
-//binding values
+//binding values from reading bits
 function Bit(_val, index) {
   try {
     var bVal = Number(_val).toString(2);
@@ -583,6 +507,7 @@ function removeFromBetween(sub1, sub2) {
   var removal = sub1 + this.getFromBetween(sub1, sub2) + sub2;
   this.string = this.string.replace(removal, "");
 }
+
 
 //showing modals(popups)
 function btnAlarmClick() {
@@ -1134,7 +1059,6 @@ function checkKlepe2YonPopupButton(buttonList, myVal) {
 
 function getMotorPopUpHTML() {
   var a =
-
       '<table>'
       + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnMan" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
       + '<tr><td style="text-align: center;width:150px;"><button style="width:100%;" id = "btnStart" onclick="MotorButton_Click(this)" type="button" class="mostPopupButton">START</button> </td></tr>'
@@ -1277,7 +1201,6 @@ function getMotorPopUpAlarmInputOutputHTML() {
 
 function getKlepePopUpHTML() {
   var a =
-
       '<table>'
       + '<tr><td style="text-align: center;"><button style="width:100%;" id = "btnMan" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
       + '<tr><td style="text-align: center;"><button style="width:100%;" id = "btnStart" onclick="KlepeButton_Click(this)" type="button" class="mostPopupButton">AÇ</button> </td></tr>'
@@ -1333,7 +1256,6 @@ function getKlepePopUpAlarmInputOutputHTML() {
 
 function getKlepe2YonPopUpHTML() {
   var a =
-
       '<table>'
       + '<tr><td><button style="width:100%;" id = "btnMan" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
       + '<tr><td><button style="width:100%;" id = "btnStart" onclick="Klepe2YonButton_Click(this)" type="button" class="mostPopupButton">Sağ Yön Start</button> </td></tr>'
@@ -1387,7 +1309,6 @@ function getKlepe2YonPopUpAlarmInputOutputHTML() {
 
 function getKlepe3YonPopUpHTML() {
   var a =
-
       '<table>'
       + '<tr><td><button style="width:100%;" id = "btnMan" onclick="Klepe3YonButton_Click(this)" type="button" class="mostPopupButton">MANUEL</button> </td></tr> '
       + '<tr><td><button style="width:100%;" id = "btnStart" onclick="Klepe3YonButton_Click(this)" type="button" class="mostPopupButton">Sağ Yön Start</button> </td></tr>'
@@ -1506,7 +1427,6 @@ function MotorButton_OnClick(myButton, AllItems, rootTag) {
       Value : "9"
     };
     WriteToPlc(plcVal);
-    // chat.server.writeTag(aa, "9");
   }
 }
 
@@ -1653,7 +1573,7 @@ function Klepe2YonButton_OnClick(myButton, AllItems, rootTag) {
   }
 }
 
-//changing components
+//changing colors of components
 function checkMotor(myVal, motor) {
   if (Bit(myVal, 13)) {
     return changeMotorColor("red",motor);
@@ -1810,7 +1730,6 @@ function checkLine(line, condition) {
     var tagObj = {
       bit: tags[0],
       value: Bit(ReadItemFromList(allItems, tags[0]), tags[1])
-      // value: Bit(ReadItemFromList(line, tags[0]), tags[1])
     };
     myDict[result[i]] = tagObj;
   }

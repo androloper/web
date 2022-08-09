@@ -23956,7 +23956,7 @@
      y="104.89094"
      id="tspan25881"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="txtHM1HammaddeKodu">1596</tspan></tspan></text><text
+       id="txtHM1HammaddeKodu">-</tspan></tspan></text><text
    PlcGroupName="hm1"
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,33.603726,1.0583333)"
@@ -23966,7 +23966,7 @@
      y="130.92805"
      id="tspan25885"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="txtHM1HammaddeAdi">Mısır</tspan></tspan></text><text
+       id="txtHM1HammaddeAdi">-</tspan></tspan></text><text
    PlcGroupName="hm1"
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,33.337503,3.6833958)"
@@ -23976,7 +23976,7 @@
      y="145.46711"
      id="tspan25889"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="txtHM1BaslamaZamani">10:17:05</tspan></tspan></text><rect
+       id="txtHM1BaslamaZamani">01.01.0001 00:00:00</tspan></tspan></text><rect
    style="opacity:1;fill:#008033;stroke-width:0.264583"
    id="rect11445"
    width="23.632557"
@@ -24307,7 +24307,7 @@
      y="104.89094"
      id="tspan25935"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="txtHM2HammaddeKodu">1596</tspan></tspan></text><text
+       id="txtHM2HammaddeKodu">-</tspan></tspan></text><text
    PlcGroupName="hm2"
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,109.80375,1.0583333)"
@@ -24317,7 +24317,7 @@
      y="130.92805"
      id="tspan25939"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="txtHM2HammaddeAdi">Mısır</tspan></tspan></text><text
+       id="txtHM2HammaddeAdi">-</tspan></tspan></text><text
    PlcGroupName="hm2"
    xml:space="preserve"
    transform="matrix(0.26458333,0,0,0.26458333,109.53752,3.6833958)"
@@ -24327,7 +24327,7 @@
      y="145.46711"
      id="tspan25943"><tspan
        style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-       id="txtHM2BaslamaZamani">10:17:05</tspan></tspan></text><rect
+       id="txtHM2BaslamaZamani">01.01.0001 00:00:00</tspan></tspan></text><rect
    style="opacity:1;fill:#008033;stroke-width:0.264583"
    id="rect17653"
    width="23.632557"
