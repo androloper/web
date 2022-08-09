@@ -9,7 +9,7 @@ var allItems = {};
 
 //SignalR Configuration
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://62.141.44.59:9999/demoHub")
+    .withUrl("http://192.168.1.163:9999/demoHub")
     .withAutomaticReconnect()
     .configureLogging(signalR.LogLevel.Information)
     .build();
@@ -336,58 +336,98 @@ function changeTextDurum(val, durum) {
     if(durum.id.includes('Hata'))
       changeHataStatus(Bit(val, 0), durum);
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','374');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','449.5');
+      }
       durum.textContent='GRUP ARIZADA';
-      durum.setAttribute('x','374');
       durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 5)){
     if(durum.id.includes('Hazir'))
       changeHazirStatus(Bit(val, 5), durum);
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','371');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','447.5');
+      }
       durum.textContent='START BEKLİYOR';
-      durum.setAttribute('x','371');
       durum.setAttribute('style', 'fill: green; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 1)){
       if(durum.id.includes('Max'))
       changeMaxStatus(Bit(val, 1), durum);
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','379.5');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','456');
+      }
       durum.textContent='SİLO MAX';
-      durum.setAttribute('x','379.5');
       durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 2)){
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','371');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','447');
+      }
       durum.textContent='TRANSFER HAZIR';
-      durum.setAttribute('x','371');
       durum.setAttribute('style', 'fill: green; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 3)){
     if(durum.id.includes('Aktif'))
       changeAktifStatus(Bit(val, 3), durum);
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','367');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','443.5');
+      }
       durum.textContent='TRANSFER DEVREDE';
-      durum.setAttribute('x','367');
       durum.setAttribute('style', 'fill: green; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 4)){
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','359.5');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','435.5');
+      }
       durum.textContent='TRANSFER DURDURULUYOR';
-      durum.setAttribute('x','359.5');
       durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 6)){
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','366.5');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','442.5');
+      }
       durum.textContent='SİLO DEĞİŞTİRİLİYOR';
-      durum.setAttribute('x','366.5');
       durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   } else if(Bit(val, 7)){
     if(durum.id.includes('Hata'))
       changeHataStatus(Bit(val, 7), durum);
     if(durum.id.includes('Durum')){
+      if(durum.getAttribute('PlcTagName').includes('HM1')){
+        durum.setAttribute('x','369.5');
+      }
+      if(durum.getAttribute('PlcTagName').includes('HM2')){
+        durum.setAttribute('x','444.5');
+      }
       durum.textContent='SİLO MAX ARIZADA';
-      durum.setAttribute('x','369.5');
       durum.setAttribute('style', 'fill: red; font-size: 4.5; font-weight: bold');
     }
   }
