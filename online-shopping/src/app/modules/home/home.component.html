@@ -1,4 +1,4 @@
-<div class="w-full">
+<div class="w-full" *transloco="let t">
     <div class="flex items-start justify-center w-full">
         <!-- Light version -->
         <!--                        <div class="text-4xl font-extrabold text-primary-600">Online Shopping</div>-->
@@ -17,7 +17,7 @@
                                 <mat-icon class="icon-size-5 md:icon-size-7 mr-2 text-primary"
                                           [svgIcon]="'mat_outline:bolt'"></mat-icon>
                             </td>
-                            <td><b>Free Shipping</b><br>Free shipping on all order</td>
+                            <td><b>Fast&Free Shipping</b><br>Fast and free shipping on all order</td>
                         </tr>
                     </table>
                 </td>
@@ -56,6 +56,510 @@
                 </td>
             </tr>
         </table>
+    </div>
+    <div class="flex items-start justify-center w-full">
+        <ng-container>
+            <mat-accordion class="max-w-4xl">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('privacy-policies')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        Biz Kimiz?
+                        Web sitemizin adresi: https://www.unifortunately.com
+
+                        Yorumlar
+                        Ziyaretçiler sitede yorum bıraktığında, spam tespitine yardımcı olmak için yorum formunda görüntülenen verileri ve ayrıca ziyaretçinin IP adresini ve tarayıcı bilgi metnini toplarız.
+
+                        Hizmeti kullanıp kullanmadığınızı görmek için e-posta adresinizden oluşturulan anonimleştirilmiş bir metin (karma olarak da adlandırılır), Gravatar hizmetine sağlanabilir. Gravatar hizmetinin gizlilik politikası https://automattic.com/privacy/ adresinde mevcuttur. Yorumunuz onaylandıktan sonra, yorumunuzla birlikte profil resminiz de herkes tarafından görülebilecektir.
+
+                        Çevre
+                        Görüntüleri web sitesine yüklerseniz, katıştırılmış konum verileri (EXIF GPS) içeren görüntüleri yüklemekten kaçınmalısınız. Web sitesi ziyaretçileri, web sitesindeki resimlerden herhangi bir konum bilgisini indirebilir ve çıkarabilir.
+
+                        Kurabiye
+                        Sitemize bir yorum bırakırsanız, adınızı, e-posta adresinizi ve web sitenizi çerezlere kaydetmeyi seçebilirsiniz. Bunlar size kolaylık sağlamak içindir, böylece başka bir yorum bıraktığınızda bilgilerinizi tekrar doldurmak zorunda kalmazsınız. Bu çerezler bir yıl süreyle kalır.
+
+                        Ana sayfamızı ziyaret ederseniz, tarayıcınızın çerezleri kabul edip etmediğini belirlemek için geçici bir çerez ayarlayacağız. Bu çerez hiçbir kişisel veri içermez ve tarayıcınızı kapattığınızda atılır.
+
+                        Giriş yaptığınızda, giriş bilgilerinizi ve ekran görünümü seçiminizi kaydetmek için birkaç çerez kaydedeceğiz. Giriş tanımlama bilgileri iki gün ve ekran seçenekleri tanımlama bilgileri bir yıl süreyle kalır. “Beni hatırla” seçeneğini seçerseniz, girişiniz iki hafta sürecektir. Hesabınızdan çıkış yaparsanız, giriş çerezleri kaldırılacaktır.
+
+                        Bir makaleyi düzenler veya yayınlarsanız, tarayıcınıza ek bir çerez kaydedilir. Bu çerez herhangi bir kişisel veri içermez ve yalnızca düzenlemekte olduğunuz makalenin gönderi kimliğini gösterir. 1 gün sonra sona eriyor.
+
+                        Diğer sitelerden gömülü içerik
+                        Bu sitedeki makaleler gömülü içerik (ör. videolar, resimler, makaleler vb.) içerebilir. Diğer web sitelerinden gömülen içerik, ziyaretçinin diğer web sitesini ziyaret etmiş gibi tamamen aynı şekilde davranır.
+
+                        Bu web siteleri sizin hakkınızda veri toplayabilir, çerez kullanabilir, üçüncü taraf izlemeyi gömebilir ve bir hesabınız varsa ve bu web sitesinde oturum açtıysanız, gömülen içerikle etkileşiminizi izlemek dahil olmak üzere, bu gömülen içerikle etkileşiminizi izleyebilir.
+
+                        Verilerinizi kimlerle paylaşıyoruz
+                        Parola sıfırlama isteğinde bulunduğunuzda, IP adresiniz sıfırlama e-postasına dahil edilir.
+
+                        Verilerinizi ne kadar süreyle saklarız?
+                        Bir yorum bırakırsanız, yorum ve meta verileri süresiz olarak saklanır. Bu şekilde, takip eden yorumlarınızı moderasyon kuyruğunda tutmak yerine otomatik olarak tanıyabilir ve onaylayabiliriz.
+
+                        Web sitemize (varsa) kaydolan kullanıcılar için, sağladıkları kişisel bilgileri de kullanıcı profillerinde saklarız. Tüm kullanıcılar istedikleri zaman kişisel bilgilerini görüntüleyebilir, düzenleyebilir veya silebilir (kullanıcı adı değiştirme hariç). Web sitesi yöneticileri de bu bilgileri görüntüleyebilir ve düzenleyebilir.
+
+                        Verileriniz üzerindeki haklarınız nelerdir?
+                        Bu sitede bir hesabınız veya yorumlarınız varsa, bize sağladığınız veriler de dahil olmak üzere, hakkınızda tuttuğumuz kişisel verilerin dışa aktarılmış bir dosyasını almayı talep edebilirsiniz. Hakkınızda tuttuğumuz tüm kişisel verilerin silinmesini de talep edebilirsiniz. Bu, idari, yasal veya güvenlik amaçlarıyla uymak zorunda olduğumuz hiçbir veriyi içermez.
+
+                        Verileriniz nereye gönderilir?
+                        Ziyaretçi yorumları, otomatik spam algılama hizmeti aracılığıyla kontrol edilebilir.
+
+
+
+                        Verilerinizi ne kadar süreyle saklarız?
+                        Bir yorum bırakırsanız, yorum ve meta verileri süresiz olarak saklanır. Bu, herhangi bir takip yorumunu denetleme kuyruğunda tutmak yerine otomatik olarak tanıyabilmemiz ve onaylayabilmemiz içindir.
+
+                        Web sitemize (varsa) kaydolan kullanıcılar için, sağladıkları kişisel bilgileri de kullanıcı profillerinde saklarız. Tüm kullanıcılar kişisel bilgilerini istedikleri zaman görebilir, düzenleyebilir veya silebilir (kullanıcı adlarını değiştirememeleri dışında). Web sitesi yöneticileri de bu bilgileri görebilir ve düzenleyebilir.
+
+                        Verileriniz üzerinde hangi haklara sahipsiniz?
+                        Bu sitede bir hesabınız varsa veya yorum bıraktıysanız, bize sağladığınız veriler de dahil olmak üzere, hakkınızda tuttuğumuz kişisel verilerin dışa aktarılmış bir dosyasını almayı talep edebilirsiniz. Ayrıca, hakkınızda tuttuğumuz tüm kişisel verileri silmemizi talep edebilirsiniz. Bu, idari, yasal veya güvenlik amaçlarıyla saklamak zorunda olduğumuz hiçbir veriyi içermez.
+
+                        Verilerinizi nereye gönderiyoruz?
+                        Ziyaretçi yorumları, otomatik spam algılama hizmeti aracılığıyla kontrol edilebilir.
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+            <mat-accordion class="max-w-4xl">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('cookie-policies')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        Bu metin LTD ŞTİ tarafından kaleme alınmıştır. Hazırlayan İşbu Çerez Aydınlatma Metni'nin amacı, elde edilen kişisel verilerin işlenmesine ilişkin olarak hangi tür çerezleri hangi amaçlarla kullandığımız ve bu çerezleri nasıl yönetebileceğiniz hakkında bilgi vermektir. www.unifortunately.com web sitemizdeki cihazınıza çerezlerin yerleştirilmesi yoluyla otomatik olarak.
+
+
+                        Zorunlu çerezler dışında internet sitemizde kullandığımız çerezler için kullanıcıların açık rızası alınır ve her an rızalarını değiştirme imkanı sağlanır.
+                        Çerez yönetim paneli aracılığıyla kullanıcılar, sitemizde kullanılan çerez türlerini görebilir ve Zorunlu Çerezler dışındaki tüm çerezler için “açık” veya “kapalı” seçenekleriyle tercihlerini belirleyebilirler. Yine kullanıcılar tercihlerini her zaman bu panel üzerinden değiştirebilirler.
+
+                        Çerez Türleri
+                        Kullanım süresine göre çerez türleri: Web sitemizde kullanım sürelerine göre oturum çerezleri ve kalıcı çerezler kullanılmaktadır. Oturum çerezleri, oturumun devamlılığını sağlamak için kullanılır ve kullanıcı tarayıcısını kapattığında bu çerezler de silinir. Kalıcı bir çerez ise internet tarayıcısı kapatıldığında silinmez ve belirli bir tarihte veya belirli bir süre sonra otomatik olarak silinir.
+                        Birinci taraf ve üçüncü taraf çerezler: Çerezin birinci taraf mı yoksa üçüncü taraf mı olduğu, web sitesi veya alan adı tarafından yerleştirilen çereze göre değişir. Birinci taraf tanımlama bilgileri, doğrudan kullanıcının ziyaret ettiği web sitesi, yani tarayıcının adres çubuğunda gösterilen internet adresi (unifortunately.com) tarafından yerleştirilir. Üçüncü taraf tanımlama bilgileri, kullanıcının ziyaret ettiği alandan farklı bir alan tarafından yerleştirilir.
+                        Kullanım amaçlarına göre çerez türleri: Web sitemizde kullanım amaçlarına göre aşağıdaki çerezler kullanılmaktadır:
+
+                        1) Zorunlu Çerezler:
+                        Bu çerezler web sitemizin çalışması için gereklidir. Bu çerezler birinci taraf çerezlerdir ve oturum sırasında kişisel verileri işler (gizlilik tercihlerinizle ilgili çerezler hariç, çünkü bu çerezler oturum süresinden daha uzun sürer.) ve oturum sona erdiğinde otomatik olarak silinir. Bu tanımlama bilgileri, talep ettiğiniz bir bilgi toplumu hizmetini yerine getirmek için zorunlu olarak kullanılır (oturum açma, form doldurma ve gizlilik tercihlerini hatırlama). Ayrıca performans ve analitik amaçlı çerez, web sitemizdeki ziyaretçilerin sayılmasına ve trafiğin ölçülmesine olanak tanır ve birinci taraftır. Bu sayede sitemizin performansını ölçebilir ve iyileştirebiliriz. Bu tanımlama bilgileri, web sitemizdeki hangi sayfaların en popüler ve hangilerinin en az popüler olduğunu anlamamıza yardımcı olur.
+
+                        2) Reklam / Pazarlama Çerezleri
+                        Bu tanımlama bilgileri, reklam ortaklarımız tarafından web sitemiz aracılığıyla yerleştirilen tanımlama bilgileridir ve üçüncü taraf tanımlama bilgileridir. Bu tanımlama bilgileri, iş ortaklarımız tarafından ilgi alanlarınızın profilini çıkarmak ve size alakalı reklamlar göstermek için kullanılır.
+
+                        3) İşlevsel Çerezler
+                        Bu tür çerezler, web sitemizi daha işlevsel hale getirmek ve kişiselleştirme amacıyla (gizlilik tercihleriniz hariç, siteye tekrar giriş yaptığınızda diğer tercihlerinizin hatırlanmasını sağlamak için) kullanılmaktadır.
+
+                        4) Performans / Analitik Çerezler:
+                        Bunlar, kullanıcıların web sitelerindeki davranışlarını analiz etmek için istatistiksel ölçüme izin veren tanımlama bilgileridir. Bu çerezler, reklamların ilgili kişiler üzerindeki etkisinin ölçülmesi de dahil olmak üzere siteyi iyileştirmek için sıklıkla kullanılır. Web sitesi sahipleri tarafından benzersiz ziyaretçi sayısını tahmin etmek, bir web sitesine yönlendiren en önemli arama motoru anahtar kelimelerini belirlemek veya web sitesinde gezinmeyi izlemek için kullanılırlar.
+
+                        5) Kalıcı Çerezler
+                        İnternet tarayıcısı kapatıldığında silinmeyen kalıcı bir çerez, belirli bir tarihte veya belirli bir süre sonra otomatik olarak silinir. Bu çerez aracılığıyla, kullanıcının işlenen verileri, kullanıcı bir web sitesini her ziyaret ettiğinde sunucuya iletilir. Bu nedenle, kalıcı tanımlama bilgilerine bazen izleme tanımlama bilgileri de denir.
+
+                        6) Birinci taraf tanımlama bilgileri
+                        Bu tanımlama bilgileri unifortunately tarafından oluşturulur. Çoğunlukla, web sitemizdeki temel işlevleri sağlarlar. Ayrıca web sitelerimizin ziyaretçiler tarafından nasıl kullanıldığını anlamak için kullandığımız kendi Web Analizi tanımlama bilgilerimizi de içerirler, böylece onları geliştirebiliriz.
+
+                        7) Üçüncü taraf tanımlama bilgileri
+                        Üçüncü taraf tanımlama bilgileri unifortunately tarafından oluşturulmaz, ancak birlikte çalıştığımız seçilmiş üçüncü taraflarca ayarlanır. Bu üçüncü taraf tanımlama bilgilerinin bazıları, çevrimiçi anketler veya Canlı Sohbet (bir unifortunately uzmanına soru sormanıza izin veren) gibi faydalı hizmetler sağlar. Diğerleri, çevrimiçi reklamlarımızı en uygun yerlere yerleştirebilmeleri için göz atma etkinliklerinizi izlemek üzere birlikte çalıştığımız reklam ağları tarafından oluşturulabilir. Aşağıdaki "Çerezleri yönetme" başlıklı bölümde, üçüncü tarafların (reklam verenler dahil) izlenmek istemediğinizi bilmesi için ayarlarınızı nasıl değiştirebileceğinizi açıklıyoruz.
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+            <mat-accordion class="max-w-4xl">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('distance-policies')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        İşbu Sözleşme aşağıda belirtilen hüküm ve koşullar çerçevesinde aşağıdaki taraflar arasında imzalanmıştır.
+
+                        'ALICI' ; (sözleşmede bundan sonra “ALICI” olarak anılacaktır)
+                        ADI SOYADI:
+                        ADRESİ:
+
+                        'SATİS ELEMANİ' ; (sözleşmede bundan sonra “SATICI” olarak anılacaktır)
+                        ADI – SOYADI: LTD ŞTİ.
+
+                        Mersis : 123456789798798749 (Türkiye Merkezi Kayıt Sistemi Numarası)
+                        ADRES: Adres Sokak
+
+                        ALICI iş bu sözleşmeyi kabul etmekle, sözleşme konusu kişinin siparişi onaylaması durumunda sipariş bedelini ve varsa kargo ücreti, vergi gibi ek ücretleri ödeme yükümlülüğü altına gireceğini, bu konu hakkında bilgilendirildiğini söyledi.
+
+                        TANIMLAR
+                        İşbu sözleşmenin uygulanmasında ve yorumlanmasında aşağıda yazılı şartlar, bunlara karşı yazılı açıklamaları ifade edecektir.
+
+                        BAKAN: Gümrük ve Ticaret Bakanını,
+
+                        BAKANLIK: Gümrük ve Ticaret Bakanlığını,
+
+                        YASA: 6502 sayılı Tüketicinin Korunması Hakkında Kanun,
+
+                        YÖNETMELİK: Mesafeli Sözleşmeler Yönetmeliği (RG:27.11.2014/29188)
+
+                        HİZMET: Bir ücret veya menfaat karşılığında yapılan veya yapılması taahhüt edilen malın tedariki dışındaki her türlü tüketici işleminin konusunu,
+
+                        SATICI: Ticari veya mesleki faaliyetleri kapsamında tüketiciye mal sunan veya sağlayıcı adına hareket eden şirketi,
+
+                        ALICI: Bir mal veya hizmeti ticari veya mesleki olmayan amaçlarla edinen, kullanan veya bunlardan yararlanan gerçek veya tüzel kişiyi,
+
+                        SİTE: SATICI'nın internet sitesini,
+
+                        SİPARİŞ VEREN: SATICI'ya ait internet sitesi üzerinden bir mal veya hizmeti talep eden gerçek veya tüzel kişiyi,
+
+                        TARAFLAR: SATICI ve ALICI,
+
+                        SÖZLEŞME: SATICI ile ALICI arasında akdedilen işbu sözleşme,
+
+                        MAL: Alışverişe konu olan taşınır mallar ile elektronik ortamda kullanılmak üzere hazırlanan yazılım, ses, görüntü ve benzeri gayri maddi malları ifade eder.
+
+                        DERS
+                        İşbu Sözleşme, nitelikleri ve satış fiyatı belirtilen ürünün satışı ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkındaki Kanun ve Mesafeli Sözleşmelere Dair Yönetmelik hükümleri gereğince tarafların hak ve yükümlülüklerini düzenler. ALICI'nın SATICI'ya ait internet sitesi üzerinden elektronik ortamda sipariş verdiği aşağıda yer almaktadır.
+
+                        Listelenen ve sitede ilan edilen fiyatlar satış fiyatıdır. İlan edilen fiyatlar ve vaatler güncellenene ve değiştirilene kadar geçerlidir. Belirli bir süre için ilan edilen fiyatlar, belirtilen süre sonuna kadar geçerlidir.
+
+                        SATICI BİLGİSİ
+                        Başlık
+                        Adres
+                        Telefon
+                        Faks
+                        E-posta
+
+                        ALICI BİLGİLERİ
+                        Teslim edilecek kişi
+                        Teslimat adresi
+                        Telefon
+                        Faks
+                        Email/Kullanıcı adı
+
+                        SİPARİŞ VEREN KİŞİ BİLGİLERİ
+                        Ad/Soyad/Unvan
+
+                        Adres
+                        Telefon
+                        Faks E-posta
+                        /Kullanıcı Adı
+
+                        7. SÖZLEŞME KONUSU ÜRÜN/ÜRÜN BİLGİLERİ
+
+                        7.1. Mal/Ürün/Ürün/Hizmet'in temel özellikleri (türü, miktarı, marka/modeli, rengi, adedi) SATICI'ya ait internet sitesinde yayınlanmaktadır. Kampanya satıcı tarafından organize ediliyorsa ilgili ürünün temel özelliklerini kampanya süresince inceleyebilirsiniz. Kampanya tarihine kadar geçerlidir.
+
+                        7.2. Listelenen ve sitede ilan edilen fiyatlar satış fiyatıdır. İlan edilen fiyatlar ve vaatler güncellenene ve değiştirilene kadar geçerlidir. Belirli bir süre için ilan edilen fiyatlar, belirtilen süre sonuna kadar geçerlidir.
+                        7.4. Ürün kargo bedeli olan kargo ücreti ALICI tarafından karşılanacaktır.
+
+                        8. FATURA BİLGİLERİ
+
+                        Ad/Soyad/Unvan
+
+                        Adres
+                        Telefon
+                        Faks E-
+                        posta/Kullanıcı Adı
+                        Fatura teslimatı: Fatura, sipariş teslimatı sırasında sipariş ile birlikte fatura adresine teslim edilecektir.
+
+                        GENEL HÜKÜMLER
+                        9.1. ALICI, SATICI'ya ait internet sitesinde sözleşme konusu ürünün temel nitelikleri, satış fiyatı, ödeme şekli ve teslimata ilişkin ön bilgileri okuyup bilgi sahibi olduğunu ve gerekli bilgileri verdiğini kabul, beyan ve taahhüt eder. elektronik ortamda teyit ALICI'nın; Ön Bilgileri elektronik ortamda teyit ettiğini, SATICI'nın ALICI'ya vereceği adresi mesafeli satış sözleşmesinin kurulmasından önce temin ettiğini, sipariş verdiği ürünün temel özelliklerini kabul, beyan ve taahhüt eder. ürünler, vergiler dahil ürünlerin fiyatı, ödeme ve teslimat bilgilerini doğru ve eksiksiz olarak beyan eder. .
+
+                        9.2. Sözleşme konusu her ürün, ALICI'nın ikametgahının uzaklığına bağlı olarak internet sitesi ön bilgiler bölümünde belirtilen süre içinde ALICI'nın veya ALICI'nın gösterdiği adresteki kişi ve/veya kuruluşa teslim edilir. 30 günlük yasal süreyi aşamaz. Bu süre içinde ürünün ALICI'ya teslim edilememesi halinde ALICI'nın sözleşmeyi feshetme hakkı saklıdır.
+
+                        9.3. SATICI, sözleşme konusu ürünü eksiksiz, siparişte belirtilen niteliklere uygun, garanti belgeleri, varsa kullanım kılavuzları, iş için gerekli bilgi ve belgelerle birlikte teslim etmeyi ve gerekli işi yerine getirmeyi taahhüt eder. standartlara uygun, standartlara uygun, sağlam, her türlü kusurdan ari olarak. İşin yürütülmesi sırasında dikkatli ve öngörülü hareket etmeyi, hizmet kalitesini korumayı ve artırmayı, gerekli özen ve dikkati göstermeyi kabul, beyan ve taahhüt eder.
+
+                        9.4. SATICI, sözleşme konusu ifa yükümlülüğü sona ermeden önce ALICI'ya bilgi vermek ve açık onayını almak şartıyla eşit kalite ve fiyatta farklı bir ürün tedarik edebilir.
+
+                        9.5. SATICI, sipariş konusu ürün veya hizmetin yerine getirilmesinin imkansız olması halinde, bu durumu öğrendiği tarihten itibaren 3 gün içinde yazılı olarak tüketiciye bildireceğini ve toplam bedeli ALICI'ya iade edeceğini kabul, beyan ve taahhüt eder. 14 gün içinde.
+
+                        9.6. ALICI, sözleşme konusu ürünün teslimatı için, sözleşme konusu ürün bedelinin herhangi bir nedenle ödenmemesi ve/veya banka kayıtlarında iptal edilmesi halinde, işbu Sözleşme'yi elektronik ortamda teyit edeceğini kabul, beyan ve taahhüt eder. SATICI'nın sözleşme konusu ürünü teslim yükümlülüğü sona erer.
+
+                        9.7. Sözleşme konusu ürünün tesliminden sonra ALICI'nın veya ALICI'nın gösterdiği adresteki kişi ve/veya kuruluşa tesliminden sonra, ALICI'nın kredi kartının yetkisiz kişilerce haksız olarak kullanılması sonucunda, ürünün bedelinin ödenmemesi halinde, sözleşme konusu bedel ilgili banka veya finans kuruluşu tarafından SATICI'ya ödenmez. 3 gün içinde masrafları SATICI'ya ait olmak üzere SATICI'ya iade edeceğini kabul, beyan ve taahhüt eder.
+
+                        9.8. SATICI, tarafların iradesi dışında gelişen, öngörülemeyen ve sözleşme konusu ürünün ifasına engel olan ve/veya geciktiren mücbir sebepler nedeniyle sözleşme konusu ürünün süresi içinde teslim edilememesi durumunda durumu ALICI'ya bildireceğini kabul, beyan ve taahhüt eder. tarafların yükümlülükleri. ALICI ayrıca SATICI'dan siparişin iptal edilmesini, sözleşme konusu ürünün varsa emsali ile değiştirilmesini ve/veya engel ortadan kalkana kadar teslimat süresinin ertelenmesini talep etme hakkına sahiptir. ALICI tarafından siparişin iptal edilmesi halinde, ALICI'nın nakit olarak yaptığı ödemelerde ürün bedeli 14 gün içinde kendisine nakden ve defaten ödenir. ALICI'nın kredi kartı ile yaptığı ödemelerde, siparişin ALICI tarafından iptal edilmesinden itibaren 14 gün içinde ürün tutarı ilgili bankaya iade edilir. ALICI, SATICI tarafından kredi kartına iade edilen tutarın banka tarafından ALICI'nın hesabına yansıması ortalama 2 ila 3 hafta sürebilmektedir. sorumlu tutulamayacağını kabul, beyan ve taahhüt eder.
+
+                        9.9. SATICI'nın adresi, e-posta adresi, sabit ve cep telefonu hatları ve ALICI'nın kayıtta belirttiği diğer iletişim bilgilerine mektup, e-posta, SMS, telefon görüşmesi ve sair yollarla iletişim, pazarlama, bilgilendirme ve iletişim sitede form veya daha sonra kendisi tarafından güncellenir. sair amaçlarla ALICI'ya ulaşma hakkına sahiptir. ALICI işbu sözleşmeyi kabul etmekle SATICI'nın yukarıda belirtilen iletişim faaliyetlerinde bulunabileceğini kabul ve beyan eder.
+
+                        9.10. ALICI, sözleşme konusu mal/hizmeti teslim almadan önce muayene edecek; ezik, kırık, ambalajı yırtılmış vb. hasarlı ve ayıplı mal/hizmeti kargo şirketinden teslim almayacaktır. Teslim alınan mal/hizmetin hasarsız ve sağlam olduğu kabul edilecektir. Mal/hizmetin tesliminden sonra özenle korunması sorumluluğu ALICI'ya aittir. Cayma hakkı kullanılacaksa mal/hizmet kullanılmamalıdır. Fatura iade edilmelidir.
+
+                        9.11. ALICI ile siparişte kullanılan kredi kartı hamili aynı kişi değilse veya ürün ALICI'ya teslim edilmeden önce siparişte kullanılan kredi kartıyla ilgili bir güvenlik açığı tespit edilirse SATICI, kimlik ve iletişim bilgilerini vermek zorundadır. kredi kartı hamilinin, siparişte kullandığı kredi kartının bir önceki aya ait ekstresi. veya ALICI'dan kart hamilinin bankasından kredi kartının kendisine ait olduğuna dair yazı ibraz etmesini talep edebilir. ALICI, talebe konu bilgi/belgeleri temin edene kadar sipariş dondurulacak olup, yukarıda belirtilen taleplerinin 24 saat içinde karşılanmaması halinde SATICI'nın siparişi iptal etme hakkı saklıdır.
+
+                        9.12. ALICI, SATICI'ya ait internet sitesine üye olurken verdiği kişisel ve diğer sair bilgilerin doğru olduğunu ve bu bilgilerin gerçeğe aykırılığı nedeniyle SATICI'nın uğrayacağı tüm zararları SATICI'nın derhal, nakden ve peşinen tazmin edeceğini beyan ve taahhüt eder. .
+
+                        9.13. ALICI, SATICI'ya ait internet sitesini kullanırken yasal mevzuat hükümlerine uymayı ve bunları ihlal etmemeyi baştan kabul ve taahhüt eder. Aksi takdirde doğabilecek her türlü hukuki ve cezai sorumluluk tamamen ve münhasıran ALICI'yı bağlayacaktır.
+
+                        9.14. ALICI, SATICI'ya ait internet sitesini, kamu düzenini bozacak, genel ahlaka aykırı, başkalarını rahatsız ve taciz edecek şekilde, hukuka aykırı bir amaçla, başkalarının maddi ve manevi haklarına tecavüz edecek şekilde kullanamaz. Ayrıca üye, başkalarının hizmetlerden yararlanmasını engelleyen veya zorlaştıran faaliyetlerde (spam, virüs, truva atı vb.) faaliyette bulunamaz.
+
+                        9.15. SATICI'ya ait internet sitesinde, SATICI'nın kontrolünde olmayan ve/veya başka üçüncü kişilerin sahip olduğu ve/veya işlettiği başka internet sitelerine ve/veya diğer içeriklere link verilebilir. Bu linkler, ALICI'ya yönlendirme kolaylığı sağlamak amacıyla verilmiş olup, herhangi bir internet sitesini veya o siteyi işleten kişiyi desteklememekte ve link verilen internet sitesinde yer alan bilgiler için herhangi bir garanti teşkil etmemektedir.
+
+                        9.16. İşbu sözleşmede sayılan maddelerden bir veya birkaçını ihlal eden üye, bu ihlalden dolayı şahsen ve cezai olarak sorumlu olacak ve SATICI'yı bu ihlallerin hukuki ve cezai sonuçlarından ari tutacaktır. Dahası; Bu ihlal nedeniyle olayın hukuk alanına intikal etmesi halinde, SATICI'nın üyelik sözleşmesine aykırılık nedeniyle üyeye karşı tazminat talep etme hakkı saklıdır.
+
+                        VAZGEÇME HAKKI
+                        10.1. ALICI; Mesafeli sözleşme, malın, ürünün kendisinin veya gösterdiği adresteki kişi/kuruluşun satışına ilişkin ise, teslim tarihinden itibaren 14 (ondört) gün içinde SATICI'ya bildirimde bulunmak kaydıyla, hiçbir hukuki ve cezai sorumluluk üstlenmeksizin ve hiçbir gerekçe göstermeksizin malı reddederek sözleşmeden cayma hakkını kullanır. Hizmet sunumuna ilişkin mesafeli sözleşmelerde bu süre, sözleşmenin imzalandığı tarihten itibaren başlar. Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile hizmetin ifasına başlanan hizmet sözleşmelerinde cayma hakkı kullanılamaz. Cayma hakkının kullanımından doğan masraflar SATICI'ya aittir. Bu sözleşmeyi kabul ederek,
+
+                        10.2. Cayma hakkının kullanılması için 14 (ondört) gün içinde SATICI'ya iadeli taahhütlü posta, faks veya elektronik posta ile yazılı bildirimde bulunulması ve ürünün "Ürünlerin" hükümleri çerçevesinde kullanılmamış olması şarttır. Cayma Hakkı kullanılamaz” hükmü işbu sözleşmede düzenlenmiştir. Bu hakkın kullanılması halinde,
+
+                        a) 3. kişiye veya ALICI'ya teslim edilen ürünün faturası, (İade edilmek istenen ürünün faturası kurumsal ise iade edilirken kurumun düzenlemiş olduğu iade faturası ile birlikte gönderilmesi gerekmektedir. Faturası kesilen sipariş iadeleri, kurumlar adına düzenlenen İADE FATURASI düzenlenmedikçe tamamlanamaz.)
+
+                        b) İade formu,
+
+                        c) İade edilecek ürünlerin kutusu, ambalajı ve varsa standart aksesuarları ile birlikte eksiksiz ve hasarsız olarak teslim edilmesi gerekmektedir.
+
+                        d) SATICI, cayma bildiriminin ALICI'ya ulaşmasını takip eden en geç 10 gün içinde toplam bedeli ve ALICI'yı borç altına sokan belgeleri, 20 gün içinde ise malı iade etmekle yükümlüdür.
+
+                        e) ALICI'nın kusuru nedeniyle malın değerinde bir azalma olursa veya iade imkânsızlaşırsa ALICI kusuru oranında SATICI'nın zararını tazmin etmekle yükümlüdür. Ancak cayma hakkı süresi içinde mal veya ürünlerin usulüne uygun kullanılması nedeniyle meydana gelen değişiklik ve bozulmalardan ALICI sorumlu değildir.
+
+                        f) Cayma hakkının kullanılması nedeniyle SATICI tarafından belirlenen kampanya limit tutarının altına düşülmesi halinde, kampanya kapsamında yararlanılan indirim tutarı iptal edilir.
+
+                        CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER
+                        ALICI'nın talebi veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve iadesi uygun olmayan iç giyim, mayo ve bikini altı, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi olan veya son kullanma tarihi geçme olasılığı olan mallar, ALICI'ya teslim edilir. Teslimattan sonra ALICI tarafından ambalajı açılmışsa sağlık ve hijyen açısından iadeye uygun olmayan ürünler, teslimattan sonra diğer ürünlerle karışan ve doğası gereği ayrıştırılamayan ürünler, Gazete ve benzeri süreli yayınlarla ilgili eşya abonelik sözleşmesi kapsamında sağlananlar dışında dergiler, Elektronik ortamda anında ifa edilen Hizmetler veya tüketiciye anında teslim edilen gayri maddi mallar ile ses veya görüntü kayıtları, kitaplar, dijital içerikler, yazılım programları, veri kayıtları, ve veri depolama cihazları, bilgisayar sarf malzemeleri, ALICI tarafından ambalajı açılmışsa Yönetmelik gereğince iade edilemez. Ayrıca cayma hakkı süresi sona ermeden önce, Tüketicinin onayı ile ifasına başlanan hizmetlere ilişkin olarak Yönetmelik uyarınca cayma hakkının kullanılması mümkün değildir.
+
+                        Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap, kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile kırtasiye sarf malzemelerinin (toner, kartuş, şerit vb.) iadesi için ambalajları açılmamış durumdadır. , denenmemiş, bozulmamış. ve kullanılmamış olmaları gerekir.
+
+                        ERTELENMİŞ DURUM VE HUKUKİ SONUÇLARI
+                        ALICI, kredi kartı ile ödeme işlemi yapması halinde temerrüde düşmesi halinde kart hamili banka ile banka arasındaki kredi kartı sözleşmesi çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul, beyan ve taahhüt eder. Bu durumda ilgili banka yasal yollara başvurabilir; doğacak masraf ve vekalet ücretlerini ALICI'dan talep edebilir ve her halükarda ALICI'nın borcundan dolayı temerrüde düşmesi halinde ALICI, SATICI'nın uğradığı zarar ve ziyanı ödeyeceğini kabul, beyan ve taahhüt eder. borcun gecikmeli ifası nedeniyle.
+
+                        YETKİLİ MAHKEME
+                        İşbu sözleşmeden doğan ihtilaflarda, tüketici sorunlarında, tüketicinin yerleşim yeri veya tüketici işleminin yapıldığı yerdeki şikayet ve itirazlar, aşağıda kanunda belirtilen parasal sınırlar dahilinde, hakem heyetlerine veya tüketici mahkemelerine yapılacaktır. Parasal limite ilişkin bilgiler aşağıdadır:
+
+                        28/05/2014 tarihinden itibaren geçerlidir:
+
+                        a) 6502 sayılı Tüketicinin Korunması Hakkında Kanunun 68 inci maddesi uyarınca değeri 2.000,00 (iki bin) TL'den az olan uyuşmazlıklarda ilçe tüketici hakem heyetlerine,
+
+                        b) Değeri 3.000,00 (üçbin) TL'den az olan uyuşmazlıklarda il tüketici hakem heyetleri,
+
+                        c) Büyükşehir statüsündeki illerde değeri 2.000,00 (iki bin) TL ile 3.000,00 (üç bin) TL arasındaki uyuşmazlıklarda il tüketici hakem heyetlerine başvurulur.
+                        Bu Sözleşme ticari amaçlarla yapılmıştır.
+
+                        VERİMLİLİK
+                        ALICI, Site üzerinden verdiği siparişe ilişkin ödemeyi yaptığında işbu sözleşmenin tüm koşullarını kabul etmiş sayılır. SATICI, siparişin yerine getirilmesinden önce işbu sözleşmenin ALICI tarafından sitede okunduğuna ve kabul edildiğine dair teyit almak için gerekli yazılımsal düzenlemeleri yapmakla yükümlüdür.
+
+                        SATICI: LTD ŞTİ
+
+                        ALICI:
+
+                        TARİH:
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+            <mat-accordion class="max-w-4xl">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('consumer-terms')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        GENEL:
+
+                        Kullanmakta olduğunuz web sitesi üzerinden elektronik ortamda sipariş vermeniz halinde size sunulan ön bilgilendirme formunu ve mesafeli satış sözleşmesini kabul etmiş sayılırsınız.
+
+
+                        Alıcılar, satın aldıkları ürünün satış ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmelere Dair Yönetmelik (RG:27.11.2014/29188) hükümleri ile yürürlükteki diğer kanunlara tabidir.
+
+
+                        Ürün kargo ücreti olan kargo ücreti satıcı tarafından karşılanacaktır.
+
+
+                        Satın alınan her ürün yasal 30 günlük süreyi geçmemek kaydıyla alıcının gösterdiği adresteki kişi ve/veya kuruluşa teslim edilir. Bu süre içinde ürünün teslim edilmemesi halinde Alıcılar sözleşmeyi feshedebilir.
+
+
+                        Satın alınan ürünün eksiksiz ve siparişte belirtilen niteliklere uygun ve varsa garanti belgesi, kullanım kılavuzu gibi belgeleri ile birlikte teslim edilmesi gerekmektedir.
+
+
+                        Satıcı, satın aldığı ürünü satamayacak hale gelirse bu durumu öğrendiği tarihten itibaren 3 gün içinde alıcıya yazılı olarak bildirmek zorundadır. Toplam bedel 14 gün içinde Alıcı'ya iade edilmelidir.
+
+
+                        SATIN ALINAN ÜRÜN ÖDENMEZSE:
+
+                        Alıcı, satın aldığı ürün bedelini ödemez veya banka kayıtlarında iptal ederse, Satıcı'nın ürünü teslim yükümlülüğü sona erer.
+
+
+                        KREDİ KARTININ İZİNSİZ KULLANIMI İLE YAPILAN ALIŞVERİŞLER:
+
+                        Ürün teslim alındıktan sonra, ödemesini yaptığı kredi kartının yetkisiz kişilerce haksız yere kullanıldığı ve satılan ürün bedelinin ilgili banka veya finans kuruluşu tarafından Satıcı'ya ödenmediği tespit edilirse, Alıcı; sözleşme konusu ürünü 3 gün içinde masrafları SATICI'ya ait olmak üzere iade etmek. SATICI'ya iade edilmelidir.
+
+
+                        ÜRÜN SÜRESİNDE TESLİM EDİLMEYEN SEBEPLERLE YAPILMAZSA:
+
+                        Satıcı'nın öngöremeyeceği mücbir sebeplerin ortaya çıkması ve ürünün zamanında teslim edilememesi durumunda Alıcı'ya bilgi verilir. Alıcı, siparişin iptalini, ürünün benzeri ile değiştirilmesini veya engel ortadan kalkana kadar teslimatın ertelenmesini talep edebilir. Alıcı siparişi iptal ederse; Ödemeyi nakit olarak yapmış ise iptal tarihinden itibaren 14 gün içinde bu ücret kendisine nakden ödenir. Alıcı, ödemeyi kredi kartı ile yapmış ise ve iptal ederse bu iptalden itibaren 14 gün içinde ürün bedeli bankaya iade edilir ancak bankanın 2-3 hafta içinde alıcının hesabına aktarması mümkündür.
+
+
+                        ALICININ ÜRÜNÜ KONTROL ETME YÜKÜMLÜLÜĞÜ:
+
+                        Alıcı, sözleşme konusu mal/hizmeti teslim almadan önce muayene edecek; ezik, kırık, ambalajı yırtılmış vb. hasarlı ve ayıplı mal/hizmeti kargo şirketinden teslim almayacaktır. Teslim alınan mal/hizmetin hasarsız ve sağlam olduğu kabul edilecektir. ALICI, teslimden sonra mal/hizmeti özenle korumak zorundadır. Cayma hakkı kullanılacaksa mal/hizmet kullanılmamalıdır. Fatura ürün ile birlikte iade edilmelidir.
+
+
+                        VAZGEÇME HAKKI:
+
+                        ALICI; Satın aldığı ürünün kendisine veya gösterdiği adresteki kişi/kuruluşa teslim tarihinden itibaren 14 (ondört) gün içinde hiçbir hukuki ve cezai sorumluluk üstlenmeksizin malları reddederek sözleşmeden cayma hakkını kullanabilir ve aşağıdaki iletişim bilgileri vasıtasıyla SATICI'ya bildirmek kaydıyla hiçbir sebep göstermeksizin.
+
+
+                        SATICININ CAYMA HAKKI HAKKINDA BİLDİRİLMESİ GEREKEN İLETİŞİM BİLGİLERİ:
+
+
+                        İade formunu doldurmak için buraya tıklayın veya info@unifortunately.com adresine e-posta gönderin.
+
+                        CAYMA HAKKI SÜRESİ:
+
+                        Alıcı hizmet satın almış ise bu 14 günlük süre sözleşmenin imzalandığı tarihten itibaren başlar. Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile hizmetin ifasına başlanan hizmet sözleşmelerinde cayma hakkı kullanılamaz.
+                        Cayma hakkının kullanımından doğan masraflar SATICI'ya aittir.
+
+
+                        Cayma hakkının kullanılması için 14 (ondört) gün içinde SATICI'ya iadeli taahhütlü posta, faks veya elektronik posta ile yazılı bildirimde bulunulması ve ürünün "Ürünlerin" hükümleri çerçevesinde kullanılmamış olması şarttır. Cayma Hakkı kullanılamaz” hükmü işbu sözleşmede düzenlenmiştir.
+
+
+                        CAYMA HAKKI KULLANIMI:
+
+                        3. kişiye veya ALICI'ya teslim edilen ürünün faturası, (İade edilmek istenen ürünün faturası kurumsal ise iade edilirken kurumun düzenlemiş olduğu iade faturası ile birlikte gönderilmesi gerekmektedir. Faturası tarihinde düzenlenen sipariş iadeleri, kurumlar adına İADE FATURASI düzenlenmedikçe tamamlanamaz.)
+
+
+                        İade formu, İade edilecek ürünlerin kutusu, ambalajı, varsa standart aksesuarları ile birlikte eksiksiz ve hasarsız olarak teslim edilmesi gerekmektedir.
+
+                        İADE ŞARTLARI:
+
+                        SATICI, cayma bildiriminin ALICI'ya ulaşmasını takip eden en geç 10 gün içinde toplam bedeli ve ALICI'yı borç altına sokan belgeleri, 20 gün içinde ise malı iade etmekle yükümlüdür.
+
+
+                        ALICI'nın kusuru nedeniyle malın değerinde bir azalma olursa veya iade imkânsızlaşırsa ALICI kusuru oranında SATICI'nın zararını tazmin etmekle yükümlüdür. Ancak cayma hakkı süresi içinde mal veya ürünlerin usulüne uygun kullanılması nedeniyle meydana gelen değişiklik ve bozulmalardan ALICI sorumlu değildir.
+
+
+                        Cayma hakkının kullanılması nedeniyle SATICI tarafından belirlenen kampanya limit tutarının altına düşülmesi halinde kampanya kapsamında yararlanılan indirim tutarı iptal edilir.
+
+
+                        CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER:
+
+                        ALICI'nın talebi veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve iadesi uygun olmayan iç giyim, mayo ve bikini altı, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi olan veya son kullanma tarihi geçme olasılığı olan mallar, ALICI'ya teslim edilir. Teslimattan sonra ALICI tarafından ambalajı açılmışsa sağlık ve hijyen açısından iadeye uygun olmayan ürünler, teslimattan sonra diğer ürünlerle karışan ve doğası gereği ayrıştırılamayan ürünler, Gazete ve benzeri süreli yayınlarla ilgili eşya dergiler, abonelik sözleşmesi kapsamında sağlananlar dışında, Elektronik ortamda anında ifa, Yönetmelik uyarınca, tüketiciye sağlanan hizmetlerin veya teslim edilen gayrimaddi malların derhal iade edilmesinin mümkün olmadığı, ayrıca ALICI tarafından paketi açılmış ise ses veya görüntü kayıtları, kitaplar, dijital içerikler, yazılım programları, veri kayıt ve veri depolama cihazları, bilgisayar sarf malzemeleri. Ayrıca cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile ifasına başlanan hizmetlere ilişkin olarak Yönetmelik uyarınca cayma hakkının kullanılması mümkün değildir.
+                        Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap, kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile kırtasiye sarf malzemelerinin (toner, kartuş, şerit vb.) iadesi için ambalajları açılmamış durumdadır. , denenmemiş, bozulmamış. ve kullanılmamış olmaları gerekir.
+
+
+                        TEMERRÜT DURUMU VE HUKUKİ SONUÇLARI
+
+                        ALICI, kredi kartı ile ödeme işlemi yapması halinde temerrüde düşmesi halinde kart hamili banka ile banka arasındaki kredi kartı sözleşmesi çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul, beyan ve taahhüt eder. Bu durumda ilgili banka yasal yollara başvurabilir; doğacak masraf ve vekalet ücretlerini ALICI'dan talep edebilir ve her halükarda ALICI'nın borcundan dolayı temerrüde düşmesi halinde ALICI, borcun geç ifasından dolayı SATICI'nın uğradığı zarar ve ziyanı tazmin edeceğini kabul eder. .
+
+
+                        ÖDEME VE TESLİMAT
+
+                        Sitemiz üzerinden tek ödeme ile tüm kredi kartlarından yararlanabilirsiniz. Online ödemelerinizde siparişinizin sonunda tutar kredi kartınızdan çekilecektir.
+
+
+                        Ürün gönderimleriniz EFT işlemleri kontrol edildikten veya Kredi Kartı ile Ödeme yapıldıktan sonra yapılır. Ücreti ödenmeyen ürünler gönderilmeyecektir.
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+            <mat-accordion class="max-w-4xl">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('terms-of-use')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        Lütfen sitemizi kullanmadan önce bu 'site kullanım koşulları'nı dikkatlice okuyunuz.
+
+                        Bu alışveriş sitesini kullanan ve alışveriş yapan müşterilerimizin aşağıdaki şartları kabul ettiği varsayılmaktadır:
+
+                        Siz ('Kullanıcı'), sitedeki hizmeti kullanmakla ve kullanmaya devam etmekle, sitede sunulan tüm hizmetlerden yararlanırken aşağıdaki koşullara tabi olursunuz; Bağlı olduğunuz yasalara göre sözleşme imzalama hak, yetki ve hukuki ehliyetine sahip olduğunuzu ve 18 yaşından büyük olduğunuzu, bu sözleşmeyi okuyup anladığınızı ve yükümlü olduğunuzu kabul etmektesiniz. sözleşmede yazılı şartlara göre.
+
+                        İşbu sözleşme, taraflara sözleşme konusu site üzerinde hak ve yükümlülükler yüklemektedir ve taraflar bu sözleşmeyi kabul ettiklerinde yukarıda belirtilen hak ve yükümlülükleri eksiksiz, doğru, zamanında ve süresi içinde yerine getireceklerini beyan ederler. bu sözleşmede talep edilen şartlar.
+
+                        SORUMLULUKLAR
+                        A. Şirket, fiyatlarda ve sunulan ürün ve hizmetlerde değişiklik yapma hakkını her zaman saklı tutar.
+
+                        B. Şirket, üyenin sözleşme konusu hizmetlerden teknik arızalar dışında yararlandırılacağını kabul ve taahhüt eder.
+
+                        C. Kullanıcı, sitenin kullanımında tersine mühendislik yapmayacağını veya bunların kaynak kodunu bulmak veya elde etmek amacına yönelik başka herhangi bir işlemde bulunmayacağını, aksi takdirde doğacak zararlardan 3. Kişiler nezdinde sorumlu olacağını ve bu hukuki sorumluluğun yasal olduğunu peşinen kabul eder. ve hakkında cezai işlem yapılacaktır.
+
+                        D. Kullanıcı, sitedeki faaliyetlerinde, sitenin herhangi bir bölümünde veya iletişimlerinde genel ahlaka ve görgü kurallarına aykırı, hukuka aykırı, üçüncü kişilerin haklarını zedeleyici, yanıltıcı, saldırgan, müstehcen, pornografik , kişilik haklarına zarar verir, telif haklarını ihlal eder, yasa dışı faaliyetleri teşvik eder. içerik üretmemeyi ve paylaşmamayı kabul eder. Aksi halde oluşacak zarardan tamamen kendisi sorumludur ve bu durumda 'Site' yetkilileri bu tür hesapları askıya alabilir veya kapatabilir, yasal işlem başlatma hakkını saklı tutar. Bu sebeple yargı mercilerinden gelen etkinlik veya kullanıcı hesapları ile ilgili bilgi taleplerini paylaşma hakkını saklı tutar.
+
+                        e. Site üyelerinin birbirleriyle veya 3. şahıslarla olan ilişkileri kendi sorumluluğundadır.
+
+                        Fikri Mülkiyet Hakları
+                        2.1. Bu Site'de yer alan ünvan, işletme adı, marka, patent, logo, tasarım, bilgi, yöntem gibi tescilli veya tescilsiz tüm fikri mülkiyet hakları, siteyi işleten ve sahibi şirkete veya belirtilen kişiye ait olup, ulusal ve uluslararası hukuk ve hukukun koruması altındadır. kanun. Bu Siteyi ziyaret etmek veya bu Sitedeki hizmetleri kullanmak, bu tür fikri mülkiyet haklarına ilişkin herhangi bir hak vermez.
+
+                        2.2. Sitedeki bilgiler hiçbir şekilde çoğaltılamaz, yayınlanamaz, kopyalanamaz, sunulamaz ve/veya aktarılamaz. Site'nin tamamı veya bir kısmı başka bir internet sitesinde izinsiz kullanılamaz.
+
+                        Kesin bilgi
+                        3.1. Şirket, kullanıcıların site aracılığıyla ilettiği kişisel bilgileri üçüncü şahıslara açıklamayacaktır. Bu kişisel bilgiler; Kişi adı-soyadı, adresi, telefon numarası, cep telefonu, e-posta adresi gibi Kullanıcıyı tanımlamaya yönelik her türlü diğer bilgileri içermekte olup, kısaca “Gizli Bilgiler” olarak anılacaktır.
+
+                        3.2. Kullanıcı sadece promosyon, reklam, kampanya, promosyon, duyuru vb. sitelerin sahibi olan firma ile iletişim, portföy durumu, demografik bilgilerinin bağlı olduğu iştirakleri veya grup şirketleri ile paylaşılmasına muvafakat ettiğini kabul ve beyan eder. bağlı olup, pazarlama faaliyetleri kapsamındaki kullanımı ile sınırlıdır. Bu kişisel bilgiler şirket bünyesinde müşteri profili belirlemek, müşteri profiline uygun promosyon ve kampanyalar sunmak ve istatistiki çalışmalar yapmak amacıyla kullanılabilecektir.
+
+                        3.3. Gizli Bilgiler, ancak resmi makamlarca bu bilgilerin usulüne uygun olarak talep edilmesi ve yürürlükteki emredici mevzuat hükümleri gereğince resmi makamlara açıklama yapılmasının zorunlu olması halinde resmi makamlara açıklanabilecektir.
+
+                        Garanti Hakkında
+                        Bu sözleşme maddesi, yürürlükteki yasaların izin verdiği azami ölçüde uygulanacaktır. Şirket tarafından sağlanan hizmetler, "olduğu gibi" ve "mümkün olduğu gibi" esasına göre, ticari elverişlilik, belirli bir amaca uygunluk veya ihlal edilmemesine ilişkin zımni garantiler olmaksızın sağlanmaktadır. Kanuni veya başka türlü hiçbir garanti vermez.
+
+                        Kayıt ve Güvenlik
+                        Kullanıcı doğru, eksiksiz ve güncel kayıt bilgilerini sağlamalıdır. Aksi halde işbu Sözleşme ihlal edilmiş sayılacak ve Kullanıcı'ya bilgi verilmeden hesap kapatılabilecektir.
+
+                        Site ve üçüncü şahıslara ait sitelerde şifre ve hesap güvenliğinden kullanıcı sorumludur. Aksi takdirde veri kaybı ve güvenlik ihlallerinden, donanım ve cihazların zarar görmesinden Şirket sorumlu tutulamaz.
+
+                        Mücbir Sebep
+                        tarafların kontrolünde olmayan; Sözleşmeden doğan doğal afetler, yangın, patlamalar, iç savaşlar, savaşlar, ayaklanmalar, halk hareketleri, seferberlik ilanı, grevler, lokavtlar, salgın hastalıklar, altyapı ve internet arızaları, elektrik kesintileri (aşağıda toplu olarak “Mücbir Sebep” olarak anılacaktır). Yükümlülükler taraflarca yerine getirilemez hale gelirse taraflar sorumlu değildir. Bu süre zarfında Tarafların işbu Sözleşme'den doğan hak ve yükümlülükleri askıya alınır.
+
+                        Sözleşmenin Bütünlüğü ve Uygulanabilirliği
+                        Bu sözleşmenin şartlarından biri kısmen veya tamamen geçersiz hale gelirse, sözleşmenin geri kalanı geçerliliğini sürdürecektir.
+
+                        Sözleşme Değişiklikleri
+                        Şirket, sitede sunulan hizmetleri ve işbu sözleşme şartlarını dilediği zaman kısmen veya tamamen değiştirebilir. Değişiklikler sitede yayınlandığı tarihten itibaren geçerli olacaktır. Değişiklikleri takip etmek Kullanıcı'nın sorumluluğundadır. Kullanıcı sunulan hizmetlerden yararlanmaya devam etmekle bu değişiklikleri kabul etmiş sayılır.
+
+                        Bildiri
+                        İşbu Sözleşme ile ilgili olarak taraflara gönderilecek tüm bildirimler, Firma'nın bilinen e-posta adresi ve kullanıcının üyelik formunda belirttiği e-posta adresi aracılığıyla yapılacaktır. Kullanıcı, üye olurken belirttiği adresin geçerli bir tebligat adresi olduğunu, değişiklik olması halinde 5 gün içinde karşı tarafa yazılı olarak bildireceğini, aksi takdirde bu adrese yapılacak tebligatların geçerli sayılacağını kabul eder.
+
+                        Kanıt Sözleşmesi
+                        Taraflar arasında işbu sözleşme ile ilgili işlemlerden doğabilecek her türlü ihtilaflarda, Tarafların defter, kayıt ve belgeleri, bilgisayar kayıtları, faks kayıtları 6999 sayılı Hukuk Muhakemeleri Kanunu uyarınca delil olarak kabul edilecektir. 6100 ve kullanıcı bu kayıtlara itiraz etmeyeceğini kabul eder.
+
+                        Tartışmalı karar
+                        İşbu Sözleşme'nin uygulanmasından veya yorumlanmasından doğacak her türlü ihtilafların çözümünde İZMİR / Türkiye (Merkez) Adliyeleri Mahkemeleri ve İcra Daireleri yetkilidir.
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+            <mat-accordion class="max-w-4xl ">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('pre-information')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        1-SÖZLEŞME KONUSU ÜRÜNLER:
+                        Ürünlerin Cinsi ve Cinsi, Miktarı, Menüdeki Adı ve Ürünlerin Satışı.
+
+                        ​ Toplam KDV Dahil Fiyat: ……………………. ₺ ( Türk Lirası )
+
+                        Teslimat Bilgisi: ……………………………………………….
+
+                        2- GENEL ŞARTLAR
+                        2.1. Taraflar yukarıda belirtilen ürün/ürünler üzerinde mutabık kalmışlardır.
+
+                        2.2. İşbu Ön Bilgilendirme Formu kapsamındaki bilgilerin detayları hakkında bilgilendirme yapılacak olup, elektronik alım için Müşteri'nin Mesafeli Sözleşmelere İlişkin Yönetmelik hükümlerine ilişkin sözleşmeyi onaylaması gerekmektedir.
+
+                        2.3. Bu ön bilgilendirme formülü, SATICI'ya ait müşteri bilgileri ve Müşteri'nin “www.unifortunately.com” isimli “unifortunately” isimli internet sitesi veya Müşteri'nin mobil web uygulaması üzerinden teslim edilmek üzere teslim edilmesinden oluşmaktadır. Tarafların hakları ve beğenileri ile fiyat belirtilir.
+
+                        3- İADE HAKKI
+                        İşbu sözleşmenin “15/1-c” kapsamından dolayı “çabuk büyüyebilen veya süresi dolan veya teslim olanlara” ait olduğu dikkate alınarak, kabul üzerine teslim edilecek bedeli kabul ederek teslim edeceklerdir. Ürün müşteriye özel hazırlanacak bir üründen hazırlandıktan sonra ayrıştırılarak kullanılamaz. Bu siparişin iptali için ürünün hazırlanmasına yönelik herhangi bir hazırlık yapılmamış olup; siparişin satın alınması, vb. kabul edilemez, kabul edilemez, taahhüt ve taahhüt edilirse bu gibi durumlarda hazırlanmaya başlanmışsa.
+
+                        4- GEÇERLİLİK
+                        Bu ön bilgilendirme formülü elektronik eğitim MÜŞTERİ tarafından okunmuş ve kabul edilmiştir.
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+            <mat-accordion class="max-w-4xl">
+                <ng-container>
+                    <mat-expansion-panel class="mt-2">
+                        <mat-expansion-panel-header [collapsedHeight]="'40px'">
+                            <mat-panel-title class="font-medium leading-tight">{{t('kvkk')}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        LTD ŞTİ . (bundan böyle “ ŞİRKET” olarak anılacaktır.“), kişisel titizlikte titizlik gösterin. Bu ve yasa dışı kişilerden 6698 şirketin etkileşim verilerine ait olan 6698 sayılı Kişiliğin Korunması Hakkında Kanun'dan bu şekilde “Kanun” olarak anılacaktır. Tebliğ vb.) ve genel olarak Kişisel Verilerin Korunması tarafından alınacak ve alınacak kararlar doğrultusunda bu işlemelerin saklanmasına büyük önem verilmektedir. Bu sorumluluğun bilincinde olunması ve “Veri Sorumlusu” kişiliğimizin, tarafımızca satın alınan kişisel boyutların, hesap oluşturma süreçlerinin ve planlama sürecinde tarafımızca tasarlanmakta olan kontrol kontrol kontrolünün onaylanması gerekmektedir. Personelinizin Adı, Soyadı, İletişim Bilgileri, Fatura Bazlı Bilgileri, Adı) Finans ve Muhasebe İşlemleri, ii) Faaliyetlerin Mevzuata Uygun Yürütülmesi, iii) İletişim Faaliyetlerinin Yürütülmesi, iv) İş Faaliyetlerinin Yürütülmesi/Kontrol Edilmesi, v) Mal/Hizmet Alımlarının Yürütülmesi, vi) Mal/Hizmet Üretim ve Operasyon süreçlerinin yürütülmesi, vii) Müşteri İlişkileri Yönetimi Süreçlerinin Yürütülmesi, viii) Takip Talep/Şikâyetlerin Takibi ix) Ziyaret Kayıtlarının Oluşturulması ve Takibi; Otomatik veri yöntemi ile ilgili eğitim ile ilgili görevlerin otomatik olarak eğitilmesi ve bu sürenin kayıt altına alınması amaçlanmaktadır. Kişisel veriler, şirketin yetkili birimi tarafından otomatik ve otomatik olmayan, kullanıcı tarafından sözlü, yazılı, elektronik veya programlı olarak toplanmaktadır. Bu pencereden yukarıda açıklanacaktır; Kanunun 5. saniyesinde belirtildiği gibi, vi) Mal/Hizmet Üretim ve Operasyon süreçlerinin yürütülmesi, vii) Müşteri İlişkileri Yönetimi Süreçlerinin yürütülmesi, viii) Talep/Şikayetlerin Takibi ix) Ziyaret Kayıtlarının Oluşturulması ve Takibi; Otomatik veri yöntemi ile ilgili eğitim ile ilgili görevlerin otomatik olarak eğitilmesi ve bu sürenin kayıt altına alınması amaçlanmaktadır. Kişisel veriler, şirketin yetkili birimi tarafından otomatik ve otomatik olmayan, kullanıcı tarafından sözlü, yazılı, elektronik veya programlı olarak toplanmaktadır. Bu pencereden yukarıda açıklanacaktır; Kanunun 5. saniyesinde belirtildiği gibi, vi) Mal/Hizmet Üretim ve Operasyon süreçlerinin yürütülmesi, vii) Müşteri İlişkileri Yönetimi Süreçlerinin yürütülmesi, viii) Talep/Şikayetlerin Takibi ix) Ziyaret Kayıtlarının Oluşturulması ve Takibi; Otomatik veri yöntemi ile ilgili eğitim ile ilgili görevlerin otomatik olarak eğitilmesi ve bu sürenin kayıt altına alınması amaçlanmaktadır. Kişisel veriler, şirketin yetkili birimi tarafından otomatik ve otomatik olmayan, kullanıcı tarafından sözlü, yazılı, elektronik veya programlı olarak toplanmaktadır. Bu pencereden yukarıda açıklanacaktır; Kanunun 5. saniyesinde belirtildiği gibi, ilgili eğitimle ilgili görevlerin otomatik olarak eğitilmesi ve bu sürenin kayıt altına alınması amaçlanmaktadır. Kişisel veriler, şirketin yetkili birimi tarafından otomatik ve otomatik olmayan, kullanıcı tarafından sözlü, yazılı, elektronik veya programlı olarak toplanmaktadır. Bu pencereden yukarıda açıklanacaktır; Kanunun 5. saniyesinde belirtildiği gibi, ilgili eğitimle ilgili görevlerin otomatik olarak eğitilmesi ve bu sürenin kayıt altına alınması amaçlanmaktadır. Kişisel veriler, şirketin yetkili birimi tarafından otomatik ve otomatik olmayan, kullanıcı tarafından sözlü, yazılı, elektronik veya programlı olarak toplanmaktadır. Bu pencereden yukarıda açıklanacaktır; Kanunun 5. saniyesinde belirtildiği gibi,
+
+                        ​• Bir sözleşme veya ifası için onaylanan kişi ile ilgili bilgiler alınmalı,
+
+                        • Veri sorumlusu elde edilemeyecek şekilde satın alınabilir,
+
+                        • Veri sahibine ve özgürlüklerine zarar verme hakkı göz önüne alındığında, verilerin meşru menfaatlerinden sorumlu olmalıdır.
+
+                        • herkesin kendisi tarafından alenileştirilmiş olması gerçeğine dayanılarak işlenmektedir.
+
+                        ​6698 Sayılı Kişisel Verilerin Korunması şartına göre ve 9/8 ile ilgili size ait, halen incelemeye alınan ve hukuki bilgileri planladığınız tarafa ait; yasal olarak yetkili kamu, adli ve idari makamlara, diğer vergi mükelleflerine, özel hukuk sahiplerine ve gerçek uygulamaya, Şirketi denetlemeye yetkili kurum ve kuruluşlara, ödemeler ve mali amaçlar için saygın ödemeler, şirket tarafından yetkilendirilmiş kişiler ve için mümkün olacaktır. generallerin eğitimleri ile ilgili detaylı bilgileri tamamlayabilecekleri materyallerden iş birliği içinde görevden alınmaları için aktarmaktır. Kişisel kullanımla ilgili verilerde tüm teknikler ve planlar tasarlanacak şekilde imha edileceklerdir.
+
+                        Kişisel verilerinizle her zaman;
+
+                        • Kişisel olarak işlenmezler, eğitim ile ilgili olarak işlenmezler,
+
+                        • Kişisel eşyaların işlenme amacına ve amacına uygun kullanılmadığına ilişkin bilgi,
+
+                        • Yurt içinde veya yurt dışında bizzat anlatılan kişiler hakkında bilgiler,
+
+                        • Kişisel olarak iyi olan veya olması gerektiği gibi olması gereken,
+
+                        • İşlem görmeden teslim alındıktan veya nakliyeden çıkarıldıktan sonra bildirim yapılacak kişiden transfer talebinde bulunabilirsiniz.
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+        </ng-container>
     </div>
 </div>
 
