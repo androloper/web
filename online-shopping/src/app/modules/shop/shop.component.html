@@ -1,0 +1,452 @@
+<!--<div class="w-full">-->
+<!--    <div class="flex items-start justify-between w-full bg-card p-6">-->
+<!--        <div class="text-4xl">Deneme</div>-->
+<!--        <div class="text-4xl">Deneme</div>-->
+<!--    </div>-->
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 justify-between w-full my-auto">
+        <fuse-alert
+            class="mb-8"
+            *ngIf="alert"
+            [type]="alert.type"
+            [showIcon]="false">
+            {{alert.message}}
+        </fuse-alert>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl leading-tight">Mobile Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$10000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl leading-tight">Web-based Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$5000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl leading-tight">System Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$25000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl leading-tight">Mobile Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$10000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl leading-tight">Web-based Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$5000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl leading-tight">System Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$25000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl leading-tight">Mobile Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$10000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl leading-tight">Web-based Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$5000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl leading-tight">System Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$25000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl leading-tight">Mobile Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$10000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl leading-tight">Web-based Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$5000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl leading-tight">System Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$25000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl leading-tight">Mobile Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$10000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl leading-tight">Web-based Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$5000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 w-full max-h-140 filter-shopping">
+            <div class="relative">
+                <img
+                    class="object-cover"
+                    src="assets/images/logo/unifortunately.png"
+                    alt="Card cover image">
+            </div>
+            <div class="m-4">
+                <div class="flex flex-col">
+                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl leading-tight">System Application Development</div>
+                    <div class="text-3xl font-semibold mt-2">$25000.00</div>
+                </div>
+            </div>
+            <div class="mb-0">
+                <div class="-mx-8">
+                    <button
+                        class="w-full rounded"
+                        mat-flat-button
+                        [color]="'primary'"
+                        [routerLink]="['./']">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </fuse-card>
+    </div>
+<!--</div>-->
+<!--<fuse-card class="flex flex-col md:flex-row max-w-80 md:max-w-160 w-full filter-shopping">-->
+<!--    <div class="flex-0 w-80 md:w-60 ">-->
+<!--        <img-->
+<!--            class="w-full h-full object-cover"-->
+<!--            src="assets/images/logo/unifortunately.png"-->
+<!--            alt="Card cover image">-->
+<!--    </div>-->
+<!--    <div class="flex flex-col flex-auto m-8 mb-4">-->
+<!--        <div class="text-2xl leading-tight">Gray sneakers with white stripes</div>-->
+<!--        <div class="text-md font-medium text-secondary mt-1">ALIDAS</div>-->
+<!--        <div class="text-3xl font-semibold mt-4">$240.00</div>-->
+<!--        <div class="flex items-center text-md mt-6">-->
+<!--            <span class="text-secondary whitespace-nowrap mr-3">Select a size:</span>-->
+<!--            <span class="mr-2">39</span>-->
+<!--            <span class="mr-2">40</span>-->
+<!--            <span class="mr-2">41</span>-->
+<!--            <span class="font-bold text-primary mr-2">42</span>-->
+<!--            <span class="mr-2">43</span>-->
+<!--        </div>-->
+<!--        <hr class="w-full border-b mt-6 md:mt-auto mb-4">-->
+<!--        <div class="flex items-center -mx-3">-->
+<!--            <button-->
+<!--                class="px-3 mr-1"-->
+<!--                mat-button-->
+<!--                [color]="'primary'"-->
+<!--                [routerLink]="['./']">-->
+<!--                <mat-icon-->
+<!--                    class="icon-size-5"-->
+<!--                    [svgIcon]="'heroicons_solid:shopping-cart'"></mat-icon>-->
+<!--                <span class="ml-2">Add to Cart</span>-->
+<!--            </button>-->
+<!--            <button-->
+<!--                class="ml-auto"-->
+<!--                mat-icon-button>-->
+<!--                <mat-icon-->
+<!--                    class="icon-size-5 text-hint"-->
+<!--                    [svgIcon]="'heroicons_solid:heart'"></mat-icon>-->
+<!--            </button>-->
+<!--            <button mat-icon-button>-->
+<!--                <mat-icon-->
+<!--                    class="icon-size-5 text-hint"-->
+<!--                    [svgIcon]="'heroicons_solid:switch-horizontal'"></mat-icon>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</fuse-card>-->
