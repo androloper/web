@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Admin} from './modules/auth/models/admin';
 
 @Component({
     selector   : 'app-root',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent
 {
+    static usr: Admin;
     /**
      * Constructor
      */

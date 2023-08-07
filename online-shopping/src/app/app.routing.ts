@@ -8,16 +8,11 @@ import { InitialDataResolver } from 'app/app.resolvers';
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
-
-    // Redirect empty path to '/example'
     {path: '', pathMatch : 'full', redirectTo: 'home'},
-
-    // Redirect signed in user to the '/example'
-    //
     // After the user signs in, the sign in page will redirect the user to the 'signed-in-redirect'
     // path. Below is another redirection for that path to redirect the user to the desired
     // location. This is a small convenience to keep all main routes together here on this file.
-    // {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'home'},
+    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'home'},
 
     // Auth routes for guests
     {
@@ -46,6 +41,9 @@ export const appRoutes: Route[] = [
         data: {
             layout: 'empty'
         },
+        // resolve    : {
+        //     initialData: InitialDataResolver,
+        // },
         children: [
             {path: 'sign-out', loadChildren: () => import('app/modules/auth/sign-out/sign-out.module').then(m => m.AuthSignOutModule)},
             {path: 'unlock-session', loadChildren: () => import('app/modules/auth/unlock-session/unlock-session.module').then(m => m.AuthUnlockSessionModule)}
@@ -53,12 +51,26 @@ export const appRoutes: Route[] = [
     },
 
     // Admin routes
+    // {
+    //     path       : '',
+    //     // canActivate: [AuthGuard],
+    //     // canActivateChild: [AuthGuard],
+    //     canActivate: [NoAuthGuard],
+    //     canActivateChild: [NoAuthGuard],
+    //     component  : LayoutComponent,
+    //     resolve    : {
+    //         initialData: InitialDataResolver,
+    //     },
+    //     children   : [
+    //         {path: 'home', loadChildren: () => import('app/modules/home/home.module').then(m => m.HomeModule)},
+    //         {path: 'shop', loadChildren: () => import('app/modules/shop/shop.module').then(m => m.ShopModule)},
+    //         {path: 'support', loadChildren: () => import('app/modules/support/support.module').then(m => m.SupportModule)},
+    //         // {path: 'account', loadChildren: () => import('app/modules/account/account.module').then(m => m.AccountModule)},
+    //         {path: 'cart', loadChildren: () => import('app/modules/cart/cart.module').then(m => m.CartModule)},
+    //     ]
+    // },
     {
-        path       : '',
-        // canActivate: [AuthGuard],
-        // canActivateChild: [AuthGuard],
-        canActivate: [NoAuthGuard],
-        canActivateChild: [NoAuthGuard],
+        path: '',
         component  : LayoutComponent,
         resolve    : {
             initialData: InitialDataResolver,
@@ -66,9 +78,28 @@ export const appRoutes: Route[] = [
         children   : [
             {path: 'home', loadChildren: () => import('app/modules/home/home.module').then(m => m.HomeModule)},
             {path: 'shop', loadChildren: () => import('app/modules/shop/shop.module').then(m => m.ShopModule)},
-            {path: 'account', loadChildren: () => import('app/modules/account/account.module').then(m => m.AccountModule)},
             {path: 'support', loadChildren: () => import('app/modules/support/support.module').then(m => m.SupportModule)},
             {path: 'cart', loadChildren: () => import('app/modules/cart/cart.module').then(m => m.CartModule)},
+        ]
+    },
+
+    {
+        path       : '',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        // canActivate: [NoAuthGuard],
+        // canActivateChild: [NoAuthGuard],
+        component  : LayoutComponent,
+        resolve    : {
+            initialData: InitialDataResolver,
+        },
+        children   : [
+            // {path: 'home', loadChildren: () => import('app/modules/home/home.module').then(m => m.HomeModule)},
+            // {path: 'shop', loadChildren: () => import('app/modules/shop/shop.module').then(m => m.ShopModule)},
+            // {path: 'support', loadChildren: () => import('app/modules/support/support.module').then(m => m.SupportModule)},
+            {path: 'account', loadChildren: () => import('app/modules/account/account.module').then(m => m.AccountModule)},
+            // {path: 'cart', loadChildren: () => import('app/modules/cart/cart.module').then(m => m.CartModule)},
+            // {path: 'account', loadChildren: () => import('app/modules/account/account.module').then(m => m.AccountModule)},
         ]
     }
 ];

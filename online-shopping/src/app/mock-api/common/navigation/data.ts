@@ -55,6 +55,6 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         title: 'Account',
         type : 'basic',
         icon : 'mat_solid:person',
-        link : '/account'
+        link : '/account',
     },
 ];

@@ -1,21 +1,42 @@
+<!--Change Theme-->
 <button class="md:mr-1.5" color="primary"
         mat-icon-button
         (click)="config.scheme!=='dark'? setScheme('dark') : setScheme('light')">
     <ng-container [ngTemplateOutlet]="iconTpl || defaultIconTpl"></ng-container>
 </button>
 
-<!-- Default icon -->
 <ng-template #defaultIconTpl>
     <mat-icon color="primary"
               [svgIcon]="config.scheme==='light' ? 'heroicons_solid:moon' : 'heroicons_outline:sun'"></mat-icon>
 </ng-template>
 
+
+<!--Login-Logout-->
 <button
     mat-icon-button color="primary">
-    <a [routerLink]="['/sign-out']">
-        <mat-icon color="primary" [svgIcon]="'heroicons_outline:logout'"></mat-icon>
+    <a [routerLink]="user!==undefined ? ['/sign-out'] : ['/sign-in']">
+        <mat-icon color="primary" [svgIcon]="user!==undefined ? 'heroicons_outline:logout' : 'heroicons_outline:user-circle'"></mat-icon>
     </a>
 </button>
+
+
+<!--<button class="md:mr-1.5" color="primary"-->
+<!--        mat-icon-button (click)="method()">-->
+<!--    <ng-container [ngTemplateOutlet]="iconTpl2 || defaultIconTpl2"></ng-container>-->
+<!--</button>-->
+
+<!--<ng-template #defaultIconTpl2>-->
+<!--    <mat-icon color="primary"-->
+<!--              [svgIcon]="user!==null? 'heroicons_outline:user-circle' : 'heroicons_outline:logout'"></mat-icon>-->
+<!--</ng-template>-->
+
+<!--Logout-->
+<!--<button-->
+<!--    mat-icon-button color="primary">-->
+<!--    <a [routerLink]="['/sign-out']">-->
+<!--        <mat-icon color="primary" [svgIcon]="'heroicons_outline:logout'"></mat-icon>-->
+<!--    </a>-->
+<!--</button>-->
 
 
 <!--&lt;!&ndash; Shortcuts toggle &ndash;&gt;-->

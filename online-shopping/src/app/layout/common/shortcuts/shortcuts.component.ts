@@ -19,6 +19,12 @@ import { Shortcut } from 'app/layout/common/shortcuts/shortcuts.types';
 import { ShortcutsService } from 'app/layout/common/shortcuts/shortcuts.service';
 import {AppConfig, Scheme} from "../../../core/config/app.config";
 import {FuseConfigService} from "../../../../@fuse/services/config";
+import {User} from "../../../core/user/user.types";
+import {UserService} from "../../../core/user/user.service";
+import {Router} from "@angular/router";
+import {Admin} from "../../../modules/auth/models/admin";
+import {AuthService} from "../../../core/auth/auth.service";
+import {AppComponent} from "../../../app.component";
 
 @Component({
     selector       : 'shortcuts',
@@ -30,12 +36,13 @@ import {FuseConfigService} from "../../../../@fuse/services/config";
 export class ShortcutsComponent implements OnInit, OnDestroy
 {
     @Input() iconTpl: TemplateRef<any>;
+    @Input() iconTpl2: TemplateRef<any>;
 
     @ViewChild('shortcutsOrigin') private _shortcutsOrigin: MatButton;
     @ViewChild('shortcutsPanel') private _shortcutsPanel: TemplateRef<any>;
 
     config: AppConfig;
-
+    user: Admin;
     mode: 'view' | 'modify' | 'add' | 'edit' = 'view';
     shortcutForm: FormGroup;
     shortcuts: Shortcut[];
@@ -52,8 +59,12 @@ export class ShortcutsComponent implements OnInit, OnDestroy
         private _overlay: Overlay,
         private _viewContainerRef: ViewContainerRef,
         private _fuseConfigService: FuseConfigService,
+        private _authService: AuthService,
+        private _userService: UserService,
+        private router: Router
     )
     {
+        this.user = AppComponent.usr;
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -72,7 +83,7 @@ export class ShortcutsComponent implements OnInit, OnDestroy
                 // Store the config
                 this.config = config;
             });
-
+        // this.user = AppComponent.usr;
         // Initialize the form
         this.shortcutForm = this._formBuilder.group({
             id         : [null],
@@ -112,6 +123,17 @@ export class ShortcutsComponent implements OnInit, OnDestroy
         }
     }
 
+    goToLogin(): void {
+        const routePath = '/sign-in';
+        // this.router.navigate([routePath],{queryParams: {'redirectURL': 'home'}});
+        this.router.navigate([routePath]);
+    }
+    goToLogout(): void {
+
+        const routePath = '/sign-out';
+        // this.router.navigate([routePath],{queryParams: {'redirectURL': 'home'}});
+        this.router.navigate([routePath]);
+    }
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------
@@ -283,5 +305,8 @@ export class ShortcutsComponent implements OnInit, OnDestroy
     }
     setScheme(scheme: Scheme): void {
         this._fuseConfigService.config = {scheme};
+    }
+    method(): void{
+        console.log(this.user);
     }
 }

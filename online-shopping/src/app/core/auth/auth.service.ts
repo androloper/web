@@ -36,6 +36,16 @@ export class AuthService
         return localStorage.getItem('accessToken') ?? '';
     }
 
+    set usermail(email: string)
+    {
+        localStorage.setItem('usermail', email);
+    }
+
+    get usermail(): string
+    {
+        return localStorage.getItem('usermail') ?? '';
+    }
+
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------

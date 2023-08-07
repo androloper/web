@@ -4,6 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
+import {HttpClient} from "@angular/common/http";
+import {Admin} from "../models/admin";
+import {AppComponent} from "../../../app.component";
 
 @Component({
     selector     : 'auth-sign-in',
@@ -21,6 +24,8 @@ export class AuthSignInComponent implements OnInit
     };
     signInForm: FormGroup;
     showAlert: boolean = false;
+    user: Admin;
+    authServ;
 
     /**
      * Constructor
@@ -29,9 +34,11 @@ export class AuthSignInComponent implements OnInit
         private _activatedRoute: ActivatedRoute,
         private _authService: AuthService,
         private _formBuilder: FormBuilder,
-        private _router: Router
+        private _router: Router,
+        private http: HttpClient
     )
     {
+        this.authServ = this._authService;
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -45,8 +52,8 @@ export class AuthSignInComponent implements OnInit
     {
         // Create the form
         this.signInForm = this._formBuilder.group({
-            email     : ['hughes.brian@company.com', [Validators.required, Validators.email]],
-            password  : ['admin', Validators.required],
+            email     : ['ramazan.bayborek', [Validators.required]],
+            password  : ['Ramazan1997@', Validators.required],
             rememberMe: ['']
         });
     }
@@ -58,6 +65,30 @@ export class AuthSignInComponent implements OnInit
     /**
      * Sign in
      */
+    login(): void {
+        this.http.get(`/api/WebManagement/AdminLogin?email=${this.signInForm.value.email}&pwd=${this.signInForm.value.password}`).subscribe((data: Admin)=>{
+            if(data.id>0){
+                this.signInForm = this._formBuilder.group({
+                    email     : ['hughes.brian@company.com', [Validators.required, Validators.email]],
+                    password  : ['admin', Validators.required],
+                });
+                AppComponent.usr = data;
+                // this.authServ.usermail(data.email);
+                // console.log(this.authServ.usermail);
+                this.signIn();
+            } else {
+                this.showAlert = false;
+                this.alert = {
+                    type   : 'error',
+                    message: 'Wrong user or password'
+                };
+
+                // Show the alert
+                this.showAlert = true;
+            }
+        });
+    }
+
     signIn(): void
     {
         // Return if the form is invalid
