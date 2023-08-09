@@ -3,59 +3,109 @@
         <!-- Light version -->
         <!--                        <div class="text-4xl font-extrabold text-primary-600">Online Shopping</div>-->
         <img
-            class="mx-auto w-2/3"
+            class="mx-auto w-full md:w-2/3 -mb-5"
             src="assets/images/logo/mobile-menu-logo-blue.png"
             alt="Logo image">
     </div>
-    <div class="flex items-start justify-center w-full">
-        <table class="mx-2 w-full text-center">
-            <tr class="border border-1 border-gray">
-                <td class="w-1/4 border border-1 border-gray p-6 text-start">
-                    <table>
-                        <tr>
-                            <td>
-                                <mat-icon class="icon-size-5 md:icon-size-7 mr-2 text-primary"
-                                          [svgIcon]="'mat_outline:bolt'"></mat-icon>
-                            </td>
-                            <td><b>Fast&Free Shipping</b><br>Fast and free shipping on all order</td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="w-1/4 border border-1 border-gray p-6 text-start">
-                    <table>
-                        <tr>
-                            <td>
-                                <mat-icon class="icon-size-5 md:icon-size-7 mr-2 text-primary"
-                                          [svgIcon]="'mat_outline:support_agent'"></mat-icon>
-                            </td>
-                            <td><b>7/24 Support</b><br>Contacting 24 hours a day</td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="w-1/4 border border-1 border-gray p-6 text-start">
-                    <table>
-                        <tr>
-                            <td>
-                                <mat-icon class="icon-size-5 md:icon-size-7 mr-2 text-primary"
-                                          [svgIcon]="'mat_outline:money'"></mat-icon>
-                            </td>
-                            <td><b>%100 Money Back</b><br>Having 15 days to return</td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="w-1/4 border border-1 border-gray p-6 text-start">
-                    <table>
-                        <tr>
-                            <td>
-                                <mat-icon class="icon-size-5 md:icon-size-7 mr-2 text-primary"
-                                          [svgIcon]="'mat_outline:security'"></mat-icon>
-                            </td>
-                            <td><b>Secure Payment</b><br>Ensuring the secure payment</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 justify-between mx-auto w-full">
+        <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
+            <mat-icon
+                class="icon-size-8 md:icon-size-12 md:mr-6 mr-3" color="primary"
+                [svgIcon]="'feather:package'"></mat-icon>
+            <div class="flex flex-col">
+                <div class="md:text-2xl text-xl font-semibold leading-tight">Free Shipping</div>
+                <div class="md:text-md text-sm text-secondary">Free shipping on all orders</div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
+            <mat-icon
+                class="icon-size-8 md:icon-size-12  md:mr-6 mr-3" color="primary"
+                [svgIcon]="'feather:dollar-sign'"></mat-icon>
+            <div class="flex flex-col">
+                <div class="md:text-2xl text-xl font-semibold leading-tight">Money Back</div>
+                <div class="md:text-md text-sm text-secondary">Having 15 days to return</div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
+            <mat-icon
+                class="icon-size-8 md:icon-size-12  md:mr-6 mr-3" color="primary"
+                [svgIcon]="'feather:shield'"></mat-icon>
+            <div class="flex flex-col">
+                <div class="md:text-2xl text-xl font-semibold leading-tight">Secure Payment</div>
+                <div class="md:text-md text-sm text-secondary">Ensuring the secure payment</div>
+            </div>
+        </fuse-card>
+        <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
+            <mat-icon
+                class="icon-size-8 md:icon-size-12  md:mr-6 mr-3" color="primary"
+                [svgIcon]="'feather:mail'"></mat-icon>
+            <div class="flex flex-col">
+                <div class="md:text-2xl text-xl font-semibold leading-tight">7/24 Support</div>
+                <div class="md:text-md text-sm text-secondary">Contacting 24 hours a day</div>
+            </div>
+        </fuse-card>
     </div>
+    <div class="flex items-start justify-around w-full bg-warn-600 p-3" [routerLink]="'/shop'">
+        <div class="text-3xl font-extrabold text-white">🔥Special Offers🔥</div>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-9 gap-4 p-6 justify-between mx-auto w-full">
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/continental.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/daf.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/ford.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/iveco.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/volvo.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/mercedes.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/renault.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/scania.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1"
+                src="assets/images/brands/man.png"
+                alt="Card cover image">
+        </fuse-card>
+    </div>
+<!--    <div class="flex items-start justify-around w-full bg-primary p-2" [routerLink]="'/shop'">-->
+<!--        <div class="text-md md:text-2xl font-extrabold text-white">We have recommendations for you...</div>-->
+<!--    </div>-->
 </div>
 

@@ -48,7 +48,7 @@
                 <!-- Navigation toggle button -->
                 <ng-container *ngIf="isScreenSmall">
                     <button
-                        mat-icon-button
+                        mat-icon-button color="primary"
                         (click)="toggleNavigation('mainNavigation')">
                         <mat-icon [svgIcon]="'heroicons_outline:menu'"></mat-icon>
                     </button>
@@ -56,6 +56,7 @@
                 <!-- Components -->
                 <div class="flex items-center pl-2 ml-auto space-x-1 sm:space-x-2">
                     <languages></languages>
+<!--                    <messages></messages>-->
                     <shortcuts></shortcuts>
                 </div>
             </div>

@@ -46,6 +46,7 @@ export class ShortcutsComponent implements OnInit, OnDestroy
     mode: 'view' | 'modify' | 'add' | 'edit' = 'view';
     shortcutForm: FormGroup;
     shortcuts: Shortcut[];
+    cartProducts = 1;
     private _overlayRef: OverlayRef;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 

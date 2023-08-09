@@ -1,4 +1,86 @@
-<!--<p>{{user.id}}</p>-->
-<p>{{user!==undefined ? user.email :''}}</p>
-<!--<p>{{user.password}}</p>-->
-<p>account works</p>
+<div class="flex flex-col w-full min-w-0 sm:absolute sm:inset-0 sm:overflow-hidden" *transloco="let t">
+
+    <mat-drawer-container class="flex-auto sm:h-full my-auto">
+
+        <!-- Drawer -->
+        <mat-drawer
+            class="sm:w-96 dark:bg-gray-900 my-auto"
+            [autoFocus]="false"
+            [mode]="drawerMode"
+            [opened]="drawerOpened"
+            #drawer>
+            <!-- Panel links -->
+            <div class="flex flex-col divide-y border-t border-b">
+                <ng-container *ngFor="let panel of panels; trackBy: trackByFn">
+                    <div
+                        class="flex px-8 py-5 cursor-pointer"
+                        [ngClass]="{'hover:bg-gray-100 dark:hover:bg-hover': !selectedPanel || selectedPanel !== panel.id,
+                                    'bg-primary-50 dark:bg-hover': selectedPanel && selectedPanel === panel.id}"
+                        (click)="goToPanel(panel.id)">
+                        <mat-icon class="my-auto"
+                                  [ngClass]="{'text-hint': !selectedPanel || selectedPanel !== panel.id,
+                                        'text-primary dark:text-primary-500': selectedPanel && selectedPanel === panel.id}"
+                                  [svgIcon]="panel.icon"></mat-icon>
+                        <div class="ml-3">
+                            <div
+                                class="font-medium leading-6"
+                                [ngClass]="{'text-primary dark:text-primary-500': selectedPanel && selectedPanel === panel.id}">
+                                {{panel.title}}
+                            </div>
+                            <div class="mt-0.5 text-secondary">
+                                {{panel.description}}
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </mat-drawer>
+
+        <!-- Drawer content -->
+        <mat-drawer-content class="flex flex-col">
+
+            <!-- Main -->
+            <div class="flex-auto px-6 pt-9 pb-12 md:p-8 md:pb-12 lg:p-12">
+
+                <!-- Panel header -->
+                <div class="flex items-center">
+
+                    <!-- Drawer toggle -->
+                    <button
+                        class="lg:hidden -ml-2"
+                        mat-icon-button
+                        (click)="drawer.toggle()">
+                        <mat-icon [svgIcon]="'heroicons_outline:menu'"></mat-icon>
+                    </button>
+
+                    <!-- Panel title -->
+                    <!--                    <div class="ml-2 lg:ml-0 text-3xl font-bold tracking-tight leading-none">-->
+                    <!--                        {{getPanelInfo(selectedPanel).title}}-->
+                    <!--                    </div>-->
+                </div>
+
+                <!-- Load settings panel -->
+                <div class="mt-8">
+                    <ng-container [ngSwitch]="selectedPanel">
+                        <ng-container *ngSwitchCase="'personal'">
+                            <personal></personal>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'change-password'">
+                            <change-password></change-password>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'address'">
+                            <address></address>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'orders'">
+                            <orders></orders>
+                        </ng-container>
+                    </ng-container>
+                </div>
+
+            </div>
+
+        </mat-drawer-content>
+
+    </mat-drawer-container>
+
+</div>

@@ -11,10 +11,25 @@
 </ng-template>
 
 
+<!--Cart-->
+<button class="md:mr-1.5"
+    mat-icon-button color="primary">
+    <a [routerLink]="['/cart']">
+        <ng-container *ngIf="cartProducts > 0">
+        <span class="absolute top-0 right-0 left-0 flex items-center justify-center h-3">
+            <span class="flex items-center justify-center flex-shrink-0 min-w-4 h-4 px-1 ml-4 mt-2.5 rounded-full bg-warn-600 text-warn-50 text-xs font-medium">
+                {{cartProducts}}
+            </span>
+        </span>
+        </ng-container>
+        <mat-icon color="primary" [svgIcon]="'mat_outline:shopping_cart'"></mat-icon>
+    </a>
+</button>
+
 <!--Login-Logout-->
 <button
     mat-icon-button color="primary">
-    <a [routerLink]="user!==undefined ? ['/sign-out'] : ['/sign-in']">
+    <a [routerLink]="user!==undefined ? ['/sign-out'] : ['/sign-out']">
         <mat-icon color="primary" [svgIcon]="user!==undefined ? 'heroicons_outline:logout' : 'heroicons_outline:user-circle'"></mat-icon>
     </a>
 </button>

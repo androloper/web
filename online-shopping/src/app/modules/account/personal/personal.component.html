@@ -1,0 +1,82 @@
+<div class="flex flex-col flex-auto min-w-0" *transloco="let t">
+
+
+    <!-- Main -->
+    <div class="justify-center w-full max-w-5xl mx-auto my-auto px-4">
+
+        <!-- Column -->
+        <div class="p-8 shadow rounded-2xl bg-card">
+            <!-- Alert -->
+            <fuse-alert
+                class="mb-8"
+                *ngIf="alert"
+                [type]="alert.type"
+                [showIcon]="false">
+                {{alert.message}}
+            </fuse-alert>
+            <form
+                class="space-y-3"
+                [formGroup]="accountForm"
+                #accountNgForm="ngForm">
+                <!-- Created Date Letters -->
+                <mat-form-field class="w-full">
+                    <input
+                        matInput
+                        [readonly]="true"
+                        [formControlName]="'registeredDate'">
+                    <mat-label>{{t('registration-date')}}</mat-label>
+                </mat-form-field>
+                <!-- Full Name -->
+                <mat-form-field class="w-full">
+                    <input
+                        matInput
+                        [readonly]="true"
+                        [formControlName]="'fullname'">
+                    <mat-label>{{t('fullname')}}</mat-label>
+                    <mat-error *ngIf="accountForm.get('fullname').hasError('required')">
+                        {{t('required-fullname')}}
+                    </mat-error>
+                </mat-form-field>
+                <!-- Email -->
+                <mat-form-field class="w-full">
+                    <input
+                        [readonly]="true"
+                        type="email"
+                        matInput
+                        [formControlName]="'email'">
+                    <mat-label>Email</mat-label>
+                    <mat-error *ngIf="accountForm.get('email').hasError('required')">
+                        {{t('required-email')}}
+                    </mat-error>
+                    <mat-error *ngIf="accountForm.get('email').hasError('email')">
+                        {{t('valid-email')}}
+                    </mat-error>
+                </mat-form-field>
+                <!-- Phone number -->
+                <mat-form-field class="w-full">
+                    <mat-label>{{t('phone')}}</mat-label>
+                    <input
+                        id="phone"
+                        matInput
+                        [pattern]="'5([0-9]{9})'"
+                        [formControlName]="'phone'">
+                    <mat-error *ngIf="accountForm.get('phone').hasError('required')">
+                        {{t('phone-required')}}                    </mat-error>
+                    <mat-error *ngIf="accountForm.get('phone').hasError('pattern')">
+                        {{t('phone-required2')}}                    </mat-error>
+                </mat-form-field>
+                <!-- Actions -->
+                <div class="flex items-center justify-end mt-8">
+                    <button
+                        class="w-full dark:bg-accent-400 dark:text-green"
+                        mat-flat-button
+                        [disabled]="accountForm.pristine"
+                        [color]="'primary'">{{t('update')}}
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

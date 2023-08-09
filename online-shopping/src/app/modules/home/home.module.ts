@@ -4,6 +4,8 @@ import { HomeComponent } from 'app/modules/home/home.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {TranslocoModule} from "@ngneat/transloco";
+import {FuseCardModule} from "../../../@fuse/components/card";
+import {MatButtonModule} from "@angular/material/button";
 
 const homeRoutes: Route[] = [
     {
@@ -20,7 +22,9 @@ const homeRoutes: Route[] = [
         RouterModule.forChild(homeRoutes),
         MatIconModule,
         MatExpansionModule,
-        TranslocoModule
+        TranslocoModule,
+        FuseCardModule,
+        MatButtonModule
     ]
 })
 export class HomeModule
