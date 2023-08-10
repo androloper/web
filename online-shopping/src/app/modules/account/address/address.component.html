@@ -1,1 +1,102 @@
-<p>address works!</p>
+<div class="flex flex-col flex-auto min-w-0" *transloco="let t">
+
+
+    <!-- Main -->
+    <div class="justify-center w-full max-w-5xl -mt-2 mx-auto px-6">
+
+        <!-- Column -->
+        <div class="p-8 shadow rounded-2xl bg-card">
+            <!-- Alert -->
+            <fuse-alert
+                class="mb-8"
+                *ngIf="alert"
+                [type]="alert.type"
+                [showIcon]="false">
+                {{alert.message}}
+            </fuse-alert>
+            <form
+                class="space-y-3"
+                [formGroup]="addressForm"
+                #addressNgForm="ngForm">
+                <!-- Full Name -->
+                <mat-form-field class="w-full">
+                    <input
+                        matInput
+                        [required]="true"
+                        [formControlName]="'fullname'">
+                    <mat-label>{{t('fullname')}}</mat-label>
+                    <mat-error *ngIf="addressForm.get('fullname').hasError('required')">
+                        {{t('required-fullname')}}
+                    </mat-error>
+                </mat-form-field>
+                <!-- Address 1 -->
+                <mat-form-field class="w-full">
+                     <textarea
+                         matInput
+                         [formControlName]="'address1'"
+                         [required]="true"
+                         [rows]="3"
+                         matTextareaAutosize></textarea>
+                    <mat-label>Address</mat-label>
+                    <mat-error *ngIf="addressForm.get('address1').hasError('required')">
+                        {{t('required-email')}}
+                    </mat-error>
+                </mat-form-field>
+                <!-- Address 2 -->
+                <mat-form-field class="w-full">
+                    <mat-label>Country/City/District</mat-label>
+                    <input
+                        matInput
+                        [required]="true"
+                        [formControlName]="'address2'">
+                    <mat-error *ngIf="addressForm.get('address2').hasError('required')">
+                        {{t('phone-required')}}
+                    </mat-error>
+                </mat-form-field>
+                <!-- Phone -->
+                <mat-form-field class="w-full">
+                    <mat-label>Phone</mat-label>
+                    <input
+                        matInput
+                        [required]="true"
+                        [formControlName]="'phone'">
+                    <mat-error *ngIf="addressForm.get('phone').hasError('required')">
+                        {{t('phone-required')}}
+                    </mat-error>
+                </mat-form-field>
+                <!-- Actions -->
+                <div class="flex items-center justify-end mt-8">
+                    <button
+                        class="w-full dark:bg-primary dark:text-green"
+                        mat-flat-button
+                        [disabled]="addressForm.pristine"
+                        [color]="'primary'">{{t('add')}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 justify-between mx-auto w-full" *ngIf="address!==undefined">
+        <fuse-card class="flex flex-col max-w-100 w-full filter-article bg-gradient p-4 py-6">
+            <p><b>{{address['fullname']}}</b></p>
+            <p class="mt-1">{{address['address1']}}</p>
+            <p>{{address['address2']}}</p>
+            <p class="mt-1">{{address['phone']}}</p>
+            <button
+                class="px-6 mt-4"
+                mat-flat-button
+                [color]="'primary'"
+                [routerLink]="['./']">
+                Edit
+            </button>
+            <button
+                class="px-6 mt-4"
+                mat-flat-button
+                [color]="'warn'"
+                [routerLink]="['./']">
+                Delete
+            </button>
+        </fuse-card>
+    </div>
+
+</div>

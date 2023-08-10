@@ -13,6 +13,9 @@ import {PersonalComponent} from "./personal/personal.component";
 import {FuseAlertModule} from "../../../@fuse/components/alert";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {FuseCardModule} from "../../../@fuse/components/card";
+import {DxDataGridModule} from "devextreme-angular";
+import {MatDividerModule} from "@angular/material/divider";
 
 const accountRoutes: Route[] = [
     {
@@ -38,7 +41,10 @@ const accountRoutes: Route[] = [
         SharedModule,
         FuseAlertModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        FuseCardModule,
+        DxDataGridModule,
+        MatDividerModule
     ]
 })
 export class AccountModule

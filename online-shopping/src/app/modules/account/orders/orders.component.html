@@ -1,1 +1,149 @@
-<p>orders works!</p>
+<div class="flex flex-col flex-auto min-w-0" *transloco="let t">
+    <div class="rounded-2xl" style="width: 100%;">
+        <dx-data-grid
+            id="gridContainer"
+            [dataSource]="notes"
+            height="100%"
+            keyExpr="id"
+            [showBorders]="true">
+            <dxi-column dataField="title" [width]="350" caption="{{t('title')}}"></dxi-column>
+            <dxi-column dataField="description" caption="{{t('description')}}"></dxi-column>
+            <dxi-column dataField="ownerFL" [width]="80" caption="{{t('owner')}}" [alignment]="'center'"></dxi-column>
+            <dxi-column dataField="price" [width]="100" caption="{{t('price')}}" [alignment]="'center'"></dxi-column>
+            <!--            <dxi-column dataField="pages" [width]="50" caption="Sayfa" [alignment]="'center'"></dxi-column>-->
+            <!--            <dxi-column dataField="soldQuantity" [width]="100" caption="Satılma Adedi" [alignment]="'center'"></dxi-column>-->
+            <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+            <div *dxTemplate="let dets of 'detail'" class="text-container" style="white-space: normal;">
+                <div class="master-detail-caption">{{
+                    dets.data.title + " " + t('details')
+                    }}</div>
+                <div class="table">
+                    <div class="row border border-2 py-1 mx-1">
+                        <div class="col-3 font-bold">{{t('owner')}}:</div>
+                        <div class="col-9">{{dets.data.ownerFL}}</div>
+                    </div>
+                    <div class="row border border-2 py-1 mx-1">
+                        <div class="col-3 font-bold">{{t('pages')}}:</div>
+                        <div class="col-9">{{dets.data.pages}}</div>
+                    </div>
+                    <div class="row border border-2 py-1 mx-1">
+                        <div class="col-3 font-bold">{{t('sales')}}:</div>
+                        <div class="col-9">{{dets.data.soldQuantity}}</div>
+                    </div>
+                    <div class="row border border-2 py-1 mx-1">
+                        <div class="col-3 font-bold">{{t('price')}}:</div>
+                        <div class="col-9">{{dets.data.price}}</div>
+                    </div>
+                    <div class="row border border-2 py-1 mx-1">
+                        <div class="col-3 font-bold">{{t('description')}}:</div>
+                        <div class="col-9">{{dets.data.description}}</div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-2">
+                            <button type="button" class="mat-stroked-button w-full bg-green-500 text-on-primary"
+                                    (click)="setBuyModalName(dets.data.id)" data-bs-toggle="modal"
+                                    data-bs-target="#buyNoteModal">
+                                {{t('buy')}}
+                            </button>
+                            <div class="modal fade" id="buyNoteModal" tabindex="-1" aria-labelledby="buyModalLabel"
+                                 aria-hidden="true" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered modal-sm" style="height: 100%"
+                                     role="document">
+                                    <!--                                <div class="modal-dialog modal-xl" style="height: 100%" role="document">-->
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-green-500 text-on-primary">
+                                            <h5 class="text-lg font-medium text-center"
+                                                id="buyModalLabel">{{t('buy')}}</h5>
+                                        </div>
+                                        <div class="modal-body text-wrap ">
+                                            <div class="table">
+                                                <div class="row">
+                                                    <div class="col-8 font-bold">{{t('price')}}:</div>
+                                                    <div class="col-4 text-end">{{dets.data.price.toFixed(2)}}</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8 font-bold">{{t('commission')}}:</div>
+                                                    <div
+                                                        class="col-4 text-end">{{(dets.data.price * .15).toFixed(2)}}</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8 font-bold">{{t('vat')}}:</div>
+                                                    <div
+                                                        class="col-4 text-end">{{(dets.data.price * .18).toFixed(2)}}</div>
+                                                </div>
+                                                <mat-divider></mat-divider>
+                                                <mat-divider></mat-divider>
+                                                <mat-divider></mat-divider>
+                                                <div class="row">
+                                                    <div class="col-8 font-bold">{{t('total-amount')}}:</div>
+                                                    <div
+                                                        class="col-4 text-end">{{(dets.data.price * 1.33).toFixed(2)}}</div>
+                                                </div>
+                                            </div>
+                                            <!-- Actions -->
+                                            <div class="col-12 items-center mt-4">
+                                                <button
+                                                    class="col-6 bg-green-500 text-on-primary -ml-1 mr-2"
+                                                    mat-flat-button
+                                                    (click)="buyNote(dets.data.id, dets.data.price);"
+                                                    data-bs-dismiss="modal">{{t('buy')}}
+                                                </button>
+                                                <button
+                                                    class="col-6 bg-accent-400 text-on-accent -mr-1"
+                                                    mat-flat-button
+                                                    data-bs-dismiss="modal">{{t('cancel')}}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dxo-toolbar>
+                <dxi-item name="groupPanel"></dxi-item>
+                <dxi-item name="searchPanel"></dxi-item>
+            </dxo-toolbar>
+            <dxo-summary>
+                <dxi-total-item
+                    column="title"
+                    summaryType="count">
+                    <!--                summaryType="min-max-avg-sum-count"-->
+                </dxi-total-item>
+                <dxi-total-item
+                    column="price"
+                    summaryType="min">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="price"
+                    summaryType="max">
+                </dxi-total-item>
+                <dxi-total-item
+                    column="soldQuantity"
+                    summaryType="max">
+                </dxi-total-item>
+                <!--                <dxi-total-item-->
+                <!--                    column="BirthDate"-->
+                <!--                    summaryType="avg">-->
+                <!--                </dxi-total-item>-->
+                <!--                <dxi-total-item-->
+                <!--                    column="BirthDate"-->
+                <!--                    summaryType="sum">-->
+                <!--                </dxi-total-item>-->
+                <!--                <dxi-total-item-->
+                <!--                    column="Id"-->
+                <!--                    showInColumn="City"-->
+                <!--                    summaryType="sum">-->
+                <!--                </dxi-total-item>-->
+            </dxo-summary>
+            <dxo-selection [allowSelectAll]="true"></dxo-selection>
+            <!--            <dxo-export [enabled]="true" [fileName]="'datatable8'"  ></dxo-export>-->
+            <dxo-search-panel [visible]="true"></dxo-search-panel>
+            <dxo-paging [pageSize]="10"></dxo-paging>
+            <dxo-pager [showPageSizeSelector]="true" [visible]="true" [allowedPageSizes]="[10, 25, 50, 100]"></dxo-pager>
+            <dxo-group-panel [visible]="true"></dxo-group-panel>
+        </dx-data-grid>
+    </div>
+</div>

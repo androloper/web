@@ -29,6 +29,7 @@ export class AccountComponent implements OnInit, OnDestroy {
     drawerOpened: boolean = true;
     panels: any[] = [];
     selectedPanel: string = 'personal';
+    // selectedPanel: string = 'address';
     availableLangs: AvailableLangs;
     activeLang: string;
     flagCodes: any;

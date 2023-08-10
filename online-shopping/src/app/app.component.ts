@@ -9,6 +9,7 @@ import {Admin} from './modules/auth/models/admin';
 export class AppComponent
 {
     static usr: Admin;
+    static serverIp;
     /**
      * Constructor
      */
