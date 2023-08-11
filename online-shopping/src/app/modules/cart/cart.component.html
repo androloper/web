@@ -1,1 +1,75 @@
-<p>cart works!</p>
+<div class="flex flex-col flex-auto min-w-0" *transloco="let t">
+    <!-- Header -->
+    <div class="bg-card dark:bg-gray-700">
+        <div class="flex flex-col w-full mx-auto px-6 sm:px-8">
+            <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
+                <div class="flex items-center justify-between w-full">
+                    <div>
+                        <h1 class="text-3xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                            Sepetim</h1>
+                    </div>
+                    <div class="col-auto float-right ml-auto">
+                        <button
+                            class="ml-4 px-1 sm:px-4 min-w-10 dark:bg-accent-50 dark:text-gray-500"
+                            mat-flat-button
+                            [color]="'accent'"
+                            [routerLink]="'/shop'">
+                            <mat-icon
+                                class="icon-size-5"
+                                [svgIcon]="'heroicons_solid:plus-circle'"></mat-icon>
+                            <span class="hidden sm:inline-block ml-2">Alışverişe Devam Et</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rounded-2xl md:p-10 p-6" style="width: 100%;">
+        <div class="row">
+            <table class="w-full" style="table-layout: fixed;">
+                <tr class="font-bold">
+                    <td class="border border-2 border-black mx-auto text-center" style="width: 35px;">
+                        #
+                    </td>
+                    <td class="border border-2 border-black mx-auto text-center p-1"
+                        style="width: 50px;">Adet</td>
+                    <td class="border border-2 border-black mx-auto text-wrap p-1 md:pl-4"
+                        style="flex: 1; word-wrap: break-word;">Ad</td>
+                    <td class="border border-2 border-black mx-auto text-center"
+                        style="width: 100px;">Tutar</td>
+                    <td class="border border-2 border-black mx-auto text-center" style="width: 35px;">
+                       Sil
+                    </td>
+                </tr>
+                <tr *ngFor="let quest of questions">
+                    <td class="border border-2 border-black text-center" style="width: 35px;">
+                        <button [routerLink]="'/shop'">
+                            <mat-icon
+                                class="icon-size-5 mt-1.5"
+                                [svgIcon]="'heroicons_solid:plus-circle'"></mat-icon>
+                        </button>
+                        <button [routerLink]="'/shop'">
+                            <mat-icon
+                                class="icon-size-5 mt-1.5"
+                                [svgIcon]="'heroicons_solid:minus-circle'"></mat-icon>
+                        </button>
+                    </td>
+                    <td class="border border-2 border-black mx-auto text-center p-1"
+                        style="width: 50px;">{{quest[1]}}</td>
+                    <td class="border border-2 border-black mx-auto text-wrap p-1 md:pl-4 md:pr-4 md:py-4"
+                        style="flex: 1; word-wrap: break-word;">{{quest[2]}}</td>
+                    <td class="border border-2 border-black mx-auto text-center"
+                        style="width: 100px;">{{quest[1]}}</td>
+                    <td class="border border-2 border-black mx-auto text-center" style="width: 35px;">
+                        <button [routerLink]="'/shop'">
+                            <mat-icon
+                                class="icon-size-5"
+                                [svgIcon]="'heroicons_solid:trash'"></mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--src="{{dets.data.source.replace('http://localhost', 'http://46.228.205.173')}}"-->

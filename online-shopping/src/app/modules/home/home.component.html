@@ -11,19 +11,28 @@
         <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
             <mat-icon
                 class="icon-size-8 md:icon-size-12 md:mr-6 mr-3" color="primary"
-                [svgIcon]="'feather:package'"></mat-icon>
+                [svgIcon]="'feather:zap'"></mat-icon>
             <div class="flex flex-col">
-                <div class="md:text-2xl text-xl font-semibold leading-tight">Free Shipping</div>
-                <div class="md:text-md text-sm text-secondary">Free shipping on all orders</div>
+                <div class="md:text-2xl text-xl font-semibold leading-tight">Fast Delivery</div>
+                <div class="md:text-md text-sm text-secondary">After payment approved</div>
             </div>
         </fuse-card>
+<!--        <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">-->
+<!--            <mat-icon-->
+<!--                class="icon-size-8 md:icon-size-12  md:mr-6 mr-3" color="primary"-->
+<!--                [svgIcon]="'feather:dollar-sign'"></mat-icon>-->
+<!--            <div class="flex flex-col">-->
+<!--                <div class="md:text-2xl text-xl font-semibold leading-tight">Money Back</div>-->
+<!--                <div class="md:text-md text-sm text-secondary">Having 15 days to return</div>-->
+<!--            </div>-->
+<!--        </fuse-card>-->
         <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
             <mat-icon
                 class="icon-size-8 md:icon-size-12  md:mr-6 mr-3" color="primary"
-                [svgIcon]="'feather:dollar-sign'"></mat-icon>
+                [svgIcon]="'feather:code'"></mat-icon>
             <div class="flex flex-col">
-                <div class="md:text-2xl text-xl font-semibold leading-tight">Money Back</div>
-                <div class="md:text-md text-sm text-secondary">Having 15 days to return</div>
+                <div class="md:text-2xl text-xl font-semibold leading-tight">Custom Product</div>
+                <div class="md:text-md text-sm text-secondary">Upon customer request</div>
             </div>
         </fuse-card>
         <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
@@ -32,7 +41,7 @@
                 [svgIcon]="'feather:shield'"></mat-icon>
             <div class="flex flex-col">
                 <div class="md:text-2xl text-xl font-semibold leading-tight">Secure Payment</div>
-                <div class="md:text-md text-sm text-secondary">Ensuring the secure payment</div>
+                <div class="md:text-md text-sm text-secondary">Ensuring the reliability</div>
             </div>
         </fuse-card>
         <fuse-card class="flex items-center max-w-80 w-full p-3 md:p-6 filter-info bg-gradient">
@@ -41,66 +50,84 @@
                 [svgIcon]="'feather:mail'"></mat-icon>
             <div class="flex flex-col">
                 <div class="md:text-2xl text-xl font-semibold leading-tight">7/24 Support</div>
-                <div class="md:text-md text-sm text-secondary">Contacting 24 hours a day</div>
+                <div class="md:text-md text-sm text-secondary">Contacting every moment</div>
             </div>
         </fuse-card>
     </div>
     <div class="flex items-start justify-around w-full bg-warn-600 p-3" [routerLink]="'/shop'">
         <div class="text-3xl font-extrabold text-white">🔥Special Offers🔥</div>
     </div>
-    <div class="grid grid-cols-3 md:grid-cols-9 gap-4 p-6 justify-between mx-auto w-full">
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-4 p-6 justify-between mx-auto w-full">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-gradient" [routerLink]="'/shop'">
             <img
                 class="object-cover my-auto px-1"
-                src="assets/images/brands/continental.png"
+                src="assets/images/techs/ios.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-gradient" [routerLink]="'/shop'">
             <img
                 class="object-cover my-auto px-1"
-                src="assets/images/brands/daf.png"
+                src="assets/images/techs/android.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-gradient" [routerLink]="'/shop'">
             <img
                 class="object-cover my-auto px-1"
-                src="assets/images/brands/ford.png"
+                src="assets/images/techs/browsers.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-gradient" [routerLink]="'/shop'">
             <img
                 class="object-cover my-auto px-1"
-                src="assets/images/brands/iveco.png"
+                src="assets/images/techs/macos.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-gradient" [routerLink]="'/shop'">
             <img
                 class="object-cover my-auto px-1"
-                src="assets/images/brands/volvo.png"
+                src="assets/images/techs/windows.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-gradient" [routerLink]="'/shop'">
             <img
                 class="object-cover my-auto px-1"
-                src="assets/images/brands/mercedes.png"
+                src="assets/images/techs/linux.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-white" [routerLink]="'/shop'">
             <img
-                class="object-cover my-auto px-1"
-                src="assets/images/brands/renault.png"
+                class="object-cover my-auto p-4 techs"
+                src="assets/images/techs/flutter.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-white" [routerLink]="'/shop'">
             <img
-                class="object-cover my-auto px-1"
-                src="assets/images/brands/scania.png"
+                class="object-cover my-auto px-1 techs"
+                src="assets/images/techs/htmlcssjs.png"
                 alt="Card cover image">
         </fuse-card>
-        <fuse-card class="flex flex-col max-w-80 h-26 w-full filter-article bg-gradient" [routerLink]="'/shop'">
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-white" [routerLink]="'/shop'">
             <img
-                class="object-cover my-auto px-1"
-                src="assets/images/brands/man.png"
+                class="object-cover my-auto px-1 techs"
+                src="assets/images/techs/netcore.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-white" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto p-4 techs"
+                src="assets/images/techs/csharp.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-white" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1 techs"
+                src="assets/images/techs/sql.png"
+                alt="Card cover image">
+        </fuse-card>
+        <fuse-card class="flex flex-col max-w-80 h-30 md:h-50 w-full filter-article bg-white" [routerLink]="'/shop'">
+            <img
+                class="object-cover my-auto px-1 techs"
+                src="assets/images/techs/db.png"
                 alt="Card cover image">
         </fuse-card>
     </div>
