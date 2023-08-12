@@ -6,17 +6,15 @@
             height="100%"
             keyExpr="id"
             [showBorders]="true">
+            <dxi-column dataField="orderId" caption="{{t('orderid')}}"></dxi-column>
             <dxi-column dataField="title" [width]="350" caption="{{t('title')}}"></dxi-column>
-            <dxi-column dataField="description" caption="{{t('description')}}"></dxi-column>
-            <dxi-column dataField="ownerFL" [width]="80" caption="{{t('owner')}}" [alignment]="'center'"></dxi-column>
-            <dxi-column dataField="price" [width]="100" caption="{{t('price')}}" [alignment]="'center'"></dxi-column>
+            <dxi-column dataField="pieces" [width]="100" caption="{{t('pieces')}}" [alignment]="'center'"></dxi-column>
+            <dxi-column dataField="date" [width]="130" caption="{{t('date')}}" [alignment]="'center'"></dxi-column>
             <!--            <dxi-column dataField="pages" [width]="50" caption="Sayfa" [alignment]="'center'"></dxi-column>-->
             <!--            <dxi-column dataField="soldQuantity" [width]="100" caption="Satılma Adedi" [alignment]="'center'"></dxi-column>-->
             <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
             <div *dxTemplate="let dets of 'detail'" class="text-container" style="white-space: normal;">
-                <div class="master-detail-caption">{{
-                    dets.data.title + " " + t('details')
-                    }}</div>
+                <div class="master-detail-caption">{{t('contents')}}</div>
                 <div class="table">
                     <div class="row border border-2 py-1 mx-1">
                         <div class="col-3 font-bold">{{t('owner')}}:</div>

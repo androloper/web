@@ -18,14 +18,6 @@
                 class="space-y-3"
                 [formGroup]="accountForm"
                 #accountNgForm="ngForm">
-                <!-- Created Date Letters -->
-                <mat-form-field class="w-full">
-                    <input
-                        matInput
-                        [readonly]="true"
-                        [formControlName]="'registeredDate'">
-                    <mat-label>{{t('registration-date')}}</mat-label>
-                </mat-form-field>
                 <!-- Full Name -->
                 <mat-form-field class="w-full">
                     <input

@@ -5,6 +5,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {TranslocoModule} from "@ngneat/transloco";
 import {SharedModule} from "../../shared/shared.module";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 const cartRoutes: Route[] = [
     {
@@ -22,7 +24,9 @@ const cartRoutes: Route[] = [
         MatButtonModule,
         MatIconModule,
         TranslocoModule,
-        SharedModule
+        SharedModule,
+        MatCheckboxModule,
+        MatFormFieldModule
     ]
 })
 export class CartModule

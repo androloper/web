@@ -80,6 +80,8 @@ export const appRoutes: Route[] = [
             {path: 'shop', loadChildren: () => import('app/modules/shop/shop.module').then(m => m.ShopModule)},
             {path: 'support', loadChildren: () => import('app/modules/support/support.module').then(m => m.SupportModule)},
             {path: 'cart', loadChildren: () => import('app/modules/cart/cart.module').then(m => m.CartModule)},
+            {path: 'cart/payment', loadChildren: () => import('app/modules/cart/payment/payment.module').then(m => m.PaymentModule)},
+            {path: 'cart/payment/success', loadChildren: () => import('app/modules/cart/payment/success/success.module').then(m => m.SuccessModule)},
         ]
     },
 

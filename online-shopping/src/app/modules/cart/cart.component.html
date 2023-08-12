@@ -6,7 +6,7 @@
                 <div class="flex items-center justify-between w-full">
                     <div>
                         <h1 class="text-3xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-                            Sepetim</h1>
+                            {{t('my-cart')}}</h1>
                     </div>
                     <div class="col-auto float-right ml-auto">
                         <button
@@ -17,7 +17,7 @@
                             <mat-icon
                                 class="icon-size-5"
                                 [svgIcon]="'heroicons_solid:plus-circle'"></mat-icon>
-                            <span class="hidden sm:inline-block ml-2">Alışverişe Devam Et</span>
+                            <span class="hidden sm:inline-block ml-2">   {{t('continue-shopping')}}</span>
                         </button>
                     </div>
                 </div>
@@ -32,13 +32,16 @@
                         #
                     </td>
                     <td class="border border-2 border-black mx-auto text-center p-1"
-                        style="width: 50px;">Adet</td>
-                    <td class="border border-2 border-black mx-auto text-wrap p-1 md:pl-4"
-                        style="flex: 1; word-wrap: break-word;">Ad</td>
+                        style="width: 50px;">   {{t('pieces')}}
+                    </td>
+                    <td class="border border-2 border-black mx-auto text-wrap p-1 md:pl-2"
+                        style="flex: 1; word-wrap: break-word;">   {{t('title')}}
+                    </td>
                     <td class="border border-2 border-black mx-auto text-center"
-                        style="width: 100px;">Tutar</td>
-                    <td class="border border-2 border-black mx-auto text-center" style="width: 35px;">
-                       Sil
+                        style="width: 100px;">   {{t('price')}}
+                    </td>
+                    <td class="border border-2 border-black mx-auto text-center" style="width: 50px;">
+                        {{t('delete')}}
                     </td>
                 </tr>
                 <tr *ngFor="let quest of questions">
@@ -56,7 +59,7 @@
                     </td>
                     <td class="border border-2 border-black mx-auto text-center p-1"
                         style="width: 50px;">{{quest[1]}}</td>
-                    <td class="border border-2 border-black mx-auto text-wrap p-1 md:pl-4 md:pr-4 md:py-4"
+                    <td class="border border-2 border-black mx-auto text-wrap p-1 md:pl-2 md:pr-2 md:py-2"
                         style="flex: 1; word-wrap: break-word;">{{quest[2]}}</td>
                     <td class="border border-2 border-black mx-auto text-center"
                         style="width: 100px;">{{quest[1]}}</td>
@@ -68,7 +71,42 @@
                         </button>
                     </td>
                 </tr>
+                <tr class="font-bold">
+                    <td>
+                    </td>
+                    <td></td>
+                    <td class="float-end pr-2">{{t('total')}}</td>
+                    <td class="border border-2 border-black mx-auto text-center"
+                        style="width: 100px;">1000.00
+                    </td>
+                    <td></td>
+                </tr>
             </table>
+            <!--            <div class="inline-flex items-start w-full mt-4">-->
+            <!--                <mat-checkbox id="agreements"-->
+            <!--                              [color]="'primary'"-->
+            <!--                              >-->
+            <!--                    <a-->
+            <!--                        class="ml-1 text-primary hover:underline"-->
+            <!--                        (click)="openDialog()">Websitenin uzaktan satış sözleşmesini okudum ve kabul ediyorum.-->
+            <!--                    </a>-->
+            <!--                </mat-checkbox>-->
+            <!--            </div>-->
+            <div class="mt-5 flex items-center justify-between font-bold">
+                <div class="inline-flex items-start mt-4">
+                    <mat-checkbox id="agreements"
+                                  [color]="'primary'"
+                                  [(ngModel)]="isAgreementChecked">
+                        {{t('tickcart')}}
+                    </mat-checkbox>
+                </div>
+                <div *ngIf="isAgreementChecked">
+                    <button mat-flat-button color="primary" [routerLink]="'/cart/payment'">
+                        <mat-icon class="mr-2" svgIcon="feather:shopping-bag"></mat-icon>
+                        {{t('proceed-payment')}}
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

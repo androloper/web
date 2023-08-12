@@ -26,7 +26,7 @@
                         [formControlName]="'fullname'">
                     <mat-label>{{t('fullname')}}</mat-label>
                     <mat-error *ngIf="addressForm.get('fullname').hasError('required')">
-                        {{t('required-fullname')}}
+                        {{t('necessarily')}}
                     </mat-error>
                 </mat-form-field>
                 <!-- Address 1 -->
@@ -37,31 +37,31 @@
                          [required]="true"
                          [rows]="3"
                          matTextareaAutosize></textarea>
-                    <mat-label>Address</mat-label>
+                    <mat-label>{{t('address')}}</mat-label>
                     <mat-error *ngIf="addressForm.get('address1').hasError('required')">
-                        {{t('required-email')}}
+                        {{t('necessarily')}}
                     </mat-error>
                 </mat-form-field>
                 <!-- Address 2 -->
                 <mat-form-field class="w-full">
-                    <mat-label>Country/City/District</mat-label>
+                    <mat-label>{{t('country')}}</mat-label>
                     <input
                         matInput
                         [required]="true"
                         [formControlName]="'address2'">
                     <mat-error *ngIf="addressForm.get('address2').hasError('required')">
-                        {{t('phone-required')}}
+                        {{t('necessarily')}}
                     </mat-error>
                 </mat-form-field>
                 <!-- Phone -->
                 <mat-form-field class="w-full">
-                    <mat-label>Phone</mat-label>
+                    <mat-label>{{t('phone')}}</mat-label>
                     <input
                         matInput
                         [required]="true"
                         [formControlName]="'phone'">
                     <mat-error *ngIf="addressForm.get('phone').hasError('required')">
-                        {{t('phone-required')}}
+                        {{t('necessarily')}}
                     </mat-error>
                 </mat-form-field>
                 <!-- Actions -->
@@ -87,14 +87,14 @@
                 mat-flat-button
                 [color]="'primary'"
                 [routerLink]="['./']">
-                Edit
+                {{t('edit')}}
             </button>
             <button
                 class="px-6 mt-4"
                 mat-flat-button
                 [color]="'warn'"
                 [routerLink]="['./']">
-                Delete
+                {{t('delete')}}
             </button>
         </fuse-card>
     </div>

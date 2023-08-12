@@ -4,7 +4,7 @@
 <!--        <div class="text-4xl">Deneme</div>-->
 <!--    </div>-->
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 justify-between w-full my-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 justify-between w-full my-auto" *transloco="let t">
         <fuse-alert
             class="mb-8"
             *ngIf="alert"
@@ -21,7 +21,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #1</div>
                     <div class="text-2xl leading-tight">Mobile Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$10000.00</div>
                 </div>
@@ -33,7 +33,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -47,7 +47,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #2</div>
                     <div class="text-2xl leading-tight">Web-based Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$5000.00</div>
                 </div>
@@ -59,7 +59,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #3</div>
                     <div class="text-2xl leading-tight">System Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$25000.00</div>
                 </div>
@@ -85,7 +85,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -99,7 +99,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #1</div>
                     <div class="text-2xl leading-tight">Mobile Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$10000.00</div>
                 </div>
@@ -111,7 +111,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #2</div>
                     <div class="text-2xl leading-tight">Web-based Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$5000.00</div>
                 </div>
@@ -137,7 +137,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -151,7 +151,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #3</div>
                     <div class="text-2xl leading-tight">System Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$25000.00</div>
                 </div>
@@ -163,7 +163,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -177,7 +177,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #1</div>
                     <div class="text-2xl leading-tight">Mobile Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$10000.00</div>
                 </div>
@@ -189,7 +189,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -203,7 +203,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #2</div>
                     <div class="text-2xl leading-tight">Web-based Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$5000.00</div>
                 </div>
@@ -215,7 +215,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -229,7 +229,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #3</div>
                     <div class="text-2xl leading-tight">System Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$25000.00</div>
                 </div>
@@ -241,7 +241,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -255,7 +255,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #1</div>
                     <div class="text-2xl leading-tight">Mobile Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$10000.00</div>
                 </div>
@@ -267,7 +267,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -281,7 +281,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #2</div>
                     <div class="text-2xl leading-tight">Web-based Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$5000.00</div>
                 </div>
@@ -293,7 +293,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -307,7 +307,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #3</div>
                     <div class="text-2xl leading-tight">System Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$25000.00</div>
                 </div>
@@ -319,7 +319,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -333,7 +333,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #1</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #1</div>
                     <div class="text-2xl leading-tight">Mobile Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$10000.00</div>
                 </div>
@@ -345,7 +345,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -359,7 +359,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #2</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #2</div>
                     <div class="text-2xl leading-tight">Web-based Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$5000.00</div>
                 </div>
@@ -371,7 +371,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -385,7 +385,7 @@
             </div>
             <div class="m-4">
                 <div class="flex flex-col">
-                    <div class="text-2xl font-extrabold leading-tight">Product #3</div>
+                    <div class="text-2xl font-extrabold leading-tight">{{t('product')}} #3</div>
                     <div class="text-2xl leading-tight">System Application Development</div>
                     <div class="text-3xl font-semibold mt-2">$25000.00</div>
                 </div>
@@ -397,7 +397,7 @@
                         mat-flat-button
                         [color]="'primary'"
                         [routerLink]="['./']">
-                        Add to Cart
+                        {{t('add-cart')}}
                     </button>
                 </div>
             </div>
@@ -433,7 +433,7 @@
 <!--                <mat-icon-->
 <!--                    class="icon-size-5"-->
 <!--                    [svgIcon]="'heroicons_solid:shopping-cart'"></mat-icon>-->
-<!--                <span class="ml-2">Add to Cart</span>-->
+<!--                <span class="ml-2">{{t('add-cart')}}</span>-->
 <!--            </button>-->
 <!--            <button-->
 <!--                class="ml-auto"-->

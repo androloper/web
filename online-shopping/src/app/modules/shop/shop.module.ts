@@ -6,6 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {CommonModule} from "@angular/common";
 import {FuseAlertModule} from "../../../@fuse/components/alert";
+import {TranslocoModule} from "@ngneat/transloco";
 
 const shopRoutes: Route[] = [
     {
@@ -24,7 +25,8 @@ const shopRoutes: Route[] = [
         MatButtonModule,
         MatIconModule,
         CommonModule,
-        FuseAlertModule
+        FuseAlertModule,
+        TranslocoModule
     ]
 })
 export class ShopModule

@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
     questions: any[];
+    isAgreementChecked: boolean = false;
 
-  constructor() {
+    constructor() {
       this.questions = [[1, 562, 'Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1Questionestion1Question1Question1Question1'],
           [2,2,'Question2'],
           [3,3,'Question 3']];
@@ -23,6 +24,7 @@ export class CartComponent implements OnInit {
         console.log(qId, val);
     }
 
+    protected readonly document = document;
 }
 export class Question {
     id: number;

@@ -32,7 +32,6 @@ export class PersonalComponent implements OnInit {
             fullname: new FormControl('Ramazan Baybörek'),
             email: new FormControl('im@ramazanbayborek.com'),
             phone: new FormControl('5060526793'),
-            registeredDate: new FormControl(formatDate('2023-08-09 17:51:58.977', 'dd/MM/yyyy', 'en', 'tr'))
         },);
         // }, 500);
     }

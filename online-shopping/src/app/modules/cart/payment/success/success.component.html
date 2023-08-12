@@ -1,0 +1,33 @@
+<body *transloco="let t">
+<div class="container">
+    <div class="printer-top"></div>
+
+    <div class="paper-container">
+        <div class="printer-bottom"></div>
+
+        <div class="paper">
+            <div class="main-contents">
+                <div class="success-icon">&#10004;</div>
+                <div class="success-title">
+                    {{t('payment-completed')}}
+                </div>
+                <div class="success-description">
+                    {{t('pc-text')}}
+                </div>
+                <div class="order-details">
+                    <div class="order-number-label">{{t('orderid')}}</div>
+                    <div class="order-number">1234567</div>
+                    <button
+                            class="ml-2"
+                            mat-stroked-button
+                            [color]="'accent'"
+                            (click)="backHome()">
+                        {{t('go-to-homepage')}}
+                    </button>
+                </div>
+            </div>
+            <div class="jagged-edge"></div>
+        </div>
+    </div>
+</div>
+</body>
