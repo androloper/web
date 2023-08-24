@@ -66,7 +66,7 @@ export class AuthSignInComponent implements OnInit
      * Sign in
      */
     login(): void {
-        this.http.get(`/api/WebManagement/AdminLogin?email=${this.signInForm.value.email}&pwd=${this.signInForm.value.password}`).subscribe((data: Admin)=>{
+        this.http.get(`https://192.168.1.64/api/WebManagement/AdminLogin?email=${this.signInForm.value.email}&pwd=${this.signInForm.value.password}`).subscribe((data: Admin)=>{
             if(data.id>0){
                 this.signInForm = this._formBuilder.group({
                     email     : ['hughes.brian@company.com', [Validators.required, Validators.email]],

@@ -7,9 +7,8 @@
             keyExpr="id"
             [showBorders]="true">
             <dxi-column dataField="orderId" caption="{{t('orderid')}}"></dxi-column>
-            <dxi-column dataField="title" [width]="350" caption="{{t('title')}}"></dxi-column>
-            <dxi-column dataField="pieces" [width]="100" caption="{{t('pieces')}}" [alignment]="'center'"></dxi-column>
-            <dxi-column dataField="date" [width]="130" caption="{{t('date')}}" [alignment]="'center'"></dxi-column>
+            <dxi-column dataField="total" caption="{{t('total')}}" [alignment]="'center'"></dxi-column>
+            <dxi-column dataField="date" caption="{{t('date')}}" [alignment]="'center'"></dxi-column>
             <!--            <dxi-column dataField="pages" [width]="50" caption="Sayfa" [alignment]="'center'"></dxi-column>-->
             <!--            <dxi-column dataField="soldQuantity" [width]="100" caption="Satılma Adedi" [alignment]="'center'"></dxi-column>-->
             <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
