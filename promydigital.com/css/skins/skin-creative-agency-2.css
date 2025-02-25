@@ -111,12 +111,12 @@
 }
 /* Skin Colors - Inverse */
 :root {
-	--primary-inverse: #777;
-	--secondary-inverse: #777;
-	--tertiary-inverse: #777;
+	--primary-inverse: #FFF;
+	--secondary-inverse: #FFF;
+	--tertiary-inverse: FFF;
 	--quaternary-inverse: #FFF;
 	--dark-inverse: #FFF;
-	--light-inverse: #777;
+	--light-inverse: #FFF;
 }
 /* Grey Colors */
 :root {
