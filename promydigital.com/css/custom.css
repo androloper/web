@@ -1,0 +1,32 @@
+/* HTML ve Body'nin ekstra kaydırma yapmasını önlüyoruz */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Sayfa dışına taşan unsurları sınırlandırıyoruz */
+.body, .main {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* SVG veya animasyonlar eğer fazla taşma yapıyorsa */
+.custom-el-1, .custom-el-2 {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Konteyner genişliği düzgün ayarlanıyor */
+.container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Mobil uyumluluk için extra scroll önleme */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+}
