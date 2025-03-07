@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>İletişim | PromyDigital.com</title>	
+		<title>META Reklamlar | PromyDigital.com</title>	
 
 		<meta name="keywords" content="promy, digital, promy digital, digital media, digital marketing, marketing, agency, digital agency" />
 		<meta name="description" content="Promy Digital Website">
@@ -46,31 +46,6 @@
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
 
-		<script>
-			function sendEmail() {
-				const formSelector = '#form';
-				obj = {
-					from_name: document.getElementById('from_name').value,
-					message: document.getElementById('message').value,
-					from_email: document.getElementById('from_email').value,
-				};
-				const serviceID = 'service_94zlivx';
-				const templateID = 'template_evrjp88';
-
-				emailjs.send(serviceID, templateID, obj)
-				.then(() => {
-					alert('Mesajınız tarafımıza iletildi. 1 iş günü içerisinde tarafınıza dönüş yapılacaktır.');
-					document.getElementById('from_name').value = '';
-					document.getElementById('message').value = '';
-					document.getElementById('from_email').value = '';
-					}, 
-				(err) => {
-					alert('Mesaj gönderirken bir hata oluştu. Lütfen solda yer alan bilgiler ile iletişime geçiniz.');
-					});
-					
-			}
-		</script>
-
 	</head>
 	<body>
 		<div class="body">
@@ -104,7 +79,7 @@
 														<a class="nav-link" href="google-reklamlar.html">Google Reklamlar</a>
 													</li>
 													<li>
-														<a class="nav-link" href="meta-reklamlar.html">META Reklamlar</a>
+														<a class="nav-link active" href="meta-reklamlar.html">META Reklamlar</a>
 													</li>
 													<li>
 														<a class="nav-link" href="yazilim-gelistirme.html">Yazılım Geliştirme</a>
@@ -123,6 +98,8 @@
 					</div>
 				</div>
 			</header>
+
+
 
 			<div role="main" class="main">
 
@@ -149,9 +126,9 @@
 				                <div class="py-4">
 				                    <ul class="breadcrumb d-flex justify-content-center text-4-5 font-weight-medium mb-2">
 				                        <li><a href="/" class="text-color-primary text-decoration-none">Ana Sayfa</a></li>
-				                        <li class="text-color-primary active">İLETİŞİM</li>
+				                        <li class="text-color-primary active">META Reklamlar</li>
 				                    </ul>
-				                    <h1 class="text-color-light font-weight-bold text-10">İletişim</h1>
+				                    <h1 class="text-color-light font-weight-bold text-10">META Reklamlar</h1>
 				                </div>
 				            </div>
 				        </div>
@@ -170,70 +147,61 @@
 				</section>
 
                 <div class="custom-page-content p-relative z-index-2">
-                    <div class="container custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light">                 
-                        <div class="row px-lg-3 pb-2 mb-5">
-                            <div class="col-lg-6 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="0">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <h3 class="d-block text-color-grey positive-ls-3 font-weight-medium text-2 mb-1">BİZİ ARAYIN</h3>
-                                        <a href="tel:+905071964152" class="d-flex align-items-center text-decoration-none text-color-dark text-color-hover-primary font-weight-bold text-3-5">
-                                            +90 507 196 41 52
-                                        </a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <h3 class="d-block text-color-grey positive-ls-3 font-weight-medium text-2 mb-1">BİZE MAİL GÖNDERİN</h3>
-                                        <a href="mailto:info@promydigital.com" class="d-flex align-items-center text-decoration-none text-color-dark text-color-hover-primary font-weight-bold text-3-5">
-                                            info@promydigital.com
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="col-lg-6 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="1600">
-                                <h3 class="d-block text-color-grey positive-ls-3 font-weight-medium text-2 mb-1">OUR LOCATION</h3>
-                                <span class="d-flex align-items-center text-color-dark font-weight-bold text-3-5">
-                                    12345 Porto Blvd. | Suite 1500 | Los Angeles, California 90000
-                                </span>
-                            </div> -->
-                        </div>
-                        <div class="row px-lg-3">                    
-                            <div class="col-lg-12 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="1800">
-								<h2 class="font-weight-bold text-transform-none text-8 pb-2 mb-4">Bize Yazın</h2>
-								<form class="contact-form custom-form-style-1" id="form">
-									<!-- <div class="contact-form-success alert alert-success d-none mt-4">
-										<strong>Başarılı!</strong> Mesajınız tarafımıza iletildi. 1 iş günü içerisinde tarafınıza dönüş yapılacaktır.
-									</div>
-	
-									<div class="contact-form-error alert alert-danger d-none mt-4">
-										<strong>Hata Oluştu!</strong> Mesaj gönderirken bir hata oluştu. Lütfen solda yer alan bilgiler ile iletişime geçiniz.
-										<span class="mail-error-message text-1 d-block"></span>
-									</div> -->
-	
-									<div class="row">
-										<div class="form-group col">
-											<input type="text" value="" data-msg-required="Lütfen adınızı giriniz." maxlength="100" id="from_name" class="form-control" name="from_name" placeholder="Ad-Soyad (bkz: Promy Digital)" required>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group col">
-											<input type="email" value="" data-msg-required="Lütfen email adresinizi giriniz." data-msg-email="Lütfen doğru formatta email giriniz." maxlength="100" id="from_email" class="form-control" name="from_email" placeholder="Email (bkz: info@promydigital.com)" required>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group col">
-											<textarea maxlength="5000" data-msg-required="Lütfen mesajınızı giriniz." rows="5" class="form-control" id="message" name="message" placeholder="Mesajınız..." required></textarea>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group col">
-											<button onclick="sendEmail()" class="btn btn-primary text-uppercase">
-						
-												Gönder
-											</button>
-										</div>
-									</div>
-								</form>
+                    <div class="container custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light">
+                        <div class="row px-lg-3">
+                            <div class="col">
+                                <p class="text-4-5 line-height-7 text-dark pb-1 mb-4 mb-lg-2 mb-xl-4"><strong>Meta (Facebook & Instagram) Reklamları</strong>, işletmelerin hedef kitlesiyle doğrudan etkileşime geçmesini sağlayan en etkili dijital pazarlama araçlarından biridir. Meta’nın gelişmiş reklam hedefleme algoritmaları sayesinde, kullanıcıların demografik özelliklerine, ilgi alanlarına ve davranışlarına göre en uygun reklamları gösterebilir, markanızı geniş bir kitleye duyurabilirsiniz.</p>
                             </div>
                         </div>
+                        <div class="row px-lg-3">
+                            <div class="col-lg-3">
+                                <img src="images/metaads.png" class="img-fluid custom-border-radius-1" alt="">
+                            </div>
+                            <div class="col-lg-9 ps-lg-4">
+								<div class="d-block">
+									<div class="toggle toggle-minimal toggle-dark" data-plugin-toggle>
+										<section class="toggle">
+											<a class="toggle-title text-dark text-4">Meta Feed Reklamları</a>
+											<div class="toggle-content">
+												<p><strong>Meta Feed Reklamları</strong>, Facebook ve Instagram ana akışlarında, kullanıcıların içerik tükettiği doğal bir ortamda gösterilen reklam formatıdır. Görsel, video veya carousel formatında oluşturulabilen bu reklamlar, marka bilinirliğini artırmak, ürün veya hizmetleri tanıtmak ve web sitesi trafiği sağlamak için idealdir. Etkileşim oranları yüksek olduğu için hem yeni müşteri kazanımı hem de marka sadakati oluşturma konusunda güçlü bir stratejidir. </p>
+											</div>
+										</section>
+										<section class="toggle">
+											<a class="toggle-title text-dark text-4">Meta Hikaye Reklamları</a>
+											<div class="toggle-content">
+												<p><strong>Meta Hikaye Reklamları</strong>, tam ekran ve mobil öncelikli tasarımlarıyla dikkat çeken, kullanıcıların hikayeler arasında gezinirken karşılarına çıkan kısa ve etkili reklam formatıdır. Hızlı tüketilen içeriklerle etkileşimi artıran bu reklamlar, özellikle marka farkındalığını yükseltmek ve hızlı aksiyon aldırmak isteyen işletmeler için oldukça etkilidir.</p>
+											</div>
+										</section>
+										<section class="toggle">
+											<a class="toggle-title text-dark text-4">Meta Mesaj Reklamları</a>
+											<div class="toggle-content">
+												<p><strong>Meta Mesaj Reklamları</strong>, WhatsApp, Messenger ve Instagram DM üzerinden doğrudan iletişim başlatmaya teşvik eden reklam modelleridir. Özellikle hizmet sektöründe, müşteri ilişkilerini geliştirmek ve potansiyel müşterileri satışa yönlendirmek için güçlü bir araçtır.</p>
+											</div>
+										</section>
+										<section class="toggle">
+											<a class="toggle-title text-dark text-4">Meta Mağaza Reklamları</a>
+											<div class="toggle-content">
+												<p><strong>Meta Mağaza Reklamları</strong>, e-ticaret siteleri için en uygun reklam formatlarından biridir. Kullanıcılar doğrudan Facebook ve Instagram üzerinden ürünlerinizi keşfedebilir, detaylarını inceleyebilir ve hızlıca satın alma işlemi gerçekleştirebilirler. Özellikle dinamik ürün reklamları ile kullanıcılara ilgilendikleri ürünleri tekrar göstererek satış oranlarını artırabilirsiniz.</p>
+											</div>
+										</section>
+										<section class="toggle">
+											<a class="toggle-title text-dark text-4">Meta Yeniden Pazarlama</a>
+											<div class="toggle-content">
+												<p><strong>Meta Yeniden Pazarlama</strong>, markanızla daha önce etkileşime geçmiş kullanıcılara özel olarak oluşturulan reklam modelleridir. Web sitenizi ziyaret eden, alışveriş sepetine ürün ekleyen ancak satın alma gerçekleştirmeyen veya sosyal medya hesaplarınızla daha önce etkileşime geçmiş kullanıcıları hedefleyerek dönüşüm oranlarını artırabilirsiniz. Bu strateji, kaybedilmiş potansiyel müşterileri geri kazanmanın en etkili yollarından biridir.</p>
+											</div>
+										</section>
+									</div>
+								</div>
+                            </div>
+                        </div>
+
+                        <div class="row px-lg-3 pb-5">
+							<div class="col">
+								<p class="text-4 line-height-7"><strong>META</strong>’nın sunduğu bu gelişmiş reklam formatlarıyla, markanızı sosyal medya ekosisteminde güçlü bir konuma taşıyabilir, hedef kitlenizle en doğru şekilde etkileşim kurarak marka bilinirliğinizi ve dönüşüm oranlarınızı artırabilirsiniz.</p>
+							</div>
+                        </div>
+
+
                     </div>
 				</div>
 
@@ -319,13 +287,8 @@
 			</footer>
 		</div>
 
-		<script type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
-	<script type="text/javascript">
-		emailjs.init('3J-38Jn4_NmeWYlrL')
-	</script>
 		<!-- Vendor -->
 		<script src="vendor/plugins/js/plugins.min.js"></script>
 
@@ -343,65 +306,6 @@
 
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
-
-	<!-- Google Maps -->
-		<script>
-
-			/* 
-			Map Markers:
-			- Get an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key
-			- Generate Map Id: https://console.cloud.google.com/google/maps-apis/studio/maps
-			- Use https://www.latlong.net/convert-address-to-lat-long.html to get Latitude and Longitude of a specific address
-			*/
-			// (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-			// 	({key: "YOUR_API_KEY", v: "weekly"});
-
-			// async function initMap() {
-			// 	const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-			// 	const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary(
-			// 		"marker",
-			// 	);
-			// 	const map = new Map(document.getElementById("googlemaps"), {
-			// 		zoom: 14,
-			// 		center: { lat: -37.817240, lng: 144.955820 },
-			// 		mapId: "YOUR_MAP_API_ID",
-			// 	});
-			// 	const markers = [
-			// 		{
-			// 			position: { lat: -37.817240, lng: 144.955820 },
-			// 			title: "Office 1<br>Melbourne, 121 King St, Australia<br>Phone: 123-456-1234",
-			// 		}
-			// 	];
-
-			// 	const infoWindow = new InfoWindow();
-
-			// 	markers.forEach(({ position, title }, i) => {
-			// 		const pin = new PinElement({
-			// 			background: "#e36159",
-			// 			borderColor: "#e36159",
-			// 			glyphColor: "#FFF",
-			// 		});
-			// 		const marker = new AdvancedMarkerElement({
-			// 			position,
-			// 			map,
-			// 			title: `${title}`,
-			// 			content: pin.element,
-			// 		});
-
-			// 		marker.addListener("click", ({ domEvent, latLng }) => {
-			// 			const { target } = domEvent;
-
-			// 			infoWindow.close();
-			// 			infoWindow.setContent(marker.title);
-			// 			infoWindow.open(marker.map, marker);
-			// 		});
-			// 	});	
-
-			// }
-
-			// initMap();	
-
-		</script>
 
 	</body>
 </html>
