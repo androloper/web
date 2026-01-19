@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>İletişim | FishineLab.com</title>	
+		<meta name="keywords" content="Fishine Lab, akvaryum otomasyonu, akıllı akvaryum, akvaryum kontrol ünitesi, otomatik yemleme, zaman ayarlı aydınlatma, akvaryum ışık kontrolü, Type-C besleme, akvaryum bakım, akvaryum teknolojisi" />
+		<meta name="description" content="Fishine Lab; akıllı akvaryum kontrol ve otomasyon çözümleri geliştirir. Zaman ayarlı aydınlatma ve otomatik yemleme ile akvaryum bakımını kolaylaştırın, canlılarınız için stabil bir ekosistem sağlayın." />
+		<meta name="author" content="@androloper">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link id="googleFonts" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="/vendor/animate/animate.compat.css">
+		<link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="/css/theme.css">
+		<link rel="stylesheet" href="/css/theme-elements.css">
+		<link rel="stylesheet" href="/css/theme-blog.css">
+		<link rel="stylesheet" href="/css/theme-shop.css">
+
+		<!-- Skin CSS -->
+		<link id="skinCSS" rel="stylesheet" href="/css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="/css/custom.css">
+
+		<script>
+
+			function resetValidationUI() {
+				const form = document.getElementById('form');
+				form.querySelectorAll('input, textarea, select').forEach((el) => {
+				el.classList.remove('is-valid', 'is-invalid', 'valid', 'error');
+				el.removeAttribute('aria-invalid');
+				});
+				form.querySelectorAll('label.error, label.valid').forEach((el) => el.remove());
+				form.querySelectorAll('.form-group, .form-control').forEach((el) => {
+				el.classList.remove('has-success', 'has-danger', 'has-error', 'validated');
+				});
+				form.classList.remove('was-validated');
+				if (window.jQuery && window.jQuery.fn && window.jQuery.fn.validate) {
+				const $form = window.jQuery(form);
+				if ($form.data('validator')) {
+					$form.validate().resetForm();
+				}
+				}
+			}
+			function showAlert(message, type) {
+				const alertEl = document.getElementById('formAlert');
+				alertEl.textContent = message;
+				alertEl.classList.remove('d-none', 'alert-success', 'alert-danger');
+				alertEl.classList.add(type === 'success' ? 'alert-success' : 'alert-danger');
+				alertEl.style.color = (type === 'success') ? '#0f5132' : '#842029';
+				alertEl.style.backgroundColor = (type === 'success') ? '#d1e7dd' : '#f8d7da';
+				alertEl.style.borderColor = (type === 'success') ? '#badbcc' : '#f5c2c7';
+				clearTimeout(window.__formAlertTimer);
+				window.__formAlertTimer = setTimeout(() => {
+				alertEl.classList.add('d-none');
+				}, 5000);
+			}
+
+			function setFormDisabled(disabled) {
+				document.getElementById('from_name').disabled = disabled;
+				document.getElementById('from_email').disabled = disabled;
+				document.getElementById('message').disabled = disabled;
+				const btn = document.querySelector('#form button[type="submit"]');
+				if (btn) btn.disabled = disabled;
+			}
+
+			function sendEmail(event) {
+				event.preventDefault();
+
+				const obj = {
+				from_name: document.getElementById('from_name').value.trim(),
+				message: document.getElementById('message').value.trim(),
+				from_email: document.getElementById('from_email').value.trim(),
+				};
+				if (!obj.from_name || !obj.from_email || !obj.message) {
+				showAlert('Lütfen tüm alanları doldurunuz.', 'error');
+				return;
+				}
+
+				const serviceID = 'servicekey';
+				const templateID = 'templatekey';
+
+				setFormDisabled(true);
+
+				emailjs.send(serviceID, templateID, obj)
+				.then(() => {
+					showAlert('Mesajınız başarıyla iletildi. 1 iş günü içerisinde dönüş yapılacaktır.', 'success');
+					document.getElementById('form').reset();
+					resetValidationUI();
+					setFormDisabled(false);
+				})
+				.catch(() => {
+					showAlert('Mesaj gönderirken bir hata oluştu. Lütfen soldaki bilgiler ile iletişime geçiniz.', 'error');
+					setFormDisabled(false);
+				});
+			}
+		</script>
+
+
+	</head>
+	<body data-plugin-page-transition>
+
+		<div class="body">
+			<!-- menüler -->
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 100}">
+				<div class="header-body header-body-bottom-border border-top-0">
+					<div class="top-social-bar">
+						<div class="container">
+						  <div class="top-social-inner">
+							<span class="top-social-title">Sosyal Medyalarımız:</span>
+							<a href="https://www.linkedin.com/company/fishine-lab" target="_blank" rel="noopener" class="top-social-link" aria-label="LinkedIn">
+							  <i class="fab fa-linkedin-in"></i>
+							  <span>Fishine Lab</span>
+							</a>
+							|
+							<a href="https://www.youtube.com/@FishineLab" target="_blank" rel="noopener" class="top-social-link" aria-label="YouTube">
+							  <i class="fab fa-youtube"></i>
+							  <span>@FishineLab</span>
+							</a>
+							|
+							<a href="https://www.instagram.com/fishinelab" target="_blank" rel="noopener" class="top-social-link" aria-label="Instagram">
+							  <i class="fab fa-instagram"></i>
+							  <span>FishineLab</span>
+							</a>
+						  </div>
+						</div>
+					  </div>
+					<div class="header-container container">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="/">
+											<img src="/images/fishinelab-rectangle-bgless.png" class="img-fluid" width="300" height="120" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-column justify-content-center">
+								<div class="header-row">
+									<div class="header-nav header-nav-links">
+										<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
+											<nav class="collapse">
+												<ul class="nav nav-pills" id="mainNav">
+													<li><a href="/" class="nav-link readable-text">Anasayfa</a></li>
+													<li><a href="/hakkimizda/" class="nav-link readable-text">Hakkımızda</a></li>
+													<li><a href="/urunlerimiz/" class="nav-link readable-text">Ürünlerimiz</a></li>
+													<li><a href="/iletisim/" class="nav-link active readable-text">İletişim</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+										<i class="fas fa-bars"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- <div role="main" class="main"> -->
+
+				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+				<!-- <div id="googlemaps" class="google-map mt-0" style="height: 500px;"></div>
+
+				<div class="container">
+
+					<div class="row py-4">
+						<div class="col-lg-6">
+
+							<h2 class="font-weight-bold text-8 mt-2 mb-0">Contact Us</h2>
+							<p class="mb-4">Feel free to ask for details, don't save any questions!</p>
+
+							<form class="contact-form" action="php/contact-form.php" method="POST">
+								<div class="contact-form-success alert alert-success d-none mt-4">
+									<strong>Success!</strong> Your message has been sent to us.
+								</div>
+
+								<div class="contact-form-error alert alert-danger d-none mt-4">
+									<strong>Error!</strong> There was an error sending your message.
+									<span class="mail-error-message text-1 d-block"></span>
+								</div>
+
+								<div class="row">
+									<div class="form-group col-lg-6">
+										<label class="form-label mb-1 text-2">Full Name</label>
+										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+									</div>
+									<div class="form-group col-lg-6">
+										<label class="form-label mb-1 text-2">Email Address</label>
+										<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col">
+										<label class="form-label mb-1 text-2">Subject</label>
+										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col">
+										<label class="form-label mb-1 text-2">Message</label>
+										<textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col">
+										<input type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading...">
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="col-lg-6">
+
+							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+								<h4 class="mt-2 mb-1">Our <strong>Office</strong></h4>
+								<ul class="list list-icons list-icons-style-2 mt-2">
+									<li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Address:</strong> Melbourne, 121 King St, Australia</li>
+									<li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Phone:</strong> (123) 456-789</li>
+									<li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <ahref="/mailto:mail@example.com">mail@example.com</a></li>
+								</ul>
+							</div>
+
+							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="950">
+								<h4 class="pt-5">Business <strong>Hours</strong></h4>
+								<ul class="list list-icons list-dark mt-2">
+									<li><i class="far fa-clock top-6"></i> Monday - Friday - 9am to 5pm</li>
+									<li><i class="far fa-clock top-6"></i> Saturday - 9am to 2pm</li>
+									<li><i class="far fa-clock top-6"></i> Sunday - Closed</li>
+								</ul>
+							</div>
+
+							<h4 class="pt-5">Get in <strong>Touch</strong></h4>
+							<p class="lead mb-0 text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+						</div>
+
+					</div>
+
+				</div> -->
+
+			<!-- </div> -->
+
+			<div class="container py-5">
+					<div class="row">
+						<div class="col-lg-6 mb-5 mb-lg-0">
+							<h2 class="font-weight-normal text-6 mb-4 text-primary readable-text"><strong class="font-weight-extra-bold">Bizimle İletişime Geçebilirsiniz</strong></h2>
+							<div class="row">
+								<div class="col">
+									<div class="feature-box feature-box-style-5">
+										<div class="feature-box-icon">
+											<img class="icon-animated" width="42" src="/img/demos/industry-factory/icons/icon-mail.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary position-relative bottom-5'}" />
+										</div>
+										<div class="feature-box-info">
+											<h3 class="text-transform-none font-weight-bold custom-font-size-1 pb-1 mb-1">Email</h3>
+											<ul class="list list-unstyled pe-5 mb-0 readable-text">
+												<li class="mb-0"><a href="mailto:info@fishinelab.com" class="text-color-default text-color-hover-primary text-decoration-none">info@fishinelab.com</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row py-3 my-4">
+								<div class="col">
+									<div class="feature-box feature-box-style-5">
+										<div class="feature-box-icon">
+											<img class="icon-animated" width="42" src="/img/demos/industry-factory/icons/icon-phone.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
+										</div>
+										<div class="feature-box-info">
+											<h3 class="text-transform-none font-weight-bold custom-font-size-1 pb-1 mb-1">Telefon</h3>
+											<ul class="list list-unstyled pe-5 mb-0 readable-text">
+												<li class="mb-0"><a href="tel:+905334260194" class="text-color-default text-color-hover-primary text-decoration-none">+90 533 426 01 94</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="feature-box feature-box-style-5">
+										<div class="feature-box-icon">
+											<img class="icon-animated" width="42" src="/img/demos/industry-factory/icons/icon-location.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
+										</div>
+										<div class="feature-box-info">
+											<h3 class="text-transform-none font-weight-bold custom-font-size-1 mb-1">Adres</h3>
+											<div class="d-flex flex-column flex-md-row">
+												<ul class="list list-unstyled pe-5 mb-md-0 readable-text">
+													<li class="mb-0">İzmir / Türkiye</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<h2 class="font-weight-normal text-6 mb-4 readable-text text-primary"><strong class="font-weight-extra-bold">Bize Yazabilirsiniz</strong></h2>
+							<form class="contact-form" id="form" onsubmit="sendEmail(event)">
+								<div id="formAlert" class="alert d-none mt-3" role="alert"></div>
+								<!-- <div class="contact-form-success alert alert-success d-none mt-4">
+									<strong>Başarılı!</strong> Mesajınız tarafımıza iletildi. 1 iş günü içerisinde tarafınıza dönüş yapılacaktır.
+								</div>
+
+								<div class="contact-form-error alert alert-danger d-none mt-4">
+									<strong>Hata Oluştu!</strong> Mesaj gönderirken bir hata oluştu. Lütfen solda yer alan bilgiler ile iletişime geçiniz.
+									<span class="mail-error-message text-1 d-block"></span>
+								</div> -->
+
+								<div class="row">
+									<div class="form-group col">
+										<input type="text" value="" data-msg-required="Lütfen adınızı giriniz." maxlength="100" id="from_name" class="form-control" name="from_name" placeholder="Ad-Soyad (bkz: Fishine Lab)" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col">
+										<input type="email" value="" data-msg-required="Lütfen email adresinizi giriniz." data-msg-email="Lütfen doğru formatta email giriniz." maxlength="100" id="from_email" class="form-control" name="from_email" placeholder="Email (bkz: info@fishinelab.com)" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col">
+										<textarea maxlength="5000" data-msg-required="Lütfen mesajınızı giriniz." rows="10" class="form-control" id="message" name="message" placeholder="Mesajınız..." required></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col readable-text">
+										<button type="submit" class="btn btn-primary btn-modern readable-text">
+											Gönder
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+			</div>
+			<footer id="footer">
+					<div class="container py-2">
+						<div class="container custom-footer-top-light-border">
+							<div class="row" style=" display: flex; align-items: center;">
+								<div class="col">
+									<p class="text-start text-3 mb-0"><a href="/">FishineLab.com</a> © 2026 | Tüm hakları saklıdır.</p>
+								</div>
+								<div class="col">
+									<a href="https://unifortunately.com"><img class="d-inline-block img-fluid" src="/images/mobile-menu-white-tr.png" style="width: 175px; float: right;" alt="">
+								</div>
+							</div>
+						</div>
+				</div>
+			</footer>
+		</div>
+
+		
+		
+		<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+			<!-- public key @emailjs -->
+		<script type="text/javascript">
+			emailjs.init('publickey')
+		</script>
+
+		<!-- Vendor -->
+		<script src="/vendor/plugins/js/plugins.min.js"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="/js/theme.js"></script>
+
+		<!-- Theme Custom -->
+		<script src="/js/custom.js"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="/js/theme.init.js"></script>
+
+	<!-- Current Page Vendor and Views -->
+		<script src="/js/views/view.contact.js"></script>
+
+		<!-- Google Maps
+		<script>
+
+			/* 
+			Map Markers:
+			- Get an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key
+			- Generate Map Id: https://console.cloud.google.com/google/maps-apis/studio/maps
+			- Use https://www.latlong.net/convert-address-to-lat-long.html to get Latitude and Longitude of a specific address
+			*/
+			(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+				({key: "YOUR_API_KEY", v: "weekly"});
+
+			async function initMap() {
+				const { Map, InfoWindow } = await google.maps.importLibrary("maps");
+				const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary(
+					"marker",
+				);
+				const map = new Map(document.getElementById("googlemaps"), {
+					zoom: 14,
+					center: { lat: -37.817240, lng: 144.955820 },
+					mapId: "YOUR_MAP_API_ID",
+				});
+				const markers = [
+					{
+						position: { lat: -37.817240, lng: 144.955820 },
+						title: "Office 1<br>Melbourne, 121 King St, Australia<br>Phone: 123-456-1234",
+					}
+				];
+
+				const infoWindow = new InfoWindow();
+
+				markers.forEach(({ position, title }, i) => {
+					const pin = new PinElement({
+						background: "#e36159",
+						borderColor: "#e36159",
+						glyphColor: "#FFF",
+					});
+					const marker = new AdvancedMarkerElement({
+						position,
+						map,
+						title: `${title}`,
+						content: pin.element,
+					});
+
+					marker.addListener("click", ({ domEvent, latLng }) => {
+						const { target } = domEvent;
+
+						infoWindow.close();
+						infoWindow.setContent(marker.title);
+						infoWindow.open(marker.map, marker);
+					});
+				});	
+
+			}
+
+			initMap();	
+
+		</script> -->
+
+	</body>
+</html>

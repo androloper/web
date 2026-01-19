@@ -1,0 +1,112 @@
+.hero-full{
+    width: 100%;
+    min-height: 580px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+  }
+  
+  .hero-inner{
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0;
+  }
+  
+  .hero-title{
+    color: #fff;
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0 0 14px 0;
+    font-size: 64px;
+  }
+  
+  .hero-subtitle{
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+    color: rgba(255,255,255,.9);
+    font-size: 18px;
+    margin: 0 0 18px 0;
+  }
+  
+  @media (max-width: 991px){
+    .hero-full{ min-height: 420px; }
+    .hero-inner{ min-height: 420px; padding: 40px 0; }
+    .hero-title{ font-size: 40px; }
+  }
+  
+  .top-social-bar{
+    background: #B67534;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    font-size: 14px;
+  }
+  
+  .top-social-inner{
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: flex-end;
+    padding: 6px 0;
+  }
+  
+  .top-social-title{
+    color: white;
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+    font-weight: 600;
+  }
+  
+  .top-social-link{
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .top-social-link i{
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+  }
+  
+  .top-social-link:hover{
+    opacity: .8;
+    text-decoration: none !important;
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+    color: #0E5272
+  } 
+  .top-social-link:focus{
+    opacity: .8;
+    text-decoration: none !important;
+    letter-spacing: 0.1px;
+    word-spacing: 0.2px;
+    color: #0E5272
+  }
+  
+  @media (max-width: 575px){
+    .top-social-title{ display:none; }
+    .top-social-link span{ display:none; }
+    .top-social-inner{ gap: 12px; }
+  }
+
+  .readable-text{
+    letter-spacing: 0.1px;
+    word-spacing: 0.6px;
+    line-height: 1.85;
+  }
