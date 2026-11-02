@@ -25,16 +25,15 @@
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
-		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<!-- Simple Line Icons are not used by this site. -->
 		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
 		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+		<!-- Magnific Popup is not used by this site. -->
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/theme.css">
 		<link rel="stylesheet" href="css/theme-elements.css">
-		<link rel="stylesheet" href="css/theme-blog.css">
-		<link rel="stylesheet" href="css/theme-shop.css">
+		<!-- Blog and shop styles are not used by this site. -->
 
 		<!-- Skin CSS -->
 		<link id="skinCSS" rel="stylesheet" href="css/skins/skin-corporate-8.css">
@@ -45,14 +44,14 @@
 	<body data-plugin-page-transition>
 		<div class="body">
 			<!-- menüler -->
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 100}">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': false, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 100}">
 				<div class="header-body header-body-bottom-border border-top-0">
 					<div class="top-social-bar">
 						<div class="container">
 						  <div class="top-social-inner">
 							<span class="top-social-title">Sosyal Medyalarımız:</span>
-							<a href="https://www.linkedin.com/company/fishine-lab" target="_blank" rel="noopener" class="top-social-link" aria-label="LinkedIn">
-							  <i class="fab fa-linkedin-in"></i>
+							<a href="https://www.facebook.com/ﬁshinelab/" target="_blank" rel="noopener" class="top-social-link" aria-label="LinkedIn">
+							  <i class="fab fa-facebook"></i>
 							  <span>Fishine Lab</span>
 							</a>
 					  		|
@@ -207,7 +206,7 @@
 						<div class="container custom-footer-top-light-border">
 							<div class="row" style=" display: flex; align-items: center;">
 								<div class="col">
-									<p class="text-start text-3 mb-0"><a href="/">FishineLab.com</a> © 2026 | Tüm hakları saklıdır.</p>
+									<p class="text-start text-3 mb-0"><a href="/">FishineLab.com</a> © <span class="current-year"></span> | Tüm hakları saklıdır.</p>
 								</div>
 								<div class="col">
 									<a href="https://unifortunately.com"><img class="d-inline-block img-fluid" src="images/mobile-menu-white-tr.png" style="width: 175px; float: right;" alt="">
@@ -225,10 +224,11 @@
 		<script src="js/theme.js"></script>
 
 		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
+		<!-- custom.js is empty. -->
 
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
+		<script>document.querySelectorAll('.current-year').forEach((el) => el.textContent = new Date().getFullYear());</script>
 	</body>
 </html>
