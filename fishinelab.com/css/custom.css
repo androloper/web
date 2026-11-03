@@ -245,6 +245,125 @@
     }
   }
 
+/* Homepage refresh */
+.home-hero { position: relative; min-height: 690px; overflow: hidden; background-size: cover; background-position: center; color: #fff; }
+.home-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5, 27, 39, .94) 0%, rgba(5, 27, 39, .75) 45%, rgba(5, 27, 39, .2) 100%); }
+.home-hero-content { min-height: 690px; display: flex; align-items: center; justify-content: space-between; gap: 50px; padding: 70px 0 80px; }
+.hero-copy { max-width: 610px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #d69a5b; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; }
+.eyebrow i { font-size: 8px; }
+.hero-copy h1, .section-heading h2, .showcase-copy h2, .cta-inner h2 { margin: 20px 0; color: #fff; font-size: clamp(42px, 5.2vw, 74px); font-weight: 300; line-height: 1.04; letter-spacing: -2px; }
+.hero-copy h1 em, .section-heading h2 em, .showcase-copy h2 em, .cta-inner h2 em { color: #d69a5b; font-style: normal; }
+.hero-copy p { max-width: 490px; margin: 0 0 30px; color: rgba(255,255,255,.75); font-size: 17px; line-height: 1.8; }
+.hero-actions { display: flex; align-items: center; gap: 28px; }
+.hero-actions .btn, .cta-inner .btn { padding: 15px 25px; border: 0; background: #c88240; color: #fff; text-transform: none; letter-spacing: .2px; }
+.hero-actions .btn:hover { background: #df9d5b; }
+.hero-text-link, .text-link { color: #fff; font-size: 13px; font-weight: 600; text-decoration: none; }
+.hero-text-link i, .text-link i { margin-left: 7px; color: #d69a5b; }
+.hero-text-link:hover, .text-link:hover { color: #d69a5b; }
+.home-promise { padding: 75px 0; background: #0b303f; color: #fff; }
+.promise-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 80px; }
+.promise-kicker { color: #79c7c6; font-size: 11px; font-weight: 700; letter-spacing: 3px; }
+.promise-grid h2 { margin: 14px 0 0; font-size: 45px; font-weight: 300; line-height: 1.05; letter-spacing: -1px; }
+.promise-grid h2 span { color: #fff; }
+.promise-grid h2 strong { color: #d69a5b; font-weight: 500; }
+.promise-grid p { max-width: 480px; margin: 0; color: rgba(255,255,255,.7); font-size: 17px; line-height: 1.8; }
+.home-benefits, .home-showcase { padding: 110px 0; background: #f7f8f5; }
+.section-heading { margin-bottom: 45px; }
+.eyebrow-dark { color: #198b91; }
+.section-heading h2, .showcase-copy h2 { margin-top: 14px; color: #0b303f; font-size: 50px; }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.benefit-card { position: relative; min-height: 300px; padding: 34px 30px; border: 1px solid #e2e7e3; background: #fff; }
+.benefit-card-featured { border-color: #0b5364; background: #0b5364; color: #fff; transform: translateY(-16px); box-shadow: 0 20px 40px rgba(11,83,100,.16); }
+.benefit-number { position: absolute; top: 26px; right: 28px; color: #b7c9c6; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+.benefit-card i { margin: 38px 0 25px; color: #c88240; font-size: 25px; }
+.benefit-card h3 { margin: 0 0 14px; color: #0b303f; font-size: 22px; font-weight: 500; }
+.benefit-card-featured h3 { color: #fff; }
+.benefit-card p { margin: 0; color: #6c7a7c; line-height: 1.75; }
+.benefit-card-featured p { color: rgba(255,255,255,.72); }
+.benefit-card a { display: inline-block; margin-top: 22px; color: #d69a5b; font-size: 12px; font-weight: 700; text-decoration: none; }
+.benefit-card a i { margin: 0 0 0 8px; font-size: 11px; }
+.home-showcase { background: #fff; }
+.showcase-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 90px; }
+.showcase-image { position: relative; }
+.showcase-image img { display: block; width: 100%; height: 480px; object-fit: cover; }
+.image-caption { position: absolute; right: -18px; bottom: 28px; padding: 14px 19px; background: #d69a5b; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .7px; }
+.showcase-copy h2 { margin-bottom: 25px; }
+.showcase-copy p { max-width: 450px; margin-bottom: 28px; color: #6c7a7c; font-size: 16px; line-height: 1.85; }
+.text-link { color: #0b5364; }
+.home-cta { padding: 85px 0; background: #0b303f; }
+.homepage-main + #footer { margin-top: 0; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.cta-inner h2 { margin: 15px 0 0; font-size: 43px; }
+.cta-inner .btn { background: #fff; color: #0b5364; white-space: nowrap; }
+
+@media (max-width: 991px) {
+  .home-hero, .home-hero-content { min-height: 620px; }
+  .home-hero-content { gap: 25px; }
+  .benefit-grid { gap: 12px; }
+  .showcase-grid { gap: 45px; }
+}
+@media (max-width: 767px) {
+  .home-hero { min-height: auto; }
+  .home-hero-shade { background: rgba(5,27,39,.82); }
+  .home-hero-content { min-height: auto; display: block; padding: 90px 0 95px; }
+  .hero-copy h1 { font-size: 47px; }
+  .hero-copy p { font-size: 15px; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .promise-grid, .showcase-grid { grid-template-columns: 1fr; gap: 25px; }
+  .home-promise, .home-benefits, .home-showcase { padding: 70px 0; }
+  .promise-grid h2, .section-heading h2, .showcase-copy h2, .cta-inner h2 { font-size: 38px; }
+  .benefit-grid { grid-template-columns: 1fr; }
+  .benefit-card-featured { transform: none; }
+  .showcase-image img { height: 320px; }
+  .image-caption { right: 12px; bottom: 15px; }
+  .cta-inner { align-items: flex-start; flex-direction: column; }
+  }
+
+/* Mobile layout refinements */
+@media (max-width: 767px) {
+  #header.header-effect-shrink .header-container {
+    min-height: 76px;
+  }
+
+  #header .header-logo {
+    margin: 8px 0;
+  }
+
+  #header .header-logo img {
+    width: 220px;
+    height: auto;
+  }
+
+  #header .header-nav {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .home-hero-content {
+    padding: 56px 0 62px;
+  }
+
+  .hero-copy h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 359px) {
+  #header .header-logo img {
+    width: 195px;
+  }
+
+  .home-hero-content {
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+
+  .hero-copy h1 {
+    font-size: 39px;
+  }
+}
+
   /* Product page */
   .product-page {
     background: #f5f8f7;
@@ -307,10 +426,11 @@
     box-shadow: 0 5px 15px rgba(14, 82, 114, .06);
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 14px;
   }
 
-  .product-visual .document-band {
-    margin-top: 14px;
+  .product-visual .document-download {
+    background: #c0392b !important;
   }
 
   .product-visual .bg-primary {
